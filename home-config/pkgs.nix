@@ -8,6 +8,7 @@ in {
 		aseprite
 		wineWowPackages.full
 		wails
+		freecad
 		easyeffects
 		telegram-desktop
 		restish
