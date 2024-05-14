@@ -5,7 +5,7 @@
 		settings = {
 			main = {
 				term = "foot";
-				font = "JetBrainsMono Nerd Font:size=20";
+				font = "JetBrainsMono Nerd Font:size=17";
 				dpi-aware = "yes";
 			};
 		
