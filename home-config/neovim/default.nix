@@ -71,23 +71,6 @@
 		# Plugins
 		plugins = {
 			alpha.enable = true;
-			obsidian.enable = true;
-			obsidian.settings = {
-				completion = {
-					min_chars = 2;
-					nvim_cmp = true;
-				};
-				new_notes_location = "current_dir";
-				workspaces = [
-					{
-						name = "default";
-						path = "~/zettle";
-					}
-				];
-				daily_notes = {
-				    folder = "Daily";
-				};
-			};
 			indent-blankline.enable = true;
 			telescope.enable = true;
 			flash.enable = true;
