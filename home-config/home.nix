@@ -5,6 +5,7 @@
 
     imports = [
         ./pkgs.nix
+		./emanote
 		./foot
         ./starship
 	    ./fish
