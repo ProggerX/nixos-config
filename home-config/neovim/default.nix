@@ -13,6 +13,7 @@
 		opts = {
 			showmode = false;
 			wrap = false;
+			conceallevel = 2;
 			number = true;
 			relativenumber = true;
 			shiftwidth = 4;
