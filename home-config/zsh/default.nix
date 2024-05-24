@@ -7,7 +7,7 @@
 		syntaxHighlighting.enable = true;
 	
 		initExtra = ''
-			eval "$(direnv hook fish)"
+			eval "$(direnv hook zsh)"
 			eval "$(zoxide init zsh --cmd cd)"
 			gof
 		'';
