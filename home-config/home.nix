@@ -6,6 +6,7 @@
     imports = [
         ./pkgs.nix
 		./emanote
+		./zsh
 		./foot
         ./starship
 	    ./fish
