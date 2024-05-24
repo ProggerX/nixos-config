@@ -183,7 +183,8 @@ boot.binfmt.registrations.appimage = {
   };
 
   programs.fish.enable = true;
-
+  programs.zsh.enable = true;
+  environment.pathsToLink = [ "/share/zsh" ];
   environment.sessionVariables = {
     PATH = [
         "/usr/bin/"
@@ -197,7 +198,7 @@ boot.binfmt.registrations.appimage = {
    # BAT_THEME="Catppuccin-mocha";
    WLR_NO_HARDWARE_CURSORS="1";
   };
-  users.defaultUserShell = pkgs.fish;
+  users.defaultUserShell = pkgs.zsh;
 
   # Configure keymap in X11
   services.xserver.xkb.layout = "us";
