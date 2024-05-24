@@ -84,6 +84,7 @@
 			toggleterm.enable = true;
 			lualine.enable = true;
 			barbar.enable = true;
+			neocord.enable = true;
 
 			trouble.settings = {
 				auto_open = true;

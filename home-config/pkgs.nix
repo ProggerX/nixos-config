@@ -3,11 +3,13 @@ let system = "x86_64-linux";
 in {
     home.packages = with pkgs; [
 		fasole
+		xournalpp
 		mindustry-wayland
 		comma
 		aseprite
 		wineWowPackages.full
 		wails
+		godot_4
 		freecad
 		easyeffects
 		telegram-desktop

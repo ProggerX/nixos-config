@@ -11,6 +11,6 @@ in {
 		notes = [
 			"/home/proggerx/zettle"
 		];
-		package = emanote.packages.${builtins.currentSystem}.default;
+		package = emanote.packages."x86_64-linux".default;
 	};
 }
