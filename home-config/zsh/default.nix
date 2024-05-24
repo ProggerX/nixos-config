@@ -1,14 +1,14 @@
-{ config, ... }:
+{ ... }:
 {
 	programs.zsh = {
 		enable = true;
 		enableCompletion = true;
-		autosuggestions.enable = true;
+		autosuggestion.enable = true;
 		syntaxHighlighting.enable = true;
 	
 		initExtra = ''
 			eval "$(direnv hook fish)"
-			zoxide init zsh --cmd cd | source
+			eval "$(zoxide init zsh --cmd cd)"
 			gof
 		'';
 
@@ -30,8 +30,5 @@
 			gbld = "go build";
 			grun = "go run .";
 		};
-
-		histSize = 10000;
-		histFile = "${config.xdg.dataHome}/zsh/history";
 	};
 }
