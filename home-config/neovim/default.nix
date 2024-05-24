@@ -1,8 +1,12 @@
-{ inputs, pkgs, ... }: {
+{ inputs, ... }: 
+let system = "x86_64-linux";
+pkgs = import inputs.nvimpkgs { inherit system; };
+in {
 	imports = [ inputs.nixvim.homeManagerModules.nixvim ];
 
 	programs.nixvim = {
 		# Base
+		package = pkgs.neovim-unwrapped;
 		enable = true;
 		vimAlias = true;
 		viAlias = true;

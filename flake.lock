@@ -267,7 +267,7 @@
         "home-manager": "home-manager_2",
         "nix-darwin": "nix-darwin",
         "nixpkgs": [
-          "nixpkgs"
+          "nvimpkgs"
         ],
         "pre-commit-hooks": "pre-commit-hooks",
         "treefmt-nix": "treefmt-nix"
@@ -283,6 +283,22 @@
       "original": {
         "owner": "nix-community",
         "repo": "nixvim",
+        "type": "github"
+      }
+    },
+    "nvimpkgs": {
+      "locked": {
+        "lastModified": 1715875428,
+        "narHash": "sha256-sRKjKke9QOquSiG73TFV2DqO51efjUGMHXJR2PUmAig=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "817c3eccc985907e3cf8137232aa9a9715f695c8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "817c3eccc985907e3cf8137232aa9a9715f695c8",
         "type": "github"
       }
     },
@@ -319,7 +335,8 @@
         "ags": "ags",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs_2",
-        "nixvim": "nixvim"
+        "nixvim": "nixvim",
+        "nvimpkgs": "nvimpkgs"
       }
     },
     "systems": {
