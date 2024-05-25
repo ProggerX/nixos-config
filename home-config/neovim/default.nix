@@ -198,6 +198,13 @@ in {
 					gopls.enable = true;
 				};
 			};
+			# Lint
+			lint = {
+				enable = true;
+				linters = {
+					golangcilint = {};
+				};
+			};
 			# Cmp
 			cmp = {
 				enable = true;
