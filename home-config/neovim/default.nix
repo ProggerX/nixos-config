@@ -201,8 +201,8 @@ in {
 			# Lint
 			lint = {
 				enable = true;
-				linters = {
-					golangcilint = {};
+				lintersByFt = {
+					go = [ "golangcilint" ];
 				};
 			};
 			# Cmp
