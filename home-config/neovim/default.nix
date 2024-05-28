@@ -30,7 +30,7 @@ in {
 		# Keymaps
 		keymaps = [
 			{
-				action = "<cmd>Neotree<CR>";
+				action = "<cmd>Oil<CR>";
 				key = "-";
 			}
 			{
@@ -92,15 +92,6 @@ in {
 			barbar.enable = true;
 			neocord.enable = true;
 
-			# Tree
-			neo-tree = {
-				enable = true;
-				closeIfLastWindow = true;
-				window = {
-					width = 35;
-				};
-			};
-
 			trouble.settings = {
 				auto_open = true;
 				auto_close = true;
@@ -158,8 +149,8 @@ in {
 				(padding 2)
 				{
 					type = "button";
-					val = "󰉋 Tree";
-					on_press.raw = ":Neotree<CR>";
+					val = "󰉋 Oil";
+					on_press.raw = ":Oil<CR>";
 					opts = {
 						shortcut = "-";
 
