@@ -103,7 +103,7 @@ bind = $mainMod, y, togglesplit,
 bind = $mainMod, u, fullscreen,
 
 
-bind = $mainMod, RETURN, exec, alacritty
+bind = $mainMod, RETURN, exec, kitty
 bind = $mainMod, E, exec, nemo
 bind = ALT, SPACE, exec, rofi -show run
 bind = $mainMod, R, exec, rofi -show drun
