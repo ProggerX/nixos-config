@@ -75,6 +75,7 @@ in {
 		# Plugins
 		plugins = {
 			alpha.enable = true;
+			image.enable = true;
 			indent-blankline.enable = true;
 			telescope.enable = true;
 			flash.enable = true;
