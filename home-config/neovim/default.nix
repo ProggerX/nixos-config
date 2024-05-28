@@ -30,6 +30,14 @@ in {
 		# Keymaps
 		keymaps = [
 			{
+				action = "<cmd>Telescope live_grep<CR>";
+				key = "lg";
+			}
+			{
+				action = "<cmd>Telescope find_files<CR>";
+				key = "lf";
+			}
+			{
 				action = "<cmd>Oil<CR>";
 				key = "-";
 			}
@@ -125,7 +133,6 @@ in {
 				{
 					type = "button";
 					val = "󰈔 New";
-					on_press.raw = ":ene<CR>";
 					opts = {
 						keymap = [
 							"n"
@@ -150,7 +157,6 @@ in {
 				{
 					type = "button";
 					val = "󰉋 Oil";
-					on_press.raw = ":Oil<CR>";
 					opts = {
 						shortcut = "-";
 
@@ -165,8 +171,6 @@ in {
 				{
 					type = "button";
 					val = " Restore";
-					on_press.raw =
-						"<cmd>lua require('persistence').load({ last = true })<CR>";
 					opts = {
 						keymap = [
 							"n"
