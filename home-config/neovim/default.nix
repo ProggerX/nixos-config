@@ -30,7 +30,7 @@ in {
 		# Keymaps
 		keymaps = [
 			{
-				action = "<cmd>Oil<CR>";
+				action = "<cmd>Neotree<CR>";
 				key = "-";
 			}
 			{
@@ -83,12 +83,22 @@ in {
 			trouble.enable = true;
 			treesitter.enable = true;
 			oil.enable = true;
+			tmux-navigator.enable = true;
 			nvim-autopairs.enable = true;
 			transparent.enable = true;
 			toggleterm.enable = true;
 			lualine.enable = true;
 			barbar.enable = true;
 			neocord.enable = true;
+
+			# Tree
+			neo-tree = {
+				enable = true;
+				closeIfLastWindow = true;
+				window = {
+					width = 35;
+				};
+			};
 
 			trouble.settings = {
 				auto_open = true;
@@ -122,8 +132,8 @@ in {
 				(padding 5)
 				{
 					type = "button";
-					val = "󰈔 New	 ";
-					on_press.raw = "<cmd>ene<CR>";
+					val = "󰈔 New";
+					on_press.raw = ":ene<CR>";
 					opts = {
 						keymap = [
 							"n"
@@ -147,8 +157,8 @@ in {
 				(padding 2)
 				{
 					type = "button";
-					val = "󰉋 Oil	 ";
-					on_press.raw = "<cmd>Oil<CR>";
+					val = "󰉋 Tree";
+					on_press.raw = ":Neotree<CR>";
 					opts = {
 						shortcut = "-";
 
@@ -162,7 +172,7 @@ in {
 				(padding 2)
 				{
 					type = "button";
-					val = " Restore	 ";
+					val = " Restore";
 					on_press.raw =
 						"<cmd>lua require('persistence').load({ last = true })<CR>";
 					opts = {
