@@ -7,7 +7,7 @@
         ./pkgs.nix
 		./emanote
 		./zsh
-		./foot
+		./kitty
         ./starship
 	    ./fish
 	    ./eww
