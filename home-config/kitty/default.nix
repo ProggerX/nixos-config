@@ -2,6 +2,8 @@
 {
 	programs.kitty = {
 		enable = true;
-		font = "JetBrainsMono Nerd Font";
+		settings = {
+			font_family = "JetBrainsMono Nerd Font";
+		};
 	};
 }
