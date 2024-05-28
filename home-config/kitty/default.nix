@@ -2,6 +2,6 @@
 {
 	programs.kitty = {
 		enable = true;
-		font = (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; });
+		font = "JetBrainsMono Nerd Font";
 	};
 }
