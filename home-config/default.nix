@@ -14,7 +14,7 @@
 	    ./eww
 	    ./neovim
 		./dotfiles.nix
-		./mako
+		./dunst
 		./hyprland
 		./pass
 		./wpaperd
