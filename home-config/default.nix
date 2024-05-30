@@ -12,7 +12,6 @@
 	    ./fish
 	    ./eww
 	    ./neovim
-        ./alacritty
 		./dotfiles.nix
 		./mako
 		./hyprland
