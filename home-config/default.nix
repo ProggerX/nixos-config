@@ -15,7 +15,6 @@
         ./alacritty
 		./dotfiles.nix
 		./mako
-		./gtk.nix
 		./hyprland
 		./pass
     ];
