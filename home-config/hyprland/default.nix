@@ -105,8 +105,8 @@ bind = $mainMod, u, fullscreen,
 
 bind = $mainMod, RETURN, exec, kitty
 bind = $mainMod, E, exec, nemo
-bind = ALT, SPACE, exec, wofi -show run
-bind = $mainMod, R, exec, wofi -show drun
+bind = ALT, SPACE, exec, wofi --show run
+bind = $mainMod, R, exec, wofi --show drun
 bind = $mainMod, V, exec, cliphist list | wofi -dmenu | cliphist decode | wl-copy
 
 bind = , PRINT, exec, grim -g"$(slurp)" - | wl-copy
