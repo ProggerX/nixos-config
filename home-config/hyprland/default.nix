@@ -10,7 +10,7 @@ monitor=eDP-1,1920x1080@60,0x0,1
 monitor=HDMI-A-1,1920x1080@144,0x0,1
 
 exec-once = wpaperd
-exec-once = /nix/store/izryxc366vlpin8vy7m679kg19hkqksl-polkit-gnome-0.105/libexec/polkit-gnome-authentication-agent-1
+exec-once = ${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
 exec-once = wl-paste --watch cliphist store
 exec-once = gsettings set org.gnome.desktop.interface cursor-theme 'Catppuccin-Mocha-Lavender-Cursors'
 exec-once = gsettings set org.gnome.desktop.interface cursor-size 35

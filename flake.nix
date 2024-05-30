@@ -26,12 +26,13 @@
                     ./configuration.nix
 
 					home-manager.nixosModules.home-manager
+
           			{
             			home-manager.useGlobalPkgs = true;
             			home-manager.useUserPackages = true;
             			home-manager.backupFileExtension = "backup";
 
-            			home-manager.users.proggerx = ./home-config/home.nix;
+            			home-manager.users.proggerx = ./home-config;
 						
 						home-manager.extraSpecialArgs = { inherit inputs; };
           			}

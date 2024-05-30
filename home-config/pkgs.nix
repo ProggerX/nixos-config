@@ -1,7 +1,7 @@
-{ config, pkgs, ...}:
-let system = "x86_64-linux";
-in {
+{ pkgs, ... }:
+{
     home.packages = with pkgs; [
+		( import ./idk.nix { inherit pkgs; } )
 		fasole
 		lutris
 		musikcube
