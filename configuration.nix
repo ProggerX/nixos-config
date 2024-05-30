@@ -87,9 +87,9 @@
 	users.extraGroups.docker.members = [ "proggerx" ];
 	
 	services.xserver.enable = true;
-	services.xserver.libinput.enable = true;
-	services.xserver.libinput.touchpad.tapping = true;
-	services.xserver.libinput.touchpad.middleEmulation = true;
+	services.libinput.enable = true;
+	services.libinput.touchpad.tapping = true;
+	services.libinput.touchpad.middleEmulation = true;
 	
 	services.displayManager.sddm.enable = true;
 	services.displayManager.sddm.wayland.enable = true;
