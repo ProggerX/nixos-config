@@ -16,6 +16,7 @@
 		./mako
 		./hyprland
 		./pass
+		./wpaperd
     ];
 
     home.stateVersion = "24.05";

@@ -51,6 +51,9 @@
 							applications = 0.8;
 						};
 						stylix.fonts = {
+							sizes = {
+								terminal = 14;
+							};
 							serif = {
 								package = pkgs.dejavu_fonts;
 								name = "DejaVu Serif";
@@ -61,7 +64,7 @@
     						};
 							monospace = {
 								package = (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; });
-								name = "JetBrainsMono Nerd Font Mono";
+								name = "JetBrainsMono Nerd Font";
 							};
 						};
 						stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
