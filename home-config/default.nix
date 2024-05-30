@@ -13,7 +13,6 @@
 		./wofi
 	    ./eww
 	    ./neovim
-		./dotfiles.nix
 		./dunst
 		./hyprland
 		./pass

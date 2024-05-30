@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
     home.packages = with pkgs; [
-		( import ./idk.nix { inherit pkgs; } )
 		fasole
 		lutris
 		musikcube
