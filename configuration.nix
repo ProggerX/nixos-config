@@ -91,16 +91,6 @@ networking.firewall = {
     enable = true;
     efiSupport = true;
     device = "nodev";
-    theme = pkgs.stdenv.mkDerivation {
-      name = "catppuccin-grub-theme";
-      src = pkgs.fetchFromGitHub {
-        owner = "catppuccin";
-	repo = "grub";
-	rev = "803c5df0e83aba61668777bb96d90ab8f6847106";
-	sha256 = "sha256-/bSolCta8GCZ4lP0u5NVqYQ9Y3ZooYCNdTwORNvR7M0=";
-      };
-      installPhase = "cp -r src/catppuccin-mocha-grub-theme/ $out";
-    };
   };
   boot.supportedFilesystems = [ "ntfs" ];
   #boot.loader.efi.installAsRemovable= true;
