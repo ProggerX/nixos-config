@@ -17,6 +17,7 @@
 		./hyprland
 		./pass
 		./wpaperd
+		./waybar
     ];
 
     home.stateVersion = "24.05";
