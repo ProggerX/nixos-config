@@ -18,6 +18,7 @@
 
     outputs = { self, nixpkgs, stylix, home-manager, ags, ...}@inputs:
 		let system = "x86_64-linux";
+		pkgs = import nixpkgs { inherit system; };
 		in {
         nixosConfigurations = {
             pocket-os = nixpkgs.lib.nixosSystem {
@@ -40,7 +41,7 @@
           			}
 
 					{
-						stylix.base16Scheme = "${nixpkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+						stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 						stylix.image = "/home/proggerx/walls/two.jpg";
 					}
                 ];
