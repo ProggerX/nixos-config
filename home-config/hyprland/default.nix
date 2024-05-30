@@ -9,7 +9,6 @@ source=/etc/nixos/home-config/hyprland/mocha.conf
 monitor=eDP-1,1920x1080@60,0x0,1
 monitor=HDMI-A-1,1920x1080@144,0x0,1
 
-exec-once = wpaperd
 exec-once = ${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
 exec-once = wl-paste --watch cliphist store
 exec-once = gsettings set org.gnome.desktop.interface cursor-theme 'Catppuccin-Mocha-Lavender-Cursors'

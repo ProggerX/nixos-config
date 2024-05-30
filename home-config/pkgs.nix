@@ -113,7 +113,6 @@
 		ccls
 		nixd
 		glab
-		wpaperd
 		firefox-devedition
 		pulseaudio
 		grim

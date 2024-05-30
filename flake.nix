@@ -13,9 +13,10 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
 		ags.url = "github:Aylur/ags";
+		stylix.url = "github:danth/stylix";
     };
 
-    outputs = { self, nixpkgs, home-manager, ags, ...}@inputs:
+    outputs = { self, nixpkgs, stylix, home-manager, ags, ...}@inputs:
 		let system = "x86_64-linux";
 		in {
         nixosConfigurations = {
@@ -26,6 +27,7 @@
                     ./configuration.nix
 
 					home-manager.nixosModules.home-manager
+					stylix.nixosModules.stylix
 
           			{
             			home-manager.useGlobalPkgs = true;
@@ -36,6 +38,11 @@
 						
 						home-manager.extraSpecialArgs = { inherit inputs; };
           			}
+
+					{
+						stylix.base16Scheme = "${nixpkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+						stylix.image = "/home/proggerx/walls/two.jpg";
+					}
                 ];
             };
 		};
