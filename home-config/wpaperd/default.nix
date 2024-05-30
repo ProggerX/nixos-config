@@ -4,7 +4,7 @@
 		enable = true;
 		settings = {
 			default = {
-				path = "/etc/nixos/walls.jpg";
+				path = "/etc/nixos/stylix/walls.jpg";
 			};
 		};
 	};
