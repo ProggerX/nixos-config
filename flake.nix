@@ -46,6 +46,24 @@
 							size = 35;
 							package = pkgs.catppuccin-cursors.mochaLavender;
 						};
+						stylix.opacity = {
+							terminal = 0.7;
+							applications = 0.8;
+						};
+						stylix.fonts = {
+							serif = {
+								package = pkgs.dejavu_fonts;
+								name = "DejaVu Serif";
+							};
+							sansSerif = {
+								package = pkgs.nerdfonts;
+								name = "JetBrainsMono Nerd Font";
+    						};
+							monospace = {
+								package = pkgs.nerdfonts;
+								name = "JetBrainsMono Nerd Font Mono";
+							};
+						};
 						stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 						stylix.image = "/home/proggerx/walls/two.jpg";
 					}
