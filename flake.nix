@@ -65,7 +65,7 @@
 							};
 						};
 						stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-						stylix.image = ./two.jpg;
+						stylix.image = ./walls.jpg;
 					}
                 ];
             };
