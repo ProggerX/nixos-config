@@ -14,6 +14,7 @@ fonts.packages = with pkgs; [
   (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
 ];
 
+
 nixpkgs.config.permittedInsecurePackages = [
                 "electron-25.9.0"
               ];

@@ -3,6 +3,9 @@ let system = "x86_64-linux";
 in {
     home.packages = with pkgs; [
 		fasole
+		lutris
+		musikcube
+		ytmdl
 		xournalpp
 		mindustry-wayland
 		comma
