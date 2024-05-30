@@ -31,11 +31,11 @@ in {
 		keymaps = [
 			{
 				action = "<cmd>Telescope live_grep<CR>";
-				key = "lg";
+				key = "<leader>tg";
 			}
 			{
 				action = "<cmd>Telescope find_files<CR>";
-				key = "lf";
+				key = "<leader>tf";
 			}
 			{
 				action = "<cmd>Oil<CR>";
