@@ -56,11 +56,11 @@
 								name = "DejaVu Serif";
 							};
 							sansSerif = {
-								package = pkgs.nerdfonts;
+								package = (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; });
 								name = "JetBrainsMono Nerd Font";
     						};
 							monospace = {
-								package = pkgs.nerdfonts;
+								package = (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; });
 								name = "JetBrainsMono Nerd Font Mono";
 							};
 						};
