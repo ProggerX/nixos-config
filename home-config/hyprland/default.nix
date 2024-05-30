@@ -14,6 +14,7 @@ exec-once = wl-paste --watch cliphist store
 exec-once = gsettings set org.gnome.desktop.interface cursor-theme 'Catppuccin-Mocha-Lavender-Cursors'
 exec-once = gsettings set org.gnome.desktop.interface cursor-size 35
 exec-once = waybar
+exec-once = wpaperd
 exec-once = firefox-devedition
 # exec-once = alacritty --class nchat --command nchat
 exec-once = telegram-desktop
