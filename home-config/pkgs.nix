@@ -108,7 +108,6 @@
 		cava
 		showmethekey
 		element-desktop
-		rofi-wayland
 		jq
 		ccls
 		nixd

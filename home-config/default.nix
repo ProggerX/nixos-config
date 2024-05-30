@@ -10,6 +10,7 @@
 		./kitty
         ./starship
 	    ./fish
+		./wofi
 	    ./eww
 	    ./neovim
 		./dotfiles.nix
