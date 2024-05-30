@@ -13,7 +13,6 @@
 	    ./eww
 	    ./neovim
         ./alacritty
-		./cursor.nix
 		./dotfiles.nix
 		./mako
 		./gtk.nix

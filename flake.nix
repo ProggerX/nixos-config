@@ -41,6 +41,11 @@
           			}
 
 					{
+						stylix.cursor = {
+							name = "Catppuccin-Mocha-Lavender-Cursors";
+							size = 35;
+							package = pkgs.catppuccin-cursors.mochaLavender;
+						};
 						stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 						stylix.image = "/home/proggerx/walls/two.jpg";
 					}
