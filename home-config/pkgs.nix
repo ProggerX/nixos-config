@@ -31,6 +31,7 @@ in {
 		fzf
 		zoxide
 		sshpass
+		simplex-chat-desktop
 		nchat
 		newt
 		tgpt
