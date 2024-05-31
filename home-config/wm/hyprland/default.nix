@@ -4,7 +4,7 @@
 		enable = true;
 		extraConfig = ''
 
-source=/etc/nixos/home-config/hyprland/mocha.conf
+source=/etc/nixos/home-config/wm/hyprland/mocha.conf
 
 monitor=eDP-1,1920x1080@60,0x0,1
 monitor=HDMI-A-1,1920x1080@144,0x0,1
