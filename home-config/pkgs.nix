@@ -111,7 +111,6 @@
 		ccls
 		nixd
 		glab
-		firefox-devedition
 		pulseaudio
 		grim
 		slurp
