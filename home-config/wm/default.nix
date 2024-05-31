@@ -1,7 +1,7 @@
 {
 	imports = [
 		./eww
-		./tofi
+		./rofi
 		./dunst
 		./waybar
 		./wpaperd
