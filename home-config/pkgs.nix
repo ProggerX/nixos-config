@@ -1,5 +1,6 @@
-{ pkgs, ... }:
-{
+{ pkgs, inputs, ... }:
+let newpkgs = import inpus.newpkgs { inherit pkgs.system; };
+in {
     home.packages = with pkgs; [
 		fasole
 		lutris
@@ -143,8 +144,8 @@
     	slurp
     	bat
     	eza
-		discord
     	python311
+		newpkgs.vesktop
 		gcc
 		gnumake
     	nitch
