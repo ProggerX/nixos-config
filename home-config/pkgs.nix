@@ -1,6 +1,6 @@
 { pkgs, inputs, ... }:
 let system = "x86_64-linux";
-newpkgs = import inpus.newpkgs { inherit system; };
+newpkgs = import inputs.newpkgs { inherit system; };
 in {
     home.packages = with pkgs; [
 		fasole
