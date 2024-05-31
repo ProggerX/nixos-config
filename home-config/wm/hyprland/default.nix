@@ -89,7 +89,7 @@ gestures {
 $mainMod = SUPER
 
 bind = $mainMod, C, killactive, 
-bind = $mainMod SHIFT, L, exec, lockscreen
+bind = $mainMod SHIFT, L, exec, swaylock
 bind = $mainMod, O, pin
 bind = $mainMod, f, togglefloating, 
 bind = $mainMod, P, pseudo,
@@ -166,7 +166,7 @@ windowrulev2 = workspace 2,class:(firefox)
 windowrulev2 = float,class:(showmethekey-gtk)
 windowrulev2 = pin,class:(showmethekey-gtk)
 windowrulev2 = workspace 4,class:(org.telegram.desktop)
-windowrulev2 = workspace 3,class:(discord)
+windowrulev2 = workspace 3,class:(vesktop)
 windowrulev2 = workspace 4,class:(nchat)
 
 	'';
