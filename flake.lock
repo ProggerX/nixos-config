@@ -371,6 +371,22 @@
         "type": "github"
       }
     },
+    "newpkgs": {
+      "locked": {
+        "lastModified": 1717171962,
+        "narHash": "sha256-9WE4ZQsCPtj289r8j7DcbkmeJ0XjsS4zE7fpu5O53Jo=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "54d557c0b97e1f695f9c7f9ef7295f60ae3a3d78",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "master",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -499,6 +515,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "newpkgs": "newpkgs",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
         "nvimpkgs": "nvimpkgs",
