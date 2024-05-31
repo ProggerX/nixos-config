@@ -2,6 +2,6 @@
 {
 	programs.firefox = {
 		enable = true;
-		package = pkgs.firefox-devediton;
+		package = pkgs.firefox-devedition;
 	};
 }
