@@ -143,7 +143,6 @@ in {
     	tmux
     	obsidian
     	slurp
-    	bat
     	eza
     	python311
 		newpkgs.vesktop
