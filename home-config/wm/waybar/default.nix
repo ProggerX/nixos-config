@@ -2,6 +2,11 @@
 {
 	programs.waybar  = {
 		enable = true;
+		style = ''
+			* {
+				border-radius: 10px;
+			}
+		'';
 		settings = {
 			bar = {
     			position = "top";
