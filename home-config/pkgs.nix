@@ -72,7 +72,6 @@
 		translate-shell
 		gnome.cheese
 		github-cli
-		swaylock-effects
 		wego
 		mono
 		fswatch
