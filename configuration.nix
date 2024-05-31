@@ -92,7 +92,7 @@
 	services.libinput.touchpad.middleEmulation = true;
 	
 	services.displayManager.defaultSession = "hyprland";
-	services.displayManager.lightdm.enable = true;
+	services.displayManager.enable = true;
 	#services.displayManager.sddm.wayland.enable = true;
 	#services.displayManager.sddm.theme = "catppuccin-sddm-corners";
 	
