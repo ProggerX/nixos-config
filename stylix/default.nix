@@ -3,9 +3,9 @@
 	stylix = {
 
 	cursor = {
-		name = "Catppuccin-Mocha-Lavender-Cursors";
+		name = "Vimix-Cursors";
 		size = 35;
-		package = pkgs.catppuccin-cursors.mochaLavender;
+		package = pkgs.vimix-cursor-theme;
 	};
 	opacity = {
 		terminal = 0.7;
