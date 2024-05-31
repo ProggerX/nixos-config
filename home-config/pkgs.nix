@@ -146,7 +146,6 @@
     	bat
     	eza
 		discord
-		vesktop
     	python311
 		gcc
 		gnumake
