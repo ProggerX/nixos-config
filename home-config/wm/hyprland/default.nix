@@ -42,8 +42,6 @@ general {
     gaps_in = 5
     gaps_out = 10
     border_size = 5
-    col.active_border = $lavender
-    col.inactive_border = rgba(00000000)
     layout = dwindle
 }
 

@@ -25,7 +25,6 @@ in {
 			smartindent = true;
 		};
 		clipboard.register = "unnamedplus";
-		colorschemes.catppuccin.enable = true;
 
 		# Keymaps
 		keymaps = [
@@ -94,7 +93,6 @@ in {
 			oil.enable = true;
 			tmux-navigator.enable = true;
 			nvim-autopairs.enable = true;
-			transparent.enable = true;
 			toggleterm.enable = true;
 			lualine.enable = true;
 			barbar.enable = true;
