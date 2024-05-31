@@ -5,19 +5,9 @@
 
     imports = [
         ./pkgs.nix
-		./emanote
-		./zsh
-		./kitty
-        ./starship
-	    ./fish
-		./wofi
-	    ./eww
-	    ./neovim
-		./dunst
-		./hyprland
-		./pass
-		./wpaperd
-		./waybar
+		./other
+		./wm
+		./shell
     ];
 
     home.stateVersion = "24.05";
