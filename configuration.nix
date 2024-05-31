@@ -91,9 +91,10 @@
 	services.libinput.touchpad.tapping = true;
 	services.libinput.touchpad.middleEmulation = true;
 	
-	services.displayManager.sddm.enable = true;
-	services.displayManager.sddm.wayland.enable = true;
-	services.displayManager.sddm.theme = "catppuccin-sddm-corners";
+	services.displayManager.defaultSession = "hyprland";
+	services.displayManager.lightdm.enable = true;
+	#services.displayManager.sddm.wayland.enable = true;
+	#services.displayManager.sddm.theme = "catppuccin-sddm-corners";
 	
 	programs.hyprland.enable = true;
 	services.xserver.desktopManager.cinnamon.enable = true;
