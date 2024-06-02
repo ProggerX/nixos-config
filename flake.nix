@@ -36,9 +36,9 @@
 					({ pkgs, ... }: {
 						nixpkgs.overlays = [ rust-overlay.overlays.default ];
 						environment.systemPackages = [
-							pkgs.rust-bin.selectLatestNightlyWith (toolchain: toolchain.default.override {
+							(pkgs.rust-bin.selectLatestNightlyWith (toolchain: toolchain.default.override {
 								extensions = [ "rust-analyzer" ];
-							})
+							}))
 						];
 					})
 
