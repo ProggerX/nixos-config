@@ -3,7 +3,6 @@ let system = "x86_64-linux";
 newpkgs = import inputs.newpkgs { inherit system; };
 in {
     home.packages = with pkgs; [
-		newpkgs.rustup
 		fasole
 		lutris
 		musikcube
