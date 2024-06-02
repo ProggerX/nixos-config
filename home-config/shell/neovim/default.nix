@@ -196,6 +196,11 @@ in {
 			lsp = {
 				enable = true;
 				servers = {
+					rust-analyzer = {
+						installCargo = false;
+						installRustc = false;
+						enable = true;
+					};
 					clangd.enable = true;
 					nixd.enable = true;
 					pyright.enable = true;
