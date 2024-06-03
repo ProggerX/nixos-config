@@ -16,7 +16,7 @@ in {
 		godot_4
 		freecad
 		easyeffects
-		telegram-desktop
+		newpkgs.telegram-desktop
 		restish
 		xorg.libX11
 		ffmpeg
