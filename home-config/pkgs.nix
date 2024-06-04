@@ -97,7 +97,7 @@ in {
 		ripgrep
 		git
 		lazygit
-    	go
+    	newpkgs.go
 		bear
 		vitetris
 		tty-clock
