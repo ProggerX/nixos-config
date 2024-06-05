@@ -208,12 +208,12 @@ in {
 				};
 			};
 			# Lint
-			lint = {
-				enable = true;
-				lintersByFt = {
-					go = [ "golangcilint" ];
-				};
-			};
+			# lint = {
+			# 	enable = true;
+			# 	lintersByFt = {
+			# 		go = [ "golangcilint" ];
+			# 	};
+			# };
 			# Cmp
 			cmp = {
 				enable = true;
