@@ -164,6 +164,7 @@ windowrulev2 = noinitialfocus,class:^(xwaylandvideobridge)$
 
 windowrulev2 = workspace 2,class:(firefox)
 windowrulev2 = float,class:(showmethekey-gtk)
+windowrulev2 = float,class:(Tk)
 windowrulev2 = pin,class:(showmethekey-gtk)
 windowrulev2 = workspace 4,class:(org.telegram.desktop)
 windowrulev2 = workspace 3,class:(vesktop)
