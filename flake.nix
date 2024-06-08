@@ -47,7 +47,7 @@
             			home-manager.useUserPackages = true;
             			home-manager.backupFileExtension = "bkp";
 
-            			home-manager.users.proggerx = ./home-config;
+            			home-manager.users.proggerx = ./home;
 						
 						home-manager.extraSpecialArgs = { inherit inputs; };
 					}
