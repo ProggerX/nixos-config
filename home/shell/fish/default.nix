@@ -10,7 +10,7 @@
 	'';
 	programs.fish.shellAliases = {
 		q = "exit";
-		update = "sudo nixos-rebuild switch";
+		update = "sudo nixos-rebuild switch --flake /home/proggerx/nixos-config#pocket-os";
 		cls = "clear";
 		lt = "leetcode";
 		cat = "bat";
