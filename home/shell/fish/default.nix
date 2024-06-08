@@ -10,6 +10,8 @@
 	'';
 	programs.fish.shellAliases = {
 		q = "exit";
+		nput = "ssh -p9990 bald.su";
+		nget = "ssh -p9991 bald.su";
 		update = "sudo nixos-rebuild switch --flake /home/proggerx/nixos-config#pocket-os";
 		cls = "clear";
 		lt = "leetcode";
