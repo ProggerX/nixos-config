@@ -7,8 +7,8 @@
 			package = pkgs.vimix-cursor-theme;
 		};
 		opacity = {
-			terminal = 0.7;
-			applications = 0.8;
+			terminal = 0.9;
+			applications = 1;
 		};
 		fonts = {
 			sizes = {
