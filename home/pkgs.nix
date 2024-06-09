@@ -4,6 +4,7 @@ newpkgs = import inputs.newpkgs { inherit system; };
 in {
     home.packages = with pkgs; [
 		fasole
+		wmctrl
 		lutris
 		musikcube
 		ytmdl

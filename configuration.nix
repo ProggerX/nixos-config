@@ -168,6 +168,7 @@
 	
 	environment.systemPackages = with pkgs; [
 		vim 
+		gnomeExtensions.tray-icons-reloaded
 		wget
 		webkitgtk
 		wireguard-tools
