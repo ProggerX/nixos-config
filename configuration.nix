@@ -168,6 +168,8 @@
 	
 	environment.systemPackages = with pkgs; [
 		vim 
+		gnomeExtensions.clipboard-indicator-2
+		gnome3.gnome-tweaks
 		gnomeExtensions.tray-icons-reloaded
 		wget
 		webkitgtk
