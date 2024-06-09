@@ -91,13 +91,14 @@
 	services.libinput.touchpad.tapping = true;
 	services.libinput.touchpad.middleEmulation = true;
 	
-	services.displayManager.defaultSession = "hyprland";
-	services.displayManager.enable = true;
+	services.displayManager.defaultSession = "gnome";
+	services.xserver.displayManager.gdm.enable = true;
+	services.xserver.desktopManager.gnome.enable = true;
 	#services.displayManager.sddm.wayland.enable = true;
 	#services.displayManager.sddm.theme = "catppuccin-sddm-corners";
 	
 	programs.hyprland.enable = true;
-	services.xserver.desktopManager.cinnamon.enable = true;
+	#services.xserver.desktopManager.cinnamon.enable = true;
 	services.xserver.windowManager.qtile.enable = true;
 	services.greenclip.enable = true;
 	hardware.pulseaudio.enable = false;
@@ -163,7 +164,6 @@
 	services.dbus.enable = true;
 	xdg.portal = {
 		enable = true;
-		wlr.enable = true;
 	};
 	
 	environment.systemPackages = with pkgs; [
@@ -172,7 +172,6 @@
 		webkitgtk
 		wireguard-tools
 		polkit_gnome
-		xdg-desktop-portal-hyprland
 		nettools
 		catppuccin-gtk
 		pinentry-curses
@@ -230,5 +229,5 @@
 	
 	networking.firewall.enable = false;
 
-	system.stateVersion = "24.05"; 
+	system.stateVersion = "24.11"; 
 }

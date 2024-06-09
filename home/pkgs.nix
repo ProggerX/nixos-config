@@ -90,7 +90,7 @@ in {
 		minesweep-rs
 		element
 		viu
-		nodePackages.pyright
+		pyright
 		just
 		tmux
 		# gdb
