@@ -1,6 +1,6 @@
-{ lib, pkgs, ... }:
+{ lib, pkgs, config, ... }:
 {
-	wayland.windowManagers.sway = rec {
+	wayland.windowManagers.sway = {
 		enable = true;
 		config = {
 			bars = [];
