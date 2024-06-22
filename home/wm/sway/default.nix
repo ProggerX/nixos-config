@@ -40,9 +40,9 @@
 				{ command = "exec sleep 5; systemctl --user start kanshi.service"; }
 			];
 			assigns = {
-				"2: web" = [{ class = "^firefox$"; }];
-				"3: dsc" = [{ class = "^vesktop$"; }];
-				"4: tg" = [{ class = "^org.telegram.desktop$"; }];
+				"2" = [{ app_id = "^firefox-devedition$"; }];
+				"3" = [{ class = "^vesktop$"; }];
+				"4" = [{ app_id = "^org.telegram.desktop$"; }];
 			};
 		};
 	};
