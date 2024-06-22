@@ -32,12 +32,12 @@
 				"${mod}+shift+l" = "exec ${pkgs.swaylock}";
 			};
 			startup = [
-				{ command = "waybar"; }
+				{ command = "${pkgs.waybar}"; }
 				{ command = "wl-paste --watch cliphist store"; }
-				{ command = "wpaperd"; }
-				{ command = "firefox-devedition"; }
-				{ command = "telegram-desktop"; }
-				{ command = "vesktop"; }
+				{ command = "${pkgs.wpaperd}"; }
+				{ command = "${pkgs.firefox-devedition}"; }
+				{ command = "${pkgs.telegram-desktop}"; }
+				{ command = "${pkgs.vesktop}"; }
 				{ command = "exec sleep 5; systemctl --user start kanshi.service"; }
 			];
 			assigns = {
