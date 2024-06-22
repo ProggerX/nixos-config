@@ -14,6 +14,7 @@
 				};
 			};
 			modifier = "Mod4";
+			bindKeysToCode = true;
 			keybindings = let
 			mod = config.wayland.windowManager.sway.config.modifier;
 			in lib.mkOptionDefault {
