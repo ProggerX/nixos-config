@@ -41,7 +41,7 @@
 				{ command = "exec sleep 5; systemctl --user start kanshi.service"; }
 			];
 			assigns = {
-				"2" = [{ app_id = "^firefox-devedition$"; }];
+				"2" = [{ app_id = "^firefox$"; }];
 				"3" = [{ class = "^vesktop$"; }];
 				"4" = [{ app_id = "^org.telegram.desktop$"; }];
 			};
