@@ -97,7 +97,7 @@
 	#services.displayManager.sddm.wayland.enable = true;
 	#services.displayManager.sddm.theme = "catppuccin-sddm-corners";
 	
-	programs.hyprland.enable = true;
+	programs.sway.enable = true;
 	services.xserver.windowManager.qtile.enable = true;
 	services.greenclip.enable = true;
 	hardware.pulseaudio.enable = false;
@@ -213,6 +213,13 @@
 	programs.dconf.enable = true;
 	
 	systemd = {
+		user.services.kanshi = {
+			description = "kanshi daemon";
+			serviceConfig = {
+				Type = "simple";
+				ExecStart = ''${pkgs.kanshi}/bin/kanshi -c kanshi_config_file'';
+			};
+		};
 		user.services.polkit-gnome-authentication-agent-1 = {
 			description = "polkit-gnome-authentication-agent-1";
 			wantedBy = [ "graphical-session.target" ];

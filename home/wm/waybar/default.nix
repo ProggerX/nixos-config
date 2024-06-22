@@ -15,11 +15,11 @@
     			width = 1895;
     			spacing = 10;
 
-    			modules-center  = ["hyprland/window"];
-    			modules-left  = ["hyprland/workspaces"];
-    			modules-right  = ["tray" "custom/alsa" "battery" "hyprland/language" "clock"];
+    			modules-center  = ["sway/window"];
+    			modules-left  = ["sway/workspaces"];
+    			modules-right  = ["tray" "custom/alsa" "battery" "sway/language" "clock"];
 
-				"hyprland/workspaces" = {
+				"sway/workspaces" = {
 					format = "{icon}";
 					on-scroll-up = "hyprctl dispatch workspace e+1";
 					on-scroll-down = "hyprctl dispatch workspace e-1";
@@ -50,13 +50,13 @@
         			"format-alt" = "{:%Y-%m-%d}";
     			};
 
-				"hyprland/window" = {
+				"sway/window" = {
     				format = "{}";
     				separate-outputs = false;
     				max-length = 20;
 				};
 
-				"hyprland/language" = {
+				"sway/language" = {
     				format = "{}";
     				format-us = "US";
     				format-ru = "RU";

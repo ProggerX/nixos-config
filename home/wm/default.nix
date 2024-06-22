@@ -7,5 +7,6 @@
 		./waybar
 		./wpaperd
 		./hyprland
+		./sway
 	];
 }
