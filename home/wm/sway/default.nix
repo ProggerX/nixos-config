@@ -1,6 +1,6 @@
 { lib, pkgs, config, ... }:
 {
-	wayland.windowManagers.sway = {
+	wayland.windowManager.sway = {
 		enable = true;
 		config = {
 			bars = [];
