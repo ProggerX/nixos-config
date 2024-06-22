@@ -98,7 +98,6 @@
 	#services.displayManager.sddm.theme = "catppuccin-sddm-corners";
 	
 	programs.hyprland.enable = true;
-	#services.xserver.desktopManager.cinnamon.enable = true;
 	services.xserver.windowManager.qtile.enable = true;
 	services.greenclip.enable = true;
 	hardware.pulseaudio.enable = false;
@@ -162,13 +161,18 @@
 	};
 	
 	services.dbus.enable = true;
+	services.gnome.gnome-remote-desktop.enable = true;
 	xdg.portal = {
 		enable = true;
 	};
 	
 	environment.systemPackages = with pkgs; [
 		vim 
-		gnomeExtensions.clipboard-indicator-2
+		gnomeExtensions.burn-my-windows
+		gnomeExtensions.compiz-windows-effect
+		gnomeExtensions.pop-shell
+		gnomeExtensions.clipboard-indicator
+		gnomeExtensions.clipboard-history
 		gnome3.gnome-tweaks
 		gnomeExtensions.tray-icons-reloaded
 		wget

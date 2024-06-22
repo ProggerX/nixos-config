@@ -3,13 +3,18 @@ let system = "x86_64-linux";
 newpkgs = import inputs.newpkgs { inherit system; };
 in {
     home.packages = with pkgs; [
+		obs-studio
 		fasole
 		wmctrl
 		lutris
+		heroic
+		typescript
 		musikcube
+		deskreen
 		ytmdl
 		xournalpp
 		mindustry-wayland
+		ags
 		comma
 		aseprite
 		wineWowPackages.full
