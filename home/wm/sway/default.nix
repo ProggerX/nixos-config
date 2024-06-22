@@ -29,6 +29,7 @@
 				"Print" = "exec grim -g\"$(slurp)\" - | wl-copy";
 				"${mod}+u" = "fullscreen toggle";
 				"${mod}+f" = "floating toggle";
+				"${mod}+shift+l" = "exec ${pkgs.swaylock}";
 			};
 			startup = [
 				{ command = "waybar"; }
