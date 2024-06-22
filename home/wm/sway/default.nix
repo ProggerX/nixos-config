@@ -29,15 +29,15 @@
 				"Print" = "exec grim -g\"$(slurp)\" - | wl-copy";
 				"${mod}+u" = "fullscreen toggle";
 				"${mod}+f" = "floating toggle";
-				"${mod}+ctrl+l" = "exec ${pkgs.swaylock}";
+				"${mod}+ctrl+l" = "exec ${pkgs.swaylock}/bin/swaylock";
 			};
 			startup = [
-				{ command = "${pkgs.waybar}"; }
-				{ command = "wl-paste --watch cliphist store"; }
-				{ command = "${pkgs.wpaperd}"; }
-				{ command = "${pkgs.firefox-devedition}"; }
-				{ command = "${pkgs.telegram-desktop}"; }
-				{ command = "${pkgs.vesktop}"; }
+				{ command = "${pkgs.waybar}/bin/waybar"; }
+				{ command = "${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store"; }
+				{ command = "${pkgs.wpaperd}/bin/wpaperd"; }
+				{ command = "${pkgs.firefox-devedition}/bin/firefox-devedition"; }
+				{ command = "${pkgs.telegram-desktop}/bin/telegram-desktop"; }
+				{ command = "${pkgs.vesktop}/bin/vesktop"; }
 				{ command = "exec sleep 5; systemctl --user start kanshi.service"; }
 			];
 			assigns = {
