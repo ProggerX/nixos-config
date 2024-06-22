@@ -26,7 +26,9 @@
 				"${mod}+r" = "exec rofi -show drun";
 				"alt+space" = "exec rofi -show run";
 				"${mod}+v" = "exec cliphist list | rofi -dmenu | cliphist decode | wl-copy";
-				"print" = "exec grim -g'$(slurp)' - | wl-copy";
+				"Print" = "exec grim -g\"$(slurp)\" - | wl-copy";
+				"${mod}+u" = "fullscreen toggle";
+				"${mod}+f" = "floating toggle";
 			};
 			startup = [
 				{ command = "waybar"; }
