@@ -13,8 +13,11 @@
 					xkb_options = "caps:escape,grp:win_space_toggle";
 				};
 			};
+			gaps = {
+				outer = 5;
+			};
 			modifier = "Mod4";
-			bindKeysToCode = true;
+			bindkeysToCode = true;
 			keybindings = let
 			mod = config.wayland.windowManager.sway.config.modifier;
 			in lib.mkOptionDefault {
@@ -29,8 +32,16 @@
 				{ command = "waybar"; }
 				{ command = "wl-paste --watch cliphist store"; }
 				{ command = "wpaperd"; }
+				{ command = "firefox-devedition"; }
+				{ command = "telegram-desktop"; }
+				{ command = "vesktop"; }
 				{ command = "exec sleep 5; systemctl --user start kanshi.service"; }
 			];
+			assigns = {
+				"2: web" = [{ class = "^firefox$"; }];
+				"3: dsc" = [{ class = "^vesktop$"; }];
+				"4: tg" = [{ class = "^org.telegram.desktop$"; }];
+			};
 		};
 	};
 }
