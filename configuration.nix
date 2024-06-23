@@ -23,6 +23,7 @@
 	};
 
 	services.xserver.videoDrivers = ["nouveau" "intel"];
+	services.tailscale.enable = true;
 
 	networking.hostName = "pocket-os";
 	networking.firewall = {
