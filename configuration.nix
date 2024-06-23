@@ -79,9 +79,9 @@
 	services.libinput.touchpad.middleEmulation = true;
 	
 	services.displayManager.defaultSession = "sway";
-	services.displayManager.sddm.enable = true;
-	services.displayManager.sddm.wayland.enable = true;
-	services.displayManager.sddm.theme = "Elegant";
+	services.displayManager.enable = true;
+	services.xserver.displayManager.lightdm.greeters.mini.enable = true;
+	services.xserver.displayManager.lightdm.greeters.mini.user = "proggerx";
 	#services.xserver.desktopManager.gnome.enable = true;
 	#services.displayManager.sddm.wayland.enable = true;
 	#services.displayManager.sddm.theme = "catppuccin-sddm-corners";
@@ -157,7 +157,13 @@
 	
 	environment.systemPackages = with pkgs; [
 		vim 
-		elegant-sddm
+		(pkgs.where-is-my-sddm-theme.override {
+			themeConfig.General = {
+				background = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake-white.svg";
+				backgroundMode = "none";
+			};
+			variants = ["qt5"];
+		})
 		gnomeExtensions.burn-my-windows
 		gnomeExtensions.compiz-windows-effect
 		gnomeExtensions.pop-shell
