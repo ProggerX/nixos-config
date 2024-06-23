@@ -38,7 +38,7 @@
 				{ command = "${pkgs.firefox-devedition}/bin/firefox-devedition"; }
 				{ command = "${pkgs.telegram-desktop}/bin/telegram-desktop"; }
 				{ command = "${pkgs.vesktop}/bin/vesktop"; }
-				{ command = "exec sleep 5; systemctl --user start kanshi.service"; }
+				{ command = "sleep 5; systemctl --user start kanshi.service"; }
 			];
 			assigns = {
 				"2" = [{ app_id = "^firefox$"; }];

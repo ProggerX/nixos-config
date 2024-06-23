@@ -79,7 +79,9 @@
 	services.libinput.touchpad.middleEmulation = true;
 	
 	services.displayManager.defaultSession = "sway";
-	services.xserver.displayManager.lightdm.enable = true;
+	services.displayManager.sddm.enable = true;
+	services.displayManager.sddm.wayland.enable = true;
+	services.displayManager.sddm.theme = "where_is_my_sddm_theme_qt5";
 	#services.xserver.desktopManager.gnome.enable = true;
 	#services.displayManager.sddm.wayland.enable = true;
 	#services.displayManager.sddm.theme = "catppuccin-sddm-corners";
@@ -155,6 +157,13 @@
 	
 	environment.systemPackages = with pkgs; [
 		vim 
+		(pkgs.where-is-my-sddm-theme.override {
+			themeConfig.General = {
+				background = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake-white.svg";
+				backgroundMode = "none";
+			};
+			variants = ["qt5"];
+		})
 		gnomeExtensions.burn-my-windows
 		gnomeExtensions.compiz-windows-effect
 		gnomeExtensions.pop-shell
@@ -204,7 +213,7 @@
 			description = "kanshi daemon";
 			serviceConfig = {
 				Type = "simple";
-				ExecStart = ''${pkgs.kanshi}/bin/kanshi -c kanshi_config_file'';
+				ExecStart = ''${pkgs.kanshi}/bin/kanshi -c ${./kanshi.conf}'';
 			};
 		};
 		user.services.polkit-gnome-authentication-agent-1 = {
