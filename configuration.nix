@@ -239,5 +239,15 @@
 	
 	networking.firewall.enable = false;
 
+	fileSystems."/temp" = {
+		device = "tmpfs";
+		fsType = "tmpfs";
+		options = [
+			"size=5G"
+			"users"
+			"nofail"
+		];
+	};
+
 	system.stateVersion = "24.11"; 
 }
