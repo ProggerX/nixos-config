@@ -11,7 +11,7 @@
 			eval "$(zoxide init zsh --cmd cd)"
 			gof
 			if [ -z "$TMUX" ]; then
-				exec tmux new -s $(date +%T) && exit;
+				exec tmux new && exit;
 			fi
 		'';
 
