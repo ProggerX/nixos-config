@@ -76,7 +76,7 @@
 #	services.xserver.displayManager.lightdm.greeters.mini.enable = true;
 #	services.xserver.displayManager.lightdm.greeters.mini.user = "proggerx";
 	#services.xserver.desktopManager.gnome.enable = true;
-	#services.displayManager.sddm.wayland.enable = true;
+	services.displayManager.sddm.wayland.enable = true;
 	#services.displayManager.sddm.theme = "catppuccin-sddm-corners";
 	
 	programs.sway.enable = true;
