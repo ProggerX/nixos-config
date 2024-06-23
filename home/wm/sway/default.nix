@@ -14,7 +14,8 @@
 				};
 			};
 			gaps = {
-				outer = 5;
+				outer = 15;
+				inner = 5;
 			};
 			modifier = "Mod4";
 			bindkeysToCode = true;
