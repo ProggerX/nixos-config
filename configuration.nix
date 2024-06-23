@@ -22,15 +22,7 @@
 		driSupport32Bit = true;
 	};
 
-	services.xserver.videoDrivers = ["nvidia" "intel"];
-	hardware.nvidia = {
-		package = config.boot.kernelPackages.nvidiaPackages.beta;
-		modesetting.enable = true;
-		powerManagement.enable = false;
-		powerManagement.finegrained = false;
-		open = false;
-		nvidiaSettings = true;
-	};
+	services.xserver.videoDrivers = ["nouveau" "intel"];
 
 	networking.hostName = "pocket-os";
 	networking.firewall = {
@@ -52,6 +44,7 @@
 	boot.supportedFilesystems = [ "ntfs" ];
 	
 	boot.extraModulePackages = [ config.boot.kernelPackages.rtl88x2bu ];
+	boot.kernelModules = [ "nouveau" ];
 	
 	networking.networkmanager.enable = true;	
 	nix.settings.experimental-features = ["nix-command" "flakes"];
