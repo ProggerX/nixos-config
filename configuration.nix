@@ -105,7 +105,7 @@
 #	services.xserver.displayManager.lightdm.greeters.mini.user = "proggerx";
 	#services.xserver.desktopManager.gnome.enable = true;
 	services.displayManager.sddm.wayland.enable = true;
-	#services.displayManager.sddm.theme = "catppuccin-sddm-corners";
+	services.displayManager.sddm.theme = "where_is_my_sddm_theme_qt5";
 	
 	programs.sway.enable = true;
 	services.xserver.windowManager.qtile.enable = true;
