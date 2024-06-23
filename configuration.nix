@@ -249,5 +249,12 @@
 		];
 	};
 
+	swapDevices = [
+		{
+			device = "/dev/disk/by-uuid/D83EBBF3-EC72-4E93-9B40-20AD34FC6E04";
+		}
+	];
+	zramSwap.enable = true;
+
 	system.stateVersion = "24.11"; 
 }
