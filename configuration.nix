@@ -133,7 +133,7 @@
 		DIRENV_LOG_FORMAT= "";
 		WLR_NO_HARDWARE_CURSORS="1";
 	};
-	users.defaultUserShell = pkgs.zsh;
+	users.defaultUserShell = pkgs.fish;
 	
 	services.xserver.xkb.layout = "us";
 	services.xserver.xkb.options = "eurosign:e,caps:escape";

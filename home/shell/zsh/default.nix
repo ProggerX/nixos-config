@@ -10,9 +10,6 @@
 			eval "$(direnv hook zsh)"
 			eval "$(zoxide init zsh --cmd cd)"
 			gof
-			if [ -z "$TMUX" ]; then
-				exec tmux new && exit;
-			fi
 		'';
 
 		shellAliases = {
