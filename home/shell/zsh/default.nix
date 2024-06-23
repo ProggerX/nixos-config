@@ -31,6 +31,8 @@
 			gin = "go install";
 			gbld = "go build";
 			grun = "go run .";
+			nput = "ssh -p9990 bald.su";
+			nget = "ssh -p9991 bald.su";
 		};
 	};
 }

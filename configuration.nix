@@ -112,7 +112,7 @@
 		DIRENV_LOG_FORMAT= "";
 		WLR_NO_HARDWARE_CURSORS="1";
 	};
-	users.defaultUserShell = pkgs.fish;
+	users.defaultUserShell = pkgs.zsh;
 	
 	services.xserver.xkb.layout = "us";
 	services.xserver.xkb.options = "eurosign:e,caps:escape";
@@ -164,13 +164,7 @@
 			};
 			variants = ["qt5"];
 		})
-		gnomeExtensions.burn-my-windows
-		gnomeExtensions.compiz-windows-effect
-		gnomeExtensions.pop-shell
-		gnomeExtensions.clipboard-indicator
-		gnomeExtensions.clipboard-history
 		gnome3.gnome-tweaks
-		gnomeExtensions.tray-icons-reloaded
 		wget
 		webkitgtk
 		wireguard-tools
