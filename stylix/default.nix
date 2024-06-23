@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
 	stylix = {
+		enable = true;
 		cursor = {
 			name = "Vimix-Cursors";
 			size = 35;
