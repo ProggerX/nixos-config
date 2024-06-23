@@ -32,6 +32,7 @@
 
 					home-manager.nixosModules.home-manager
 					stylix.nixosModules.stylix
+					./stylix
 
 					({ pkgs, ... }: {
 						nixpkgs.overlays = [ rust-overlay.overlays.default ];
@@ -51,8 +52,6 @@
 						
 						home-manager.extraSpecialArgs = { inherit inputs; };
 					}
-
-					./stylix
                 ];
             };
 		};
