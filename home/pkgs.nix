@@ -16,7 +16,7 @@ in {
 		mindustry-wayland
 		ags
 		comma
-		aseprite
+		#aseprite
 		wineWowPackages.full
 		wails
 		godot_4
