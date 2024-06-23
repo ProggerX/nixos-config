@@ -18,7 +18,7 @@
 		shellAliases = {
 			ms = "musikcube";
 			dl = "ytmdl";
-			update = "sudo nixos-rebuild switch";
+			update = "sudo nixos-rebuild switch --flake /home/proggerx/nixos-config#pocket-os";
 			q = "exit";
 			cls = "clear";
 			lt = "leetcode";

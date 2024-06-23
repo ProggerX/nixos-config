@@ -39,6 +39,7 @@
 				{ command = "${pkgs.firefox-devedition}/bin/firefox-devedition"; }
 				{ command = "${pkgs.telegram-desktop}/bin/telegram-desktop"; }
 				{ command = "${pkgs.vesktop}/bin/vesktop"; }
+				{ command = "${pkgs.tmux}/bin/tmux start-server"; }
 				{ command = "${pkgs.systemd}/bin/systemctl --user start kanshi.service"; }
 			];
 			assigns = {
