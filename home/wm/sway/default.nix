@@ -14,7 +14,7 @@
 				};
 			};
 			gaps = {
-				outer = 7;
+				outer = 5;
 				inner = 5;
 			};
 			modifier = "Mod4";
