@@ -10,12 +10,15 @@
 			eval "$(direnv hook zsh)"
 			eval "$(zoxide init zsh --cmd cd)"
 			gof
+			if [ -z "$TMUX" ]; then
+				exec tmux new -s $(date +%T) && exit;
+			fi
 		'';
 
 		shellAliases = {
 			ms = "musikcube";
 			dl = "ytmdl";
-			update = "sudo nixos-rebuild switch --flake /etc/nixos#pocket-os";
+			update = "sudo nixos-rebuild switch";
 			q = "exit";
 			cls = "clear";
 			lt = "leetcode";
