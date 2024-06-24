@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
 	imports = [ 
@@ -279,7 +279,7 @@
 
 	specialisation = {
 		gaming.configuration = {
-			services.xserver.videoDrivers = ["nvidia"];
+			services.xserver.videoDrivers = lib.mkForce ["nvidia"];
   
   hardware.nvidia.modesetting.enable = true;
   hardware.nvidia.powerManagement.enable = false;
@@ -311,7 +311,7 @@ in config.boot.kernelPackages.nvidiaPackages.mkDriver {
  };
 
 services.xserver.desktopManager.gnome.enable = true;
-services.displayManager.defaultSession = "gnome";
+services.displayManager.defaultSession = lib.mkForce "gnome";
 		};
 	};
 }
