@@ -100,6 +100,7 @@ in {
 
 			trouble.settings = {
 				auto_close = true;
+				modes.diagnostics.auto_open = true;
 			};
 
 			alpha.layout = let
