@@ -99,7 +99,6 @@ in {
 			neocord.enable = true;
 
 			trouble.settings = {
-				auto_open = true;
 				auto_close = true;
 			};
 
