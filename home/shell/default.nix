@@ -3,7 +3,7 @@
 		./zsh
 		./bat
 		./fish
-		./neovim
+		#./neovim
 		./pass
 		./kitty
 		./starship
