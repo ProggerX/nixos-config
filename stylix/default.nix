@@ -2,6 +2,7 @@
 {
 	stylix = {
 		enable = true;
+		targets.firefox.profileNames = ["dev-edition-default"];
 		cursor = {
 			name = "Vimix-Cursors";
 			size = 35;
