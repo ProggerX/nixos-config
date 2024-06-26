@@ -3,7 +3,7 @@
 		./zsh
 		./bat
 		./fish
-		#./neovim
+		./old_nixvim
 		./pass
 		./kitty
 		./starship

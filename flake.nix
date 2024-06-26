@@ -17,10 +17,10 @@
             url = "github:nix-community/home-manager/";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-		turnip = {
-			url = "github:ProggerX/turnip";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
+		#turnip = {
+			#url = "github:ProggerX/turnip";
+			#inputs.nixpkgs.follows = "nixpkgs";
+		#};
 		stylix.url = "github:danth/stylix";
     };
 
@@ -38,7 +38,7 @@
 					inputs.turnip.nixosModules.turnip
 					stylix.nixosModules.stylix
 					./stylix
-					./turnip
+					#./turnip
 
 					({ pkgs, ... }: {
 						nixpkgs.overlays = [ rust-overlay.overlays.default ];
