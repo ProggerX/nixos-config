@@ -316,7 +316,6 @@ services.displayManager.defaultSession = lib.mkForce "gnome";
 	};
 
 	services.terraria.enable = true;
-	services.terraria.port = 5555;
 services.frp = {
 		enable = true;
 		role = "client";
@@ -328,8 +327,8 @@ services.frp = {
 					name = "terka";
 					type = "tcp";
 					localIP = "127.0.0.1";
-					localPort = 5555;
-					remotePort = 5555;
+					localPort = 7777;
+					remotePort = 7777;
 				}
 			];
 		};
