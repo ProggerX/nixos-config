@@ -35,7 +35,7 @@
                     ./configuration.nix
 
 					home-manager.nixosModules.home-manager
-					inputs.turnip.nixosModules.turnip
+					#inputs.turnip.nixosModules.turnip
 					stylix.nixosModules.stylix
 					./stylix
 					#./turnip
