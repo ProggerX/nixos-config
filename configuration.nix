@@ -312,6 +312,25 @@ in config.boot.kernelPackages.nvidiaPackages.mkDriver {
 
 services.xserver.desktopManager.gnome.enable = true;
 services.displayManager.defaultSession = lib.mkForce "gnome";
+	services.terraria.enable = true;
+	services.terraria.port = 5555;
+services.frp = {
+		enable = true;
+		role = "client";
+		settings = {
+			serverAddr = "5.35.87.192";
+			serverPort = 7000;
+			proxies = [
+				{
+					name = "terka";
+					type = "tcp";
+					localIP = "127.0.0.1";
+					localPort = 5555;
+					remotePort = 5555;
+				}
+			];
 		};
+	};
+	};
 	};
 }
