@@ -312,6 +312,9 @@ in config.boot.kernelPackages.nvidiaPackages.mkDriver {
 
 services.xserver.desktopManager.gnome.enable = true;
 services.displayManager.defaultSession = lib.mkForce "gnome";
+	};
+	};
+
 	services.terraria.enable = true;
 	services.terraria.port = 5555;
 services.frp = {
@@ -330,7 +333,5 @@ services.frp = {
 				}
 			];
 		};
-	};
-	};
 	};
 }
