@@ -3,6 +3,7 @@ let system = "x86_64-linux";
 newpkgs = import inputs.newpkgs { inherit system; };
 in {
     home.packages = with pkgs; [
+		tic-80
 		obs-studio
 		fasole
 		wmctrl
