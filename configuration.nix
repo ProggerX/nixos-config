@@ -315,7 +315,7 @@ services.displayManager.defaultSession = lib.mkForce "gnome";
 	};
 	};
 
-	services.terraria.enable = true;
+	services.terraria.enable = false;
 services.frp = {
 		enable = true;
 		role = "client";
