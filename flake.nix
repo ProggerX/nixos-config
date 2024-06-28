@@ -39,6 +39,11 @@
 					stylix.nixosModules.stylix
 					./stylix
 					./turnip
+					./gaming.nix
+
+					{
+						imports = [ ./hardware-configuration.nix ];
+					}
 
 					({ pkgs, ... }: {
 						nixpkgs.overlays = [ rust-overlay.overlays.default ];
@@ -47,6 +52,43 @@
 								extensions = [ "rust-analyzer" ];
 							}))
 						];
+					})
+
+					{
+            			home-manager.useGlobalPkgs = true;
+            			home-manager.useUserPackages = true;
+            			home-manager.backupFileExtension = "old";
+
+            			home-manager.users.proggerx = ./home;
+						
+						home-manager.extraSpecialArgs = { inherit inputs; };
+					}
+                ];
+            };
+            laptop = nixpkgs.lib.nixosSystem {
+                system = "${system}";
+                
+                modules = [
+                    ./configuration.nix
+
+					home-manager.nixosModules.home-manager
+					inputs.turnip.nixosModules.turnip
+					stylix.nixosModules.stylix
+					./stylix
+					./turnip
+
+					({ pkgs, ... }: {
+						nixpkgs.overlays = [ rust-overlay.overlays.default ];
+						environment.systemPackages = [
+							(pkgs.rust-bin.selectLatestNightlyWith(toolchain: toolchain.default.override {
+								extensions = [ "rust-analyzer" ];
+							}))
+						];
+					})
+
+					({ lib, ... }: {
+						networking.hostName = lib.mkForce "laptop";
+						imports = [ ./laptop-hardware-configuration.nix ];
 					})
 
 					{
