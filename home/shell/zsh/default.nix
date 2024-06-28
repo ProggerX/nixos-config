@@ -7,6 +7,7 @@
 		syntaxHighlighting.enable = true;
 	
 		initExtra = ''
+			setopt completealiases
 			eval "$(direnv hook zsh)"
 			eval "$(zoxide init zsh --cmd cd)"
 			gof
@@ -15,7 +16,7 @@
 		shellAliases = {
 			ms = "musikcube";
 			dl = "ytmdl";
-			update = "sudo nixos-rebuild switch --flake /home/proggerx/nixos-config#pocket-os";
+			update = "sudo nixos-rebuild switch --flake /home/proggerx/nixos-config";
 			q = "exit";
 			cls = "clear";
 			lt = "leetcode";
