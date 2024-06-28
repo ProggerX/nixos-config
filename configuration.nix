@@ -170,7 +170,7 @@
 	};
 	
 	services.dbus.enable = true;
-	services.gnome.gnome-remote-desktop.enable = true;
+#services.gnome.gnome-remote-desktop.enable = true;
 	xdg.portal = {
 		enable = true;
 	};
