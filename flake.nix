@@ -24,7 +24,7 @@
 		stylix.url = "github:danth/stylix";
     };
 
-    outputs = { nixpkgs, stylix, home-manager, rust-overlay, ...}@inputs:
+    outputs = { nixpkgs, stylix, home-manager, ...}@inputs:
 		let system = "x86_64-linux";
 		in {
         nixosConfigurations =
@@ -35,16 +35,29 @@
             ./configuration.nix
 			./stylix
 			./turnip
-			./modules/home.nix
-			./modules/rust.nix
+
+			({ ... }: {
+				home-manager.useGlobalPkgs = true;
+				home-manager.useUserPackages = true;
+				home-manager.backupFileExtension = "old";
+				home-manager.users.proggerx = ./home;
+				home-manager.extraSpecialArgs = { inherit inputs; };
+			})
+			
+			({ pkgs,  ... }: {
+				nixpkgs.overlays = [ inputs.rust-overlay.overlays.default ];
+				environment.systemPackages = [
+					(pkgs.rust-bin.selectLatestNightlyWith(toolchain: toolchain.default.override {
+						extensions = [ "rust-analyzer" ];
+					}))
+				];
+			})
 		]; in {
             pocket-os = nixpkgs.lib.nixosSystem {
                 system = "${system}";
                 
-                modules = [
-					base
-					./modules/gaming.nix
-
+                modules = base ++ [
+					./gaming.nix
 					{
 						imports = [ ./hardware-configuration.nix ];
 					}
@@ -52,9 +65,7 @@
             };
             laptop = nixpkgs.lib.nixosSystem {
                 system = "${system}";
-                modules = [
-					base
-
+                modules = base ++ [
 					({ lib, ... }: {
 						networking.hostName = lib.mkForce "laptop";
 						imports = [ ./laptop-hardware-configuration.nix ];
