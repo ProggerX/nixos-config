@@ -27,79 +27,38 @@
     outputs = { nixpkgs, stylix, home-manager, rust-overlay, ...}@inputs:
 		let system = "x86_64-linux";
 		in {
-        nixosConfigurations = {
+        nixosConfigurations =
+		let base = [
+			home-manager.nixosModules.home-manager
+			inputs.turnip.nixosModules.turnip
+			stylix.nixosModules.stylix
+            ./configuration.nix
+			./stylix
+			./turnip
+			./modules/home.nix
+			./modules/rust.nix
+		]; in {
             pocket-os = nixpkgs.lib.nixosSystem {
                 system = "${system}";
                 
                 modules = [
-                    ./configuration.nix
-
-					home-manager.nixosModules.home-manager
-					inputs.turnip.nixosModules.turnip
-					stylix.nixosModules.stylix
-					./stylix
-					./turnip
-					./gaming.nix
+					base
+					./modules/gaming.nix
 
 					{
 						imports = [ ./hardware-configuration.nix ];
-					}
-
-					({ pkgs, ... }: {
-						nixpkgs.overlays = [ rust-overlay.overlays.default ];
-						environment.systemPackages = [
-							(pkgs.rust-bin.selectLatestNightlyWith(toolchain: toolchain.default.override {
-								extensions = [ "rust-analyzer" ];
-							}))
-						];
-					})
-
-					{
-            			home-manager.useGlobalPkgs = true;
-            			home-manager.useUserPackages = true;
-            			home-manager.backupFileExtension = "old";
-
-            			home-manager.users.proggerx = ./home;
-						
-						home-manager.extraSpecialArgs = { inherit inputs; };
 					}
                 ];
             };
             laptop = nixpkgs.lib.nixosSystem {
                 system = "${system}";
-                
                 modules = [
-                    ./configuration.nix
-
-					home-manager.nixosModules.home-manager
-					inputs.turnip.nixosModules.turnip
-					stylix.nixosModules.stylix
-					./stylix
-					./turnip
-
-					({ pkgs, ... }: {
-						nixpkgs.overlays = [ rust-overlay.overlays.default ];
-						environment.systemPackages = [
-							(pkgs.rust-bin.selectLatestNightlyWith(toolchain: toolchain.default.override {
-								extensions = [ "rust-analyzer" ];
-							}))
-						];
-					})
+					base
 
 					({ lib, ... }: {
 						networking.hostName = lib.mkForce "laptop";
 						imports = [ ./laptop-hardware-configuration.nix ];
 					})
-
-					{
-            			home-manager.useGlobalPkgs = true;
-            			home-manager.useUserPackages = true;
-            			home-manager.backupFileExtension = "old";
-
-            			home-manager.users.proggerx = ./home;
-						
-						home-manager.extraSpecialArgs = { inherit inputs; };
-					}
                 ];
             };
 		};
