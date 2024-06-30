@@ -61,7 +61,7 @@ in {
 		curl
 		wget
 		neovim
-];
+	];
 
 	services.openssh = {
 		enable = true;
@@ -81,5 +81,5 @@ in {
 	};
 
 	hardware.enableRedistributableFirmware = true;
-	system.stateVersion = "23.11";
+	system.stateVersion = "24.05";
 }
