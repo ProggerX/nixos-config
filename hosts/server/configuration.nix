@@ -95,7 +95,7 @@ in {
 	containers.test = {
 		privateNetwork = true;
 		hostBridge = "br0";
-		localAddress = "192.168.0.18";
+		localAddress = "192.168.0.18/24";
 		config = {};
 	};
 }
