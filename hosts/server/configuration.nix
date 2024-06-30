@@ -84,11 +84,11 @@ in {
 	system.stateVersion = "24.05";
 
 	networking = {
-		bridges.br0.interfaces = [ "end0" ];
-		interfaces."br0".ipv4.addresses= [{
-			address = "192.168.0.17";
-			prefixLength = 24;
-		}];
+		#bridges.br0.interfaces = [ "end0" ];
+		#interfaces."br0".ipv4.addresses= [{
+			#address = "192.168.0.17";
+			#prefixLength = 24;
+		#}];
 		defaultGateway = "192.168.0.1";
 		nat = {
 			enable = true;
