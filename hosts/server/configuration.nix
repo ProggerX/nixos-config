@@ -84,24 +84,19 @@ in {
 	system.stateVersion = "24.05";
 
 	networking = {
-		#bridges.br0.interfaces = [ "end0" ];
-		#interfaces."br0".ipv4.addresses= [{
-			#address = "192.168.0.17";
-			#prefixLength = 24;
-		#}];
+		nameservers = ["1.1.1.1" "1.0.0.1"];
+		bridges.br0.interfaces = [ "end0" ];
+		interfaces."br0".ipv4.addresses= [{
+			address = "192.168.0.17";
+			prefixLength = 24;
+		}];
 		defaultGateway = "192.168.0.1";
-		nat = {
-			enable = true;
-			internalInterfaces = [ "ve-+" ];
-			externalInterface = "end0";
-		};
 	};
 
 	containers.test = {
 		privateNetwork = true;
-		#hostBridge = "br0";
+		hostBridge = "br0";
 		localAddress = "192.168.0.30/24";
-		hostAddress = "192.168.0.16";
 		config = {
 			networking = {
 				defaultGateway = "192.168.0.1";
