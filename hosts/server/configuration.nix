@@ -84,7 +84,6 @@ in {
 	system.stateVersion = "24.05";
 
 	networking = {
-		nameservers = ["192.168.0.1"];
 		bridges.br0.interfaces = [ "end0" ];
 		interfaces."br0".ipv4.addresses= [{
 			address = "192.168.0.17";
