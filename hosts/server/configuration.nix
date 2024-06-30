@@ -98,6 +98,7 @@ in {
 		hostBridge = "br0";
 		localAddress = "192.168.0.30/24";
 		config = {
+			system.stateVersion = "24.05";
 			networking = {
 				defaultGateway = "192.168.0.1";
 				nameservers = ["217.10.39.4"];
