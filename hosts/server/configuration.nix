@@ -96,6 +96,11 @@ in {
 		privateNetwork = true;
 		hostBridge = "br0";
 		localAddress = "192.168.0.20/24";
-		config = {};
+		config = {
+			networking = {
+				defaultGateway = "192.168.0.1";
+				nameservers = ["8.8.8.8"];
+			};
+		};
 	};
 }
