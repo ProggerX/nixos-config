@@ -84,6 +84,7 @@ in {
 	system.stateVersion = "24.05";
 
 	networking = {
+		nameservers = ["217.10.39.4"];
 		bridges.br0.interfaces = [ "end0" ];
 		interfaces."br0".ipv4.addresses= [{
 			address = "192.168.0.17";
@@ -99,7 +100,7 @@ in {
 		config = {
 			networking = {
 				defaultGateway = "192.168.0.1";
-				nameservers = ["192.168.0.1"];
+				nameservers = ["217.10.39.4"];
 				useHostResolvConf = lib.mkForce false;
 			};
 		};
