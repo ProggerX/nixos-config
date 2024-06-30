@@ -99,7 +99,7 @@ in {
 		config = {
 			networking = {
 				defaultGateway = "192.168.0.1";
-				nameservers = ["8.8.8.8"];
+				nameservers = ["1.1.1.1" "1.0.0.1"];
 				useHostResolvConf = lib.mkForce false;
 			};
 			services.resolved.enable = true;
