@@ -1,5 +1,10 @@
-{ ... }:
+{ inputs, ... }:
 {
+	imports = [
+		inputs.site.nixosModules.site
+		inputs.homepage.nixosModules.homepage
+		inputs.notie.nixosModules.notie
+	];
 	server.site.enable = true;
 	server.homepage.enable = true;
 	server.searx.enable = true;

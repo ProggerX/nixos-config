@@ -38,68 +38,37 @@
 		};
 	};
 
-	outputs = { nixpkgs, stylix, home-manager, ...}@inputs:
-		let system = "x86_64-linux";
-		in {
-		nixosConfigurations =
-		let base = [
-			home-manager.nixosModules.home-manager
-			inputs.turnip.nixosModules.turnip
-			stylix.nixosModules.stylix
-			./stylix
-			./turnip
-
-			({ ... }: {
-				home-manager.useGlobalPkgs = true;
-				home-manager.useUserPackages = true;
-				home-manager.backupFileExtension = "old";
-				home-manager.users.proggerx = ./home;
-				home-manager.extraSpecialArgs = { inherit inputs; };
-			})
-			
-			({ pkgs,  ... }: {
-				nixpkgs.overlays = [ inputs.rust-overlay.overlays.default ];
-				environment.systemPackages = [
-					(pkgs.rust-bin.selectLatestNightlyWith(toolchain: toolchain.default.override {
-						extensions = [ "rust-analyzer" ];
-					}))
-				];
-			})
-		]; in {
+	outputs = { nixpkgs, ...}@inputs: {
+		nixosConfigurations = {
 			pocket-os = nixpkgs.lib.nixosSystem {
-				system = "${system}";
-				
-				modules = base ++ [
-					./hosts/pocket-os/gaming.nix
+				system = "x86_64-linux";
+				specialArgs = { inherit inputs; };
+				modules = [
+					./modules/base.nix
+					./modules/home.nix
+					./modules/gaming.nix
 					./hosts/pocket-os/configuration.nix
-					{
-						imports = [ ./hosts/pocket-os/hardware-configuration.nix ];
-					}
+					./hosts/pocket-os/hardware-configuration.nix
 				];
 			};
 			laptop = nixpkgs.lib.nixosSystem {
-				system = "${system}";
-				modules = base ++ [
+				system = "x86_64-linux";
+				specialArgs = { inherit inputs; };
+				modules = [
+					./modules/base.nix
+					./modules/home.nix
 					./hosts/laptop/configuration.nix
-					({ lib, ... }: {
-						networking.hostName = lib.mkForce "laptop";
-						imports = [ ./hosts/laptop/hardware-configuration.nix ];
-					})
+					./hosts/laptop/hardware-configuration.nix
 				];
 			};
 			server = nixpkgs.lib.nixosSystem {
 				system = "aarch64-linux";
+				specialArgs = { inherit inputs; };
 				modules = [
-					inputs.turnip.nixosModules.turnip
-					inputs.site.nixosModules.site
-					inputs.homepage.nixosModules.homepage
-					inputs.notie.nixosModules.notie
-					inputs.stylix.nixosModules.stylix
+					./modules/base.nix
 					./modules/server
 					./hosts/server/configuration.nix
 					./hosts/server/server.nix
-					./stylix
-					./turnip
 				];
 			};
 		};
