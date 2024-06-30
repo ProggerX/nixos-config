@@ -177,6 +177,7 @@
 	
 	environment.systemPackages = with pkgs; [
 		vim 
+		nh
 		(pkgs.where-is-my-sddm-theme.override {
 			themeConfig.General = {
 				background = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake-white.svg";
