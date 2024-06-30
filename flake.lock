@@ -532,6 +532,26 @@
         "type": "github"
       }
     },
+    "homepage": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719305825,
+        "narHash": "sha256-fcaHtOpebvlxX++FNhzc8mujxIH37T54mU/t60ifVpk=",
+        "owner": "ProggerX",
+        "repo": "homepage",
+        "rev": "0915ad59167ab51039e831093629d518aa3d2a00",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ProggerX",
+        "repo": "homepage",
+        "type": "github"
+      }
+    },
     "newpkgs": {
       "locked": {
         "lastModified": 1719075281,
@@ -678,6 +698,26 @@
         "type": "github"
       }
     },
+    "notie": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719341481,
+        "narHash": "sha256-DTZ639a5pk1YP0URHpr1dSkP0UB3kmV7Mw/FtYhhFgM=",
+        "owner": "ProggerX",
+        "repo": "notie",
+        "rev": "d6bc0a396564c2a35477ab6463995893b764e3fa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ProggerX",
+        "repo": "notie",
+        "type": "github"
+      }
+    },
     "nvimpkgs": {
       "locked": {
         "lastModified": 1719075281,
@@ -697,11 +737,14 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "homepage": "homepage",
         "newpkgs": "newpkgs",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
+        "notie": "notie",
         "nvimpkgs": "nvimpkgs",
         "rust-overlay": "rust-overlay",
+        "site": "site",
         "stylix": "stylix",
         "turnip": "turnip"
       }
@@ -723,6 +766,26 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "site": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719303118,
+        "narHash": "sha256-snYlW5WpOkVT5iHJGHspmK//M/QEUmP4e9LjLFosjDE=",
+        "owner": "ProggerX",
+        "repo": "site",
+        "rev": "e3751babcd556ac04eca880f446a9dd10ded48c6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ProggerX",
+        "repo": "site",
         "type": "github"
       }
     },
