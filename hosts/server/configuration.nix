@@ -90,12 +90,18 @@ in {
 			prefixLength = 24;
 		}];
 		defaultGateway = "192.168.0.1";
+		nat = {
+			enable = true;
+			internalInterfaces = [ "ve-+" ];
+			externalInterface = "end0";
+		};
 	};
 
 	containers.test = {
 		privateNetwork = true;
-		hostBridge = "br0";
+		#hostBridge = "br0";
 		localAddress = "192.168.0.30/24";
+		hostAddress = "192.168.0.16";
 		config = {
 			networking = {
 				defaultGateway = "192.168.0.1";
