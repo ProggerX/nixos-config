@@ -100,7 +100,9 @@ in {
 			networking = {
 				defaultGateway = "192.168.0.1";
 				nameservers = ["8.8.8.8"];
+				useHostResolvConf = lib.mkForce false;
 			};
+			services.resolved.enable = true;
 		};
 	};
 }
