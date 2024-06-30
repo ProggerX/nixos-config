@@ -95,7 +95,7 @@ in {
 	containers.test = {
 		privateNetwork = true;
 		hostBridge = "br0";
-		localAddress = "192.168.0.20/24";
+		localAddress = "192.168.0.30/24";
 		config = {
 			networking = {
 				defaultGateway = "192.168.0.1";
