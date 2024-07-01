@@ -37,7 +37,7 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 		cwe = {
-			url = "github:NotBalds/cwe";
+			url = "github:NotBalds/cwe_server";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 	};
