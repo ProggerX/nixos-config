@@ -4,6 +4,7 @@
 		inputs.site.nixosModules.site
 		inputs.homepage.nixosModules.homepage
 		inputs.notie.nixosModules.notie
+		inputs.cwe.nixosModules.cwe-server
 	];
 	server.site.enable = true;
 	server.homepage.enable = true;
@@ -14,4 +15,5 @@
 		enable = true;
 		transmission.enable = false;
 	};
+	server.cwe-server.enable = true;
 }

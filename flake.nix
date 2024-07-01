@@ -36,6 +36,10 @@
 			url = "github:ProggerX/notie";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		cwe = {
+			url = "github:NotBalds/cwe";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 	};
 
 	outputs = { nixpkgs, ...}@inputs: {
