@@ -15,5 +15,5 @@
 		enable = true;
 		transmission.enable = false;
 	};
-	server.cwe-server.enable = false;
+	server.cwe_server.enable = true;
 }
