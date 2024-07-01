@@ -114,6 +114,26 @@
         "type": "github"
       }
     },
+    "cwe": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719836116,
+        "narHash": "sha256-VlccLZ1JCbbyR94jGGFDuC3GNzRgKSpqVT1qwK2vAG8=",
+        "owner": "NotBalds",
+        "repo": "cwe_server",
+        "rev": "83917db70d695c0f15961424e75a83a96a689502",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NotBalds",
+        "repo": "cwe_server",
+        "type": "github"
+      }
+    },
     "devshell": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -736,6 +756,7 @@
     },
     "root": {
       "inputs": {
+        "cwe": "cwe",
         "home-manager": "home-manager",
         "homepage": "homepage",
         "newpkgs": "newpkgs",
