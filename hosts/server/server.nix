@@ -4,7 +4,7 @@
 		inputs.site.nixosModules.site
 		inputs.homepage.nixosModules.homepage
 		inputs.notie.nixosModules.notie
-		inputs.cwe.nixosModules.cwe-server
+		inputs.cwe.nixosModules.cwe_server
 	];
 	server.site.enable = true;
 	server.homepage.enable = true;
