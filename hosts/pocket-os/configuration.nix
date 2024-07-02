@@ -87,11 +87,13 @@
 	
 	virtualisation.libvirtd.enable = true;
 	programs.virt-manager.enable = true;
+	programs.wireshark.enable = true;
 	
 	time.timeZone = "Europe/Moscow";
 	
 	virtualisation.docker.enable = true;
 	users.extraGroups.docker.members = [ "proggerx" ];
+	users.extraGroups.wireshark.members = [ "proggerx" ];
 	
 	services.xserver.enable = true;
 	services.libinput.enable = true;
