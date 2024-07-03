@@ -28,11 +28,6 @@
 			directory.format = "[ $path ]($style)";
 			directory.truncation_length = 3;
 			directory.truncation_symbol = "…/";
-			directory.substitutions."Documents" = "󰈙 ";
-			directory.substitutions."Downloads" = " ";
-			directory.substitutions."Music" = "󰝚 ";
-			directory.substitutions."Pictures" = " ";
-			directory.substitutions."coding" = "󰲋 ";
 			
 			git_branch.symbol = "";
 			git_branch.style = "bg:color_aqua";
