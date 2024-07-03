@@ -187,7 +187,6 @@
 			};
 			variants = ["qt5"];
 		})
-		gnome3.gnome-tweaks
 		wget
 		webkitgtk
 		wireguard-tools
