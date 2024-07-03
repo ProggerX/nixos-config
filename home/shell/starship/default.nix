@@ -20,6 +20,7 @@
 			palettes.gruvbox_dark.color_yellow = "#d79921";
 
 			os.disabled = false;
+			os.style = "bg:color_orange fg:color_fg0";
 			os.symbols.NixOS = "";
 
 			username.show_always = true;
