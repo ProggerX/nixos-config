@@ -11,13 +11,13 @@
 			palettes.gruvbox_dark.color_fg0 = "#fbf1c7";
 			palettes.gruvbox_dark.color_bg1 = "#3c3836";
 			palettes.gruvbox_dark.color_bg3 = "#665c54";
-			palettes.gruvbox_dark.color_blue = "#458588";
-			palettes.gruvbox_dark.color_aqua = "#689d6a";
-			palettes.gruvbox_dark.color_green = "#98971a";
-			palettes.gruvbox_dark.color_orange = "#d65d0e";
-			palettes.gruvbox_dark.color_purple = "#b16286";
-			palettes.gruvbox_dark.color_red = "#cc241d";
-			palettes.gruvbox_dark.color_yellow = "#d79921";
+			palettes.gruvbox_dark.color_blue = "#83a598";
+			palettes.gruvbox_dark.color_aqua = "#8ec07c";
+			palettes.gruvbox_dark.color_green = "#b8bb26";
+			palettes.gruvbox_dark.color_orange = "#fe8019";
+			palettes.gruvbox_dark.color_purple = "#d3869b";
+			palettes.gruvbox_dark.color_red = "#fb4934";
+			palettes.gruvbox_dark.color_yellow = "#fabd2f";
 
 			username.show_always = true;
 			username.style_user = "bg:color_orange fg:color_fg0";

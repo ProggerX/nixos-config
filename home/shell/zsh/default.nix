@@ -10,7 +10,6 @@
 			setopt completealiases
 			eval "$(direnv hook zsh)"
 			eval "$(zoxide init zsh --cmd cd)"
-			gof
 		'';
 
 		shellAliases = {
@@ -23,7 +22,7 @@
 			cat = "bat";
 			o = "vim";
 			ed = "vim";
-			c = "clear && gof";
+			c = "clear";
 			g = "git";
 			ls = "eza --icons";
 			lg = "lazygit";
