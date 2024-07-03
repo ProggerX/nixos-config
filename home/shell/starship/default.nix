@@ -5,7 +5,7 @@
 			add_newline = true;
 			lua.disabled = true;
 			c.detect_extensions = ["cpp" "c" "h" "hpp"];
-			format = "[](color_orange)$os$username[](bg:color_yellow fg:color_orange)$directory[](fg:color_yellow bg:color_aqua)$git_branch$git_status[](fg:color_aqua bg:color_blue)$c$rust$golang$nodejs$php$java$kotlin$haskell$python[](fg:color_blue bg:color_bg3)$docker_context$conda[](fg:color_bg3 bg:color_bg1)$time[ ](fg:color_bg1)$line_break$character";
+			format = "[](color_orange)$username[](bg:color_yellow fg:color_orange)$directory[](fg:color_yellow bg:color_aqua)$git_branch$git_status[](fg:color_aqua bg:color_blue)$c$rust$golang$nodejs$php$java$kotlin$haskell$python[](fg:color_blue bg:color_bg3)$docker_context$conda[](fg:color_bg3 bg:color_bg1)$time[ ](fg:color_bg1)$line_break$character";
 
 			palette = "gruvbox_dark";
 			palettes.gruvbox_dark.color_fg0 = "#fbf1c7";
@@ -18,29 +18,6 @@
 			palettes.gruvbox_dark.color_purple = "#b16286";
 			palettes.gruvbox_dark.color_red = "#cc241d";
 			palettes.gruvbox_dark.color_yellow = "#d79921";
-
-			os.disabled = false;
-			os.style = "bg:color_orange fg:color_fg0";
-
-			os.symbols.Windows = "󰍲";
-			os.symbols.Ubuntu = "󰕈";
-			os.symbols.SUSE = "";
-			os.symbols.Raspbian = "󰐿";
-			os.symbols.Mint = "󰣭";
-			os.symbols.Macos = "󰀵";
-			os.symbols.Manjaro = "";
-			os.symbols.Linux = "󰌽";
-			os.symbols.Gentoo = "󰣨";
-			os.symbols.Fedora = "󰣛";
-			os.symbols.Alpine = "";
-			os.symbols.Amazon = "";
-			os.symbols.Android = "";
-			os.symbols.Arch = "󰣇";
-			os.symbols.Artix = "󰣇";
-			os.symbols.CentOS = "";
-			os.symbols.Debian = "󰣚";
-			os.symbols.Redhat = "󱄛";
-			os.symbols.RedHatEnterprise = "󱄛";
 
 			username.show_always = true;
 			username.style_user = "bg:color_orange fg:color_fg0";
