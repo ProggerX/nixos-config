@@ -86,7 +86,7 @@
 				};
 
 				"custom/charging" = {
-					exec = "if[ '$(cat /sys/class/power_supply/BAT0/status)' = 'Charging']; then echo '󱐋' fi";
+					exec = ''if ["$(cat /sys/class/power_supply/BAT0/status)" = "Charging"]; then echo '󱐋'; fi'';
 					interval = 5;
 					format = {};
 				};
