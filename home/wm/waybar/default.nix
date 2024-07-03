@@ -17,7 +17,7 @@
 
     			modules-center  = ["sway/window"];
     			modules-left  = ["sway/workspaces"];
-    			modules-right  = ["tray" "custom/alsa" "battery" "sway/language" "clock"];
+    			modules-right  = ["tray" "custom/alsa" "battery" "custom/charging" "sway/language" "clock"];
 
 				"sway/workspaces" = {
 					format = "{icon}";
@@ -83,6 +83,12 @@
 					format = "{capacity}% {icon}";
 					format-icons = ["" "" "" "" ""];
 	    			max-length = 25;
+				};
+
+				"custom/charging" = {
+					exec = "if[ '$(cat /sys/class/power_supply/BAT0/status)' = 'Charging']; then echo '󱐋' fi";
+					interval = 5;
+					format = {};
 				};
 			};
 		};
