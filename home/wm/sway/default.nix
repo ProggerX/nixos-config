@@ -23,6 +23,7 @@
 			mod = config.wayland.windowManager.sway.config.modifier;
 			in lib.mkOptionDefault {
 				"${mod}+Return" = "exec ${pkgs.kitty}/bin/kitty";
+				"${mod}+shift+r" = ''mode "resize"'';
 				"${mod}+c" = "kill";
 				"${mod}+r" = "exec rofi -show drun";
 				"alt+space" = "exec rofi -show run";
