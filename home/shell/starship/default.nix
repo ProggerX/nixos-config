@@ -93,7 +93,7 @@
 			character.disabled = false;
 			character.success_symbol = "[󱞪](bold fg:color_green)";
 			character.error_symbol = "[󱞪](bold fg:color_red)";
-			character.vimcmd_symbol = "[󱞪](bold fg:color_green)";
+			character.vimcmd_symbol = "[](bold fg:color_green)";
 			character.vimcmd_replace_one_symbol = "[](bold fg:color_purple)";
 			character.vimcmd_replace_symbol = "[](bold fg:color_purple)";
 			character.vimcmd_visual_symbol = "[](bold fg:color_yellow)";
