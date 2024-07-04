@@ -59,7 +59,6 @@
 	};
 
 	boot.initrd.systemd.enable = true;
-	boot.plymouth.enable = true;
 	
 	boot.loader.systemd-boot.enable = false;
 	boot.loader.efi.canTouchEfiVariables = false;
