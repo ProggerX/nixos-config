@@ -30,7 +30,7 @@ pkgs.writeShellScriptBin "cava_waybar" ''
   ascii_max_range = 7
   " > $config_file
 
-  cava -p $config_file &
+  ${pkgs.cava} -p $config_file &
 
   while read -r cmd; do
       echo $cmd | sed $dict
