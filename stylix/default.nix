@@ -10,7 +10,7 @@
 			});
 		};
 		opacity = {
-			terminal = 0.9;
+			terminal = 0.7;
 			applications = 1;
 		};
 		fonts = {
