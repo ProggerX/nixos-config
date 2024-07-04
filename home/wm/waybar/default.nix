@@ -61,13 +61,13 @@
 
 				"custom/alsa" = {
     				format = "{}";
-					exec = "echo $(pamixer --get-mute)$(pamixer --get-volume) | sed 's/true/ /' | sed 's/false/) /'";
+					exec = "sleep 0.05 && echo $(pamixer --get-mute)$(pamixer --get-volume) | sed 's/true/ /' | sed 's/false/) /'";
 					on-click = "pamixer -t; pkill -x -RTMIN+11 waybar";
 					on-scroll-up = "pamixer -i2; pkill -x -RTMIN+11 waybar";
 					on-scroll-down = "pamixer -d2; pkill -x -RTMIN+11 waybar";
 					signal = 11;
 					interval = 5;
-					tooltip = true;
+					tooltip = false;
     			};
 				
 				"custom/battery" = {
