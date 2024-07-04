@@ -58,9 +58,8 @@
 		allowedUDPPorts = [ 51820 ]; 
 	};
 
-	boot.plymouth.themePackages = with pkgs; [ (catppuccin-plymouth.override {variant = "mocha";}) ];
-	boot.plymouth.theme = "catppuccin-mocha"; 
 	boot.initrd.systemd.enable = true;
+	services.plymouth.enable = true;
 	
 	boot.loader.systemd-boot.enable = false;
 	boot.loader.efi.canTouchEfiVariables = false;
@@ -198,7 +197,6 @@
 		pinentry-curses
 		libsForQt5.qt5.qtgraphicaleffects
 		catppuccin-sddm-corners
-		catppuccin-plymouth
 		(
 			buildFHSUserEnv {
 				name = "fhs";

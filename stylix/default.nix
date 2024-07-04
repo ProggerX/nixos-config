@@ -3,9 +3,11 @@
 	stylix = {
 		enable = true;
 		cursor = {
-			name = "Capitaine Cursors (Gruvbox)";
-			size = 30;
-			package = pkgs.capitaine-cursors;
+			name = "idk-cursor";
+			size = 35;
+			package = pkgs.capitaine-cursors-themed.overrideAttrs (old:{
+				installPhase = old.installPhase + "cp -r $out/share/icons/'Capitaine Cursors (Gruvbox)' $out/share/icons/idk-cursor";
+			});
 		};
 		opacity = {
 			terminal = 0.9;
