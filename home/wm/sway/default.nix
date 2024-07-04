@@ -2,6 +2,7 @@
 {
 	wayland.windowManager.sway = {
 		enable = true;
+		package = pkgs.swayfx;
 		extraOptions = [
 			"--unsupported-gpu"
 		];
@@ -46,6 +47,41 @@
 				"2" = [{ app_id = "^firefox$"; }];
 				"3" = [{ class = "^vesktop$"; }];
 				"4" = [{ app_id = "^org.telegram.desktop$"; }];
+			};
+		};
+		extraConfig = ''
+			blur enable
+			corner_radius 10
+			default_dim_inactive 0.1
+			shadows enable
+		'';
+	};
+
+	services.kanshi = {
+		enable = true;
+		profiles = {
+			laptop = {
+				outputs = [
+					{
+						scale = 1;
+						criteria = "eDP-1";
+						status = "enable";
+					}
+					{
+						scale = 1;
+						criteria = "HDMI-A-1";
+						status = "enable";
+					}
+				];
+			};
+			pc = {
+				outputs = [
+					{
+						status = "enable";
+						criteria = "HDMI-A-1";
+						scale = 1;
+					}
+				];
 			};
 		};
 	};

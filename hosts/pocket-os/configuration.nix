@@ -225,13 +225,6 @@
 	programs.dconf.enable = true;
 	
 	systemd = {
-		user.services.kanshi = {
-			description = "kanshi daemon";
-			serviceConfig = {
-				Type = "simple";
-				ExecStart = ''${pkgs.kanshi}/bin/kanshi -c ${./kanshi.conf}'';
-			};
-		};
 		user.services.polkit-gnome-authentication-agent-1 = {
 			description = "polkit-gnome-authentication-agent-1";
 			wantedBy = [ "graphical-session.target" ];
