@@ -1,5 +1,7 @@
-{ ... }:
+{ pkgs, ... }:
 {
+	home.packages = [ (import ./cava.nix {inherit pkgs;}) ];
+	
 	programs.waybar  = {
 		enable = true;
 		style = ''
@@ -16,7 +18,7 @@
     			spacing = 10;
 
     			modules-center  = ["sway/window"];
-    			modules-left  = ["sway/workspaces"];
+    			modules-left  = ["sway/workspaces" "custom/cava"];
     			modules-right  = ["tray" "custom/alsa" "custom/battery" "sway/language" "clock"];
 
 				"sway/workspaces" = {
@@ -78,6 +80,15 @@
 					exec = "${./battery.sh}";
 					interval = 5;
 				};
+
+				"custom/cava" = {
+					format = "{}";
+					return-type = "text";
+					max-length = 40;
+					escape = true;
+					tooltip = false;
+					exec = "cava_waybar";
+    			};
 			};
 		};
 	};
