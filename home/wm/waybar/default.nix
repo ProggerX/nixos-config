@@ -17,7 +17,7 @@
 
     			modules-center  = ["sway/window"];
     			modules-left  = ["sway/workspaces"];
-    			modules-right  = ["tray" "custom/alsa" "battery" "custom/charging" "sway/language" "clock"];
+    			modules-right  = ["tray" "custom/alsa" "custom/battery" "sway/language" "clock"];
 
 				"sway/workspaces" = {
 					format = "{icon}";
@@ -69,26 +69,14 @@
 					on-scroll-up = "pamixer -i2; pkill -x -RTMIN+11 waybar";
 					on-scroll-down = "pamixer -d2; pkill -x -RTMIN+11 waybar";
 					signal = 11;
-					interval = 10;
+					interval = 5;
 					tooltip = true;
     			};
-
-				"battery" = {
-					bat = "BAT0";
-	    			interval = 5;
-					states = {
-						warning = 30;
-						critical = 15;
-					};
-					format = "{capacity}% {icon}";
-					format-icons = ["" "" "" "" ""];
-	    			max-length = 25;
-				};
-
-				"custom/charging" = {
-					exec = ''if [ "$(cat /sys/class/power_supply/BAT0/status)" = "Charging" ]; then echo '󱐋'; fi'';
+				
+				"custom/battery" = {
+					format = "{}";
+					exec = "${./battery.sh}";
 					interval = 5;
-					format = {};
 				};
 			};
 		};
