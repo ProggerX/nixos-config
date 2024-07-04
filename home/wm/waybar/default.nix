@@ -76,7 +76,7 @@
     			};
 				
 				"custom/battery" = {
-					format = "{}";
+					format = "{} ";
 					exec = "${./battery.sh}";
 					interval = 5;
 				};
