@@ -1,7 +1,5 @@
 { pkgs, ... }:
 {
-	home.packages = [ (import ./cava.nix {inherit pkgs;}) ];
-	
 	programs.waybar  = {
 		enable = true;
 		style = ''
@@ -19,7 +17,7 @@
 
     			modules-center  = ["custom/cava"];
     			modules-left  = ["sway/workspaces" "sway/window"];
-    			modules-right  = ["tray" "custom/alsa" "custom/battery" "sway/language" "clock"];
+    			modules-right  = ["tray" "custom/pipewire" "custom/brightness" "custom/battery" "sway/language" "clock"];
 
 				"sway/workspaces" = {
 					format = "{icon}";
@@ -64,12 +62,12 @@
     				format-ru = "RU";
 				};
 
-				"custom/alsa" = {
+				"custom/pipewire" = let pamixer = "${pkgs.pamixer}/bin/pamixer"; in {
     				format = "{}";
-					exec = "sleep 0.05 && echo $(pamixer --get-mute)$(pamixer --get-volume) | sed 's/true/ /' | sed 's/false/) /'";
-					on-click = "pamixer -t; pkill -x -RTMIN+11 waybar";
-					on-scroll-up = "pamixer -i2; pkill -x -RTMIN+11 waybar";
-					on-scroll-down = "pamixer -d2; pkill -x -RTMIN+11 waybar";
+					exec = "sleep 0.05 && echo $(${pamixer} --get-mute)$(${pamixer} --get-volume) | sed 's/true/ /' | sed 's/false/) /'";
+					on-click = "${pamixer} -t; pkill -x -RTMIN+11 waybar";
+					on-scroll-up = "${pamixer} -i2; pkill -x -RTMIN+11 waybar";
+					on-scroll-down = "${pamixer} -d2; pkill -x -RTMIN+11 waybar";
 					signal = 11;
 					interval = 5;
 					tooltip = false;
@@ -81,13 +79,18 @@
 					interval = 5;
 				};
 
+				"custom/brightness" = {
+					format = "{}";
+					exec = "${import ./brightness.nix { inherit pkgs; }}/bin/waybar-brightness get";
+				};
+
 				"custom/cava" = {
 					format = "{}";
 					return-type = "text";
 					max-length = 40;
 					escape = true;
 					tooltip = false;
-					exec = "cava_waybar";
+					exec = "${import ./cava.nix { inherit pkgs; }}/bin/cava_waybar";
     			};
 			};
 		};
