@@ -17,8 +17,8 @@
     			width = 1895;
     			spacing = 10;
 
-    			modules-center  = ["sway/window" "custom/cava"];
-    			modules-left  = ["sway/workspaces"];
+    			modules-center  = ["custom/cava"];
+    			modules-left  = ["sway/workspaces" "sway/window"];
     			modules-right  = ["tray" "custom/alsa" "custom/battery" "sway/language" "clock"];
 
 				"sway/workspaces" = {
