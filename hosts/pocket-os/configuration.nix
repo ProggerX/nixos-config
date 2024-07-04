@@ -5,6 +5,8 @@
 		noto-fonts
 	];
 
+	programs.nix-ld.enable = true;
+
 	nixpkgs.config.permittedInsecurePackages = [
 		"electron-25.9.0"
 	];
