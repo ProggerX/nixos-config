@@ -81,6 +81,9 @@
 
 				"custom/brightness" = {
 					format = "{}";
+					interval = 5;
+					on-scroll-up = "${import ./brightness.nix { inherit pkgs; }}/bin/waybar-brightness raise > /dev/null";
+					on-scroll-down = "${import ./brightness.nix { inherit pkgs; }}/bin/waybar-brightness lower > /dev/null";
 					exec = "${import ./brightness.nix { inherit pkgs; }}/bin/waybar-brightness get";
 				};
 
