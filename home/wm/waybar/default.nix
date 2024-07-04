@@ -4,6 +4,11 @@
 	
 	programs.waybar  = {
 		enable = true;
+		style = ''
+			* {
+				border-radius: 10;
+			}
+		'';
 		settings = {
 			bar = {
     			position = "top";
