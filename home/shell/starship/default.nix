@@ -5,7 +5,7 @@
 			add_newline = true;
 			lua.disabled = true;
 			c.detect_extensions = ["cpp" "c" "h" "hpp"];
-			format = "[](color_orange)$os$username[](bg:color_yellow fg:color_orange)$directory[](fg:color_yellow bg:color_aqua)$git_branch$git_status[](fg:color_aqua bg:color_blue)$c$rust$golang$nodejs$php$java$kotlin$haskell$python[](fg:color_blue bg:color_bg3)$docker_context$conda[](fg:color_bg3 bg:color_bg1)$time[ ](fg:color_bg1)$line_break$character";
+			format = "[](color_orange)$os$username[](bg:color_yellow fg:color_orange)$directory[](fg:color_yellow bg:color_aqua)$git_branch$git_status[](fg:color_aqua bg:color_blue)$c$rust$golang$nodejs$php$java$kotlin$haskell$python[](fg:color_blue bg:color_bg3)$docker_context$conda[](fg:color_bg3 bg:color_bg1)$nix_shell[ ](fg:color_bg1)$line_break$character";
 
 			palette = "gruvbox_dark";
 			palettes.gruvbox_dark.color_fg0 = "#fbf1c7";
@@ -83,10 +83,10 @@
 			conda.style = "bg:color_bg3";
 			conda.format = "[[ $symbol( $environment) ](fg:#83a598 bg:color_bg3)]($style)";
 			
-			time.disabled = false;
-			time.time_format = "%R";
-			time.style = "bg:color_bg1";
-			time.format = "[[  $time ](fg:color_fg0 bg:color_bg1)]($style)";
+			nix_shell.disabled = false;
+			nix_shell.symbol = "";
+			nix_shell.style = "bg:color_bg1";
+			nix_shell.format = "[[ $symbol sh](fg:color_fg0 bg:color_bg1)]($style)";
 			
 			line_break.disabled = false;
 			
