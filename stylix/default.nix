@@ -3,9 +3,9 @@
 	stylix = {
 		enable = true;
 		cursor = {
-			name = "Vimix-Cursors";
-			size = 35;
-			package = pkgs.vimix-cursor-theme;
+			name = "Capitaine Cursors (Gruvbox)";
+			size = 30;
+			package = pkgs.capitaine-cursors;
 		};
 		opacity = {
 			terminal = 0.9;
