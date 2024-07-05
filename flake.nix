@@ -20,7 +20,6 @@
 		};
 		turnip = {
 			url = "github:ProggerX/turnip";
-			inputs.nixpkgs.follows = "nixpkgs";
 		};
 		stylix.url = "github:danth/stylix";
 		# Server inputs
