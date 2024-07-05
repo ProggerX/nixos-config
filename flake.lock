@@ -933,11 +933,11 @@
         "nixvim": "nixvim_2"
       },
       "locked": {
-        "lastModified": 1720172110,
-        "narHash": "sha256-vq+JNOzmtu2vpkW6ARFIeaT8SvyKk73/aIDwST2iqKU=",
+        "lastModified": 1720173206,
+        "narHash": "sha256-SERCzTOUKYOIxmbKHLhEOrL3CUfYqRtxOLXyhZYTnII=",
         "owner": "ProggerX",
         "repo": "turnip",
-        "rev": "e5a0d596ca8f738d701001060828a948d9871dbd",
+        "rev": "e7221cafb557390a124fe6860fa8a177db4f02b5",
         "type": "github"
       },
       "original": {
