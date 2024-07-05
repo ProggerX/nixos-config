@@ -10,7 +10,7 @@
 		settings = {
 			bar = {
 				position = "top";
-
+				margin-top = 5;
 				height = 40;
 				width = 1885;
 				spacing = 10;
