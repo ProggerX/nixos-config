@@ -919,11 +919,11 @@
         "nixvim": "nixvim_2"
       },
       "locked": {
-        "lastModified": 1720171904,
-        "narHash": "sha256-HoUU9R00duXSv4/084b3CKKhszUVKUkU2lRhjU9ZvrI=",
+        "lastModified": 1720172110,
+        "narHash": "sha256-vq+JNOzmtu2vpkW6ARFIeaT8SvyKk73/aIDwST2iqKU=",
         "owner": "ProggerX",
         "repo": "turnip",
-        "rev": "070e72b22add1349a64d1932219e44afcf6924b0",
+        "rev": "e5a0d596ca8f738d701001060828a948d9871dbd",
         "type": "github"
       },
       "original": {
