@@ -17,7 +17,7 @@
 		fonts = {
 			sizes = {
 				terminal = 17;
-				desktop = 11;
+				#desktop = 11;
 			};
 			serif = {
 				package = pkgs.dejavu_fonts;
