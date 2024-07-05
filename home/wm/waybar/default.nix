@@ -43,7 +43,7 @@
 
 				"cpu" = {
 					interval = 1;
-					format = " {usage}%";
+					format = "    {usage}%";
 					states = {
 						"warning" = 70;
 						"critical" = 90;
