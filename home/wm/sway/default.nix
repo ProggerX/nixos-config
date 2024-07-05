@@ -49,6 +49,10 @@
 				"4" = [{ app_id = "^org.telegram.desktop$"; }];
 			};
 		};
+		extraConfig = ''
+			default_border pixel 2
+			default_floating_border pixel 2
+		'';
 	};
 
 	services.kanshi = {

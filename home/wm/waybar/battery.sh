@@ -21,4 +21,4 @@ for i in {0..4}; do
 done
 fi
 
-echo $capacity% $icon
+echo $icon  $capacity%

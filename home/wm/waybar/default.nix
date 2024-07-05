@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-	programs.waybar  = {
+	programs.waybar	= {
 		enable = true;
 		style = ''
 			* {
@@ -9,15 +9,15 @@
 		'';
 		settings = {
 			bar = {
-    			position = "top";
+				position = "top";
 
-    			height = 35;
-    			width = 1895;
-    			spacing = 10;
+				height = 40;
+				width = 1885;
+				spacing = 10;
 
-    			modules-center  = ["custom/cava"];
-    			modules-left  = ["sway/workspaces" "sway/window"];
-    			modules-right  = ["tray" "custom/pipewire" "custom/brightness" "custom/battery" "sway/language" "clock"];
+				modules-center	= ["custom/cava"];
+				modules-left	= ["sway/workspaces" "sway/window"];
+				modules-right	= ["tray" "cpu" "memory" "custom/pipewire" "custom/brightness" "custom/battery" "sway/language" "clock"];
 
 				"sway/workspaces" = {
 					format = "{icon}";
@@ -26,7 +26,7 @@
 					on-click = "activate";
 					all-outputs = false;
 					format-icons = {
-        				"1" = "1";
+						"1" = "1";
 						"2" = "2";
 						"3" = "3";
 						"4" = "4";
@@ -37,33 +37,52 @@
 						"9" = "9";
 						"10" = "0";
 						urgent = "!";
-    				};
+					};
+				};
+
+
+				"cpu" = {
+					interval = 1;
+					format = " {usage}%";
+					states = {
+						"warning" = 70;
+						"critical" = 90;
+					};
+				};
+
+				"memory" = {
+					"interval" = 5;
+					"format" = " {}%";
+					"states" = {
+						"warning" = 70;
+						"critical" = 90;
+					};
 				};
 
 				"tray" = {
-        			spacing = 10;
-        			icon-size = 15;
-    			};
+					spacing = 10;
+					icon-size = 15;
+				};
 
 				"clock" = {
-        			"format" = "{:%H:%M}";
-        			"format-alt" = "{:%Y-%m-%d}";
-    			};
+					"format" = "{:%H:%M}";
+					"format-alt" = "{:%Y-%m-%d}";
+				};
 
 				"sway/window" = {
-    				format = "{}";
-    				separate-outputs = false;
-    				max-length = 20;
+					format = "  {}";
+					separate-outputs = false;
+					max-length = 20;
 				};
 
 				"sway/language" = {
-    				format = "{}";
-    				format-us = "US";
-    				format-ru = "RU";
+					format = "{}";
+					format-us = "US";
+					format-ru = "RU";
 				};
 
 				"custom/pipewire" = let pamixer = "${pkgs.pamixer}/bin/pamixer"; in {
-    				format = "{}";
+					format = " {}";
 					exec = "sleep 0.05 && echo $(${pamixer} --get-mute)$(${pamixer} --get-volume) | sed 's/true/ /' | sed 's/false/) /'";
 					on-click = "${pamixer} -t; pkill -x -RTMIN+11 waybar";
 					on-scroll-up = "${pamixer} -i2; pkill -x -RTMIN+11 waybar";
@@ -71,16 +90,16 @@
 					signal = 11;
 					interval = 5;
 					tooltip = false;
-    			};
+				};
 				
 				"custom/battery" = {
-					format = "{} ";
+					format = " {} ";
 					exec = "${./battery.sh}";
 					interval = 5;
 				};
 
 				"custom/brightness" = {
-					format = "{}";
+					format = " {}";
 					interval = 5;
 					on-scroll-up = "${import ./brightness.nix { inherit pkgs; }}/bin/waybar-brightness raise > /dev/null";
 					on-scroll-down = "${import ./brightness.nix { inherit pkgs; }}/bin/waybar-brightness lower > /dev/null";
@@ -94,7 +113,7 @@
 					escape = true;
 					tooltip = false;
 					exec = "${import ./cava.nix { inherit pkgs; }}/bin/cava_waybar";
-    			};
+				};
 			};
 		};
 	};
