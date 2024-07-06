@@ -5,6 +5,7 @@ let
 	hostname = "server";
 in {
 	imports = [
+		/home/proggerx/test-module
 	];
 
 	time.timeZone = "Europe/Moscow";
