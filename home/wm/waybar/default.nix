@@ -41,6 +41,26 @@
 				};
 
 
+				"network" = {
+					"interface" = "wlp4s0";
+					"format-wifi" = " ";
+					"format-ethernet" = " ";
+					"format-disconnected" = " ";
+					"tooltip-format-wifi" = "{essid} ({signalStrength}%)  ";
+					"tooltip-format-ethernet" = "{ifname}  ";
+					"tooltip-format-disconnected" = "Disconnected";
+				};
+						
+				"bluetooth" = {
+					"format" = " ";
+					"format-connected" = " ";
+					"format-connected-battery" = " ";
+					"tooltip-format" = "{controller_alias}\t{controller_address}\n\n{num_connections} connected";
+					"tooltip-format-connected" = "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}";
+					"tooltip-format-enumerate-connected" = "{device_alias}\t{device_address}";
+					"tooltip-format-enumerate-connected-battery" = "{device_alias}\t{device_address}\t{device_battery_percentage}%";
+				};
+
 				"cpu" = {
 					interval = 1;
 					format = "    {usage}%";
