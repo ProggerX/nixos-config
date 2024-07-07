@@ -4,15 +4,10 @@
 	inputs = {
 		# Main inputs
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-		nvimpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-		newpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+		masterpkgs.url = "github:NixOS/nixpkgs/master";
 		rust-overlay = {
 			url = "github:oxalica/rust-overlay";
-			inputs.nixpkgs.follows = "newpkgs";
-		};
-		nixvim = {
-			url = "github:nix-community/nixvim";
-			inputs.nixpkgs.follows = "nvimpkgs";
+			inputs.nixpkgs.follows = "masterpkgs";
 		};
 		home-manager = {
 			url = "github:nix-community/home-manager/";
