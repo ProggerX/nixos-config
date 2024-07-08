@@ -4,6 +4,7 @@ newpkgs = import inputs.masterpkgs { inherit system; };
 in {
     home.packages = with pkgs; [
 		tic-80
+		element-desktop-wayland
 		obs-studio
 		fasole
 		wmctrl
@@ -114,7 +115,6 @@ in {
     	btop
 		cava
 		showmethekey
-		element-desktop
 		jq
 		ccls
 		nixd
