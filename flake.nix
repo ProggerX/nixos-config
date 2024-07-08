@@ -4,6 +4,7 @@
 	inputs = {
 		# Main inputs
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+		bald.url = "github:NotBalds/bald";
 		masterpkgs.url = "github:NixOS/nixpkgs/master";
 		rust-overlay = {
 			url = "github:oxalica/rust-overlay";
