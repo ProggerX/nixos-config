@@ -4,6 +4,7 @@ newpkgs = import inputs.masterpkgs { inherit system; };
 in {
     home.packages = with pkgs; [
 		tic-80
+		swayimg
 		element-desktop-wayland
 		obs-studio
 		fasole
