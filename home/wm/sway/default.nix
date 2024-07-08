@@ -68,13 +68,28 @@
 					}
 				];
 			};
+			laptop-with-hdmi = {
+				outputs = [
+					{
+						status = "enable";
+						criteria = "eDP-1";
+						mode = "1920x1080@60";
+						scale = 1.0;
+					}
+					{
+						status = "enable";
+						criteria = "HDMI-A-1";
+						scale = 1.0;
+					}
+				];
+			};
 			pc = {
 				outputs = [
 					{
 						status = "enable";
 						criteria = "HDMI-A-1";
-						scale = 1.0;
 						mode = "1920x1080@144";
+						scale = 1.0;
 					}
 				];
 			};
