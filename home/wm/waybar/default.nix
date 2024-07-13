@@ -15,7 +15,7 @@
 				width = 1885;
 				spacing = 10;
 
-				modules-center	= ["custom/cava"];
+				modules-center	= ["custom/cava" "custom/spotify"];
 				modules-left	= ["sway/workspaces" "sway/window"];
 				modules-right	= ["tray" "cpu" "memory" "custom/pipewire" "custom/brightness" "custom/battery" "sway/language" "clock"];
 
@@ -127,12 +127,20 @@
 				};
 
 				"custom/cava" = {
-					format = "{}";
+					format = "{} ";
 					return-type = "text";
 					max-length = 40;
 					escape = true;
 					tooltip = false;
 					exec = "${import ./cava.nix { inherit pkgs; }}/bin/cava_waybar";
+				};
+				"custom/spotify" = {
+					format = " {}";
+					return-type = "text";
+					max-length = 40;
+					escape = true;
+					tooltip = false;
+					exec = "${import ./spotify.nix { inherit pkgs; }}/bin/spotify_now_playing";
 				};
 			};
 		};
