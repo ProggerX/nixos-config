@@ -5,6 +5,8 @@
 		noto-fonts
 	];
 
+	services.resolved.enable = true;
+
 	programs.nix-ld.enable = true;
 
 	nixpkgs.config.permittedInsecurePackages = [
@@ -246,6 +248,7 @@
 	programs.adb.enable = true;
 	
 	networking.firewall.enable = false;
+	networking.wireguard.enable = true;
 
 	fileSystems."/temp" = {
 		device = "tmpfs";

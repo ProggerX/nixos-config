@@ -6,6 +6,7 @@
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 		bald.url = "github:NotBalds/bald";
 		masterpkgs.url = "github:NixOS/nixpkgs/master";
+		spicetify-nix.url = "github:the-argus/spicetify-nix";
 		rust-overlay = {
 			url = "github:oxalica/rust-overlay";
 			inputs.nixpkgs.follows = "masterpkgs";
