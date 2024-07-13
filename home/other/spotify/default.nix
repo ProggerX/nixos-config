@@ -34,8 +34,5 @@ in {
 			loopyLoop
 			popupLyrics
 		];
-		enabledCustomApps = with spicePkgs.apps; [
-			lyrics-plus
-		];
 	};
 }
