@@ -33,6 +33,13 @@
 				"${mod}+u" = "fullscreen toggle";
 				"${mod}+f" = "floating toggle";
 				"${mod}+ctrl+l" = "exec ${pkgs.swaylock}/bin/swaylock";
+				"XF86AudioMute" = "exec ${pkgs.pamixer}/bin/pamixer -t";
+				"XF86AudioRaiseVolume" = "exec ${pkgs.pamixer}/bin/pamixer -i2";
+				"XF86AudioLowerVolume" = "exec ${pkgs.pamixer}/bin/pamixer -d2";
+				"XF86AudioPause" = "exec ${pkgs.playerctl}/bin/playerctl play-pause";
+				"XF86AudioPlay" = "exec ${pkgs.playerctl}/bin/playerctl play";
+				"XF86AudioPrev" = "exec ${pkgs.playerctl}/bin/playerctl previous";
+				"XF86AudioNext" = "exec ${pkgs.playerctl}/bin/playerctl next";
 			};
 			startup = [
 				{ command = "${pkgs.waybar}/bin/waybar"; }
@@ -41,11 +48,13 @@
 				{ command = "${pkgs.firefox-devedition}/bin/firefox-devedition"; }
 				{ command = "${pkgs.telegram-desktop}/bin/telegram-desktop"; }
 				{ command = "${pkgs.vesktop}/bin/vesktop"; }
+				{ command = "spotify"; }
 				{ command = "sleep 5 && ${pkgs.systemd}/bin/systemctl --user start kanshi.service"; }
 			];
 			assigns = {
 				"2" = [{ app_id = "^firefox$"; }];
 				"3" = [{ class = "^vesktop$"; }];
+				"0" = [{ class = "^Spotify$"; }];
 				"4" = [{ app_id = "^org.telegram.desktop$"; }];
 			};
 		};
