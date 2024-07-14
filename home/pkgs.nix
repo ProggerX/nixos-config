@@ -24,7 +24,6 @@ in {
 		wineWowPackages.full
 		wails
 		godot_4
-		freecad
 		easyeffects
 		telegram-desktop
 		restish
@@ -49,7 +48,6 @@ in {
 		kate
 		codeium
 		ncdu
-		youtube-dl
 		cmus
 		cmusfm
 		silicon
@@ -82,7 +80,6 @@ in {
 		glib
 		wf-recorder
 		translate-shell
-		gnome.cheese
 		github-cli
 		wego
 		mono
@@ -91,7 +88,7 @@ in {
 		asciinema-agg
 		zathura
 		brightnessctl
-		transmission
+		transmission_3
 		lynx
 		chromium
 		ventoy
