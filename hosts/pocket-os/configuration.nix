@@ -1,12 +1,9 @@
 { config, lib, pkgs, ... }:
 {
-	imports = [ ../../modules/nvidia.nix ];
 	options = {
 		isLaptop = lib.mkEnableOption ''Device is laptop'';
-		isNvidia = lib.mkEnableOption ''Device is nvidiaPC'';
 	};
 	config = {
-		isNvidia = true;
 		fonts.packages = with pkgs; [
 			(nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
 			noto-fonts
