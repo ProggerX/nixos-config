@@ -48,8 +48,9 @@
 				{ command = "${pkgs.firefox-devedition}/bin/firefox-devedition"; }
 				{ command = "${pkgs.telegram-desktop}/bin/telegram-desktop"; }
 				{ command = "${pkgs.vesktop}/bin/vesktop"; }
-				{ command = "spotify"; }
+				{ command = "${pkgs.spicetify-cli}/bin/spotify"; }
 				{ command = "sleep 5 && ${pkgs.systemd}/bin/systemctl --user start kanshi.service"; }
+				{ command = "sleep 2 && ${pkgs.sway}/bin/swaymsg workspace 1"; }
 			];
 			assigns = {
 				"2" = [{ app_id = "^firefox$"; }];
