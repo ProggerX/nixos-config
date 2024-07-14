@@ -51,7 +51,6 @@ in {
 		cmus
 		cmusfm
 		silicon
-		cpplint
 		openboard
 		steamPackages.steamcmd
 		leetcode-cli
