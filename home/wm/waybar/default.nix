@@ -1,5 +1,8 @@
 { pkgs, ... }:
 {
+	imports = [
+		./laptop.nix
+	];
 	programs.waybar	= {
 		enable = true;
 		style = ''
@@ -17,7 +20,7 @@
 
 				modules-center	= ["custom/cava" "custom/spotify"];
 				modules-left	= ["sway/workspaces" "sway/window"];
-				modules-right	= ["tray" "cpu" "memory" "custom/pipewire" "custom/brightness" "custom/battery" "sway/language" "clock"];
+				modules-right	= ["tray" "cpu" "memory" "custom/pipewire" "sway/language" "clock"];
 
 				"sway/workspaces" = {
 					format = "{icon}";
