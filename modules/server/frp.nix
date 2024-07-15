@@ -20,13 +20,6 @@
 					localPort = 443;
 					remotePort = 443;
 				}
-				{
-					name = "ssh";
-					type = "tcp";
-					localIP = "127.0.0.1";
-					localPort = 22;
-					remotePort = 9995;
-				}
 			];
 		};
 	};
