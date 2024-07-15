@@ -830,11 +830,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1721052863,
-        "narHash": "sha256-YfDy8YrAqqSWLBVMWX1myYlXMM7ROKlBh0KsPgoW4wo=",
+        "lastModified": 1721053128,
+        "narHash": "sha256-N2+C0/FwonNr/IjftH4bxpJnzkLIfN2G4rr60I+lexY=",
         "owner": "ProggerX",
         "repo": "turnip",
-        "rev": "2ac43515b7cc74a7f3a3a947c173bfe3fedc422b",
+        "rev": "f0a6656effc801033bcbc0d9c4f6fa4d31d327ea",
         "type": "github"
       },
       "original": {
