@@ -73,7 +73,7 @@
 				];
 			};
 		};
-		deploy.nodes.some-random-system = {
+		deploy.nodes.server = {
 			hostname = "100.126.179.69";
 			profiles.system = {
 				user = "root";
