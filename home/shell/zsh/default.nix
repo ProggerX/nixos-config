@@ -14,6 +14,7 @@
 
 		shellAliases = {
 			ms = "musikcube";
+			dploy = "deploy -s";
 			dl = "ytmdl";
 			update = "nh os switch /home/proggerx/nixos-config";
 			q = "exit";
