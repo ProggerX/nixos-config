@@ -31,6 +31,7 @@ in {
 	};
 
 	services.getty.autologinUser = "proggerx";
+	services.tailscale.enable = true;
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 	networking.firewall.enable = false;
