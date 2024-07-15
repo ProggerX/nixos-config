@@ -19,6 +19,7 @@
 			url = "github:ProggerX/turnip";
 		};
 		stylix.url = "github:danth/stylix";
+		deploy-rs.url = "github:serokell/deploy-rs";
 		# Server inputs
 		site = {
 			url = "github:ProggerX/site";
@@ -70,6 +71,13 @@
 					./hosts/server/configuration.nix
 					./hosts/server/server.nix
 				];
+			};
+		};
+		deploy.nodes.some-random-system = {
+			hostname = "";
+			profiles.system = {
+				user = "root";
+				path = inputs.deploy-rs.lib.aarch64-linux.activate.nixos inputs.self.nixosConfigurations.server;
 			};
 		};
 	};
