@@ -3,7 +3,7 @@
 	config = lib.mkIf config.server.adguard.enable {
 		services.adguardhome = {
 			enable = true;
-			port = 8082;
+			port = 9576;
 			settings = {
 				http.address = "0.0.0.0:9576";
 				schema_version = 21;
