@@ -74,7 +74,7 @@
 			};
 		};
 		deploy.nodes.some-random-system = {
-			hostname = "";
+			hostname = "100.126.179.69";
 			profiles.system = {
 				user = "root";
 				path = inputs.deploy-rs.lib.aarch64-linux.activate.nixos inputs.self.nixosConfigurations.server;
