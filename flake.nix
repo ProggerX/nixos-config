@@ -4,6 +4,7 @@
 	inputs = {
 		# Main inputs
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+		stablepkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
 		bald.url = "github:NotBalds/bald";
 		masterpkgs.url = "github:NixOS/nixpkgs/master";
 		spicetify-nix.url = "github:the-argus/spicetify-nix";
@@ -61,7 +62,7 @@
 					./hosts/laptop/hardware-configuration.nix
 				];
 			};
-			server = nixpkgs.lib.nixosSystem {
+			server = inputs.stablepkgs.lib.nixosSystem {
 				system = "aarch64-linux";
 				specialArgs = { inherit inputs; };
 				modules = [
