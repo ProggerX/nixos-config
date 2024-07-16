@@ -29,7 +29,7 @@
 		wantedBy = [ "multi-user.target" ];
 		after = [ "network-setup.service" ];
 		serviceConfig = {
-			ExecStart = "${pkgs.busybox}/bin/busybox sh -c '${ip} route add 100.100.1.1 dev ens3; ${ip} route add default via 100.100.1.1'";
+			ExecStart = "-${pkgs.busybox}/bin/busybox sh -c '${ip} route add 100.100.1.1 dev ens3; ${ip} route add default via 100.100.1.1'";
 		};
 	};
 
