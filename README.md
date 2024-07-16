@@ -11,3 +11,4 @@
 - PC - AMD Ryzen 5 2600, NVIDIA GeForce GTX1660 (but system is removable, on Netac Z6S usb ssd, 1TB)
 - Laptop - Core i7-4600U, integrated graphics
 - Server - Raspberry Pi 4B, with Netac Z7S usb ssd, 240GB
+- VPS - [Beget](https://beget.com/) VPS with 1CPU, 1GB RAM and 10GB of storage for reverse proxy
