@@ -5,6 +5,8 @@
 		# Main inputs
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 		bald.url = "github:NotBalds/bald";
+		disko.url = "github:nix-community/disko";
+		disko.inputs.nixpkgs.follows = "nixpkgs";
 		masterpkgs.url = "github:NixOS/nixpkgs/master";
 		spicetify-nix.url = "github:the-argus/spicetify-nix";
 		rust-overlay = {
@@ -72,6 +74,13 @@
 					./hosts/server/server.nix
 				];
 			};
+			vps = nixpkgs.lib.nixosSystem {
+				system = "x86_64-linux";
+				modules = [
+					inputs.disko.nixosModules.disko
+					./hosts/vps/configuration.nix
+				];
+			};
 		};
 		deploy.nodes.server = {
 			hostname = "100.126.179.69";
@@ -79,6 +88,14 @@
 				user = "root";
 				sshUser = "root";
 				path = inputs.deploy-rs.lib.aarch64-linux.activate.nixos inputs.self.nixosConfigurations.server;
+			};
+		};
+		deploy.nodes.vps = {
+			hostname = "5.35.87.192";
+			profiles.system = {
+				user = "root";
+				sshUser = "root";
+				path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos inputs.self.nixosConfigurations.vps;
 			};
 		};
 	};

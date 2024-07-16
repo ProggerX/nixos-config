@@ -4,6 +4,7 @@
 		isLaptop = lib.mkEnableOption ''Device is laptop'';
 	};
 	config = {
+		services.atftpd.enable = true;
 		fonts.packages = with pkgs; [
 			(nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
 			noto-fonts
