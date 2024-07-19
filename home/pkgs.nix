@@ -1,7 +1,4 @@
-{ pkgs, inputs, ... }:
-let system = "x86_64-linux";
-newpkgs = import inputs.masterpkgs { inherit system; };
-in {
+{ pkgs, ... }: {
     home.packages = with pkgs; [
 		tic-80
 		deploy-rs
@@ -11,24 +8,15 @@ in {
 		obs-studio
 		fasole
 		wmctrl
-		lutris
-		heroic
 		typescript
 		musikcube
-		deskreen
-		ytmdl
-		xournalpp
 		mindustry-wayland
 		ags
-		comma
-		#aseprite
 		wineWowPackages.full
 		wails
-		godot_4
 		easyeffects
 		telegram-desktop
 		restish
-		xorg.libX11
 		ffmpeg
 		lazydocker
 		mpv
@@ -44,88 +32,60 @@ in {
 		sshpass
 		simplex-chat-desktop
 		nchat
-		newt
-		tgpt
-		kate
-		codeium
 		ncdu
-		cmus
-		cmusfm
-		silicon
 		openboard
-		steamPackages.steamcmd
 		leetcode-cli
 		speedcrunch
 		cinnamon.nemo
 		tor-browser
-		logiops
-		steam-tui
-		tea
-		floorp-unwrapped
     	neofetch
 		prismlauncher
 		bc
-		arduino
-		ani-cli
 		gimp
-		tor-browser
 		openjdk17-bootstrap
 		osu-lazer-bin
-		filelight
 		xwaylandvideobridge
 		alsa-utils
 		toilet figlet
 		cowsay
-		xsnow
 		glib
 		wf-recorder
 		translate-shell
 		github-cli
-		wego
 		mono
 		fswatch
-		asciinema
-		asciinema-agg
 		zathura
 		brightnessctl
 		transmission_3
-		lynx
 		chromium
 		ventoy
 		file
 		ueberzug
-		minesweep-rs
 		element
 		viu
 		pyright
 		just
 		tmux
-		# gdb
 		ripgrep
 		git
 		lazygit
-    	newpkgs.go
+    	go
 		bear
 		vitetris
 		tty-clock
-		zoom-us
 		fpc
     	tree
     	btop
 		cava
 		showmethekey
 		jq
-		ccls
 		nixd
-		glab
 		pulseaudio
 		grim
 		slurp
-		flutter
 		wl-clipboard cliphist
 		waybar
     	winetricks
-		rpg-cli
 		wireplumber
 		libreoffice
 		p7zip
@@ -143,15 +103,13 @@ in {
     	xclip
 		lldb
     	vifm
-    	pandoc
-    	scrot
     	lua-language-server
     	tmux
     	obsidian
     	slurp
     	eza
     	python311
-		newpkgs.vesktop
+		vesktop
 		gcc
 		gnumake
     	nitch
