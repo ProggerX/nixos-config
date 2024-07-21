@@ -1,6 +1,7 @@
 { pkgs, ... }: {
     home.packages = with pkgs; [
 		tic-80
+		cool-retro-term
 		deploy-rs
 		openvpn3
 		swayimg
