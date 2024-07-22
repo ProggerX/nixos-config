@@ -1,5 +1,6 @@
 {
 	imports = [
+		./emanote.nix
 		./searx.nix
 		./frp.nix
 		./minecraft.nix

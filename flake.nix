@@ -23,6 +23,10 @@
 		stylix.url = "github:danth/stylix";
 		deploy-rs.url = "github:serokell/deploy-rs";
 		# Server inputs
+		emanote = {
+			url = "github:srid/emanote";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 		site = {
 			url = "github:ProggerX/site";
 			inputs.nixpkgs.follows = "nixpkgs";
