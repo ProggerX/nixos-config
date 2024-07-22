@@ -28,7 +28,7 @@
 				"${mod}+c" = "kill";
 				"${mod}+r" = "exec rofi -show drun";
 				"alt+space" = "exec rofi -show run";
-				"${mod}+v" = "exec cliphist list | rofi -dmenu | cliphist decode | wl-copy";
+				"${mod}+v" = "exec cliphist list | rofi -dmenu -p ' 󰅌  ' | cliphist decode | wl-copy";
 				"Print" = "exec grim -g\"$(slurp)\" - | wl-copy";
 				"${mod}+u" = "fullscreen toggle";
 				"${mod}+f" = "floating toggle";

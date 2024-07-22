@@ -1,6 +1,0 @@
-{ ... }:
-{
-	turnip = {
-		enable = true;
-	};
-}
