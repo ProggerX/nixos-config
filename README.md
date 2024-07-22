@@ -5,7 +5,6 @@
 - ```hosts``` - host-specific configs, laptop just inherits PC's ```configuration.nix```)
 - ```modules``` - my NixOS modules
 - ```stylix``` - my stylix config, all hosts use it
-- ```turnip``` - my NixVim config, all hosts use it
 - ```home``` - my HM config, server doesn't have HM
 ## Hardware
 - PC - AMD Ryzen 5 2600, NVIDIA GeForce GTX1660 (but system is removable, on Netac Z6S usb ssd, 1TB)
