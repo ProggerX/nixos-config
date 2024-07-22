@@ -68,6 +68,11 @@
 				system = "aarch64-linux";
 				specialArgs = { inherit inputs; };
 				modules = [
+					inputs.site.nixosModules.site
+					inputs.homepage.nixosModules.homepage
+					inputs.notie.nixosModules.notie
+					inputs.cwe.nixosModules.cwe_server
+
 					./modules/base.nix
 					./modules/server
 					./hosts/server/configuration.nix
