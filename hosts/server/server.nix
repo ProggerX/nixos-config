@@ -2,6 +2,7 @@
 {
 	server.site.enable = true;
 	server.adguard.enable = true;
+	server.emanote.enable = true;
 	server.homepage.enable = true;
 	server.searx.enable = true;
 	server.minecraft.enable = true;
