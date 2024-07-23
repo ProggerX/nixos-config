@@ -1099,11 +1099,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1721712680,
-        "narHash": "sha256-gD8HPqkkaEUfTm5tuQ4Zia9jKZHj3X7j42/DModXmTw=",
+        "lastModified": 1721713123,
+        "narHash": "sha256-CvDRoUQQetOOhob63099wyuZ1QYS+J4e1Ziwlq8tlwg=",
         "owner": "ProggerX",
         "repo": "notie",
-        "rev": "7e6d1539a7ed57f04de598d7b24ddb10906954fd",
+        "rev": "21b5abcedcc498ad8f41ee9e2396b655cceee7dc",
         "type": "github"
       },
       "original": {
