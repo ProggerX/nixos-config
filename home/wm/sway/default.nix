@@ -24,6 +24,7 @@
 			in lib.mkOptionDefault {
 				"${mod}+Return" = "exec ${pkgs.kitty}/bin/kitty";
 				"${mod}+y" = "exec ${pkgs.kitty}/bin/kitty ${pkgs.yazi}/bin/yazi";
+				"${mod}+o" = "exec ${pkgs.neovide}/bin/neovide";
 				"${mod}+shift+r" = ''mode "resize"'';
 				"${mod}+c" = "kill";
 				"${mod}+r" = "exec rofi -show drun";
