@@ -2,6 +2,7 @@
     home.packages = with pkgs; [
 		tic-80
 		cool-retro-term
+		neovide
 		deploy-rs
 		openvpn3
 		swayimg
