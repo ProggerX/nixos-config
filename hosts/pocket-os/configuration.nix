@@ -156,6 +156,7 @@
 		
 		environment.systemPackages = with pkgs; [
 			vim 
+			wayvnc
 			nh
 			(pkgs.where-is-my-sddm-theme.override {
 				themeConfig.General = {
