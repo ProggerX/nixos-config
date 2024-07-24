@@ -1,7 +1,7 @@
 { ... }: {
 	services.kanata = {
 		enable = true;
-		keyboards."*".config = ''
+		keyboards.all.config = ''
 (defsrc
   caps
 )
