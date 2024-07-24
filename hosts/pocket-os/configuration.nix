@@ -48,7 +48,7 @@
 		boot.supportedFilesystems = [ "ntfs" ];
 		
 		boot.extraModulePackages = [ config.boot.kernelPackages.rtl88x2bu ];
-		boot.kernelModules = [ "nouveau" "uinput" ];
+		boot.kernelModules = [ "nouveau" ];
 		
 		networking.networkmanager.enable = true;	
 		nix.settings.experimental-features = ["nix-command" "flakes"];
