@@ -1,5 +1,4 @@
 { ... }: {
-	users.users.kanata.extraGroups = [ "uinput" ];
 	services.kanata = {
 		enable = true;
 		keyboards.all.config = ''
