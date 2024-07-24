@@ -10,7 +10,7 @@
 			input = {
 				"*" = {
 					xkb_layout = "us,ru";
-					xkb_options = "caps:escape,grp:win_space_toggle";
+					xkb_options = "grp:win_space_toggle";
 				};
 			};
 			gaps = {
