@@ -2,6 +2,7 @@
 {
 	imports = [
 		../../modules/dm.nix
+		../../modules/kanata.nix
 	];
 	options = {
 		isLaptop = lib.mkEnableOption ''Device is laptop'';

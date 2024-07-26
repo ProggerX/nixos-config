@@ -3,7 +3,6 @@
 		inputs.turnip.nixosModules.turnip
 		inputs.stylix.nixosModules.stylix
 		../stylix
-		./kanata.nix
 		./rust.nix
 	];
 	config = {
