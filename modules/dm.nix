@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+	systemd.services.greetd.serviceConfig.After = "multi-user.target";
 	services.greetd = {
 		enable = true;
 		settings = {
