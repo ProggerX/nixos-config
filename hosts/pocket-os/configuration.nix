@@ -1,5 +1,8 @@
 { config, lib, pkgs, ... }:
 {
+	imports = [
+		../../modules/dm.nix
+	];
 	options = {
 		isLaptop = lib.mkEnableOption ''Device is laptop'';
 	};
@@ -78,13 +81,13 @@
 		services.libinput.touchpad.middleEmulation = true;
 		
 		services.displayManager.defaultSession = "sway";
-		services.displayManager.sddm.enable = true;
+		# services.displayManager.sddm.enable = true;
 #		services.xserver.displayManager.lightdm.greeters.mini.enable = true;
 #		services.xserver.displayManager.lightdm.greeters.mini.user = "proggerx";
 		#services.xserver.desktopManager.gnome.enable = true;
-		services.displayManager.sddm.wayland.enable = true;
-		services.displayManager.sddm.theme = "where_is_my_sddm_theme_qt5";
-		
+		# services.displayManager.sddm.wayland.enable = true;
+		# services.displayManager.sddm.theme = "where_is_my_sddm_theme_qt5";
+
 		programs.sway.enable = true;
 		services.xserver.windowManager.qtile.enable = true;
 		services.greenclip.enable = true;
