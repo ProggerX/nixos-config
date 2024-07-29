@@ -71,10 +71,6 @@ dwindle {
     preserve_split = yes
 }
 
-master {
-    new_is_master = 1
-}
-
 
 gestures {
     workspace_swipe = off
