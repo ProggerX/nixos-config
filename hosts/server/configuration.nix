@@ -5,6 +5,7 @@ let
 	hostname = "server";
 in {
 
+	nixpkgs.config.allowUnfree = true;
 	time.timeZone = "Europe/Moscow";
 
 	virtualisation.docker.enable = true;
