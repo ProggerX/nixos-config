@@ -3,6 +3,7 @@
 	imports = [
 		../../modules/dm.nix
 		../../modules/kanata.nix
+		../../modules/music.nix
 	];
 	options = {
 		isLaptop = lib.mkEnableOption ''Device is laptop'';
