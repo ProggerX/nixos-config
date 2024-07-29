@@ -33,7 +33,7 @@
 				"Print" = "exec grim -g\"$(slurp)\" - | wl-copy";
 				"${mod}+u" = "fullscreen toggle";
 				"${mod}+f" = "floating toggle";
-				"${mod}+ctrl+l" = "exec ${pkgs.swaylock}/bin/swaylock";
+				"${mod}+ctrl+l" = "exec ${pkgs.hyprlock}/bin/hyprlock";
 				"XF86AudioMute" = "exec ${pkgs.pamixer}/bin/pamixer -t";
 				"XF86AudioRaiseVolume" = "exec ${pkgs.pamixer}/bin/pamixer -i2";
 				"XF86AudioLowerVolume" = "exec ${pkgs.pamixer}/bin/pamixer -d2";

@@ -1,4 +1,0 @@
-{ ... }:
-{
-	programs.swaylock.enable = true;
-}

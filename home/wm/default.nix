@@ -1,12 +1,10 @@
 {
 	imports = [
-		./eww
-		./swaylock
+		./hyprlock
 		./rofi
 		./dunst
 		./waybar
 		./wpaperd
-		./hyprland
 		./sway
 	];
 }
