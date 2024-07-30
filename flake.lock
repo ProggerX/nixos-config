@@ -1441,11 +1441,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1722319832,
-        "narHash": "sha256-d4qzcqw6wZcJa/D+sfomlHdoKElKT32F+AoXMZcqjHU=",
+        "lastModified": 1722320199,
+        "narHash": "sha256-PKc7QxMNDerq41RI+lBXsiijiKvVpIqECDB1SyBLd7Y=",
         "owner": "ProggerX",
         "repo": "turnip",
-        "rev": "327de5c7941e7e84c55e0f8654d2edd22177c001",
+        "rev": "76106ae35e5e55fb52990893bc1de43399d2416a",
         "type": "github"
       },
       "original": {
