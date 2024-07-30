@@ -9,7 +9,10 @@
 		environment.systemPackages = [ inputs.bald.defaultPackage.${pkgs.stdenv.hostPlatform.system} ];
 		turnip = {
 			enable = true;
-			colorscheme = "gruvbox";
+			colorscheme = "catppuccin";
+			custom = {
+				colorschemes.catppuccin.settings.transparent_background = true;
+			};
 		};
 	};
 }
