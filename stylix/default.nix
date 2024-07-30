@@ -16,7 +16,7 @@
 		};
 		fonts = {
 			sizes = {
-				terminal = 17;
+				terminal = 12;
 				#desktop = 11;
 			};
 			serif = {
