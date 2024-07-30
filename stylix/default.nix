@@ -37,6 +37,6 @@
 			};
 		};
 		base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-		image = ./walls.png;
+		image = ./walls.jpg;
 	};
 }
