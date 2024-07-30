@@ -1,4 +1,4 @@
-{ sys, ... }: {
+{ sys, lib, ... }: {
 	programs.hyprlock = {
 		enable = true;
 		extraConfig = ''
@@ -62,7 +62,8 @@
 			
 			label {
 			    monitor =
-			    text = cmd[update:1000] echo "$(whoami), screen is locked"
+			    text = cmd[update:1000] echo "($(whoami))'' + (if sys.isLaptop == true then ''($(${../waybar/battery.sh}))"'' else ''"'') + ''
+
 			    color = rgb(${sys.lib.stylix.colors.base05})
 			    font_size = 14
 			    font_family = JetBrainsMono Nerd Font
