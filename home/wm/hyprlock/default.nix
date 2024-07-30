@@ -62,7 +62,7 @@
 			
 			label {
 			    monitor =
-			    text = cmd[update:1000] echo "$(whoami)"
+			    text = cmd[update:1000] echo "$(whoami), screen is locked"
 			    color = rgb(${sys.lib.stylix.colors.base05})
 			    font_size = 14
 			    font_family = JetBrainsMono Nerd Font
