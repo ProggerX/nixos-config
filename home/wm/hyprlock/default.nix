@@ -4,7 +4,7 @@
 		extraConfig = ''
 			background {
 			    monitor =
-			    path = ${../../../stylix/walls.jpg}
+			    path = ${../../../stylix/walls.png}
 			    blur_passes = 2
 			    contrast = 1
 			    brightness = 0.5
