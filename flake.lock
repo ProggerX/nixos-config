@@ -870,11 +870,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1722347970,
-        "narHash": "sha256-E/Rt6TNwsKxuQ76LDmHsOO7eJ3B4UnMc/L8cswzWzYY=",
+        "lastModified": 1722369276,
+        "narHash": "sha256-F9WTsgO/UlK1aA4PwxNrLLnA5NdUCbHyE5czLDYvjWw=",
         "owner": "ProggerX",
         "repo": "homepage",
-        "rev": "aa3b88c821bb2575aadd6202cb3aa46d77f15226",
+        "rev": "8734475c32a53ef5e83cb5da016d2914661a789b",
         "type": "github"
       },
       "original": {
