@@ -7,6 +7,9 @@
 	];
 	config = {
 		environment.systemPackages = [ inputs.bald.defaultPackage.${pkgs.stdenv.hostPlatform.system} ];
-		turnip.enable = true;
+		turnip = {
+			enable = true;
+			colorscheme = "gruvbox";
+		};
 	};
 }
