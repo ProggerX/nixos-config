@@ -11,7 +11,6 @@
 		spicetify-nix.url = "github:the-argus/spicetify-nix";
 		rust-overlay = {
 			url = "github:oxalica/rust-overlay";
-			inputs.nixpkgs.follows = "masterpkgs";
 		};
 		home-manager = {
 			url = "github:nix-community/home-manager/";
