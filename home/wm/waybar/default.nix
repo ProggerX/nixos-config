@@ -88,8 +88,8 @@
 				};
 
 				"clock" = {
-					"format" = "{:%H:%M}";
-					"format-alt" = "{:%Y-%m-%d}";
+					"format" = "{:%H:%M} ";
+					"format-alt" = "{:%Y-%m-%d} ";
 				};
 
 				"sway/window" = {
