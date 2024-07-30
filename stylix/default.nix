@@ -10,8 +10,8 @@
 			});
 		};
 		opacity = {
-			desktop = 0.7;
-			terminal = 0.7;
+			desktop = 0.8;
+			terminal = 0.8;
 			applications = 1;
 		};
 		fonts = {
