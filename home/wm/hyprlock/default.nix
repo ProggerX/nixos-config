@@ -13,9 +13,9 @@
 			}
 			
 			general {
-			    hide_cursor = false
+			    hide_cursor = true
 			    grace = 0
-			    disable_loading_bar = true
+			    disable_loading_bar = false
 			}
 			
 			input-field {
