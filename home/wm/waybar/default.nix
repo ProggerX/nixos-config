@@ -138,7 +138,7 @@
 					exec = "${import ./cava.nix { inherit pkgs; }}/bin/cava_waybar";
 				};
 				"custom/spotify" = {
-					format = " {}";
+					format = "  {}";
 					return-type = "text";
 					max-length = 40;
 					escape = true;
