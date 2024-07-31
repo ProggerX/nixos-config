@@ -1455,11 +1455,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1722352160,
-        "narHash": "sha256-TF4hE6MQ3ICO3DekQh5eqc7R4Bvc9ZXryTYXsLmTYDk=",
+        "lastModified": 1722455687,
+        "narHash": "sha256-JbZaKhhIKWBLBfeevg6pLzRuY8Qv84709E84vVXt0hQ=",
         "owner": "ProggerX",
         "repo": "turnip",
-        "rev": "13519cd8e1c7a0d8d5824243c72c2082fd5ba555",
+        "rev": "15a2bc4c6abc99876bf69bed7712e67707533075",
         "type": "github"
       },
       "original": {
