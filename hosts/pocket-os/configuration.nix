@@ -128,6 +128,7 @@
 		security.polkit.enable = true;
 		security.pam.services.swaylock = {};
 		security.pam.services.hyprlock = {};
+		security.sudo.wheelNeedsPassword = false;
 		services.pipewire = {
 			enable = true;
 			alsa.enable = true;
@@ -149,9 +150,11 @@
 		hardware.bluetooth.powerOnBoot = true; 
 		services.blueman.enable = true;
 			
+		users.mutableUsers = false;
 		users.users.proggerx = {
 			isNormalUser = true;
 			extraGroups = [ "wheel" "adbusers" ]; 
+			hashedPassword = "$y$j9T$9Q.MJOUROTrVdApws9avH0$HYDJYm6RsP8o3AWoL7FHjOA.y/TPE2p4tbI1DXHhM.6";
 		};
 		
 		services.dbus.enable = true;
