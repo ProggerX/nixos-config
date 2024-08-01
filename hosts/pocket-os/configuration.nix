@@ -165,6 +165,7 @@
 		
 		environment.systemPackages = with pkgs; [
 			vim 
+			man-pages man-pages-posix
 			wayvnc
 			nh
 			(pkgs.where-is-my-sddm-theme.override {
