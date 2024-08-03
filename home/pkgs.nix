@@ -2,6 +2,9 @@
     home.packages = with pkgs; [
 		tic-80
 		cool-retro-term
+		(dwarf-fortress-packages.dwarf-fortress-full.override {
+			dfVersion = "0.47.05";
+		})
 		neovide
 		deploy-rs
 		openvpn3
