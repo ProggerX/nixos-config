@@ -8,6 +8,7 @@
 	
 		initExtra = ''
 			setopt completealiases
+			bindkey -v '^?' backward-delete-char
 			eval "$(direnv hook zsh)"
 			eval "$(zoxide init zsh --cmd cd)"
 		'';
