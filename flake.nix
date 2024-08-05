@@ -44,18 +44,18 @@
 
 	outputs = { nixpkgs, ...}@inputs: {
 		nixosConfigurations = {
-			pocket-os = nixpkgs.lib.nixosSystem {
+			snd-pc = nixpkgs.lib.nixosSystem {
 				system = "x86_64-linux";
 				specialArgs = { inherit inputs; };
 				modules = [
 					./modules/base.nix
 					./modules/home.nix
 					./modules/gaming.nix
-					./hosts/pocket-os/configuration.nix
-					./hosts/pocket-os/hardware-configuration.nix
+					./hosts/snd-pc/configuration.nix
+					./hosts/snd-pc/hardware-configuration.nix
 				];
 			};
-			laptop = nixpkgs.lib.nixosSystem {
+			snd-lp = nixpkgs.lib.nixosSystem {
 				system = "x86_64-linux";
 				specialArgs = { inherit inputs; };
 				modules = [
