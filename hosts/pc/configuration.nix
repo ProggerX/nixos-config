@@ -34,7 +34,7 @@
 
 		services.tailscale.enable = true;
 
-		networking.hostName = "pocket-os";
+		networking.hostName = "snd-pc";
 		networking.nameservers = [ "100.126.179.69" ];
 		networking.firewall = {
 			allowedUDPPorts = [ 51820 ]; 

@@ -1,6 +1,6 @@
 { lib, ... }: {
 	imports = [ ../pocket-os/configuration.nix ];
-	networking.hostName = lib.mkForce "puncakes";
+	networking.hostName = lib.mkForce "snd-lp";
 	services.thermald.enable = true;
 	isLaptop = true;
 }
