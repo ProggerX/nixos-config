@@ -22,7 +22,7 @@
 			cls = "clear";
 			lt = "leetcode";
 			cat = "bat";
-			o = "vim";
+			o = "nvim";
 			ed = "vim";
 			c = "clear";
 			g = "git";

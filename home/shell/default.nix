@@ -7,5 +7,6 @@
 		./pass
 		./kitty
 		./starship
+		./nvim
 	];
 }

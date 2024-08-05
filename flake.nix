@@ -16,9 +16,6 @@
 			url = "github:nix-community/home-manager/";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-		turnip = {
-			url = "github:ProggerX/turnip";
-		};
 		stylix.url = "github:danth/stylix";
 		deploy-rs.url = "github:serokell/deploy-rs";
 		yandex-music.url = "github:cucumber-sp/yandex-music-linux";
