@@ -6,6 +6,7 @@
 			dfVersion = "0.47.05";
 		})
 		neovide
+		neovim
 		deploy-rs
 		openvpn3
 		swayimg
