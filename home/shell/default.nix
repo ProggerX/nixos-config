@@ -6,6 +6,5 @@
 		./yazi
 		./pass
 		./kitty
-		./starship
 	];
 }
