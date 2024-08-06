@@ -7,7 +7,6 @@
 		syntaxHighlighting.enable = true;
 	
 		initExtra = ''
-			export TERM=xterm-256color
 			setopt completealiases
 			bindkey -v '^?' backward-delete-char
 			eval "$(direnv hook zsh)"
@@ -36,6 +35,7 @@
 			grun = "go run .";
 			nput = "ssh -p9990 bald.su";
 			nget = "ssh -p9991 bald.su";
+			ssh = "TERM=xterm-256color ssh";
 		};
 	};
 }
