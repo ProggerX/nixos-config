@@ -224,11 +224,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1722930734,
-        "narHash": "sha256-ktWcUtGrnqFw1HnyRgZFHXgZScJNA2fWLlWADvIebGo=",
+        "lastModified": 1722939210,
+        "narHash": "sha256-xwOZ3u6pP9WVQuv+7h9MsdmdJ9T9zCZH/kr4U8ChbfI=",
         "owner": "NotBalds",
         "repo": "cwe-rust-cli",
-        "rev": "3fedabf63ff9c0aed8432e04d2cfc51eb98cb944",
+        "rev": "22a73696d726c792155e7fa5ef2c9f04f72f7433",
         "type": "github"
       },
       "original": {
