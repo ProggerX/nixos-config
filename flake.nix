@@ -57,6 +57,7 @@
 					./modules/gaming.nix
 					./hosts/snd-pc/configuration.nix
 					./hosts/snd-pc/hardware-configuration.nix
+					./modules/non-server.nix
 				];
 			};
 			snd-lp = nixpkgs.lib.nixosSystem {
@@ -67,6 +68,7 @@
 					./modules/home.nix
 					./hosts/laptop/configuration.nix
 					./hosts/laptop/hardware-configuration.nix
+					./modules/non-server.nix
 				];
 			};
 			server = nixpkgs.lib.nixosSystem {
