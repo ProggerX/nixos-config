@@ -40,6 +40,10 @@
 			url = "github:NotBalds/cwe_server";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		cwe-cli = {
+			url = "github:NotBalds/cwe-rust-cli";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 	};
 
 	outputs = { nixpkgs, ...}@inputs: {
