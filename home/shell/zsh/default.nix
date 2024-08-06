@@ -7,6 +7,7 @@
 		syntaxHighlighting.enable = true;
 	
 		initExtra = ''
+			export TERM=xterm-256color
 			setopt completealiases
 			bindkey -v '^?' backward-delete-char
 			eval "$(direnv hook zsh)"
