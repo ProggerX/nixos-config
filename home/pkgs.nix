@@ -6,6 +6,7 @@
 			dfVersion = "0.47.05";
 		})
 		neovide
+		lutris
 		neovim
 		deploy-rs
 		openvpn3
