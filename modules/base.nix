@@ -1,4 +1,4 @@
-{ inputs, ... }: {
+{ inputs, pkgs, ... }: {
 	imports = [
 		inputs.stylix.nixosModules.stylix
 		inputs.nur.nixosModules.nur
@@ -6,4 +6,5 @@
 		./rust.nix
 		./starship
 	];
+	config.environment.systemPackges = [ pkgs.comma ];
 }
