@@ -4,6 +4,7 @@
 	inputs = {
 		# Main inputs
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+		nur.url = "github:nix-community/NUR";
 		bald.url = "github:NotBalds/bald";
 		disko.url = "github:nix-community/disko";
 		disko.inputs.nixpkgs.follows = "nixpkgs";

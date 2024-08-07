@@ -203,11 +203,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1723032864,
-        "narHash": "sha256-0y1ABf0LQwBMYnhPj2r6imiarCOVhRZtzVvfAXKl/JQ=",
+        "lastModified": 1723039689,
+        "narHash": "sha256-yOcZgwOZ9YBLCJedw2ti56le00RNMpAMYJxGPc0TjL0=",
         "owner": "NotBalds",
         "repo": "cwe_server",
-        "rev": "9dca3204ba6101dc274c4a8ffa12c938ddf28544",
+        "rev": "86832629d8e13eff294c912035c72bd09637af62",
         "type": "github"
       },
       "original": {
@@ -977,6 +977,21 @@
         "type": "github"
       }
     },
+    "nur": {
+      "locked": {
+        "lastModified": 1723036652,
+        "narHash": "sha256-YIKo7vD/wkItzqIzg7u9bxYPhPwKhJbRbFcENuT0p68=",
+        "owner": "nix-community",
+        "repo": "NUR",
+        "rev": "2ee33d83d919b2375ebeeee175fab2af02dff92f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "NUR",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "bald": "bald",
@@ -990,6 +1005,7 @@
         "masterpkgs": "masterpkgs",
         "nixpkgs": "nixpkgs_4",
         "notie": "notie",
+        "nur": "nur",
         "rust-overlay": "rust-overlay",
         "site": "site",
         "spicetify-nix": "spicetify-nix",
