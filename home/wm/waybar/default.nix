@@ -95,7 +95,7 @@
 				"sway/window" = {
 					format = "  {}";
 					separate-outputs = false;
-					max-length = 20;
+					max-length = 35;
 				};
 
 				"sway/language" = {
