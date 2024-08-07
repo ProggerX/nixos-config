@@ -203,11 +203,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1722943359,
-        "narHash": "sha256-eri8b0Dw18Q61UKvVxxDQZY75Is/y+HiB00TbcAWYc0=",
+        "lastModified": 1723032864,
+        "narHash": "sha256-0y1ABf0LQwBMYnhPj2r6imiarCOVhRZtzVvfAXKl/JQ=",
         "owner": "NotBalds",
         "repo": "cwe_server",
-        "rev": "99b16fa7254838535c29fbe32625c46fe738fa7a",
+        "rev": "9dca3204ba6101dc274c4a8ffa12c938ddf28544",
         "type": "github"
       },
       "original": {
