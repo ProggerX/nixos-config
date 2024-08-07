@@ -5,6 +5,7 @@
 		./dunst
 		./waybar
 		./wpaperd
+		./river
 		./sway
 	];
 }

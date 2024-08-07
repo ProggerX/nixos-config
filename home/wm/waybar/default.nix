@@ -19,7 +19,7 @@
 				spacing = 10;
 
 				modules-center	= ["custom/cava" "custom/spotify"];
-				modules-left	= ["sway/workspaces" "sway/window"];
+				modules-left	= ["sway/workspaces" "river/tags" "sway/window" "river/window"];
 				modules-right	= ["tray" "cpu" "memory" "custom/pipewire" "sway/language" "clock"];
 
 				"sway/workspaces" = {
@@ -144,6 +144,9 @@
 					escape = true;
 					tooltip = false;
 					exec = "${import ./spotify.nix { inherit pkgs; }}/bin/spotify_now_playing";
+				};
+				"river/window" = {
+					max-length = 20;
 				};
 			};
 		};
