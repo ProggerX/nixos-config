@@ -62,7 +62,8 @@
 		"'rivertile -view-padding 6 -outer-padding 6'"
 		"yandex-music"
 		"${pkgs.telegram-desktop}/bin/telegram-desktop"
-		"${pkgs.firefox-devedition}/bin/firefox-dev-edition"
+		"${pkgs.firefox-devedition}/bin/firefox-devedition"
+		"${pkgs.waybar}/bin/waybar"
 	];
 	default-layout = "rivertile";
 	keyboard-layout = "-options grp:win_space_toggle us,ru";
