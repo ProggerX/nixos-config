@@ -1,40 +1,30 @@
-{ pkgs, sys, ... }: {
+{ pkgs, sys, lib, ... }: {
 	border-width = 3;
 	border-color-focused = "0x${sys.lib.stylix.colors.base0D}";
 	map = {
-		normal = {
+		normal = lib.mkMerge [{
 			"Super Return" = "spawn ${pkgs.kitty}/bin/kitty";
 			"Super C" = "close";
-			"Super 1" = "set-focused-tags 1";
-			"Super 2" = "set-focused-tags 2";
-			"Super 3" = "set-focused-tags 4";
-			"Super 4" = "set-focused-tags 8";
-			"Super 5" = "set-focused-tags 16";
-			"Super 6" = "set-focused-tags 32";
-			"Super 7" = "set-focused-tags 64";
-			"Super 8" = "set-focused-tags 128";
-			"Super 9" = "set-focused-tags 256";
-			"Super 0" = "set-focused-tags 512";
-			"Super+Shift 1" = "set-view-tags 1";
-			"Super+Shift 2" = "set-view-tags 2";
-			"Super+Shift 3" = "set-view-tags 4";
-			"Super+Shift 4" = "set-view-tags 8";
-			"Super+Shift 5" = "set-view-tags 16";
-			"Super+Shift 6" = "set-view-tags 32";
-			"Super+Shift 7" = "set-view-tags 64";
-			"Super+Shift 8" = "set-view-tags 128";
-			"Super+Shift 9" = "set-view-tags 256";
-			"Super+Shift 0" = "set-view-tags 512";
-			"Super+Control 1" = "toggle-focused-tags 1";
-			"Super+Control 2" = "toggle-focused-tags 2";
-			"Super+Control 3" = "toggle-focused-tags 4";
-			"Super+Control 4" = "toggle-focused-tags 8";
-			"Super+Control 5" = "toggle-focused-tags 16";
-			"Super+Control 6" = "toggle-focused-tags 32";
-			"Super+Control 7" = "toggle-focused-tags 64";
-			"Super+Control 8" = "toggle-focused-tags 128";
-			"Super+Control 9" = "toggle-focused-tags 256";
-			"Super+Control 0" = "toggle-focused-tags 512";
+		}
+		(builtins.listToAttrs (
+			lib.forEach [[1 1] [2 2] [3 4] [4 8] [5 16] [6 32] [7 64] [8 128] [9 256] [0 512]] (x: {
+				name = "Super ${toString (builtins.elemAt x 0)}";
+				value = "set-focused-tags ${toString (builtins.elemAt x 1)}";
+			})
+		))
+		(builtins.listToAttrs (
+			lib.forEach [[1 1] [2 2] [3 4] [4 8] [5 16] [6 32] [7 64] [8 128] [9 256] [0 512]] (x: {
+				name = "Super+Shift ${toString (builtins.elemAt x 0)}";
+				value = "set-view-tags ${toString (builtins.elemAt x 1)}";
+			})
+		))
+		(builtins.listToAttrs (
+			lib.forEach [[1 1] [2 2] [3 4] [4 8] [5 16] [6 32] [7 64] [8 128] [9 256] [0 512]] (x: {
+				name = "Super+Control ${toString (builtins.elemAt x 0)}";
+				value = "toggle-focused-tags ${toString (builtins.elemAt x 1)}";
+			})
+		))
+		{
 			"Super+Shift E" = "exit";
 			"Super R" = "spawn 'rofi -show drun'";
 			"Alt Space" = "spawn 'rofi -show run'";
@@ -62,7 +52,7 @@
 			"None XF86AudioPlay" = "spawn '${pkgs.playerctl}/bin/playerctl play'";
 			"None XF86AudioPrev" = "spawn '${pkgs.playerctl}/bin/playerctl previous'";
 			"None XF86AudioNext" = "spawn '${pkgs.playerctl}/bin/playerctl next'";
-		};
+		}];
 	};
 	spawn = [
 		"${pkgs.wpaperd}/bin/wpaperd"
