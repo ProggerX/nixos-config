@@ -6,5 +6,5 @@
 		./rust.nix
 		./starship
 	];
-	config.environment.systemPackges = [ pkgs.comma ];
+	config.environment.systemPackages = [ pkgs.comma ];
 }
