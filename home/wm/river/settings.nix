@@ -54,14 +54,14 @@
 			"Super+Shift+Alt J" = "resize vertical -20";
 			"Super+Shift+Alt K" = "resize vertical 20";
 			"Super+Shift+Alt L" = "resize horizontal 20";
-			"Print" = "spawn 'grim -g\"$(slurp)\" - | wl-copy'";
-			"XF86AudioMute" = "spawn ${pkgs.pamixer}/bin/pamixer -t";
-			"XF86AudioRaiseVolume" = "spawn '${pkgs.pamixer}/bin/pamixer -i2'";
-			"XF86AudioLowerVolume" = "spawn '${pkgs.pamixer}/bin/pamixer -d2'";
-			"XF86AudioPause" = "spawn '${pkgs.playerctl}/bin/playerctl play-pause'";
-			"XF86AudioPlay" = "spawn '${pkgs.playerctl}/bin/playerctl play'";
-			"XF86AudioPrev" = "spawn '${pkgs.playerctl}/bin/playerctl previous'";
-			"XF86AudioNext" = "spawn '${pkgs.playerctl}/bin/playerctl next'";
+			"None Print" = "spawn 'grim -g\"$(slurp)\" - | wl-copy'";
+			"None XF86AudioMute" = "spawn ${pkgs.pamixer}/bin/pamixer -t";
+			"None XF86AudioRaiseVolume" = "spawn '${pkgs.pamixer}/bin/pamixer -i2'";
+			"None XF86AudioLowerVolume" = "spawn '${pkgs.pamixer}/bin/pamixer -d2'";
+			"None XF86AudioPause" = "spawn '${pkgs.playerctl}/bin/playerctl play-pause'";
+			"None XF86AudioPlay" = "spawn '${pkgs.playerctl}/bin/playerctl play'";
+			"None XF86AudioPrev" = "spawn '${pkgs.playerctl}/bin/playerctl previous'";
+			"None XF86AudioNext" = "spawn '${pkgs.playerctl}/bin/playerctl next'";
 		};
 	};
 	spawn = [
