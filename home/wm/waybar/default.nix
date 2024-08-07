@@ -1,4 +1,4 @@
-{ pkgs, sys, ... }:
+{ pkgs, sys, lib, ... }:
 {
 	imports = [
 		./laptop.nix
@@ -153,6 +153,7 @@
 				};
 				"river/tags" = {
 					num-tags = 10;
+					tag-labels = lib.forEach [1 2 3 4 5 6 7 8 9 0] (x: toString x);
 				};
 			};
 		};
