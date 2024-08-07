@@ -1273,11 +1273,11 @@
         "ymExe": "ymExe"
       },
       "locked": {
-        "lastModified": 1722559034,
-        "narHash": "sha256-bz21Yda9yovvDNBVChJH1WGspbO3USeqxH0UiYhyg5Q=",
+        "lastModified": 1722991074,
+        "narHash": "sha256-dm0ONxDzkfsXwHiOw4K1D/c6IsfOJkksNyVf/uWh+OA=",
         "owner": "cucumber-sp",
         "repo": "yandex-music-linux",
-        "rev": "38300dcb1f0457080500e594adaf88fdd8a808dc",
+        "rev": "6ab6b6eefff499ae4f6256b9a049efc2e1195ad3",
         "type": "github"
       },
       "original": {
@@ -1289,13 +1289,13 @@
     "ymExe": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-x8j2rQilAD1e2oDIhsfhIDWIbtxC2oIv/AhfuwRmnak=",
+        "narHash": "sha256-nMmUZov3j/vEs9+/5dbP1xSx80U9plrkqWkAtUTgeo8=",
         "type": "file",
-        "url": "https://music-desktop-application.s3.yandex.net/stable/Yandex_Music_x64_5.8.3.exe"
+        "url": "https://music-desktop-application.s3.yandex.net/stable/Yandex_Music_x64_5.9.4.exe"
       },
       "original": {
         "type": "file",
-        "url": "https://music-desktop-application.s3.yandex.net/stable/Yandex_Music_x64_5.8.3.exe"
+        "url": "https://music-desktop-application.s3.yandex.net/stable/Yandex_Music_x64_5.9.4.exe"
       }
     }
   },
