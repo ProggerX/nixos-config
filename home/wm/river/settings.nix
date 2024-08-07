@@ -1,5 +1,6 @@
-{ pkgs, lib, ... }: {
-	border-width = 2;
+{ pkgs, sys, ... }: {
+	border-width = 3;
+	border-color-focused = "0x${sys.lib.stylix.colors.base0D}";
 	map = {
 		normal = {
 			"Super Return" = "spawn ${pkgs.kitty}/bin/kitty";
@@ -33,13 +34,33 @@
 			"Super K" = "focus-view previous";
 			"Super+Shift J" = "swap next";
 			"Super+Shift K" = "swap previous";
-			"Super V" = "spawn 'cliphist list | rofi -dmenu -p ' 󰅌  ' | cliphist decode | wl-copy'";
+			"Super V" = ''spawn "cliphist list | rofi -dmenu -p ' 󰅌  ' | cliphist decode | wl-copy"'';
+			"Super F" = "toggle-float";
+			"Super+Alt H" = "move left 20";
+			"Super+Alt J" = "move down 20";
+			"Super+Alt K" = "move up 20";
+			"Super+Alt L" = "move right 20";
+			"Super+Shift+Alt H" = "resize horizontal -20";
+			"Super+Shift+Alt J" = "resize vertical -20";
+			"Super+Shift+Alt K" = "resize vertical 20";
+			"Super+Shift+Alt L" = "resize horizontal 20";
 		};
 	};
 	spawn = [
 		"${pkgs.wpaperd}/bin/wpaperd"
 		"'${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store'"
 		"'rivertile -view-padding 6 -outer-padding 6'"
+		"yandex-music"
+		"${pkgs.telegram-desktop}/bin/telegram-desktop"
+		"${pkgs.firefox-devedition}/bin/firefox-dev-edition"
 	];
 	default-layout = "rivertile";
+	keyboard-layout = "-options grp:win_space_toggle us,ru";
+	rule-add = {
+		"-app-id" = {
+			"'firefox'" = "tags 2";
+			"'YandexMusic'" = "tags 512";
+			"'org.telegram.desktop'" = "tags 8";
+		};
+	};
 }

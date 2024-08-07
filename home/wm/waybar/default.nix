@@ -7,7 +7,7 @@
 		enable = true;
 		style = with sys.lib.stylix.colors; ''
 			* {
-				border-radius: 10;
+				border-radius: 10px;
 			}
 			#tags button.focused {
 				border: 2px solid #${base05};
@@ -153,6 +153,18 @@
 				};
 				"river/tags" = {
 					num-tags = 10;
+					tag-labels = [
+						""
+						""
+						""
+						""
+						""
+						""
+						""
+						""
+						""
+						" "
+					];
 				};
 			};
 		};
