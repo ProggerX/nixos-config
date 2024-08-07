@@ -1,13 +1,16 @@
-{ pkgs, ... }:
+{ pkgs, sys, ... }:
 {
 	imports = [
 		./laptop.nix
 	];
 	programs.waybar	= {
 		enable = true;
-		style = ''
+		style = with sys.lib.stylix.colors; ''
 			* {
 				border-radius: 10;
+			}
+			#tags button.focused {
+				border: 2px solid #${base05};
 			}
 		'';
 		settings = {
@@ -147,6 +150,9 @@
 				};
 				"river/window" = {
 					max-length = 20;
+				};
+				"river/tags" = {
+					num-tags = 10;
 				};
 			};
 		};

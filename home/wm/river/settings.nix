@@ -25,18 +25,21 @@
 			"Super+Shift 9" = "set-view-tags 256";
 			"Super+Shift 0" = "set-view-tags 512";
 			"Super+Shift E" = "exit";
-			"Super R" = "spawn rofi -show drun";
-			"Alt Space" = "spawn rofi -show run";
+			"Super R" = "spawn 'rofi -show drun'";
+			"Alt Space" = "spawn 'rofi -show run'";
 			"Super+Control L" = "spawn ${pkgs.hyprlock}/bin/hyprlock";
 			"Super U" = "toggle-fullscreen";
 			"Super J" = "focus-view next";
 			"Super K" = "focus-view previous";
 			"Super+Shift J" = "swap next";
 			"Super+Shift K" = "swap previous";
+			"Super V" = "spawn 'cliphist list | rofi -dmenu -p ' 󰅌  ' | cliphist decode | wl-copy'";
 		};
 	};
 	spawn = [
-		"wpaperd"
+		"${pkgs.wpaperd}/bin/wpaperd"
+		"'${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store'"
+		"'rivertile -view-padding 6 -outer-padding 6'"
 	];
 	default-layout = "rivertile";
 }
