@@ -25,6 +25,16 @@
 			"Super+Shift 8" = "set-view-tags 128";
 			"Super+Shift 9" = "set-view-tags 256";
 			"Super+Shift 0" = "set-view-tags 512";
+			"Super+Control 1" = "toggle-focused-tags 1";
+			"Super+Control 2" = "toggle-focused-tags 2";
+			"Super+Control 3" = "toggle-focused-tags 4";
+			"Super+Control 4" = "toggle-focused-tags 8";
+			"Super+Control 5" = "toggle-focused-tags 16";
+			"Super+Control 6" = "toggle-focused-tags 32";
+			"Super+Control 7" = "toggle-focused-tags 64";
+			"Super+Control 8" = "toggle-focused-tags 128";
+			"Super+Control 9" = "toggle-focused-tags 256";
+			"Super+Control 0" = "toggle-focused-tags 512";
 			"Super+Shift E" = "exit";
 			"Super R" = "spawn 'rofi -show drun'";
 			"Alt Space" = "spawn 'rofi -show run'";
@@ -56,6 +66,7 @@
 	];
 	default-layout = "rivertile";
 	keyboard-layout = "-options grp:win_space_toggle us,ru";
+	focus-follows-cursor = "normal";
 	rule-add = {
 		"-app-id" = {
 			"'firefox'" = "tags 2";
