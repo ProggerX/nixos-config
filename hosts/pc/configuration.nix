@@ -91,6 +91,7 @@
 		# services.displayManager.sddm.theme = "where_is_my_sddm_theme_qt5";
 
 		programs.sway.enable = true;
+		programs.river.enable = true;
 		services.xserver.windowManager.qtile.enable = true;
 		services.greenclip.enable = true;
 		hardware.pulseaudio.enable = false;
@@ -161,6 +162,8 @@
 #ser	vices.gnome.gnome-remote-desktop.enable = true;
 		xdg.portal = {
 			enable = true;
+			wlr.enable = true;
+			extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 		};
 		
 		environment.systemPackages = with pkgs; [
