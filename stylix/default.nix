@@ -10,8 +10,8 @@
 			});
 		};
 		opacity = {
-			desktop = 0.7;
-			terminal = 0.7;
+			desktop = 0.65;
+			terminal = 0.65;
 			applications = 1;
 		};
 		fonts = {
@@ -37,6 +37,6 @@
 			};
 		};
 		base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
-		image = ./walls.jpg;
+		image = ./wallpapers/secluded-grove-pixel.png;
 	};
 }
