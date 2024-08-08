@@ -257,11 +257,11 @@
         "nixpkgs": "nixpkgs_8"
       },
       "locked": {
-        "lastModified": 1722943042,
-        "narHash": "sha256-0+LX4HoaOHzNM+W1PKjCNRBCtuIIyPYFbir9uOXUrnY=",
+        "lastModified": 1722943359,
+        "narHash": "sha256-eri8b0Dw18Q61UKvVxxDQZY75Is/y+HiB00TbcAWYc0=",
         "owner": "NotBalds",
         "repo": "cwe-server",
-        "rev": "dd472967fe936264cb7cc19f2a8be3fced113aca",
+        "rev": "99b16fa7254838535c29fbe32625c46fe738fa7a",
         "type": "github"
       },
       "original": {
@@ -1075,11 +1075,11 @@
         "nixpkgs": "nixpkgs_9"
       },
       "locked": {
-        "lastModified": 1723147774,
-        "narHash": "sha256-FCraSoxyli4CavbImsGCdxWy5gX6v98jFQUcaL39lYM=",
+        "lastModified": 1723149225,
+        "narHash": "sha256-4vPgfILJIoa5IOvhE4hhLxEgDOCcyvB/HAJXoGF4e2s=",
         "owner": "NotBalds",
         "repo": "nix",
-        "rev": "5d6680c29c70a289974a37f742de46cb821a9bd4",
+        "rev": "3deed181062b1b5a9f15bbc6bf86d707a8438440",
         "type": "github"
       },
       "original": {
