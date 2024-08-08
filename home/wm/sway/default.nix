@@ -6,7 +6,6 @@
 			"--unsupported-gpu"
 		];
 		config = {
-			output."*" = lib.mkForce {};
 			bars = [];
 			input = {
 				"*" = {

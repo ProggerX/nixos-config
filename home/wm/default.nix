@@ -4,7 +4,6 @@
 		./rofi
 		./dunst
 		./waybar
-		./wpaperd
 		./river
 		./sway
 	];
