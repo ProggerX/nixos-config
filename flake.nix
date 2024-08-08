@@ -37,14 +37,7 @@
 			url = "github:ProggerX/notie";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-		cwe = {
-			url = "github:NotBalds/cwe_server";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
-		cwe-cli = {
-			url = "github:NotBalds/cwe-rust-cli";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
+		notbalds.url = "github:NotBalds/nix";
 	};
 
 	outputs = { nixpkgs, ...}@inputs: {
@@ -79,7 +72,7 @@
 					inputs.site.nixosModules.site
 					inputs.homepage.nixosModules.homepage
 					inputs.notie.nixosModules.notie
-					inputs.cwe.nixosModules.cwe_server
+					inputs.notbalds.nixosModules.cwe-server
 
 					./modules/base.nix
 					./modules/server

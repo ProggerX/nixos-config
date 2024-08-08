@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }: {
 	environment.systemPackages = [
-		inputs.bald.packages.${pkgs.stdenv.hostPlatform.system}.default
-		inputs.cwe-cli.packages.${pkgs.stdenv.hostPlatform.system}.default
+		inputs.notbalds.packages.${pkgs.stdenv.hostPlatform.system}.bald
+		inputs.notbalds.packages.${pkgs.stdenv.hostPlatform.system}.cwe-client-cli
 	];
 }
