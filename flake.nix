@@ -38,6 +38,7 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 		notbalds.url = "github:NotBalds/nix";
+		lazynix.url = "github:ProggerX/lazynix";
 	};
 
 	outputs = { nixpkgs, ...}@inputs: {
