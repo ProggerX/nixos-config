@@ -130,7 +130,6 @@
 		security.polkit.enable = true;
 		security.pam.services.swaylock = {};
 		security.pam.services.hyprlock = {};
-		security.sudo.wheelNeedsPassword = false;
 		services.pipewire = {
 			enable = true;
 			alsa.enable = true;
@@ -262,7 +261,7 @@
 
 		services.terraria.enable = false;
 		services.frp = {
-			enable = true;
+			enable = config.services.terraria.enable;
 			role = "client";
 			settings = {
 				serverAddr = "5.35.87.192";
