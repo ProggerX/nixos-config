@@ -17,7 +17,7 @@
 			ms = "musikcube";
 			dploy = "deploy -s";
 			dl = "ytmdl";
-			update = "nh os switch /home/proggerx/nixos-config";
+			update = "nh os switch /home/proggerx/Nix/nixos-config";
 			q = "exit";
 			cls = "clear";
 			lt = "leetcode";
