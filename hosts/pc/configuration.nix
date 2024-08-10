@@ -40,7 +40,7 @@
 			allowedUDPPorts = [ 51820 ]; 
 		};
 
-		boot.initrd.systemd.enable = true;
+		#boot.initrd.systemd.enable = true;
 		
 		boot.loader.systemd-boot.enable = false;
 		boot.loader.efi.canTouchEfiVariables = false;
