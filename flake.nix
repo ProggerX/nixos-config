@@ -49,7 +49,7 @@
 				modules = [
 					./modules/base.nix
 					./modules/home.nix
-					./modules/gaming.nix
+					./modules/nvidia.nix
 					./hosts/pc/configuration.nix
 					./hosts/pc/hardware-configuration.nix
 					./modules/non-server.nix

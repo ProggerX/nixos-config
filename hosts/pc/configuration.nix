@@ -41,8 +41,7 @@
 			allowedUDPPorts = [ 51820 ]; 
 		};
 
-		#boot.initrd.systemd.enable = true;
-		
+				
 		boot.loader.systemd-boot.enable = false;
 		boot.loader.efi.canTouchEfiVariables = false;
 		boot.loader.grub.efiInstallAsRemovable = true;
@@ -54,7 +53,6 @@
 		boot.supportedFilesystems = [ "ntfs" ];
 		
 		boot.extraModulePackages = [ config.boot.kernelPackages.rtl88x2bu ];
-		boot.kernelModules = [ "nouveau" ];
 		
 		networking.networkmanager.enable = true;	
 		nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -84,14 +82,8 @@
 		services.libinput.touchpad.middleEmulation = true;
 		
 		services.displayManager.defaultSession = "sway";
-		# services.displayManager.sddm.enable = true;
-#		services.xserver.displayManager.lightdm.greeters.mini.enable = true;
-#		services.xserver.displayManager.lightdm.greeters.mini.user = "proggerx";
-		#services.xserver.desktopManager.gnome.enable = true;
-		# services.displayManager.sddm.wayland.enable = true;
-		# services.displayManager.sddm.theme = "where_is_my_sddm_theme_qt5";
-
-		programs.sway.enable = true;
+								
+		programs.hyprland.enable = true;
 		programs.river.enable = true;
 		services.xserver.windowManager.qtile.enable = true;
 		services.greenclip.enable = true;
@@ -120,7 +112,7 @@
 		users.defaultUserShell = pkgs.zsh;
 		
 		services.xserver.xkb.layout = "us";
-		services.xserver.videoDrivers = [ "nouveau" "intel" ];
+		services.xserver.videoDrivers = [ "nvidia" "intel" ];
 		services.xserver.xkb.options = "eurosign:e,caps:escape";
 		nixpkgs.config.allowUnfree = true;
 		
@@ -159,7 +151,6 @@
 		};
 		
 		services.dbus.enable = true;
-#ser	vices.gnome.gnome-remote-desktop.enable = true;
 		xdg.portal = {
 			enable = true;
 			wlr.enable = true;

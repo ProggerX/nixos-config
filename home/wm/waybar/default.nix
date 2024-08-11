@@ -22,7 +22,7 @@
 				spacing = 10;
 
 				modules-center	= ["custom/cava" "custom/spotify"];
-				modules-left	= ["sway/workspaces" "river/tags" "sway/window" "river/window"];
+				modules-left	= [ "hyprland/workspaces" "sway/workspaces" "river/tags" "hyprland/window" "sway/window" "river/window"];
 				modules-right	= ["tray" "cpu" "memory" "custom/pipewire" "sway/language" "clock"];
 
 				"sway/workspaces" = {
