@@ -5,6 +5,7 @@
 		(dwarf-fortress-packages.dwarf-fortress-full.override {
 			dfVersion = "0.47.05";
 		})
+		tgpt
 		neovide
 		lutris
 		neovim
