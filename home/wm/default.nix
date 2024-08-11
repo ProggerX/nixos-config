@@ -1,6 +1,7 @@
 {
 	imports = [
 		./hyprlock
+		./swaylock
 		./hyprland
 		./rofi
 		./dunst

@@ -28,7 +28,7 @@
 			"Super+Shift E" = "exit";
 			"Super R" = "spawn 'rofi -show drun'";
 			"Alt Space" = "spawn 'rofi -show run'";
-			"Super+Control L" = "spawn ${pkgs.hyprlock}/bin/hyprlock";
+			"Super+Control L" = "spawn ${pkgs.swaylock}/bin/swaylock";
 			"Super U" = "toggle-fullscreen";
 			"Super J" = "focus-view next";
 			"Super K" = "focus-view previous";
