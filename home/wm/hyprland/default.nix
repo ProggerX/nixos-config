@@ -84,7 +84,7 @@ gestures {
 $mainMod = SUPER
 
 bind = $mainMod, C, killactive, 
-bind = $mainMod SHIFT, L, exec, hyprlock
+bind = $mainMod SHIFT, L, exec, swaylock
 bind = $mainMod, O, pin
 bind = $mainMod, f, togglefloating, 
 bind = $mainMod, P, pseudo,
