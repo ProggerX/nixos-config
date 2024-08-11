@@ -1,7 +1,8 @@
-{config, pkgs, ...}:
+{config, inputs, pkgs, ...}:
 {
 	wayland.windowManager.hyprland = {
 		enable = true;
+		package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 		extraConfig = ''
 env = LIBVA_DRIVER_NAME,nvidia
 env = XDG_SESSION_TYPE,wayland
