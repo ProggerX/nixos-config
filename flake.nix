@@ -50,8 +50,8 @@
 					./modules/base.nix
 					./modules/home.nix
 					./modules/gaming.nix
-					./hosts/snd-pc/configuration.nix
-					./hosts/snd-pc/hardware-configuration.nix
+					./hosts/pc/configuration.nix
+					./hosts/pc/hardware-configuration.nix
 					./modules/non-server.nix
 				];
 			};
