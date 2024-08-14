@@ -112,7 +112,6 @@
 		users.defaultUserShell = pkgs.zsh;
 		
 		services.xserver.xkb.layout = "us";
-		services.xserver.videoDrivers = [ "nvidia" "intel" ];
 		services.xserver.xkb.options = "eurosign:e,caps:escape";
 		nixpkgs.config.allowUnfree = true;
 		
