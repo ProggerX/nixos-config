@@ -1,5 +1,5 @@
 { pkgs, ... }:
-pkgs.writeShellScriptBin "spotify_now_playing" ''
+pkgs.writeShellScriptBin "music_now_playing" ''
 	while true
 	do
 		player_status=''$(${pkgs.playerctl}/bin/playerctl status -p chromium 2> /dev/null)

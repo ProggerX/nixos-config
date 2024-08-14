@@ -3,14 +3,117 @@
 	imports = [
 		./laptop.nix
 	];
+	stylix.targets.waybar.enable = false;
 	programs.waybar	= {
 		enable = true;
 		style = with sys.lib.stylix.colors; ''
 			* {
-				border-radius: 10px;
+				background-color: #${base00};
+				color: #${base05};
+				font-family: "JetBrainsMono Nerd Font";
+				font-size: 10pt;
+				border-radius: 20px;
 			}
-			#tags button.focused {
+
+			#workspaces {
+				background-color: #${base01};
+				margin: 6px;
+				border-radius: 14px;
+			}
+
+			#workspaces * {
+				background-color: #${base01};
+			}
+
+			#workspaces button {
+				margin: 2px;
+				padding-left: 7px;
+				padding-right: 7px;
+				border-radius: 12px;
+			}
+
+			#workspaces button.active {
 				border: 2px solid #${base05};
+			}
+
+			#window {
+				background-color: #${base01};
+				border-radius: 14px;
+				margin: 6px;
+				padding: 6px;
+				padding-left: 8px;
+				padding-right: 8px;
+			}
+
+			#window * {
+				background-color: #${base01};
+			}
+
+			#custom-cava {
+				background-color: #${base01};
+				border-radius: 14px;
+				margin: 6px;
+				padding: 6px;
+				padding-left: 8px;
+				padding-right: 8px;
+			}
+
+			#custom-music {
+				background-color: #${base01};
+				border-radius: 14px;
+				margin: 6px;
+				padding: 6px;
+				padding-left: 8px;
+				padding-right: 8px;
+			}
+
+			#custom-pipewire {
+				background-color: #${base01};
+				border-radius: 14px;
+				margin: 6px;
+				padding: 6px;
+				padding-left: 8px;
+				padding-right: 8px;
+			}
+
+			#custom-battery {
+				background-color: #${base01};
+				border-radius: 14px;
+				margin: 6px;
+				padding: 6px;
+				padding-left: 8px;
+				padding-right: 8px;
+			}
+
+			#language {
+				background-color: #${base01};
+				border-radius: 14px;
+				margin: 6px;
+				padding: 6px;
+				padding-left: 8px;
+				padding-right: 8px;
+			}
+
+			#clock {
+				background-color: #${base01};
+				border-radius: 14px;
+				margin: 6px;
+				padding: 6px;
+				padding-left: 8px;
+				padding-right: 8px;
+			}
+
+			#tray {
+				background-color: #${base01};
+				border-radius: 14px;
+				margin: 6px;
+				padding: 6px;
+				padding-left: 8px;
+				padding-right: 8px;
+			}
+
+			#tray * {
+				background-color: #${base01};
 			}
 		'';
 		settings = {
@@ -21,68 +124,17 @@
 				width = 1885;
 				spacing = 10;
 
-				modules-center	= ["custom/cava" "custom/spotify"];
-				modules-left	= [ "hyprland/workspaces" "sway/workspaces" "river/tags" "hyprland/window" "sway/window" "river/window"];
-				modules-right	= ["tray" "cpu" "memory" "custom/pipewire" "sway/language" "clock"];
+				modules-center	= [ "custom/music" ];
+				modules-left	= [ "hyprland/workspaces" "hyprland/window" ];
+				modules-right	= [ "tray" "custom/pipewire" "hyprland/language" "clock" ];
 
-				"sway/workspaces" = {
-					format = "{icon}";
-					on-scroll-up = "hyprctl dispatch workspace e+1";
-					on-scroll-down = "hyprctl dispatch workspace e-1";
-					on-click = "activate";
-					all-outputs = false;
-					format-icons = {
-						"1" = "1";
-						"2" = "2";
-						"3" = "3";
-						"4" = "4";
-						"5" = "5";
-						"6" = "6";
-						"7" = "7";
-						"8" = "8";
-						"9" = "9";
-						"10" = "0";
-						urgent = "!";
-					};
+				"hyprland/language" = {
+					format-ru = "ru";
+					format-en = "us";
 				};
 
-
-				"network" = {
-					"interface" = "wlp4s0";
-					"format-wifi" = " ";
-					"format-ethernet" = " ";
-					"format-disconnected" = " ";
-					"tooltip-format-wifi" = "{essid} ({signalStrength}%)  ";
-					"tooltip-format-ethernet" = "{ifname}  ";
-					"tooltip-format-disconnected" = "Disconnected";
-				};
-						
-				"bluetooth" = {
-					"format" = " ";
-					"format-connected" = " ";
-					"format-connected-battery" = " ";
-					"tooltip-format" = "{controller_alias}\t{controller_address}\n\n{num_connections} connected";
-					"tooltip-format-connected" = "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}";
-					"tooltip-format-enumerate-connected" = "{device_alias}\t{device_address}";
-					"tooltip-format-enumerate-connected-battery" = "{device_alias}\t{device_address}\t{device_battery_percentage}%";
-				};
-
-				"cpu" = {
-					interval = 1;
-					format = "    {usage}%";
-					states = {
-						"warning" = 70;
-						"critical" = 90;
-					};
-				};
-
-				"memory" = {
-					"interval" = 5;
-					"format" = " {}%";
-					"states" = {
-						"warning" = 70;
-						"critical" = 90;
-					};
+				"hyprland/window" = {
+					max-length = 30;
 				};
 
 				"tray" = {
@@ -91,24 +143,12 @@
 				};
 
 				"clock" = {
-					"format" = "{:%H:%M} ";
-					"format-alt" = "{:%Y-%m-%d} ";
-				};
-
-				"sway/window" = {
-					format = "  {}";
-					separate-outputs = false;
-					max-length = 35;
-				};
-
-				"sway/language" = {
-					format = "{}";
-					format-us = "US";
-					format-ru = "RU";
+					"format" = "{:%H:%M}";
+					"format-alt" = "{:%Y-%m-%d}";
 				};
 
 				"custom/pipewire" = let pamixer = "${pkgs.pamixer}/bin/pamixer"; in {
-					format = " {}";
+					format = "{}";
 					exec = "sleep 0.05 && echo $(${pamixer} --get-mute)$(${pamixer} --get-volume) | sed 's/true/ /' | sed 's/false/) /'";
 					on-click = "${pamixer} -t; pkill -x -RTMIN+11 waybar";
 					on-scroll-up = "${pamixer} -i2; pkill -x -RTMIN+11 waybar";
@@ -132,28 +172,13 @@
 					exec = "${import ./brightness.nix { inherit pkgs; }}/bin/waybar-brightness get";
 				};
 
-				"custom/cava" = {
-					format = "{} ";
-					return-type = "text";
-					max-length = 40;
-					escape = true;
-					tooltip = false;
-					exec = "${import ./cava.nix { inherit pkgs; }}/bin/cava_waybar";
-				};
-				"custom/spotify" = {
+				"custom/music" = {
 					format = "  {}";
 					return-type = "text";
 					max-length = 40;
 					escape = true;
 					tooltip = false;
-					exec = "${import ./spotify.nix { inherit pkgs; }}/bin/spotify_now_playing";
-				};
-				"river/window" = {
-					max-length = 20;
-				};
-				"river/tags" = {
-					num-tags = 10;
-					tag-labels = lib.forEach [1 2 3 4 5 6 7 8 9 0] (x: toString x);
+					exec = "${import ./music.nix { inherit pkgs; }}/bin/music_now_playing";
 				};
 			};
 		};

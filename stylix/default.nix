@@ -10,14 +10,12 @@
 			});
 		};
 		opacity = {
-			desktop = 0.65;
-			terminal = 0.65;
+			terminal = 0.75;
 			applications = 1;
 		};
 		fonts = {
 			sizes = {
 				terminal = 12;
-				#desktop = 11;
 			};
 			serif = {
 				package = pkgs.dejavu_fonts;
