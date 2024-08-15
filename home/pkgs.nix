@@ -28,8 +28,6 @@
 		ffmpeg
 		lazydocker
 		mpv
-		typst
-		typst-lsp
 		clang-tools
 		mpg123
 		parted
