@@ -63,6 +63,8 @@
 			"decoration:blur" = {
 				enabled = false;
 			};
+
+			"render:explicit_sync" = 0;
 			
 			animations = {
 			    enabled = true;

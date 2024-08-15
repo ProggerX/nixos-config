@@ -174,7 +174,6 @@
 				"custom/music" = {
 					format = "  {}";
 					return-type = "text";
-					max-length = 40;
 					escape = true;
 					tooltip = false;
 					exec = "${import ./music.nix { inherit pkgs; }}/bin/music_now_playing";
