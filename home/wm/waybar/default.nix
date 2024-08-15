@@ -81,6 +81,16 @@
 				padding-right: 8px;
 			}
 
+			#custom-brightness {
+				background-color: #${base01};
+				border-radius: 24px;
+				box-shadow: 0 0 3px #${base05};
+				margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
+				padding: 6px;
+				padding-left: 8px;
+				padding-right: 8px;
+			}
+
 			#language {
 				background-color: #${base01};
 				border-radius: 24px;
@@ -158,13 +168,13 @@
 				};
 				
 				"custom/battery" = {
-					format = " {} ";
+					format = "{}";
 					exec = "${./battery.sh}";
 					interval = 5;
 				};
 
 				"custom/brightness" = {
-					format = " {}";
+					format = "{}";
 					interval = 5;
 					on-scroll-up = "${import ./brightness.nix { inherit pkgs; }}/bin/waybar-brightness raise > /dev/null";
 					on-scroll-down = "${import ./brightness.nix { inherit pkgs; }}/bin/waybar-brightness lower > /dev/null";
