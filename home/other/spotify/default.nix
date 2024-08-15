@@ -1,12 +1,12 @@
 { pkgs, inputs, config, ... }:
 let
-	spicePkgs = inputs.spicetify-nix.packages.${pkgs.system}.default;
+	spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
 in {
-	imports = [inputs.spicetify-nix.homeManagerModule];
+	imports = [inputs.spicetify-nix.homeManagerModules.default];
 	programs.spicetify = {
 		enable = true;
-		theme = spicePkgs.themes.text;
 		colorScheme = "custom";
+		theme = spicePkgs.themes.sleek;
 		customColorScheme = with config.lib.stylix.colors; {
 			accent = base0B;
 			accent-active = base0B;
@@ -34,8 +34,5 @@ in {
 			loopyLoop
 			popupLyrics
 		];
-		enabledCustomApps = with spicePkgs.apps; [
-			lyrics-plus
-    	];
 	};
 }
