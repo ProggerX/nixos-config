@@ -22,7 +22,6 @@
 		ags
 		wineWowPackages.full
 		wails
-		easyeffects
 		telegram-desktop
 		restish
 		ffmpeg
