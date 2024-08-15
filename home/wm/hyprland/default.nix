@@ -90,7 +90,7 @@
 			
 			bind = [
 				"$mainMod, C, killactive, "
-				"$mainMod SHIFT, L, exec, swaylock"
+				"$mainMod SHIFT, L, exec, hyprlock"
 				"$mainMod, O, pin"
 				"$mainMod, f, togglefloating," 
 				"$mainMod, P, pseudo,"

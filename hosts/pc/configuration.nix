@@ -119,7 +119,6 @@
 		
 		security.rtkit.enable = true;
 		security.polkit.enable = true;
-		security.pam.services.swaylock = {};
 		security.pam.services.hyprlock = {};
 		services.pipewire = {
 			enable = true;
