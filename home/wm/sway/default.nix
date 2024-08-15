@@ -46,7 +46,7 @@
 				{ command = "${pkgs.waybar}/bin/waybar"; }
 				{ command = "${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store"; }
 				{ command = "${pkgs.wpaperd}/bin/wpaperd"; }
-				{ command = "${pkgs.firefox-devedition}/bin/firefox-devedition"; }
+				{ command = "${pkgs.firefox}/bin/firefox"; }
 				{ command = "${pkgs.telegram-desktop}/bin/telegram-desktop"; }
 				{ command = "${pkgs.vesktop}/bin/vesktop"; }
 				{ command = "yandex-music"; }

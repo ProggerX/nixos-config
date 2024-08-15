@@ -23,7 +23,7 @@
 				"wl-paste --watch cliphist store"
 				"waybar"
 				"spotify"
-				"firefox-devedition"
+				"firefox"
 				"telegram-desktop"
 				"vesktop"
 			];

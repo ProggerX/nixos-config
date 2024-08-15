@@ -60,7 +60,7 @@
 		"'rivertile -view-padding 6 -outer-padding 6'"
 		"yandex-music"
 		"${pkgs.telegram-desktop}/bin/telegram-desktop"
-		"${pkgs.firefox-devedition}/bin/firefox-devedition"
+		"${pkgs.firefox}/bin/firefox"
 		"${pkgs.waybar}/bin/waybar"
 	];
 	default-layout = "rivertile";

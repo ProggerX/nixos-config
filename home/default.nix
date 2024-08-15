@@ -2,7 +2,6 @@
 {
     home.username = "proggerx";
     home.homeDirectory = "/home/proggerx";
-	stylix.targets.firefox.profileNames = ["dev-edition-default"];
 
     imports = [
         ./pkgs.nix
