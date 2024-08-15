@@ -219,7 +219,7 @@
 		};
 		
 		networking.extraHosts = ''
-			31.129.99.206 git
+			
 		'';
 		
 		programs.adb.enable = true;
