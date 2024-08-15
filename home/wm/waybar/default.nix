@@ -12,13 +12,14 @@
 				color: #${base05};
 				font-family: "JetBrainsMono Nerd Font";
 				font-size: 10pt;
-				border-radius: 20px;
+				border-radius: 30px;
 			}
 
 			#workspaces {
 				background-color: #${base01};
-				margin: 6px;
-				border-radius: 14px;
+				margin-left: 6px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
+				border-radius: 24px;
+				box-shadow: 0 0 3px #${base05};
 			}
 
 			#workspaces * {
@@ -29,7 +30,7 @@
 				margin: 2px;
 				padding-left: 7px;
 				padding-right: 7px;
-				border-radius: 12px;
+				border-radius: 22px;
 			}
 
 			#workspaces button.active {
@@ -38,8 +39,9 @@
 
 			#window {
 				background-color: #${base01};
-				border-radius: 14px;
-				margin: 6px;
+				border-radius: 24px;
+				box-shadow: 0 0 3px #${base05};
+				margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
 				padding: 6px;
 				padding-left: 8px;
 				padding-right: 8px;
@@ -49,19 +51,11 @@
 				background-color: #${base01};
 			}
 
-			#custom-cava {
-				background-color: #${base01};
-				border-radius: 14px;
-				margin: 6px;
-				padding: 6px;
-				padding-left: 8px;
-				padding-right: 8px;
-			}
-
 			#custom-music {
 				background-color: #${base01};
-				border-radius: 14px;
-				margin: 6px;
+				border-radius: 24px;
+				box-shadow: 0 0 3px #${base05};
+				margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
 				padding: 6px;
 				padding-left: 8px;
 				padding-right: 8px;
@@ -69,8 +63,9 @@
 
 			#custom-pipewire {
 				background-color: #${base01};
-				border-radius: 14px;
-				margin: 6px;
+				border-radius: 24px;
+				box-shadow: 0 0 3px #${base05};
+				margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
 				padding: 6px;
 				padding-left: 8px;
 				padding-right: 8px;
@@ -78,8 +73,9 @@
 
 			#custom-battery {
 				background-color: #${base01};
-				border-radius: 14px;
-				margin: 6px;
+				border-radius: 24px;
+				box-shadow: 0 0 3px #${base05};
+				margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
 				padding: 6px;
 				padding-left: 8px;
 				padding-right: 8px;
@@ -87,8 +83,9 @@
 
 			#language {
 				background-color: #${base01};
-				border-radius: 14px;
-				margin: 6px;
+				border-radius: 24px;
+				box-shadow: 0 0 3px #${base05};
+				margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
 				padding: 6px;
 				padding-left: 8px;
 				padding-right: 8px;
@@ -96,8 +93,9 @@
 
 			#clock {
 				background-color: #${base01};
-				border-radius: 14px;
-				margin: 6px;
+				border-radius: 24px;
+				box-shadow: 0 0 3px #${base05};
+				margin-left: 10px; margin-right: 6px; margin-top: 6px; margin-bottom: 6px;
 				padding: 6px;
 				padding-left: 8px;
 				padding-right: 8px;
@@ -105,8 +103,9 @@
 
 			#tray {
 				background-color: #${base01};
-				border-radius: 14px;
-				margin: 6px;
+				border-radius: 24px;
+				box-shadow: 0 0 3px #${base05};
+				margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
 				padding: 6px;
 				padding-left: 8px;
 				padding-right: 8px;
@@ -120,8 +119,8 @@
 			bar = {
 				position = "top";
 				margin-top = 5;
-				height = 40;
-				width = 1885;
+				height = 52;
+				width = 1900;
 				spacing = 10;
 
 				modules-center	= [ "custom/music" ];
