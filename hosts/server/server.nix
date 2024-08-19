@@ -6,6 +6,7 @@
 	server.homepage.enable = true;
 	server.searx.enable = true;
 	server.minecraft.enable = true;
+	server.minecraft.servers.main.enable = true;
 	server.notie.enable = true;
 	server.jellyfin = {
 		enable = true;
