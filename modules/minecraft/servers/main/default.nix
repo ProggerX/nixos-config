@@ -4,6 +4,7 @@
 	};
 	imports = [
 		./frp.nix
+		./nginx.nix
 	];
 	config = let cfg = config.server.minecraft.servers.main; in lib.mkIf cfg.enable {
 		flux = {
