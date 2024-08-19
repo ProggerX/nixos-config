@@ -3,7 +3,7 @@
 		./emanote.nix
 		./searx.nix
 		./frp.nix
-		./minecraft
+		../minecraft
 		./jellyfin.nix
 		./adguard.nix
 	];

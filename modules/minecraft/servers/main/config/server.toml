@@ -1,0 +1,43 @@
+name = "main"
+mc_version = "1.21"
+
+plugins = [
+	{
+		type = "hangar",
+		id = "Blue/BlueMap",
+		version = "3.16"
+	}
+	{
+		type = "hangar",
+		id = "GeyserMC/Geyser",
+		version = "Geyser"
+	}
+	{
+		type = "hangar",
+		id = "GeyserMC/Floodgate",
+		version = "Floodgate"
+	}
+	{
+		type = "hangar",
+		id = "GrimAnticheat/GrimAnticheat",
+		version = "2.3.66"
+	}
+	{
+		type = "spigot",
+		id = "discordsrv.18494"
+	}
+]
+
+[jar]
+type = "paper"
+
+[variables]
+SERVER_PORT = "25566"
+
+[launcher]
+eula_args = true
+nogui = true
+
+[options]
+success_line = ""
+stop_command = ""
