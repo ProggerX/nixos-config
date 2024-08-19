@@ -4,9 +4,10 @@ mc_version = "1.18.2"
 plugins = [
 	{ type = "url", url = "https://download.geysermc.org/v2/projects/geyser/versions/2.4.2/builds/650/downloads/spigot", filename = "geyser.jar" },
 	{ type = "url", url = "https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot", filename = "floodgate.jar" },
-	{ type = "spigot", id = "bluemap.83557" },
-	{ type = "spigot", id = "grim-anticheat.99923" },
-	{ type = "spigot", id = "discordsrv.18494" }
+	{ type = "url", url = "https://github.com/ViaVersion/ViaVersion/releases/download/5.0.3/ViaVersion-5.0.3.jar" },
+	{ type = "url", url = "https://github.com/DiscordSRV/DiscordSRV/releases/download/v1.28.0/DiscordSRV-Build-1.28.0.jar" },
+	{ type = "url", url = "https://github.com/BlueMap-Minecraft/BlueMap/releases/download/v3.16/BlueMap-3.16-spigot.jar" },
+	{ type = "url", url = "https://hangarcdn.papermc.io/plugins/GrimAnticheat/GrimAnticheat/versions/2.3.66/PAPER/grimac-2.3.66.jar" }
 ]
 
 [jar]
