@@ -23,7 +23,7 @@
 		deploy-rs.url = "github:serokell/deploy-rs";
 		yandex-music.url = "github:cucumber-sp/yandex-music-linux";
 		# Server inputs
-		flux.url = "github:IogaMaster/flux";
+		flux.url = "github:Bananad3v/flux";
 		emanote = {
 			url = "github:srid/emanote";
 			inputs.nixpkgs.follows = "nixpkgs";

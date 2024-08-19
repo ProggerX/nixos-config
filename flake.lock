@@ -676,15 +676,15 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1723661621,
-        "narHash": "sha256-OELVwnN9m4drhMG6sn+WJNTqeW579+NyYFGhGmoXeEg=",
-        "owner": "IogaMaster",
+        "lastModified": 1722153922,
+        "narHash": "sha256-fthMjFVXDy/a1OY+6TAPvDCT4FFjtBppNOks79Wd46E=",
+        "owner": "Bananad3v",
         "repo": "flux",
-        "rev": "383749ed637fce9c47fda7b89203ff0699882cb9",
+        "rev": "1f5dc6df24624c35ece20112ef523040ee793daa",
         "type": "github"
       },
       "original": {
-        "owner": "IogaMaster",
+        "owner": "Bananad3v",
         "repo": "flux",
         "type": "github"
       }

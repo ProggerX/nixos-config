@@ -10,9 +10,9 @@
 			servers = {
 				main = {
 					package = pkgs.mkMinecraftServer {
-						name = "main-mine";
+						name = "main-minecraft-server";
 						src = ./config;
-						hash = "";
+						hash = "sha256-KTd1F/vt+3n6m/ct4Ay4rKz8Zd0T7VqxLAqARx/CtT9=";
 					};
 					proxy.enable = false;
 				};

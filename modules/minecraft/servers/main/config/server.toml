@@ -1,38 +1,19 @@
 name = "main"
-mc_version = "1.21"
+mc_version = "1.18.2"
 
 plugins = [
-	{
-		type = "hangar",
-		id = "Blue/BlueMap",
-		version = "3.16"
-	}
-	{
-		type = "hangar",
-		id = "GeyserMC/Geyser",
-		version = "Geyser"
-	}
-	{
-		type = "hangar",
-		id = "GeyserMC/Floodgate",
-		version = "Floodgate"
-	}
-	{
-		type = "hangar",
-		id = "GrimAnticheat/GrimAnticheat",
-		version = "2.3.66"
-	}
-	{
-		type = "spigot",
-		id = "discordsrv.18494"
-	}
+	{ type = "url", url = "https://download.geysermc.org/v2/projects/geyser/versions/2.4.2/builds/650/downloads/spigot", filename = "geyser.jar" },
+	{ type = "url", url = "https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot", filename = "floodgate.jar" },
+	{ type = "spigot", id = "bluemap.83557" },
+	{ type = "spigot", id = "grim-anticheat.99923" },
+	{ type = "spigot", id = "discordsrv.18494" }
 ]
 
 [jar]
 type = "paper"
 
 [variables]
-SERVER_PORT = "25566"
+SERVER_PORT = "25565"
 
 [launcher]
 eula_args = true
