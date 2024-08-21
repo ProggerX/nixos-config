@@ -1,5 +1,9 @@
 { pkgs, ... }: {
     home.packages = with pkgs; [
+		ghc
+		haskell-language-server
+		cabal-install
+		stack
 		tic-80
 		cool-retro-term
 		(dwarf-fortress-packages.dwarf-fortress-full.override {
