@@ -169,7 +169,7 @@
 				
 				"custom/battery" = {
 					format = "{}";
-					exec = "${./battery.sh}";
+					exec = "${import ./battery.nix { inherit pkgs; }}/bin/waybar_brightness";
 					interval = 5;
 				};
 
