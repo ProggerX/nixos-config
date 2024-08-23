@@ -1,6 +1,7 @@
 { pkgs, ... }: {
     home.packages = with pkgs; [
 		ghc
+        haskellPackages.hoogle
 		haskell-language-server
 		cabal-install
 		stack
