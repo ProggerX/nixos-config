@@ -166,7 +166,7 @@
 				"nofocus,class:^(xwaylandvideobridge)$"
 				"noinitialfocus,class:^(xwaylandvideobridge)$"
 				# "workspace 2,class:(firefox)"
-				"workspace 2,class:(brave)"
+				"workspace 2,class:(Brave-browser)"
 				"float,class:(showmethekey-gtk)"
 				"float,class:(Tk)"
 				"pin,class:(showmethekey-gtk)"
