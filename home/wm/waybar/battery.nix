@@ -11,15 +11,15 @@ icon=""
 
 
 if [ "$status" = "Charging" ]; then
-	icon=$charging_icon
+    icon=$charging_icon
 elif [ "$status" = "Full" ]; then
-	icon=$full_icon
+    icon=$full_icon
 else
 for i in {0..4}; do
-	if [ "$capacity" -le "''${values[$i]}" ] && [ "$result" = "" ]; then
-		icon=''${icons[$i]}
-		break
-	fi
+    if [ "$capacity" -le "''${values[$i]}" ] && [ "$result" = "" ]; then
+        icon=''${icons[$i]}
+        break
+    fi
 done
 fi
 

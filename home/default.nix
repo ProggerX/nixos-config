@@ -5,10 +5,10 @@
 
     imports = [
         ./pkgs.nix
-		./nurpkgs.nix
-		./other
-		./wm
-		./shell
+        ./nurpkgs.nix
+        ./other
+        ./wm
+        ./shell
     ];
 
     home.stateVersion = "24.11";

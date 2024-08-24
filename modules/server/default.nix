@@ -1,10 +1,10 @@
 {
-	imports = [
-		./emanote.nix
-		./searx.nix
-		./frp.nix
-		../minecraft
-		./jellyfin.nix
-		./adguard.nix
-	];
+    imports = [
+        ./emanote.nix
+        ./searx.nix
+        ./frp.nix
+        ../minecraft
+        ./jellyfin.nix
+        ./adguard.nix
+    ];
 }

@@ -1,8 +1,8 @@
 { ... }: {
-	hardware.uinput.enable = true;
-	services.kanata = {
-		enable = true;
-		keyboards.all.config = ''
+    hardware.uinput.enable = true;
+    services.kanata = {
+        enable = true;
+        keyboards.all.config = ''
 (defsrc
   caps
 )
@@ -14,6 +14,6 @@
 (deflayer base
   @escctrl
 )
-		'';
-	};
+        '';
+    };
 }

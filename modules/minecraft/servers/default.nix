@@ -1,3 +1,3 @@
 {
-	imports = [ ./main ];
+    imports = [ ./main ];
 }

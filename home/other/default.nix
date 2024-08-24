@@ -1,8 +1,8 @@
 {
-	imports = [
-		./firefox
-		./forkgram
-		./spotify
+    imports = [
+        ./firefox
+        ./forkgram
+        ./spotify
         ./brave
-	];
+    ];
 }

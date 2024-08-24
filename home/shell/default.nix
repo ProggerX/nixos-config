@@ -1,11 +1,11 @@
 {
-	imports = [
-		./zsh
-		./bat
-		./neofetch
-		./fish
-		./yazi
-		./pass
-		./kitty
-	];
+    imports = [
+        ./zsh
+        ./bat
+        ./neofetch
+        ./fish
+        ./yazi
+        ./pass
+        ./kitty
+    ];
 }

@@ -1,11 +1,11 @@
 {
-	imports = [
-		./hyprlock
-		./hyprland
-		./rofi
-		./dunst
-		./waybar
-		./river
-		./sway
-	];
+    imports = [
+        ./hyprlock
+        ./hyprland
+        ./rofi
+        ./dunst
+        ./waybar
+        ./river
+        ./sway
+    ];
 }
