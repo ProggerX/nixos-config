@@ -1,4 +1,4 @@
-{ pkgs, sys, lib, ... }:
+{ pkgs, sys, ... }:
 {
     imports = [
         ./laptop.nix
@@ -10,7 +10,7 @@
             * {
                 background-color: #${base00};
                 color: #${base05};
-                font-family: "JetBrainsMono Nerd Font";
+                font-family: "${sys.stylix.fonts.sansSerif.name}";
                 font-size: 10pt;
                 border-radius: 30px;
             }

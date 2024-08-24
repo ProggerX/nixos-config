@@ -13,7 +13,7 @@
             terminal = 0.75;
             applications = 1;
         };
-        fonts = {
+        fonts = rec {
             sizes = {
                 terminal = 12;
             };
@@ -25,10 +25,7 @@
                 package = (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; });
                 name = "JetBrainsMono Nerd Font";
             };
-            monospace = {
-                package = (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; });
-                name = "JetBrainsMono Nerd Font";
-            };
+            monospace = sansSerif;
             emoji = {
                 package = pkgs.noto-fonts-color-emoji;
                 name = "Noto Color Emoji";
