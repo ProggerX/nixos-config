@@ -1,3 +1,8 @@
 {
-    programs.ncmpcpp.enable = true;
+    programs.ncmpcpp = {
+        enable = true;
+        settings = {
+            lyrics_fetchers = "azlyrics";
+        };
+    };
 }
