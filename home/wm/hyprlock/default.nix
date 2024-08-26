@@ -62,7 +62,7 @@
             
             label {
                 monitor =
-                text = cmd[update:1000] echo "($(whoami))'' + (if sys.isLaptop == true then ''($(${import ../waybar/battery.nix { inherit pkgs; }}/bin/waybar_brightness))"'' else ''"'') + ''
+                text = cmd[update:1000] echo "($(whoami))'' + (if sys.isLaptop == true then ''($(${import ../waybar/battery.nix { inherit pkgs; }}/bin/waybar_battery))"'' else ''"'') + ''
 
                 color = rgb(${sys.lib.stylix.colors.base05})
                 font_size = 14

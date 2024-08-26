@@ -169,7 +169,7 @@
                 
                 "custom/battery" = {
                     format = "{}";
-                    exec = "${import ./battery.nix { inherit pkgs; }}/bin/waybar_brightness";
+                    exec = "${import ./battery.nix { inherit pkgs; }}/bin/waybar_battery";
                     interval = 5;
                 };
 
