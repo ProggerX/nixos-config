@@ -5,12 +5,12 @@
         extraConfig = ''
             audio_output {
                 type "pipewire"
-                name "PipeWire"
+                name "pip"
             }
         '';
         user = "proggerx";
     };
     systemd.services.mpd.environment = {
-        XDG_RUNTIME_DIR = "/run/user/${toString config.users.users.proggerx.uid}";
+        XDG_RUNTIME_DIR = "/run/user/1000";
     };
 }
