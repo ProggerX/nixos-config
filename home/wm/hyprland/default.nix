@@ -22,7 +22,7 @@
             exec-once = [
                 "wl-paste --watch cliphist store"
                 "waybar"
-                "spotify"
+                # "spotify"
                 # "firefox-devedition"
                 "brave"
                 "telegram-desktop"
@@ -172,7 +172,7 @@
                 "workspace 3,class:(vesktop)"
                 "workspace 4,class:(nchat)"
                 "workspace 10,class:(YandexMusic)"
-                "workspace 10,class:(Spotify)"    
+                # "workspace 10,class:(Spotify)"    
             ];
         };
     };
