@@ -14,13 +14,10 @@
         '';
 
         shellAliases = {
-            ms = "musikcube";
             dploy = "deploy -s";
-            dl = "ytmdl";
             update = "nh os switch /home/proggerx/Nix/nixos-config";
             q = "exit";
             cls = "clear";
-            lt = "leetcode";
             cat = "bat";
             o = "nvim";
             ed = "vim";
@@ -29,7 +26,6 @@
             ls = "eza --icons";
             lg = "lazygit";
             l = "ls -a -F";
-            mail = "aerc";
             gin = "go install";
             gbld = "go build";
             grun = "go run .";
