@@ -3,8 +3,8 @@
         ./emanote.nix
         ./searx.nix
         ./frp.nix
-        ./music.nix
-        ../minecraft
+        ./navidrome.nix
+        ./minecraft
         ./jellyfin.nix
         ./adguard.nix
     ];
