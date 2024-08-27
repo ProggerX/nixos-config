@@ -8,6 +8,7 @@
             enable = true;
             settings = {
                 MusicFolder = "/music";
+                Address = "0.0.0.0";
             };
         };
     };
