@@ -1,16 +1,14 @@
-{ config, ... }: {
-    services.mpd = {
+{ pkgs, lib, ... }: {
+    services.mopidy = {
         enable = true;
-        musicDirectory = "/music";
-        extraConfig = ''
-            audio_output {
-                type "pipewire"
-                name "pip"
-            }
+        extensionPackages = [ pkgs.mopidy-mpd ];
+        configuration = ''
+            [file]
+            media_dirs = /music|music
         '';
-        user = "proggerx";
     };
-    systemd.services.mpd.environment = {
-        XDG_RUNTIME_DIR = "/run/user/1000";
+    systemd.services.mopidy = {
+        serviceConfig.User = lib.mkForce "proggerx";
+        environment.XDG_RUNTIME_DIR = "/run/user/1000";
     };
 }
