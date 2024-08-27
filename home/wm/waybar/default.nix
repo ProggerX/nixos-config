@@ -61,6 +61,16 @@
                 padding-right: 8px;
             }
 
+            #custom-cava {
+                background-color: #${base01};
+                border-radius: 24px;
+                box-shadow: 0 0 3px #${base05};
+                margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
+                padding: 6px;
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
             #custom-pipewire {
                 background-color: #${base01};
                 border-radius: 24px;
@@ -187,6 +197,15 @@
                     escape = true;
                     tooltip = false;
                     exec = "${import ./music.nix { inherit pkgs; }}/bin/music_now_playing";
+                };
+
+                "custom/cava" = {
+                    format = "{}";
+                    return-type = "text";
+                    max-length = 50;
+                    escape = true;
+                    tooltip = false;
+                    exec = "${import ./cava.nix { inherit pkgs; }}/bin/cava_waybar";
                 };
             };
         };
