@@ -1,11 +1,8 @@
 { pkgs, lib, ... }: {
     services.mopidy = {
         enable = true;
-        extensionPackages = [ pkgs.mopidy-mpd ];
-        configuration = ''
-            [file]
-            media_dirs = /music|music
-        '';
+        extensionPackages = [ pkgs.mopidy-mpd pkgs.mopidy-jellyfin ];
+        extraConfigFiles = [ "/home/proggerx/.mopidy.conf" ];
     };
     systemd.services.mopidy = {
         serviceConfig.User = lib.mkForce "proggerx";
