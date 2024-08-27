@@ -11,5 +11,20 @@
                 Address = "0.0.0.0";
             };
         };
+        services.nginx = {
+            enable = true;
+            virtualHosts.navidrome = {
+                addSSL = true;
+                enableACME = true;
+                serverName = "music.bald.su";
+                locations."/" = {
+                    proxyPass = "http://0.0.0.0:4533";
+                };
+            };
+        };
+        security.acme = {
+            acceptTerms = true;
+            defaults.email = "x@proggers.ru";
+        };
     };
 }
