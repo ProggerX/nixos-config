@@ -143,7 +143,7 @@
                 width = 1900;
                 spacing = 10;
 
-                modules-center    = [ "custom/music" ];
+                modules-center    = [ "custom/music" "custom/cava" ];
                 modules-left    = [ "hyprland/workspaces" "hyprland/window" ];
                 modules-right    = [ "tray" "custom/pipewire" "hyprland/language" "clock" ];
 
