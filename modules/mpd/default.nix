@@ -1,7 +1,7 @@
 { pkgs, lib, ... }: {
     services.mopidy = {
         enable = true;
-        extensionPackages = [ pkgs.mopidy-mpd pkgs.mopidy-jellyfin ];
+        extensionPackages = [ pkgs.mopidy-mpd pkgs.mopidy-subidy ];
         extraConfigFiles = [ "/home/proggerx/.mopidy.conf" ];
     };
     systemd.services.mopidy = {
