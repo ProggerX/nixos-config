@@ -2,6 +2,7 @@
     home.packages = with pkgs; [
         ghc
         haskellPackages.hoogle
+        cassette
         haskell-language-server
         cabal-install
         stack
