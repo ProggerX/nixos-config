@@ -21,9 +21,8 @@
             
             exec-once = [
                 "wl-paste --watch cliphist store"
+                "cassette"
                 "waybar"
-                # "spotify"
-                # "firefox-devedition"
                 "brave"
                 "telegram-desktop"
                 "vesktop"
@@ -163,7 +162,6 @@
                 "noanim,class:^(xwaylandvideobridge)$"
                 "nofocus,class:^(xwaylandvideobridge)$"
                 "noinitialfocus,class:^(xwaylandvideobridge)$"
-                # "workspace 2,class:(firefox)"
                 "workspace 2,class:(Brave-browser)"
                 "float,class:(showmethekey-gtk)"
                 "float,class:(Tk)"
@@ -171,8 +169,7 @@
                 "workspace 4,class:(org.telegram.desktop)"
                 "workspace 3,class:(vesktop)"
                 "workspace 4,class:(nchat)"
-                "workspace 10,class:(YandexMusic)"
-                # "workspace 10,class:(Spotify)"    
+                "workspace 10,class:(io.github.Rirusha.Cassette)"
             ];
         };
     };
