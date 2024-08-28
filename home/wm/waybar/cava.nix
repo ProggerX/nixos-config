@@ -34,11 +34,10 @@ pkgs.writeShellScriptBin "cava_waybar" ''
    ${pkgs.cava}/bin/cava -p $config_file &
 
    while read -r cmd; do
-      if [ "$(${pkgs.mpc-cli}/bin/mpc | head -n 1 | sed 's/volume:.*//')" = "" ]
-        then
-        echo ""
+        if [ "$(echo $cmd | sed $dict)" = "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁" ]; then
+            echo ""
         else
-        echo $cmd | sed $dict
+            echo $cmd | sed $dict
         fi
    done < $pipe
 ''
