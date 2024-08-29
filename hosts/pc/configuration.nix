@@ -43,10 +43,13 @@
                 
         boot.loader.systemd-boot.enable = false;
         boot.loader.efi.canTouchEfiVariables = false;
-        boot.loader.grub.efiInstallAsRemovable = true;
         boot.loader.grub = {
             enable = true;
             efiSupport = true;
+			efiInstallAsRemovable = true;
+			extraConfig = ''
+				set timeout=0
+			'';
             device = "nodev";
         };
         boot.supportedFilesystems = [ "ntfs" ];
