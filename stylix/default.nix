@@ -15,7 +15,7 @@
         };
         fonts = rec {
             sizes = {
-                terminal = 14;
+                terminal = 12;
             };
             serif = {
                 package = pkgs.dejavu_fonts;
