@@ -18,10 +18,14 @@
                 "eDP-1,1920x1080@60,0x0,1"
                 "HDMI-A-1,1920x1080@144,0x0,1"
             ];
+
+			debug = {
+				damage_tracking = false;
+			};
             
             exec-once = [
                 "wl-paste --watch cliphist store"
-                "cassette"
+                "spotify"
                 "waybar"
                 "brave"
                 "telegram-desktop"
@@ -169,7 +173,7 @@
                 "workspace 4,class:(org.telegram.desktop)"
                 "workspace 3,class:(vesktop)"
                 "workspace 4,class:(nchat)"
-                "workspace 10,class:(io.github.Rirusha.Cassette)"
+                "workspace 10,class:(Spotify)"
             ];
         };
     };
