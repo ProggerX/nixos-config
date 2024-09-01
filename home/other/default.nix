@@ -3,6 +3,5 @@
         ./firefox
         ./forkgram
         ./spotify
-        ./brave
     ];
 }
