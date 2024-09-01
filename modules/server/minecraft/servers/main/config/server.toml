@@ -7,7 +7,8 @@ plugins = [
 	{ type = "url", url = "https://github.com/ViaVersion/ViaVersion/releases/download/5.0.3/ViaVersion-5.0.3.jar" },
 	{ type = "url", url = "https://github.com/DiscordSRV/DiscordSRV/releases/download/v1.28.0/DiscordSRV-Build-1.28.0.jar" },
 	{ type = "url", url = "https://github.com/BlueMap-Minecraft/BlueMap/releases/download/v3.16/BlueMap-3.16-spigot.jar" },
-	{ type = "url", url = "https://hangarcdn.papermc.io/plugins/GrimAnticheat/GrimAnticheat/versions/2.3.66/PAPER/grimac-2.3.66.jar" }
+	{ type = "url", url = "https://hangarcdn.papermc.io/plugins/GrimAnticheat/GrimAnticheat/versions/2.3.66/PAPER/grimac-2.3.66.jar" },
+	{ type = "url", url = "https://github.com/SkinsRestorer/SkinsRestorerX/releases/download/15.0.2/SkinsRestorer.jar" }
 ]
 
 [jar]

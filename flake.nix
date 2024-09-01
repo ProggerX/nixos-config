@@ -4,6 +4,7 @@
     inputs = {
         # Main inputs
         nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+		zen-browser.url = "github:MarceColl/zen-browser-flake";
         hyprland.url = "github:hyprwm/Hyprland";
         nur.url = "github:nix-community/NUR";
         bald.url = "github:NotBalds/bald";
