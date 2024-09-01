@@ -29,7 +29,7 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
         site = {
-            url = "github:ProggerX/site";
+            url = "github:ProggerX/ProggerX-old-site";
             inputs.nixpkgs.follows = "nixpkgs";
         };
         homepage = {
