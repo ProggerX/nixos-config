@@ -13,7 +13,7 @@
                     package = pkgs.mkMinecraftServer {
                         name = "main-minecraft-server";
                         src = ./config;
-                        hash = "sha256-fHQ5YW9f98BWArFwSB+Mq8g76JK7xjM9PVQA6G0yrdQ=";
+                        hash = "sha256-NQWcDUzSPsQPiu3aLHQ4WpytFERwwSxWxzLjx0s9ePE=";
                     };
                     proxy.enable = false;
                 };
