@@ -24,6 +24,8 @@ limits:
     max-chunks: 50
   city:
     max-chunks: 200
+  max:
+    max-chunks: 999
 dynmap-integration:
   enabled: true
   use-old-outline-style: false
