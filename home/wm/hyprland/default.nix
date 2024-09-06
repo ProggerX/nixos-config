@@ -27,7 +27,7 @@
                 "wl-paste --watch cliphist store"
                 "spotify"
                 "waybar"
-                "firefox-devedition"
+                "zen"
                 "telegram-desktop"
                 "vesktop"
             ];
@@ -166,7 +166,7 @@
                 "noanim,class:^(xwaylandvideobridge)$"
                 "nofocus,class:^(xwaylandvideobridge)$"
                 "noinitialfocus,class:^(xwaylandvideobridge)$"
-                "workspace 2,class:(firefox-devedition)"
+                "workspace 2,class:(zen-alpha)"
                 "float,class:(showmethekey-gtk)"
                 "float,class:(Tk)"
                 "pin,class:(showmethekey-gtk)"

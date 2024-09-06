@@ -1,6 +1,5 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, ... }: {
     home.packages = with pkgs; [
-		inputs.zen-browser.packages.${pkgs.system}.default
         ghc
         haskellPackages.hoogle
         cassette

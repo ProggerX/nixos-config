@@ -1,6 +1,6 @@
 {
     imports = [
-        ./firefox
+        ./zen
         ./forkgram
         ./spotify
     ];
