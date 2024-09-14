@@ -1,4 +1,4 @@
-{ ... }:
+{ sys, ... }:
 {
     wayland.windowManager.hyprland = {
         enable = true;
@@ -30,7 +30,7 @@
                 "zen"
                 "telegram-desktop"
                 "vesktop"
-            ];
+            ] ++ (if sys.isLaptop then [ "iio-hyprland" ] else [ ]);
             
             input = {
                 kb_layout = "us,ru";

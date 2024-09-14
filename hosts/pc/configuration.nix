@@ -9,6 +9,7 @@
     };
     config = {
         virtualisation.waydroid.enable = true;
+		services.fprintd.enable = true;
         services.atftpd.enable = true;
         fonts.packages = with pkgs; [
             (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })

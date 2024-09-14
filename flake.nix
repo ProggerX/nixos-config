@@ -69,6 +69,17 @@
                     ./modules/non-server.nix
                 ];
             };
+            snd-tp = nixpkgs.lib.nixosSystem {
+                system = "x86_64-linux";
+                specialArgs = { inherit inputs; };
+                modules = [
+                    ./modules/base.nix
+                    ./modules/home.nix
+                    ./hosts/thinkpad/configuration.nix
+                    ./hosts/thinkpad/hardware-configuration.nix
+                    ./modules/non-server.nix
+                ];
+            };
             server = nixpkgs.lib.nixosSystem {
                 system = "aarch64-linux";
                 specialArgs = { inherit inputs; };
