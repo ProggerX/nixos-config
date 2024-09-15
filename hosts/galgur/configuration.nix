@@ -1,6 +1,10 @@
-{ lib, pkgs, config, ... }: {
+{ lib, pkgs, config, inputs, ... }: {
     networking.hostName = lib.mkForce "galgur";
-	imports = [ ./stylix.nix ];
+    imports = [ ./stylix.nix inputs.home-manager.nixosModules.home-manager ];
+    home-manager.useGlobalPkgs = true;
+    home-manager.useUserPackages = true;
+    home-manager.backupFileExtension = "old";
+    home-manager.users.galgur = ./home.nix;
     
     services.xserver.videoDrivers = [ "intel" ];
 
