@@ -8,6 +8,8 @@
         isLaptop = lib.mkEnableOption ''Device is laptop'';
     };
     config = {
+		services.logind.powerKey = "suspend";
+		services.logind.powerKeyLongPress = "poweroff";
         virtualisation.waydroid.enable = true;
 		services.fprintd.enable = true;
         services.atftpd.enable = true;
