@@ -94,7 +94,7 @@
             
             bind = [
                 "$mainMod, C, killactive, "
-                "$mainMod SHIFT, L, exec, lockscreen"
+                "$mainMod SHIFT, L, exec, ${../hyprlock/lock.sh}"
                 "$mainMod, O, pin"
                 "$mainMod, f, togglefloating," 
                 "$mainMod, P, pseudo,"

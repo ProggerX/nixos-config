@@ -1,5 +1,4 @@
 { sys, pkgs, ... }: {
-	home.packages = [ (import ./lock.nix { inherit pkgs; }) ];
     programs.hyprlock = {
         enable = true;
         extraConfig = ''
