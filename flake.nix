@@ -69,6 +69,15 @@
                     ./modules/non-server.nix
                 ];
             };
+            galgur = nixpkgs.lib.nixosSystem {
+                system = "x86_64-linux";
+                specialArgs = { inherit inputs; };
+                modules = [
+                    ./hosts/galgur/configuration.nix
+					inputs.stylix.nixosModules.stylix
+                    ./hosts/galgur/hardware-configuration.nix
+                ];
+            };
             snd-tp = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
                 specialArgs = { inherit inputs; };
