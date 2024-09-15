@@ -2,6 +2,9 @@
     home.packages = with pkgs; [
         ghc
         haskellPackages.hoogle
+		arduino
+		arduino-cli
+		arduino-language-server
         cassette
         haskell-language-server
         cabal-install
