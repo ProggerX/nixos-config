@@ -16,6 +16,8 @@
         fonts.packages = with pkgs; [
             (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
             noto-fonts
+			corefonts
+			vistafonts
         ];
         boot.binfmt.emulatedSystems = ["aarch64-linux"];
         nix.settings.extra-platforms = config.boot.binfmt.emulatedSystems;
