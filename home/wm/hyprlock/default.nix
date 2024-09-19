@@ -4,7 +4,7 @@
         extraConfig = ''
             background {
                 monitor =
-                path = ${../../../stylix/wallpapers/secluded-grove-pixel.png}
+                path = ${sys.stylix.image}
                 blur_passes = 1
                 contrast = 1
                 brightness = 0.5
