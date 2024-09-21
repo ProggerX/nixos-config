@@ -1,5 +1,6 @@
-{ pkgs, ... }: {
+{ pkgs, inputs, ... }: {
     home.packages = with pkgs; [
+        inputs.pabc-nix.packages.${pkgs.system}.default
         ghc
         haskellPackages.hoogle
 		arduino

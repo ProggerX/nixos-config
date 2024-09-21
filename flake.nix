@@ -13,11 +13,13 @@
         masterpkgs.url = "github:NixOS/nixpkgs/master";
         spicetify-nix.url = "github:Gerg-L/spicetify-nix";
         spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
-        rust-overlay = {
-            url = "github:oxalica/rust-overlay";
-        };
+        rust-overlay.url = "github:oxalica/rust-overlay";
         home-manager = {
             url = "github:nix-community/home-manager/";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+        pabc-nix = {
+            url = "github:ProggerX/pabc-nix/v1";
             inputs.nixpkgs.follows = "nixpkgs";
         };
         stylix.url = "github:danth/stylix";
