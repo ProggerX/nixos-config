@@ -2,6 +2,7 @@
     home.packages = with pkgs; [
         inputs.pabc-nix.packages.${pkgs.system}.default
         ghc
+        cf-tool
         haskellPackages.hoogle
 		arduino
 		arduino-cli
