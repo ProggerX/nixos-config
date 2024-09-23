@@ -40,7 +40,7 @@
                 kb_rules = "";
             
                 follow_mouse = 1;
-				scroll_method = "on_button_down";
+				scroll_method = (if sys.isLaptop then "on_button_down" else "2fg");
             
                 touchpad = {
                     natural_scroll = false;
