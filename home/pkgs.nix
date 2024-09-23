@@ -6,6 +6,8 @@
         haskellPackages.hoogle
 		arduino
 		arduino-cli
+		zig
+		zls
 		arduino-language-server
         cassette
         haskell-language-server
