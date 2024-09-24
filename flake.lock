@@ -1724,17 +1724,17 @@
         "nixpkgs": "nixpkgs_15"
       },
       "locked": {
-        "lastModified": 1726556131,
-        "narHash": "sha256-8pw8YO3TdPAc3kFivG51c3sJ4WU49G5xRVA/SxZTAdk=",
+        "lastModified": 1727131828,
+        "narHash": "sha256-lVB+saQ92UnfjAM0U0whgpo8kaXgSx5XIJwfNsUpXMg=",
         "owner": "MarceColl",
         "repo": "zen-browser-flake",
-        "rev": "c7b0aadb81cbc9ea10a650bf9f3485b94bb6e864",
+        "rev": "157c2edaa24da7d57d23f3f776f4e47f07c7831b",
         "type": "github"
       },
       "original": {
         "owner": "MarceColl",
         "repo": "zen-browser-flake",
-        "rev": "c7b0aadb81cbc9ea10a650bf9f3485b94bb6e864",
+        "rev": "157c2edaa24da7d57d23f3f776f4e47f07c7831b",
         "type": "github"
       }
     }
