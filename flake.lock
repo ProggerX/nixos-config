@@ -847,26 +847,6 @@
         "type": "github"
       }
     },
-    "homepage": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1722369276,
-        "narHash": "sha256-F9WTsgO/UlK1aA4PwxNrLLnA5NdUCbHyE5czLDYvjWw=",
-        "owner": "ProggerX",
-        "repo": "homepage",
-        "rev": "8734475c32a53ef5e83cb5da016d2914661a789b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ProggerX",
-        "repo": "homepage",
-        "type": "github"
-      }
-    },
     "hyprcursor": {
       "inputs": {
         "hyprlang": [
@@ -1442,7 +1422,6 @@
         "emanote": "emanote",
         "flux": "flux",
         "home-manager": "home-manager",
-        "homepage": "homepage",
         "hyprland": "hyprland",
         "lazynix": "lazynix",
         "masterpkgs": "masterpkgs",
@@ -1452,7 +1431,6 @@
         "nur": "nur",
         "pabc-nix": "pabc-nix",
         "rust-overlay": "rust-overlay",
-        "site": "site",
         "spicetify-nix": "spicetify-nix",
         "stylix": "stylix",
         "zen-browser": "zen-browser"
@@ -1473,26 +1451,6 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "type": "github"
-      }
-    },
-    "site": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1719303118,
-        "narHash": "sha256-snYlW5WpOkVT5iHJGHspmK//M/QEUmP4e9LjLFosjDE=",
-        "owner": "ProggerX",
-        "repo": "ProggerX-old-site",
-        "rev": "e3751babcd556ac04eca880f446a9dd10ded48c6",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ProggerX",
-        "repo": "ProggerX-old-site",
         "type": "github"
       }
     },

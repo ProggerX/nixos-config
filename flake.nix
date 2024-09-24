@@ -30,14 +30,6 @@
             url = "github:srid/emanote";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-        site = {
-            url = "github:ProggerX/ProggerX-old-site";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-        homepage = {
-            url = "github:ProggerX/homepage";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
         notie = {
             url = "github:ProggerX/notie";
             inputs.nixpkgs.follows = "nixpkgs";
@@ -95,8 +87,6 @@
                 system = "aarch64-linux";
                 specialArgs = { inherit inputs; };
                 modules = [
-                    inputs.site.nixosModules.site
-                    inputs.homepage.nixosModules.homepage
                     inputs.notie.nixosModules.notie
                     inputs.notbalds.nixosModules.cwe-server
 
