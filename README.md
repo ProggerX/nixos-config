@@ -1,8 +1,8 @@
 # ProggerX/nixos-config
-### My multi-host NixOS configuration: PC (usb ssd), laptop and RPI4 server.
+### My multi-host NixOS configuration: PC (usb ssd), laptops, VPS and RPI4 server.
 ## Tree
 - ```flake.nix``` - Working mess with all the hosts and their inputs
-- ```hosts``` - host-specific configs, laptop just inherits PC's ```configuration.nix```)
+- ```hosts``` - host-specific configs, laptops inherit PC's ```configuration.nix``` with some changes
 - ```modules``` - my NixOS modules
 - ```stylix``` - my stylix config, all hosts use it
 - ```home``` - my HM config, server doesn't have HM
