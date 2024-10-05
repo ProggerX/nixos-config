@@ -65,45 +65,4 @@
             default_floating_border pixel 2
         '';
     };
-
-    services.kanshi = {
-        enable = true;
-        profiles = {
-            laptop = {
-                outputs = [
-                    {
-                        scale = 1.0;
-                        criteria = "eDP-1";
-                        status = "enable";
-                        mode = "1920x1080@60";
-                    }
-                ];
-            };
-            laptop-with-hdmi = {
-                outputs = [
-                    {
-                        status = "enable";
-                        criteria = "eDP-1";
-                        mode = "1920x1080@60";
-                        scale = 1.0;
-                    }
-                    {
-                        status = "enable";
-                        criteria = "HDMI-A-1";
-                        scale = 1.0;
-                    }
-                ];
-            };
-            pc = {
-                outputs = [
-                    {
-                        status = "enable";
-                        criteria = "HDMI-A-1";
-                        mode = "1920x1080@144";
-                        scale = 1.0;
-                    }
-                ];
-            };
-        };
-    };
 }

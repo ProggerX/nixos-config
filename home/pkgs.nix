@@ -55,7 +55,7 @@
         openboard
         leetcode-cli
         speedcrunch
-        cinnamon.nemo
+        nemo
         tor-browser
         neofetch
         prismlauncher
