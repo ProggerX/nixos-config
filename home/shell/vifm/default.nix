@@ -30,6 +30,7 @@
             highlight Socket	cterm=bold	ctermfg=223	ctermbg=default
 
             set vicmd=nvim
+            set sort=+iname
         '';
     };
 }
