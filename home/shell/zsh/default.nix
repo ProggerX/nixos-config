@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
     programs.zsh = {
         enable = true;
@@ -21,9 +21,9 @@
             ed = "vim";
             c = "clear";
             g = "git";
-            ls = "eza --icons";
+            ls = "${pkgs.lsd}/bin/lsd";
             lg = "lazygit";
-            l = "ls -a -F";
+            l = "ls -aF";
             gin = "go install";
             gbld = "go build";
             grun = "go run .";
