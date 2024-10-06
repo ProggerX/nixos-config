@@ -21,6 +21,7 @@
             ed = "vim";
             c = "clear";
             g = "git";
+            f = "vifm";
             ls = "${pkgs.lsd}/bin/lsd";
             lg = "lazygit";
             l = "ls -aF";
