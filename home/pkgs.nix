@@ -121,7 +121,6 @@
         pavucontrol
         xclip
         lldb
-        vifm
         lua-language-server
         tmux
         obsidian

@@ -6,8 +6,8 @@
         ./direnv.nix
         ./neofetch
         ./fish
-        ./yazi
         ./pass
         ./kitty
+        ./vifm
     ];
 }
