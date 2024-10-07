@@ -1,6 +1,7 @@
 { inputs, pkgs, ... }: {
     imports = [
         ./spoofdpi.nix
+        ./dm.nix
     ];
     services.spoofdpi.enable = true;
     environment.systemPackages = [

@@ -1,8 +1,5 @@
 { config, lib, pkgs, ... }:
 {
-    imports = [
-        ../../modules/dm.nix
-    ];
     options = {
         isLaptop = lib.mkEnableOption ''Device is laptop'';
     };
