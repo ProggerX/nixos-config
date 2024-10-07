@@ -12,13 +12,13 @@
                 color: #${base05};
                 font-family: "${sys.stylix.fonts.sansSerif.name}";
                 font-size: 10pt;
-                border-radius: 30px;
+                border-radius: 20px;
             }
 
             #workspaces {
                 background-color: #${base01};
                 margin-left: 6px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
-                border-radius: 24px;
+                border-radius: 14px;
                 box-shadow: 0 0 3px #${base05};
             }
 
@@ -30,7 +30,7 @@
                 margin: 2px;
                 padding-left: 7px;
                 padding-right: 7px;
-                border-radius: 22px;
+                border-radius: 12px;
             }
 
             #workspaces button.active {
@@ -39,7 +39,7 @@
 
             #window {
                 background-color: #${base01};
-                border-radius: 24px;
+                border-radius: 14px;
                 box-shadow: 0 0 3px #${base05};
                 margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
                 padding: 6px;
@@ -53,7 +53,7 @@
 
             #custom-music {
                 background-color: #${base01};
-                border-radius: 24px;
+                border-radius: 14px;
                 box-shadow: 0 0 3px #${base05};
                 margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
                 padding: 6px;
@@ -63,7 +63,7 @@
 
             #custom-cava {
                 background-color: #${base01};
-                border-radius: 24px;
+                border-radius: 14px;
                 box-shadow: 0 0 3px #${base05};
                 margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
                 padding: 6px;
@@ -73,7 +73,7 @@
 
             #custom-pipewire {
                 background-color: #${base01};
-                border-radius: 24px;
+                border-radius: 14px;
                 box-shadow: 0 0 3px #${base05};
                 margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
                 padding: 6px;
@@ -83,7 +83,7 @@
 
             #custom-battery {
                 background-color: #${base01};
-                border-radius: 24px;
+                border-radius: 14px;
                 box-shadow: 0 0 3px #${base05};
                 margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
                 padding: 6px;
@@ -93,7 +93,7 @@
 
             #custom-brightness {
                 background-color: #${base01};
-                border-radius: 24px;
+                border-radius: 14px;
                 box-shadow: 0 0 3px #${base05};
                 margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
                 padding: 6px;
@@ -103,7 +103,7 @@
 
             #language {
                 background-color: #${base01};
-                border-radius: 24px;
+                border-radius: 14px;
                 box-shadow: 0 0 3px #${base05};
                 margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
                 padding: 6px;
@@ -113,7 +113,7 @@
 
             #clock {
                 background-color: #${base01};
-                border-radius: 24px;
+                border-radius: 14px;
                 box-shadow: 0 0 3px #${base05};
                 margin-left: 10px; margin-right: 6px; margin-top: 6px; margin-bottom: 6px;
                 padding: 6px;
@@ -123,7 +123,7 @@
 
             #tray {
                 background-color: #${base01};
-                border-radius: 24px;
+                border-radius: 14px;
                 box-shadow: 0 0 3px #${base05};
                 margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
                 padding: 6px;
@@ -146,6 +146,14 @@
                 modules-center    = [ "custom/music" "custom/cava" ];
                 modules-left    = [ "hyprland/workspaces" "hyprland/window" ];
                 modules-right    = [ "tray" "custom/pipewire" "hyprland/language" "clock" ];
+
+                
+                "hyprland/workspaces" = {
+                    format-icons = {
+                        default = "";
+                        active = "  ";
+                    };
+                };
 
                 "hyprland/language" = {
                     format-ru = "ru";
