@@ -9,7 +9,6 @@
         ./other
         ./wm
         ./shell
-        ./modules
     ];
 
     home.stateVersion = "24.11";
