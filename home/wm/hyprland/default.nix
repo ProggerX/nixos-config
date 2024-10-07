@@ -1,4 +1,4 @@
-{ sys, ... }:
+{ pkgs, sys, ... }:
 {
     wayland.windowManager.hyprland = {
         enable = true;
@@ -95,7 +95,7 @@
             
             bind = [
                 "$mainMod, C, killactive, "
-                "$mainMod SHIFT, L, exec, ${../hyprlock/lock.sh}"
+                "$mainMod SHIFT, L, exec, ${import ../hyprlock/lock.nix { inherit pkgs; }}/bin/lock"
                 "$mainMod, O, pin"
                 "$mainMod, f, togglefloating," 
                 "$mainMod, P, pseudo,"

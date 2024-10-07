@@ -1,4 +1,5 @@
-#!/bin/sh
+{ pkgs }:
+pkgs.writeShellScriptBin "lock" ''
 set -euo pipefail
 if [ -f /tmp/locked ] ; then exit ; fi
 touch /tmp/locked
@@ -13,3 +14,4 @@ hyprlock
 rm /tmp/locked
 kill $(jobs -p)
 pkill fprintd-verify
+''
