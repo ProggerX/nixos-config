@@ -15,7 +15,7 @@
         spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
         rust-overlay.url = "github:oxalica/rust-overlay";
         home-manager = {
-            url = "github:ProggerX/home-manager/add-vifm";
+            url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs";
         };
         pabc-nix = {

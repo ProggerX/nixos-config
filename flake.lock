@@ -813,16 +813,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1728289259,
-        "narHash": "sha256-OKwqbfzdTmb+S2y8hNpMwIEtH9tb6M05RmHLNJ2jJ/U=",
-        "owner": "ProggerX",
+        "lastModified": 1728337164,
+        "narHash": "sha256-VdRTjJFyq4Q9U7Z/UoC2Q5jK8vSo6E86lHc2OanXtvc=",
+        "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "2e49125af000c6b593a0d6cfe4009e0d882bec7b",
+        "rev": "038630363e7de57c36c417fd2f5d7c14773403e4",
         "type": "github"
       },
       "original": {
-        "owner": "ProggerX",
-        "ref": "add-vifm",
+        "owner": "nix-community",
         "repo": "home-manager",
         "type": "github"
       }
