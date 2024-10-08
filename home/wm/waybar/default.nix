@@ -6,6 +6,7 @@
     stylix.targets.waybar.enable = false;
     programs.waybar    = {
         enable = true;
+        systemd.enable = true;
         style = with sys.lib.stylix.colors; ''
             * {
                 background-color: #${base00};

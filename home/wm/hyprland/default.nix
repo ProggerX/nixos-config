@@ -1,5 +1,6 @@
 { pkgs, sys, ... }:
 {
+    services.cliphist.enable = true;
     wayland.windowManager.hyprland = {
         enable = true;
         settings = {
@@ -24,9 +25,7 @@
 			};
             
             exec-once = [
-                "wl-paste --watch cliphist store"
                 "spotify"
-                "waybar"
                 "zen"
                 "telegram-desktop"
                 "vesktop"
