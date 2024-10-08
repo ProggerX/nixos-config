@@ -1,6 +1,7 @@
 {
     imports = [
         ./zsh
+        ./carapace.nix
         ./bat
         ./zoxide.nix
         ./direnv.nix

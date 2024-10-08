@@ -7,7 +7,6 @@
         syntaxHighlighting.enable = true;
     
         initExtra = ''
-            setopt completealiases
             bindkey -v '^?' backward-delete-char
         '';
 
