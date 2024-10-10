@@ -87,13 +87,6 @@
                     ./hosts/server/server.nix
                 ];
             };
-            vps = nixpkgs.lib.nixosSystem {
-                system = "x86_64-linux";
-                modules = [
-                    inputs.disko.nixosModules.disko
-                    ./hosts/vps/configuration.nix
-                ];
-            };
         };
         deploy.nodes.server = {
             hostname = "100.126.179.69";
@@ -101,14 +94,6 @@
                 user = "root";
                 sshUser = "root";
                 path = inputs.deploy-rs.lib.aarch64-linux.activate.nixos inputs.self.nixosConfigurations.server;
-            };
-        };
-        deploy.nodes.vps = {
-            hostname = "5.35.87.192";
-            profiles.system = {
-                user = "root";
-                sshUser = "root";
-                path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos inputs.self.nixosConfigurations.vps;
             };
         };
     };

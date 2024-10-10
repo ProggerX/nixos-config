@@ -1,5 +1,5 @@
 # ProggerX/nixos-config
-### My multi-host NixOS configuration: PC (usb ssd), laptops, VPS and RPI4 server.
+### My multi-host NixOS configuration: PC (usb ssd), laptops and RPI4 server.
 ## Tree
 - ```flake.nix``` - Working mess with all the hosts and their inputs
 - ```hosts``` - host-specific configs, laptops inherit PC's ```configuration.nix``` with some changes
@@ -11,4 +11,3 @@
 - Laptop - Core i7-4600U, integrated graphics
 - ThinkPad X1 Yoga G4 (main laptop) - Core i5-8365U, integrated graphics
 - Server - Raspberry Pi 4B, with Netac Z7S usb ssd, 240GB
-- VPS - [Beget](https://beget.com/) VPS with 1CPU, 1GB RAM and 10GB of storage for reverse proxy
