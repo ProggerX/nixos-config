@@ -1,7 +1,9 @@
 { pkgs, inputs, ... }: {
     home.packages = with pkgs; [
         inputs.pabc-nix.packages.${pkgs.system}.default
+		pandoc
         ghc
+		texliveTeTeX
         cf-tool
         haskellPackages.hoogle
 		arduino
