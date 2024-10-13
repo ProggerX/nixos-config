@@ -1,6 +1,8 @@
 { pkgs, inputs, ... }: {
     home.packages = with pkgs; [
         inputs.pabc-nix.packages.${pkgs.system}.default
+		codeblocks
+		jetbrains.pycharm-community-bin
 		pandoc
         ghc
 		texliveTeTeX
