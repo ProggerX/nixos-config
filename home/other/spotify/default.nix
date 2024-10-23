@@ -35,5 +35,9 @@ in {
             loopyLoop
             popupLyrics
         ];
+
+		enabledCustomApps = with spicePkgs.apps; [
+			lyricsPlus
+		];
     };
 }
