@@ -11,18 +11,14 @@
                 "__GLX_VENDOR_LIBRARY_NAME,nvidia;"
             ];
 
-            cursor = {
-                no_hardware_cursors = true;
-            };
+            cursor.no_hardware_cursors = true;
             
             monitor= [
                 "eDP-1,1920x1080@60,0x0,1"
                 "HDMI-A-1,1920x1080@144,0x0,1"
             ];
 
-			debug = {
-				damage_tracking = false;
-			};
+			debug.damage_tracking = false;
             
             exec-once = [
                 "spotify"
@@ -41,9 +37,7 @@
                 follow_mouse = 1;
 				scroll_method = (if sys.isLaptop then "on_button_down" else "2fg");
             
-                touchpad = {
-                    natural_scroll = false;
-                };
+                touchpad.natural_scroll = false;
             
                 sensitivity = 0;
             };
@@ -52,43 +46,23 @@
                 gaps_in = 5;
                 gaps_out = 10;
                 border_size = 2;
-                layout = "dwindle";
+                layout = "master";
             };
+
+			master.new_status = "master";
             
             decoration = {
                 rounding = 10;
-            
                 drop_shadow = "no";
-            
                 dim_inactive = 1;
                 dim_strength = 0.2;
             };
             
-            "decoration:blur" = {
-                enabled = false;
-            };
+            "decoration:blur".enabled = false;
 
-            animations = {
-                enabled = true;
+            animations.enabled = false;
             
-                bezier = "cool, 0.64, 0.33, 0.44, 0.94";
-            
-                animation = [
-                    "windows, 1, 2, default, slide"
-                    "border, 1, 2, default"
-                    "fade, 1, 2, default"
-                    "workspaces, 1, 2, cool"
-                ];
-            };
-            
-            dwindle =  {
-                pseudotile = true;
-                preserve_split = true;
-            };
-            
-            gestures = {
-                workspace_swipe = false;
-            };
+            gestures.workspace_swipe = true;
             
             "$mainMod" = "SUPER";
             
@@ -99,7 +73,7 @@
                 "$mainMod, f, togglefloating," 
                 "$mainMod, P, pseudo,"
                 "ALT $mainMod, P, exec, power"
-                "$mainMod, M, exit"
+                "$mainMod, M, layoutmsg, swapwithmaster"
                 "$mainMod, y, togglesplit,"
                 "$mainMod, u, fullscreen,"
                 
@@ -115,15 +89,12 @@
                 ''CTRL, PRINT, exec, rm -rf /home/proggerx/screen-record.mp4 && wf-recorder -g"$(slurp)" --file ~/screen-record.mp4''
                 "CTRL SHIFT, PRINT, exec, pkill wf-recorder"
                 
-                "$mainMod, h, movefocus, l"
-                "$mainMod, l, movefocus, r"
-                "$mainMod, k, movefocus, u"
-                "$mainMod, j, movefocus, d"
-                
-                "$mainMod CTRL SHIFT, h, movewindow, l"
-                "$mainMod CTRL SHIFT, l, movewindow, r"
-                "$mainMod CTRL SHIFT, k, movewindow, u"
-                "$mainMod CTRL SHIFT, j, movewindow, d"
+				"$mainMod, h, layoutmsg, mfact -0.08"
+				"$mainMod, l, layoutmsg, mfact +0.08"
+                "$mainMod, j, layoutmsg, cyclenext"
+                "$mainMod, k, layoutmsg, cycleprev"
+                "$mainMod SHIFT, j, layoutmsg, swapnext"
+                "$mainMod SHIFT, k, layoutmsg, swapprev"
                 
                 "$mainMod, 1, workspace, 1"
                 "$mainMod, 2, workspace, 2"

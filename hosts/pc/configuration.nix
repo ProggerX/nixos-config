@@ -56,6 +56,7 @@
         boot.supportedFilesystems = [ "ntfs" ];
         
         boot.extraModulePackages = [ config.boot.kernelPackages.rtl88x2bu ];
+		boot.kernelPackages = pkgs.linuxPackages_zen;
         
         networking.networkmanager.enable = true;    
         nix.settings.experimental-features = ["nix-command" "flakes"];
