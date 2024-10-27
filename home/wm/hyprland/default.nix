@@ -63,6 +63,7 @@
             animations.enabled = false;
             
             gestures.workspace_swipe = true;
+            gestures.workspace_swipe_touch = true;
             
             "$mainMod" = "SUPER";
             
