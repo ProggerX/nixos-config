@@ -21,7 +21,7 @@
 			debug.damage_tracking = false;
             
             exec-once = [
-                "spotify"
+            	"spotify"
                 "zen"
                 "telegram-desktop"
                 "vesktop"

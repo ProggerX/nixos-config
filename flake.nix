@@ -4,6 +4,7 @@
     inputs = {
         # Main inputs
         nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+		aagl.url = "github:ezKEa/aagl-gtk-on-nix";
 		zen-browser.url = "github:MarceColl/zen-browser-flake";
         hyprland.url = "github:hyprwm/Hyprland";
         nur.url = "github:nix-community/NUR";
@@ -46,6 +47,7 @@
                 modules = [
                     ./modules/base.nix
                     ./modules/home.nix
+					./modules/aagl.nix
                     ./modules/nvidia.nix
                     ./hosts/pc/configuration.nix
                     ./hosts/pc/hardware-configuration.nix
