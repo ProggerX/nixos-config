@@ -3,6 +3,7 @@
         inputs.pabc-nix.packages.${pkgs.system}.default
 		codeblocks
 		jetbrains.pycharm-community-bin
+		texlab
 		pandoc
         ghc
 		texliveTeTeX
