@@ -1,12 +1,14 @@
 { pkgs, inputs, ... }: {
     home.packages = with pkgs; [
+		tree-sitter
         inputs.pabc-nix.packages.${pkgs.system}.default
 		codeblocks
 		jetbrains.pycharm-community-bin
 		texlab
 		pandoc
         ghc
-		texliveTeTeX
+		(texlive.combine { inherit (texlive) scheme-tetex ucs cyrillic; })
+		nodejs
         cf-tool
         haskellPackages.hoogle
 		arduino
