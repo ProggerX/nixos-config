@@ -4,6 +4,8 @@
         inputs.pabc-nix.packages.${pkgs.system}.default
 		codeblocks
 		jetbrains.pycharm-community-bin
+		typst
+		typst-lsp
 		texlab
 		pandoc
         ghc
