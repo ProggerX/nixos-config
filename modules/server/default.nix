@@ -1,10 +1,10 @@
 {
     imports = [
         ./emanote.nix
+		./memos.nix
         ./searx.nix
         ./frp.nix
         ./navidrome.nix
-        ./minecraft
         ./jellyfin.nix
         ./adguard.nix
     ];
