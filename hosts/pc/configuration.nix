@@ -202,7 +202,10 @@
              enableSSHSupport = true;
         };
             
-        services.openssh.enable = true;
+        services.openssh = {
+			enable = true;
+			settings.PasswordAuthentication = false;
+		};
         services.flatpak.enable = true;
         programs.dconf.enable = true;
         
