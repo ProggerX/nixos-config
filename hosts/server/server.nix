@@ -1,6 +1,7 @@
 { inputs, ... }:
 {
     server.adguard.enable = true;
+	server.dufs.enable = true;
     server.navidrome.enable = true;
     server.emanote.enable = true;
     server.searx.enable = true;

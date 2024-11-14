@@ -1,6 +1,7 @@
 {
     imports = [
         ./emanote.nix
+		./dufs.nix
 		./memos.nix
         ./searx.nix
         ./frp.nix
