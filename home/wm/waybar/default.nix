@@ -8,154 +8,50 @@
         enable = true;
         systemd.enable = true;
         style = with sys.lib.stylix.colors; ''
+			#window {
+				margin-left: 4px;
+				border-radius: 6px;
+			}
+			#window * {
+				background-color: #${base01};
+				padding: 0;
+				margin-bottom: 4px;
+				margin-left: 0px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			#clock {
+				margin-right: 10px;
+			}
             * {
+				border-bottom-right-radius: 10px;
+				border-bottom-left-radius: 10px;
                 background-color: #${base00};
                 color: #${base05};
                 font-family: "${sys.stylix.fonts.sansSerif.name}";
                 font-size: 10pt;
-                border-radius: 20px;
             }
-
-            #workspaces {
-                background-color: #${base01};
-                margin-left: 6px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
-                border-radius: 14px;
-                box-shadow: 0 0 3px #${base05};
-            }
-
-            #workspaces * {
-                background-color: #${base01};
-            }
-
-            #workspaces button {
-                margin: 2px;
-                padding-left: 7px;
-                padding-right: 7px;
-                border-radius: 12px;
-            }
-
-            #workspaces button.active {
-                border: 2px solid #${base05};
-            }
-
-            #window {
-                background-color: #${base01};
-                border-radius: 14px;
-                box-shadow: 0 0 3px #${base05};
-                margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
-                padding: 6px;
-                padding-left: 8px;
-                padding-right: 8px;
-            }
-
-            #window * {
-                background-color: #${base01};
-            }
-
-            #custom-music {
-                background-color: #${base01};
-                border-radius: 14px;
-                box-shadow: 0 0 3px #${base05};
-                margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
-                padding: 6px;
-                padding-left: 8px;
-                padding-right: 8px;
-            }
-
-            #custom-cava {
-                background-color: #${base01};
-                border-radius: 14px;
-                box-shadow: 0 0 3px #${base05};
-                margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
-                padding: 6px;
-                padding-left: 8px;
-                padding-right: 8px;
-            }
-
-            #custom-pipewire {
-                background-color: #${base01};
-                border-radius: 14px;
-                box-shadow: 0 0 3px #${base05};
-                margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
-                padding: 6px;
-                padding-left: 8px;
-                padding-right: 8px;
-            }
-
-            #custom-battery {
-                background-color: #${base01};
-                border-radius: 14px;
-                box-shadow: 0 0 3px #${base05};
-                margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
-                padding: 6px;
-                padding-left: 8px;
-                padding-right: 8px;
-            }
-
-            #custom-brightness {
-                background-color: #${base01};
-                border-radius: 14px;
-                box-shadow: 0 0 3px #${base05};
-                margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
-                padding: 6px;
-                padding-left: 8px;
-                padding-right: 8px;
-            }
-
-            #language {
-                background-color: #${base01};
-                border-radius: 14px;
-                box-shadow: 0 0 3px #${base05};
-                margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
-                padding: 6px;
-                padding-left: 8px;
-                padding-right: 8px;
-            }
-
-            #clock {
-                background-color: #${base01};
-                border-radius: 14px;
-                box-shadow: 0 0 3px #${base05};
-                margin-left: 10px; margin-right: 6px; margin-top: 6px; margin-bottom: 6px;
-                padding: 6px;
-                padding-left: 8px;
-                padding-right: 8px;
-            }
-
-            #tray {
-                background-color: #${base01};
-                border-radius: 14px;
-                box-shadow: 0 0 3px #${base05};
-                margin-left: 10px; margin-right: 10px; margin-top: 6px; margin-bottom: 6px;
-                padding: 6px;
-                padding-left: 8px;
-                padding-right: 8px;
-            }
-
-            #tray * {
-                background-color: #${base01};
-            }
+			#workspaces button {
+				padding: 4px;
+			}
+			#workspaces button.active {
+				border-radius: 10px;
+				border: 2px solid #${base05};
+				margin-top: 2px;
+				margin-bottom: 2px;
+			}
         '';
         settings = {
             bar = {
                 position = "top";
-                margin-top = 5;
-                height = 52;
-                width = 1900;
-                spacing = 10;
+                margin-top = 0;
+                height = 15;
+                spacing = 20;
 
-                modules-center    = [ "custom/music" "custom/cava" ];
-                modules-left    = [ "hyprland/workspaces" "hyprland/window" ];
-                modules-right    = [ "tray" "custom/pipewire" "hyprland/language" "clock" ];
-
+                modules-center = [ "custom/music" "custom/cava" ];
+                modules-left = [ "hyprland/window" "hyprland/workspaces" ];
+                modules-right = [ "tray" "custom/pipewire" "hyprland/language" "clock" ];
                 
-                "hyprland/workspaces" = {
-                    format-icons = {
-                        default = "";
-                        active = "  ";
-                    };
-                };
-
                 "hyprland/language" = {
                     format-ru = "ru";
                     format-en = "us";
@@ -163,6 +59,9 @@
 
                 "hyprland/window" = {
                     max-length = 30;
+					min-length = 30;
+					align = 0;
+					format = "  {title}";
                 };
 
                 "tray" = {
