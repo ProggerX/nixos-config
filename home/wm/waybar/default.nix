@@ -58,6 +58,7 @@
                 };
 
                 "hyprland/window" = {
+					on-click = "rofi -show drun";
                     max-length = 30;
 					min-length = 30;
 					align = 0;
