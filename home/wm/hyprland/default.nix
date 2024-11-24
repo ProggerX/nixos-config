@@ -77,6 +77,7 @@
                 "$mainMod, M, layoutmsg, swapwithmaster"
                 "$mainMod, y, togglesplit,"
                 "$mainMod, u, fullscreen,"
+				"$mainMod, TAB, exec, rofi -show window"
                 
                 
                 "$mainMod, RETURN, exec, kitty"
