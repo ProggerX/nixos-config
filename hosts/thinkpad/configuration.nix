@@ -5,6 +5,7 @@
     services.xserver.videoDrivers = [ "intel" ];
 	services.xserver.wacom.enable = true;
 	services.xserver.desktopManager.cinnamon.enable = true;
+	services.logind.powerKey = lib.mkForce "ignore";
 	hardware.sensor.iio.enable = true;
 	programs.iio-hyprland.enable = true;
 	boot.loader.grub.efiInstallAsRemovable = lib.mkForce false;
