@@ -81,6 +81,7 @@
         users.extraGroups.wireshark.members = [ "proggerx" ];
         
         services.xserver.enable = true;
+		services.xserver.desktopManager.cinnamon.enable = true;
         services.libinput.enable = true;
         services.libinput.touchpad.tapping = true;
         services.libinput.touchpad.middleEmulation = true;
