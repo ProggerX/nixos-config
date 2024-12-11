@@ -72,7 +72,7 @@
 
                 "clock" = {
                     "format" = "{:%H:%M}";
-                    "format-alt" = "{:%Y-%m-%d}";
+                    "format-alt" = "{:%d-%m-%Y}";
                 };
 
                 "custom/pipewire" = let pamixer = "${pkgs.pamixer}/bin/pamixer"; in {
