@@ -5,7 +5,7 @@
         # Main inputs
         nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 		aagl.url = "github:ezKEa/aagl-gtk-on-nix";
-		zen-browser.url = "github:MarceColl/zen-browser-flake";
+		zen-browser.url = "github:ProggerX/zen-browser-flake";
         hyprland.url = "github:hyprwm/Hyprland";
         nur.url = "github:nix-community/NUR";
         bald.url = "github:NotBalds/bald";

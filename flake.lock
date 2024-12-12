@@ -1776,15 +1776,15 @@
         "nixpkgs": "nixpkgs_16"
       },
       "locked": {
-        "lastModified": 1727721329,
-        "narHash": "sha256-QYlWZwUSwrM7BuO+dXclZIwoPvBIuJr6GpFKv9XKFPI=",
-        "owner": "MarceColl",
+        "lastModified": 1733989921,
+        "narHash": "sha256-UgVz7Qc8klVKKKWR6ab3MnEpSyS+GNCbKGSCe51WZAQ=",
+        "owner": "ProggerX",
         "repo": "zen-browser-flake",
-        "rev": "e6ab73f405e9a2896cce5956c549a9cc359e5fcc",
+        "rev": "66f6a7b6989d14d85f1f93dd7f2ff413b61a14d1",
         "type": "github"
       },
       "original": {
-        "owner": "MarceColl",
+        "owner": "ProggerX",
         "repo": "zen-browser-flake",
         "type": "github"
       }
