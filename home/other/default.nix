@@ -3,5 +3,6 @@
         ./zen
         ./forkgram
         ./spotify
+		./tor-proxy
     ];
 }
