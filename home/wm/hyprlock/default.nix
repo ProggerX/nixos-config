@@ -1,6 +1,7 @@
-{ sys, pkgs, ... }: {
-    programs.hyprlock = {
+{ sys, pkgs, lib, ... }: {
+    programs.hyprlock = lib.mkForce {
         enable = true;
+		settings = {};
         extraConfig = ''
             background {
                 monitor =

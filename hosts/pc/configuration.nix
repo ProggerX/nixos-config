@@ -23,7 +23,11 @@
         programs.nix-ld.enable = true;
 
         nixpkgs.config.permittedInsecurePackages = [
+			"dotnet-sdk-6.0.428"
+			"dotnet-sdk-wrapped-6.0.428"
             "electron-25.9.0"
+			"dotnet-runtime-wrapped-6.0.36"
+			"dotnet-runtime-6.0.36"
         ];
 
         hardware.opentabletdriver.enable = true;

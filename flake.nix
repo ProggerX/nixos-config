@@ -3,7 +3,8 @@
 
     inputs = {
         # Main inputs
-        nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+        nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+		unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 		aagl.url = "github:ezKEa/aagl-gtk-on-nix";
 		zen-browser.url = "github:ProggerX/zen-browser-flake";
         hyprland.url = "github:hyprwm/Hyprland";
@@ -16,14 +17,14 @@
         spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
         rust-overlay.url = "github:oxalica/rust-overlay";
         home-manager = {
-            url = "github:nix-community/home-manager";
+            url = "github:nix-community/home-manager/release-24.11";
             inputs.nixpkgs.follows = "nixpkgs";
         };
         pabc-nix = {
             url = "github:ProggerX/pabc-nix/v1";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-        stylix.url = "github:danth/stylix";
+        stylix.url = "github:danth/stylix/release-24.11";
         deploy-rs.url = "github:serokell/deploy-rs";
         # Server inputs
         flux.url = "github:Bananad3v/flux";
@@ -41,9 +42,9 @@
 
     outputs = { nixpkgs, ...}@inputs: {
         nixosConfigurations = {
-            snd-pc = nixpkgs.lib.nixosSystem {
+            snd-pc = nixpkgs.lib.nixosSystem rec {
                 system = "x86_64-linux";
-                specialArgs = { inherit inputs; };
+                specialArgs = { inherit inputs; inherit system; };
                 modules = [
                     ./modules/base.nix
                     ./modules/home.nix
@@ -54,9 +55,9 @@
                     ./modules/non-server.nix
                 ];
             };
-            snd-lp = nixpkgs.lib.nixosSystem {
+            snd-lp = nixpkgs.lib.nixosSystem rec {
                 system = "x86_64-linux";
-                specialArgs = { inherit inputs; };
+                specialArgs = { inherit inputs; inherit system; };
                 modules = [
                     ./modules/base.nix
                     ./modules/home.nix
@@ -65,9 +66,9 @@
                     ./modules/non-server.nix
                 ];
             };
-            snd-tp = nixpkgs.lib.nixosSystem {
+            snd-tp = nixpkgs.lib.nixosSystem rec {
                 system = "x86_64-linux";
-                specialArgs = { inherit inputs; };
+                specialArgs = { inherit inputs; inherit system; };
                 modules = [
                     ./modules/base.nix
                     ./modules/home.nix
@@ -76,9 +77,9 @@
                     ./modules/non-server.nix
                 ];
             };
-            server = nixpkgs.lib.nixosSystem {
+            server = nixpkgs.lib.nixosSystem rec {
                 system = "aarch64-linux";
-                specialArgs = { inherit inputs; };
+                specialArgs = { inherit inputs; inherit system; };
                 modules = [
                     inputs.notie.nixosModules.notie
                     inputs.notbalds.nixosModules.cwe-server

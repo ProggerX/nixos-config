@@ -1,4 +1,5 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, system, ... }:
+let unstable = import inputs.unstable { inherit system; }; in {
     home.packages = with pkgs; [
 		tree-sitter
 		ollama
@@ -47,7 +48,7 @@
         ags
         wineWowPackages.full
         wails
-        telegram-desktop
+        unstable.telegram-desktop
         restish
         ffmpeg
         lazydocker
@@ -99,7 +100,7 @@
         ripgrep
         git
         lazygit
-        go
+        unstable.go
         bear
         vitetris
         tty-clock
@@ -138,7 +139,7 @@
         slurp
         eza
         python311
-        vesktop
+        unstable.vesktop
         gcc
         gnumake
         nitch

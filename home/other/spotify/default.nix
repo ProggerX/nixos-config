@@ -1,9 +1,9 @@
-{ pkgs, inputs, config, ... }:
+{ pkgs, inputs, config, lib, ... }:
 let
     spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
 in {
     imports = [inputs.spicetify-nix.homeManagerModules.default];
-    programs.spicetify = {
+    programs.spicetify = lib.mkForce {
         enable = true;
         theme = spicePkgs.themes.text;
         colorScheme = "custom";
