@@ -48,7 +48,6 @@ let unstable = import inputs.unstable { inherit system; }; in {
         ags
         wineWowPackages.full
         wails
-        unstable.telegram-desktop
         restish
         ffmpeg
         lazydocker

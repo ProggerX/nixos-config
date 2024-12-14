@@ -23,7 +23,7 @@
 			exec-once = [
 				"spotify"
 				"zen"
-				"telegram-desktop"
+				"ayugram-desktop"
 				"vesktop"
 			] ++ (if sys.isLaptop then [ "iio-hyprland" ] else [ ]);
 			

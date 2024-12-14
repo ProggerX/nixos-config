@@ -1,5 +1,6 @@
 { pkgs, ... }: {
     imports = [
+		./ayugram
         ./zen
         ./forkgram
         ./spotify
