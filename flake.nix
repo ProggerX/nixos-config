@@ -28,6 +28,7 @@
         stylix.url = "github:danth/stylix/release-24.11";
         deploy-rs.url = "github:serokell/deploy-rs";
         # Server inputs
+		fish-text.url = "github:ProggerX/fish-text";
         flux.url = "github:Bananad3v/flux";
         emanote = {
             url = "github:srid/emanote";

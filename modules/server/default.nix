@@ -1,5 +1,6 @@
 {
     imports = [
+		./fish-text.nix
         ./emanote.nix
 		./dufs.nix
 		./memos.nix

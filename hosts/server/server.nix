@@ -2,8 +2,9 @@
 {
     server.adguard.enable = true;
 	server.dufs.enable = true;
+	server.fish-text.enable = true;
     server.navidrome.enable = true;
-    server.emanote.enable = true;
+    server.emanote.enable = false;
     server.searx.enable = true;
 	server.memos.enable = true;
     server.notie.enable = true;

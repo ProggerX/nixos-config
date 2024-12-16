@@ -143,7 +143,7 @@
 				"float,class:(showmethekey-gtk)"
 				"float,class:(Tk)"
 				"pin,class:(showmethekey-gtk)"
-				"workspace 4,class:(org.telegram.desktop)"
+				"workspace 4,class:(com.ayugram)"
 				"workspace 3,class:(vesktop)"
 				"workspace 4,class:(nchat)"
 				"workspace 10,class:(Spotify)"
