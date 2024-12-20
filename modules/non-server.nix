@@ -2,6 +2,7 @@
     imports = [
         ./spoofdpi.nix
         ./dm.nix
+		./mopidy.nix
     ];
     services.spoofdpi.enable = true;
     environment.systemPackages = [

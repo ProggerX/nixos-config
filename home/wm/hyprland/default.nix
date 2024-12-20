@@ -21,7 +21,6 @@
 			debug.damage_tracking = false;
 			
 			exec-once = [
-				"chromium next.music.yandex.ru --class='music'"
 				"zen"
 				"ayugram-desktop"
 				"vesktop"
@@ -147,7 +146,6 @@
 				"workspace 3,class:(vesktop)"
 				"workspace 4,class:(nchat)"
 				"workspace 10,class:(Spotify)"
-				"workspace 10,class:(music)"
 			];
 		};
 	};
