@@ -74,6 +74,8 @@
 				"$mainMod, P, pseudo,"
 				"ALT $mainMod, P, exec, power"
 				"$mainMod, M, layoutmsg, swapwithmaster"
+				"SHIFT $mainMod, M, layoutmsg, addmaster"
+				"CTRL $mainMod, M, layoutmsg, removemaster"
 				"$mainMod, y, togglesplit,"
 				"$mainMod, u, fullscreen,"
 				"$mainMod, TAB, exec, rofi -show window"

@@ -48,7 +48,7 @@
                 height = 15;
                 spacing = 20;
 
-                modules-center = [ "custom/music" "custom/cava" ];
+                modules-center = [ "mpd" "custom/cava" ];
                 modules-left = [ "hyprland/window" "hyprland/workspaces" ];
                 modules-right = [ "tray" "custom/pipewire" "hyprland/language" "clock" ];
                 
@@ -100,12 +100,13 @@
                     exec = "${import ./brightness.nix { inherit pkgs; }}/bin/waybar-brightness get";
                 };
 
-                "custom/music" = {
-                    format = "  {}";
-                    return-type = "text";
-                    escape = true;
-                    tooltip = false;
-                    exec = "${import ./music.nix { inherit pkgs; }}/bin/music_now_playing";
+                "mpd" = {
+                    format = "  {artist} - {title}";
+					format-paused = " {artist} - {title}";
+					format-stopped = "";
+					on-click = "${pkgs.mpc-cli}/bin/mpc prev";
+					on-click-right = "${pkgs.mpc-cli}/bin/mpc next";
+					on-click-middle = "${pkgs.mpc-cli}/bin/mpc toggle";
                 };
 
                 "custom/cava" = {
