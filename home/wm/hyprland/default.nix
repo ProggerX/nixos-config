@@ -68,7 +68,7 @@
 			
 			bind = [
 				"$mainMod, C, killactive, "
-				"$mainMod SHIFT, L, exec, ${import ../hyprlock/lock.nix { inherit pkgs; }}/bin/lock"
+				"$mainMod SHIFT, L, exec, hyprlock"
 				"$mainMod, O, pin"
 				"$mainMod, f, togglefloating," 
 				"$mainMod, P, pseudo,"
