@@ -32,6 +32,6 @@
             };
         };
         base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-medium.yaml";
-        image = ./wallpaper.png;
+        image = (if config.isLaptop then ./thinkpad.png else ./wallpaper.png);
     };
 }
