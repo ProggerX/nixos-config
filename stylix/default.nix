@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
     stylix = {
         enable = true;
@@ -10,12 +10,12 @@
             });
         };
         opacity = {
-            terminal = 0.85;
+            terminal = 1.0;
             applications = 1;
         };
         fonts = rec {
             sizes = {
-                terminal = 12;
+                terminal = (if config.isLaptop then 14 else 12);
             };
             serif = {
                 package = pkgs.dejavu_fonts;
@@ -31,7 +31,7 @@
                 name = "Noto Color Emoji";
             };
         };
-        base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+        base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-medium.yaml";
         image = ./wallpaper.png;
     };
 }
