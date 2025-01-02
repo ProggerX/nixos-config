@@ -1,5 +1,5 @@
-{ config, lib, pkgs, ... }:
-{
+{ config, inputs, system, lib, pkgs, ... }:
+let unstable = import inputs.unstable { inherit system; }; in {
     options = {
         isLaptop = lib.mkEnableOption ''Device is laptop'';
     };
@@ -65,7 +65,7 @@
         };
         boot.supportedFilesystems = [ "ntfs" ];
         
-        boot.extraModulePackages = [ config.boot.kernelPackages.rtl88x2bu ];
+        boot.extraModulePackages = with config.boot.kernelPackages; [ rtl88x2bu amneziawg ];
 		boot.kernelPackages = pkgs.linuxPackages_zen;
         
         networking.networkmanager.enable = true;    
@@ -170,6 +170,8 @@
         };
         
         environment.systemPackages = with pkgs; [
+			amneziawg-go
+			unstable.amneziawg-tools
             vim 
             man-pages man-pages-posix
             wayvnc
