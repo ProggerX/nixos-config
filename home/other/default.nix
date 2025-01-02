@@ -3,8 +3,6 @@
 		./ayugram
         ./zen
 		./ncmpcpp
-        ./forkgram
-        ./spotify
 		./tor-proxy
     ];
 	stylix.iconTheme = {

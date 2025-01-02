@@ -7,14 +7,6 @@
 		unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 		aagl.url = "github:ezKEa/aagl-gtk-on-nix";
 		zen-browser.url = "github:ProggerX/zen-browser-flake";
-        hyprland.url = "github:hyprwm/Hyprland";
-        nur.url = "github:nix-community/NUR";
-        bald.url = "github:NotBalds/bald";
-        disko.url = "github:nix-community/disko";
-        disko.inputs.nixpkgs.follows = "nixpkgs";
-        masterpkgs.url = "github:NixOS/nixpkgs/master";
-        spicetify-nix.url = "github:Gerg-L/spicetify-nix";
-        spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
 		ayugram-desktop.url = "github:/ayugram-port/ayugram-desktop/release?submodules=1";
         rust-overlay.url = "github:oxalica/rust-overlay";
         home-manager = {
@@ -39,7 +31,6 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
         notbalds.url = "github:NotBalds/nix";
-        lazynix.url = "github:ProggerX/lazynix";
     };
 
     outputs = { nixpkgs, ...}@inputs: {

@@ -5,7 +5,6 @@
 
     imports = [
         ./pkgs.nix
-        ./nurpkgs.nix
         ./other
         ./wm
         ./shell
