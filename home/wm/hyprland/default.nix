@@ -140,7 +140,7 @@
 				"noanim,class:^(xwaylandvideobridge)$"
 				"nofocus,class:^(xwaylandvideobridge)$"
 				"noinitialfocus,class:^(xwaylandvideobridge)$"
-				"workspace 2,class:(zen-beta)"
+				"workspace 2,class:(zen)"
 				"float,class:(showmethekey-gtk)"
 				"float,class:(Tk)"
 				"pin,class:(showmethekey-gtk)"
