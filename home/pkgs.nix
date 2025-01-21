@@ -4,6 +4,7 @@ let unstable = import inputs.unstable { inherit system; }; in {
 		tree-sitter
 		ollama
 		marksman
+		codeberg-cli
         inputs.pabc-nix.packages.${pkgs.system}.default
 		codeblocks
 		jetbrains.pycharm-community-bin
