@@ -39,7 +39,7 @@ let unstable = import inputs.unstable { inherit system; }; in {
         deploy-rs
         openvpn3
         swayimg
-        element-desktop-wayland
+        element-desktop
         obs-studio
         fasole
         wmctrl

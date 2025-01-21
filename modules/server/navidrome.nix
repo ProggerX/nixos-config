@@ -4,6 +4,7 @@
         server.navidrome.enable = lib.mkEnableOption "Enable navidrome";
     };
     config = lib.mkIf config.server.navidrome.enable {
+		systemd.services.navidrome.serviceConfig.EnvironmentFile = "/navidrome-env.conf";
         services.navidrome = {
             enable = true;
             settings = {
