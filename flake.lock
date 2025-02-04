@@ -1482,11 +1482,11 @@
         "nixpkgs": "nixpkgs_15"
       },
       "locked": {
-        "lastModified": 1736576765,
-        "narHash": "sha256-0HXxO3oNByO+6mkyGdKov8scbi37BbZQ7CxXpQPXd+A=",
+        "lastModified": 1738672059,
+        "narHash": "sha256-fKMPpyOE5qE2CvqzHg7x4/c5m24APb/1nDZUIdpI2mY=",
         "owner": "ProggerX",
         "repo": "zen-browser-flake",
-        "rev": "3da2d5de814ef37536f7b5ee18cdb17a0930ea4a",
+        "rev": "6c8a1edd3a384c2bf7761cc979552c3208265ebc",
         "type": "github"
       },
       "original": {
