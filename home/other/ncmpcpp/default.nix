@@ -1,8 +1,10 @@
-{ ... }: {
+{ pkgs, ... }: {
 	programs.ncmpcpp = {
 		enable = true;
+		package = pkgs.ncmpcpp.override {visualizerSupport = true;};
 		settings = {
-			lyrics_fetchers = "tags, justsomelyrics";
+			lyrics_fetchers = "tags, plyrics, jah-lyrics";
+			user_interface = "alternative";
 		};
 	};
 }
