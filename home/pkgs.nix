@@ -10,7 +10,7 @@ let unstable = import inputs.unstable { inherit system; }; in {
 		codeblocks
 		jetbrains.pycharm-community-bin
 		typst
-		typst-lsp
+		tinymist
 		texlab
 		pandoc
         ghc
