@@ -23,6 +23,7 @@
 			exec-once = [
 				"zen"
 				"ayugram-desktop"
+				"nix run nixpkgs#sshfs -- server:/music ./music"
 				"vesktop"
 			] ++ (if sys.isLaptop then [ "iio-hyprland" ] else [ ]);
 			

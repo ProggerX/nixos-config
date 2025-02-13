@@ -269,18 +269,18 @@ let unstable = import inputs.unstable { inherit system; }; in {
 
         services.terraria.enable = false;
         services.frp = {
-            enable = config.services.terraria.enable;
+            enable = true;
             role = "client";
             settings = {
                 serverAddr = "5.35.87.192";
                 serverPort = 7000;
                 proxies = [
                     {
-                        name = "terka";
+                        name = "slsk";
                         type = "tcp";
                         localIP = "127.0.0.1";
-                        localPort = 7777;
-                        remotePort = 7777;
+                        localPort = 2234;
+                        remotePort = 2234;
                     }
                 ];
             };
