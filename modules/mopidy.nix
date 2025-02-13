@@ -1,7 +1,7 @@
 { pkgs, lib, ... }: {
 	services.mopidy = {
 		enable = true;
-		extensionPackages = [ pkgs.mopidy-mpd pkgs.mopidy-subidy ];
+		extensionPackages = with pkgs; [ mopidy-mpd mopidy-subidy mopidy-mpris ];
 		extraConfigFiles = [ "/mopidy.conf" ];
 	};
 	systemd.services.mopidy = {
