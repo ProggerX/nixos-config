@@ -3,9 +3,8 @@
 		enable = true;
 		package = pkgs.ncmpcpp.override {visualizerSupport = true;};
 		settings = {
-			lyrics_fetchers = "tags, plyrics, jah-lyrics";
+			lyrics_fetchers = "tags, plyrics";
 			user_interface = "alternative";
-			visualizer_data_source = "localhost:5555";
 		};
 	};
 }
