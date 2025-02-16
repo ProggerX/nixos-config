@@ -32,6 +32,6 @@
             };
         };
         base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-medium.yaml";
-        image = (if config.isLaptop then ./second-herta.png else ./second-herta.png);
+        image = ./su-57.jpg;
     };
 }
