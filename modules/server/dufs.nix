@@ -3,7 +3,7 @@
     config = lib.mkIf config.server.dufs.enable {
 		virtualisation.oci-containers.containers.dufs = {
 			image = "sigoden/dufs";
-			cmd = [ "--allow-upload" "/files" ];
+			cmd = [ "/files" ];
 			volumes = [ "/var/lib/dufs:/data" "/var/lib/dufs-files:/files" ];
 			ports = [ "5000:5000" ];
 		};
@@ -16,7 +16,7 @@
                 locations."/" = {
                     proxyPass = "http://0.0.0.0:5000";
                 };
-				extraConfig = "client_max_body_size 50M;";
+				extraConfig = "client_max_body_size 5G;";
             };
         };
         security.acme = {
