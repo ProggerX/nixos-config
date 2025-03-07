@@ -111,4 +111,16 @@ in {
             };
         };
     };
+
+    services.nginx = {
+        enable = true;
+        virtualHosts.main = {
+            addSSL = true;
+            enableACME = true;
+            serverName = "bald.su";
+            locations."/" = {
+				root = "/nginx-root";
+            };
+        };
+    };
 }
