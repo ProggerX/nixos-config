@@ -3,6 +3,7 @@ let unstable = import inputs.unstable { inherit system; }; in {
     home.packages = with pkgs; [
 		apostrophe
 		nicotine-plus
+		fretboard
 		haskellPackages.pointfree
 		tree-sitter
 		ollama
