@@ -6,7 +6,6 @@
         nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
 		unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 		aagl.url = "github:ezKEa/aagl-gtk-on-nix";
-		zen-browser.url = "github:ProggerX/zen-browser-flake";
 		ayugram-desktop.url = "github:/ayugram-port/ayugram-desktop/release?submodules=1";
         rust-overlay.url = "github:oxalica/rust-overlay";
         home-manager = {

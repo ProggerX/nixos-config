@@ -21,7 +21,7 @@
 			debug.damage_tracking = false;
 			
 			exec-once = [
-				"zen"
+				"firefox-beta"
 				"ayugram-desktop"
 				"nix run nixpkgs#sshfs -- 100.126.179.69:/music /home/proggerx/music"
 				"vesktop"
@@ -141,7 +141,7 @@
 				"noanim,class:^(xwaylandvideobridge)$"
 				"nofocus,class:^(xwaylandvideobridge)$"
 				"noinitialfocus,class:^(xwaylandvideobridge)$"
-				"workspace 2,class:(zen)"
+				"workspace 2,class:(firefox)"
 				"float,class:(showmethekey-gtk)"
 				"float,class:(Tk)"
 				"pin,class:(showmethekey-gtk)"

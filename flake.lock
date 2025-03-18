@@ -967,22 +967,6 @@
         "type": "github"
       }
     },
-    "nixpkgs_15": {
-      "locked": {
-        "lastModified": 1727348695,
-        "narHash": "sha256-J+PeFKSDV+pHL7ukkfpVzCOO7mBSrrpJ3svwBFABbhI=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "1925c603f17fc89f4c8f6bf6f631a802ad85d784",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1729880355,
@@ -1189,8 +1173,7 @@
         "pabc-nix": "pabc-nix",
         "rust-overlay": "rust-overlay",
         "stylix": "stylix",
-        "unstable": "unstable",
-        "zen-browser": "zen-browser"
+        "unstable": "unstable"
       }
     },
     "rust-overlay": {
@@ -1474,24 +1457,6 @@
       "original": {
         "owner": "numtide",
         "repo": "flake-utils",
-        "type": "github"
-      }
-    },
-    "zen-browser": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_15"
-      },
-      "locked": {
-        "lastModified": 1738672059,
-        "narHash": "sha256-fKMPpyOE5qE2CvqzHg7x4/c5m24APb/1nDZUIdpI2mY=",
-        "owner": "ProggerX",
-        "repo": "zen-browser-flake",
-        "rev": "6c8a1edd3a384c2bf7761cc979552c3208265ebc",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ProggerX",
-        "repo": "zen-browser-flake",
         "type": "github"
       }
     }

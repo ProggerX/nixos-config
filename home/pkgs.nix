@@ -2,6 +2,7 @@
 let unstable = import inputs.unstable { inherit system; }; in {
     home.packages = with pkgs; [
 		apostrophe
+		firefox-beta
 		gamescope
 		nicotine-plus
 		fretboard
