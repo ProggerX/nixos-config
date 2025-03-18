@@ -30,6 +30,7 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
         notbalds.url = "github:NotBalds/nix";
+		firefox.url = "github:nix-community/flake-firefox-nightly";
     };
 
     outputs = { nixpkgs, ...}@inputs: {
