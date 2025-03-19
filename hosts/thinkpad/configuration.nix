@@ -25,6 +25,11 @@ let theme = pkgs.fetchFromGitHub {
 				initrd /android-8.1-r6/initrd.img
 				boot
 			}
+			menuentry "Windows" --class windows --class os {
+				insmod ntfs
+				search --no-floppy --set=root --fs-uuid 28B9-E112
+				chainloader (''${root})/EFI/Microsoft/Boot/bootmgfw.efi
+			}
 		'';
 		theme = lib.mkForce theme;
 	};
