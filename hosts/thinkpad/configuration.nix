@@ -1,4 +1,10 @@
-{ lib, pkgs, ... }: {
+{ lib, pkgs, ... }:
+let theme = pkgs.fetchFromGitHub {
+	owner = "YouStones";
+	repo = "ultrakill-grub-theme";
+	rev = "6df32df10aaa79c14d39775d5a5e44416fcb7078";
+	sha256 = "sha256-PgQu1m7H11O8QveVvnofdZDqfs08mJqTMsaJk9Th+GQ=";
+}; in {
     isLaptop = true;
     imports = [ ../pc/configuration.nix ];
     networking.hostName = lib.mkForce "snd-tp";
@@ -9,6 +15,18 @@
 	services.logind.powerKey = lib.mkForce "ignore";
 	hardware.sensor.iio.enable = true;
 	programs.iio-hyprland.enable = true;
-	boot.loader.grub.efiInstallAsRemovable = lib.mkForce false;
+	boot.loader.grub = {
+		efiInstallAsRemovable = lib.mkForce false;
+		extraConfig = lib.mkForce "";
+		extraEntries = ''
+			menuentry "Android" {
+				set root=(hd0,gpt9)
+				linux /android-8.1-r6/kernel
+				initrd /android-8.1-r6/initrd.img
+				boot
+			}
+		'';
+		theme = lib.mkForce theme;
+	};
     boot.loader.efi.canTouchEfiVariables = lib.mkForce true;
 }
