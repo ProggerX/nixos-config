@@ -4,7 +4,9 @@ let theme = pkgs.fetchFromGitHub {
 	repo = "ultrakill-grub-theme";
 	rev = "6df32df10aaa79c14d39775d5a5e44416fcb7078";
 	sha256 = "sha256-PgQu1m7H11O8QveVvnofdZDqfs08mJqTMsaJk9Th+GQ=";
-}; in {
+};
+android-path = "/android-2024-10-11";
+in {
     isLaptop = true;
     imports = [ ../pc/configuration.nix ];
     networking.hostName = lib.mkForce "snd-tp";
@@ -20,9 +22,9 @@ let theme = pkgs.fetchFromGitHub {
 		extraConfig = lib.mkForce "";
 		extraEntries = ''
 			menuentry "Android" {
-				set root=(hd0,gpt9)
-				linux /android-8.1-r6/kernel
-				initrd /android-8.1-r6/initrd.img
+				set root=(hd0,gpt10)
+				linux ${android-path}/kernel
+				initrd ${android-path}/initrd.img
 				boot
 			}
 			menuentry "Windows" --class windows --class os {
