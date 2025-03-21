@@ -23,7 +23,7 @@
 			exec-once = [
 				"firefox-nightly"
 				"ayugram-desktop"
-				"nix run nixpkgs#sshfs -- 100.126.179.69:/music /home/proggerx/music"
+				"sshfs 100.126.179.69:/music /home/proggerx/music"
 				"vesktop"
 			] ++ (if sys.isLaptop then [ "iio-hyprland" ] else [ ]);
 			
