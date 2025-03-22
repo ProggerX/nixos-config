@@ -13,7 +13,7 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
         pabc-nix = {
-            url = "github:ProggerX/pabc-nix/v1";
+            url = "github:ProggerX/pabc-nix/v2";
             inputs.nixpkgs.follows = "nixpkgs";
         };
         stylix.url = "github:danth/stylix/release-24.11";

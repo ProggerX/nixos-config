@@ -1247,16 +1247,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1726900064,
-        "narHash": "sha256-DBED/E3BviwKzVS3W6t8eVa2tX3itHiEDponbhwQkZM=",
+        "lastModified": 1742627605,
+        "narHash": "sha256-F2q8GJkOglWquJvRNYf6gcxXUcFIYyDaRzryCgCt/C0=",
         "owner": "ProggerX",
         "repo": "pabc-nix",
-        "rev": "56138387221450993ff32a681ca8af309b104ff3",
+        "rev": "56c6e0d26fd9c02b3c5d780e6f250a3bba1a1292",
         "type": "github"
       },
       "original": {
         "owner": "ProggerX",
-        "ref": "v1",
+        "ref": "v2",
         "repo": "pabc-nix",
         "type": "github"
       }
