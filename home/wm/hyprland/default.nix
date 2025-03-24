@@ -1,8 +1,9 @@
-{ pkgs, sys, ... }:
-{
+{ sys, system, inputs, ... }:
+let unstable = import inputs.unstable { inherit system; }; in {
 	services.cliphist.enable = true;
 	wayland.windowManager.hyprland = {
 		enable = true;
+		package = unstable.hyprland;
 		settings = {
 			env = [
 				"LIBVA_DRIVER_NAME,nvidia;"
@@ -22,7 +23,7 @@
 			
 			exec-once = [
 				"firefox-nightly"
-				"ayugram-desktop"
+				"telegram-desktop"
 				"sshfs 100.126.179.69:/music /home/proggerx/music"
 				"vesktop"
 			] ++ (if sys.isLaptop then [ "iio-hyprland" ] else [ ]);
@@ -145,7 +146,7 @@
 				"float,class:(showmethekey-gtk)"
 				"float,class:(Tk)"
 				"pin,class:(showmethekey-gtk)"
-				"workspace 4,class:(com.ayugram)"
+				"workspace 4,class:(org.telegram.desktop)"
 				"workspace 3,class:(vesktop)"
 				"workspace 4,class:(nchat)"
 				"workspace 10,class:(Spotify)"

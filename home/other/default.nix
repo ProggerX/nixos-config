@@ -1,6 +1,5 @@
 { pkgs, ... }: {
     imports = [
-		./ayugram
 		./ncmpcpp
 		./tor-proxy
     ];
