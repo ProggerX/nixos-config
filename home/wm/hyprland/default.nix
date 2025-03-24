@@ -3,7 +3,6 @@ let unstable = import inputs.unstable { inherit system; }; in {
 	services.cliphist.enable = true;
 	wayland.windowManager.hyprland = {
 		enable = true;
-		package = unstable.hyprland;
 		settings = {
 			env = [
 				"LIBVA_DRIVER_NAME,nvidia;"

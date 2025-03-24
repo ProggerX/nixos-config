@@ -1,4 +1,4 @@
-{ pkgs, inputs, system, ... }:
+{ pkgs, inputs, system, sys, ... }:
 let unstable = import inputs.unstable { inherit system; }; in {
     home.packages = with pkgs; [
 		telegram-desktop
@@ -19,10 +19,8 @@ let unstable = import inputs.unstable { inherit system; }; in {
 		jetbrains.pycharm-community-bin
 		typst
 		tinymist
-		texlab
 		pandoc
         ghc
-		(texlive.combine { inherit (texlive) scheme-tetex ucs cyrillic; })
 		nodejs
         cf-tool
         haskellPackages.hoogle
@@ -37,10 +35,6 @@ let unstable = import inputs.unstable { inherit system; }; in {
         stack
         tic-80
         cool-retro-term
-        (dwarf-fortress-packages.dwarf-fortress-full.override {
-            dfVersion = "0.47.05";
-            enableDwarfTherapist = false;
-        })
         tgpt
         neovide
         lutris
@@ -153,5 +147,10 @@ let unstable = import inputs.unstable { inherit system; }; in {
         gnumake
         nitch
         direnv
-    ];
+    ] ++ (if sys.isLaptop then [] else [
+		(dwarf-fortress-packages.dwarf-fortress-full.override {
+            dfVersion = "0.47.05";
+            enableDwarfTherapist = false;
+        })
+	]);
 }
