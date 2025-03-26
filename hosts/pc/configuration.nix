@@ -217,7 +217,7 @@ let unstable = import inputs.unstable { inherit system; }; in {
             
         services.openssh = {
 			enable = true;
-			settings.PasswordAuthentication = false;
+			settings.PasswordAuthentication = true;
 		};
         services.flatpak.enable = true;
         programs.dconf.enable = true;
