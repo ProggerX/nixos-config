@@ -5,7 +5,7 @@
         ./hyprland
         ./rofi
         ./dunst
-        ./waybar
+        ./msh
         ./river
         ./sway
     ];

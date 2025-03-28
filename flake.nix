@@ -17,6 +17,8 @@
         };
         stylix.url = "github:danth/stylix/release-24.11";
         deploy-rs.url = "github:serokell/deploy-rs";
+		firefox.url = "github:nix-community/flake-firefox-nightly";
+		msh.url = "github:proggerx/msh";
         # Server inputs
 		fish-text.url = "github:ProggerX/fish-text";
         flux.url = "github:Bananad3v/flux";
@@ -29,7 +31,6 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
         notbalds.url = "github:NotBalds/nix";
-		firefox.url = "github:nix-community/flake-firefox-nightly";
     };
 
     outputs = { nixpkgs, ...}@inputs: {
