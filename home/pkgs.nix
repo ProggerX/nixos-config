@@ -1,6 +1,7 @@
 { pkgs, inputs, system, sys, ... }:
 let unstable = import inputs.unstable { inherit system; }; in {
     home.packages = with pkgs; [
+		mpc-cli
 		telegram-desktop
 		sshfs
 		apostrophe
