@@ -24,7 +24,6 @@ let unstable = import inputs.unstable { inherit system; }; in {
 				"firefox-nightly"
 				"telegram-desktop"
 				"sshfs 100.126.179.69:/music /home/proggerx/music"
-				"vesktop"
 			] ++ (if sys.isLaptop then [ "iio-hyprland" ] else [ ]);
 			
 			input = {

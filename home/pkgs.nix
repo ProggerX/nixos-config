@@ -11,7 +11,7 @@ let unstable = import inputs.unstable { inherit system; }; in {
 		nicotine-plus
 		fretboard
 		haskellPackages.pointfree
-		tree-sitter
+		unstable.tree-sitter
 		ollama
 		marksman
 		codeberg-cli
@@ -39,7 +39,7 @@ let unstable = import inputs.unstable { inherit system; }; in {
         tgpt
         neovide
         lutris
-        neovim
+        unstable.neovim
         deploy-rs
         openvpn3
         swayimg

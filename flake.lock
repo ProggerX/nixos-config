@@ -1021,16 +1021,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1742627605,
-        "narHash": "sha256-F2q8GJkOglWquJvRNYf6gcxXUcFIYyDaRzryCgCt/C0=",
+        "lastModified": 1743230484,
+        "narHash": "sha256-FqHFe/VZUl/oO1zn6wH0rIPzy6q1kY9+ddvwsGIakiU=",
         "owner": "ProggerX",
         "repo": "pabc-nix",
-        "rev": "56c6e0d26fd9c02b3c5d780e6f250a3bba1a1292",
+        "rev": "086b74ec1e4b1233d890bbc14e78162ed95dfd43",
         "type": "github"
       },
       "original": {
         "owner": "ProggerX",
-        "ref": "v2",
+        "ref": "v3",
         "repo": "pabc-nix",
         "type": "github"
       }
@@ -1253,11 +1253,11 @@
     },
     "unstable": {
       "locked": {
-        "lastModified": 1742669843,
-        "narHash": "sha256-G5n+FOXLXcRx+3hCJ6Rt6ZQyF1zqQ0DL0sWAMn2Nk0w=",
+        "lastModified": 1743315132,
+        "narHash": "sha256-6hl6L/tRnwubHcA4pfUUtk542wn2Om+D4UnDhlDW9BE=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "1e5b653dff12029333a6546c11e108ede13052eb",
+        "rev": "52faf482a3889b7619003c0daec593a1912fddc1",
         "type": "github"
       },
       "original": {
