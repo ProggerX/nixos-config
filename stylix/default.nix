@@ -32,6 +32,8 @@
             };
         };
         base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-medium.yaml";
-        image = ./solid.png;
+        image =
+			let color = "${config.lib.stylix.colors.base00}";
+			in import ./color.nix { inherit pkgs; col = "#${color}"; w = 1920; h = 1080; };
     };
 }
