@@ -10,7 +10,7 @@
             });
         };
         opacity = {
-            terminal = 0.9;
+            terminal = 1.0;
             applications = 1;
         };
         fonts = rec {
@@ -32,6 +32,6 @@
             };
         };
         base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-medium.yaml";
-        image = ./su-57.jpg;
+        image = ./solid.png;
     };
 }

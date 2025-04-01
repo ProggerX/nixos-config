@@ -1,5 +1,4 @@
-{ sys, system, inputs, ... }:
-let unstable = import inputs.unstable { inherit system; }; in {
+{ sys, ... }: {
 	services.cliphist.enable = true;
 	wayland.windowManager.hyprland = {
 		enable = true;
@@ -52,7 +51,7 @@ let unstable = import inputs.unstable { inherit system; }; in {
 			
 			decoration = {
 				rounding = 10;
-				dim_inactive = 1;
+				dim_inactive = 0;
 				dim_strength = 0.2;
 			};
 			
