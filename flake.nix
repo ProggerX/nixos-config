@@ -3,19 +3,19 @@
 
     inputs = {
         # Main inputs
-        nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
-		unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+        nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+		stable.url = "github:NixOS/nixpkgs/nixos-24.11";
 		aagl.url = "github:ezKEa/aagl-gtk-on-nix";
         rust-overlay.url = "github:oxalica/rust-overlay";
         home-manager = {
-            url = "github:nix-community/home-manager/release-24.11";
+            url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs";
         };
         pabc-nix = {
             url = "github:ProggerX/pabc-nix/v3";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-        stylix.url = "github:danth/stylix/release-24.11";
+        stylix.url = "github:danth/stylix";
         deploy-rs.url = "github:serokell/deploy-rs";
         # Server inputs
 		fish-text.url = "github:ProggerX/fish-text";

@@ -1,6 +1,6 @@
-{ pkgs, inputs, system, sys, ... }:
-let unstable = import inputs.unstable { inherit system; }; in {
-    home.packages = with pkgs; [
+{ pkgs, inputs, system, sys, ... }: {
+home.packages = with pkgs; [
+		neovim
 		mpc-cli
 		telegram-desktop
 		sshfs
@@ -11,13 +11,12 @@ let unstable = import inputs.unstable { inherit system; }; in {
 		nicotine-plus
 		fretboard
 		haskellPackages.pointfree
-		unstable.tree-sitter
+		tree-sitter
 		ollama
 		marksman
 		codeberg-cli
         inputs.pabc-nix.packages.${pkgs.system}.default
 		codeblocks
-		jetbrains.pycharm-community-bin
 		typst
 		tinymist
 		pandoc
@@ -34,12 +33,10 @@ let unstable = import inputs.unstable { inherit system; }; in {
         haskell-language-server
         cabal-install
         stack
-        tic-80
         cool-retro-term
         tgpt
         neovide
         lutris
-        unstable.neovim
         deploy-rs
         openvpn3
         swayimg
@@ -79,7 +76,7 @@ let unstable = import inputs.unstable { inherit system; }; in {
         gimp
         openjdk17-bootstrap
         osu-lazer-bin
-        xwaylandvideobridge
+		kdePackages.xwaylandvideobridge
         alsa-utils
         toilet figlet
         cowsay
@@ -104,7 +101,7 @@ let unstable = import inputs.unstable { inherit system; }; in {
         ripgrep
         git
         lazygit
-        unstable.go
+        go
         bear
         vitetris
         tty-clock
@@ -143,7 +140,7 @@ let unstable = import inputs.unstable { inherit system; }; in {
         slurp
         eza
         python311
-        unstable.vesktop
+        vesktop
         gcc
         gnumake
         nitch

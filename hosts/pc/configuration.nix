@@ -1,5 +1,5 @@
 { config, inputs, system, lib, pkgs, ... }:
-let unstable = import inputs.unstable { inherit system; }; in {
+let stable = import inputs.stable { inherit system; }; in {
     options = {
         isLaptop = lib.mkEnableOption ''Device is laptop'';
     };
@@ -16,7 +16,7 @@ let unstable = import inputs.unstable { inherit system; }; in {
 		services.fprintd.enable = true;
         services.atftpd.enable = true;
         fonts.packages = with pkgs; [
-            (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+            nerd-fonts.jetbrains-mono
             noto-fonts
 			corefonts
 			vistafonts
@@ -66,7 +66,7 @@ let unstable = import inputs.unstable { inherit system; }; in {
         boot.supportedFilesystems = [ "ntfs" ];
         
         boot.extraModulePackages = with config.boot.kernelPackages; [ rtl88x2bu amneziawg ];
-		boot.kernelPackages = pkgs.linuxPackages_zen;
+		boot.kernelPackages = stable.linuxPackages_zen;
         
         networking.networkmanager.enable = true;    
         nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -171,7 +171,7 @@ let unstable = import inputs.unstable { inherit system; }; in {
         
         environment.systemPackages = with pkgs; [
 			amneziawg-go
-			unstable.amneziawg-tools
+			amneziawg-tools
             vim 
             man-pages man-pages-posix
             wayvnc

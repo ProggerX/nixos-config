@@ -22,8 +22,8 @@
                 name = "DejaVu Serif";
             };
             sansSerif = {
-                package = (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; });
-                name = "JetBrainsMono Nerd Font";
+                package = pkgs.nerd-fonts.jetbrains-mono;
+                name = "JetBrainsMono NF";
             };
             monospace = sansSerif;
             emoji = {

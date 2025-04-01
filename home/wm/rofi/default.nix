@@ -15,7 +15,7 @@
 			    grey: #${base05};
 			
 			    width: 600;
-			    font: "JetBrainsMono Nerd Font 14";
+			    font: "JetBrainsMono NF 14";
 			}
 			
 			element-text, element-icon , mode-switcher {
