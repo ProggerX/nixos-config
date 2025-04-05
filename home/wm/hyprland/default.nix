@@ -23,6 +23,7 @@
 				"firefox-nightly"
 				"telegram-desktop"
 				"sshfs 100.126.179.69:/music /home/proggerx/music"
+				"easyeffects --gapplication-service"
 			] ++ (if sys.isLaptop then [ "iio-hyprland" ] else [ ]);
 			
 			input = {
