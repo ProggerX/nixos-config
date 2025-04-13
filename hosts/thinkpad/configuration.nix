@@ -5,7 +5,7 @@ let theme = pkgs.fetchFromGitHub {
 	rev = "6df32df10aaa79c14d39775d5a5e44416fcb7078";
 	sha256 = "sha256-PgQu1m7H11O8QveVvnofdZDqfs08mJqTMsaJk9Th+GQ=";
 };
-android-path = "/android-2024-10-11";
+android-path = "/android";
 in {
     isLaptop = true;
     imports = [ ../pc/configuration.nix ];
@@ -22,7 +22,7 @@ in {
 		extraConfig = lib.mkForce "";
 		extraEntries = ''
 			menuentry "Android" {
-				set root=(hd0,gpt10)
+				set root=(hd0,gpt9)
 				linux ${android-path}/kernel
 				initrd ${android-path}/initrd.img
 				boot
