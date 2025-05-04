@@ -14,6 +14,8 @@ in {
 	services.hypridle.enable = true;
     services.xserver.videoDrivers = [ "intel" ];
 	services.xserver.wacom.enable = true;
+	services.xserver.desktopManager.cinnamon.enable = lib.mkForce false;
+	services.xserver.desktopManager.gnome.enable = true;
 	services.logind.powerKey = lib.mkForce "ignore";
 	hardware.sensor.iio.enable = true;
 	programs.iio-hyprland.enable = true;

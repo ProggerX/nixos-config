@@ -15,6 +15,8 @@ let stable = import inputs.stable { inherit system; }; in {
         virtualisation.waydroid.enable = true;
 		services.fprintd.enable = true;
         services.atftpd.enable = true;
+		qt.platformTheme = lib.mkForce "qt5ct";
+		stylix.targets.qt.platform = lib.mkForce "qtct";
         fonts.packages = with pkgs; [
             nerd-fonts.jetbrains-mono
             noto-fonts

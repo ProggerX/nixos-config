@@ -9,4 +9,5 @@
 		dark = "Gruvbox-Plus-Dark";
 		light = "Gruvbox-Plus-Light";
 	};
+	home.pointerCursor.hyprcursor.enable = true;
 }
