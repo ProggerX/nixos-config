@@ -1,4 +1,4 @@
-{ sys, ... }: {
+{ sys, pkgs, ... }: {
 	services.cliphist.enable = true;
 	services.hyprsunset.enable = true;
 	wayland.windowManager.hyprland = {
@@ -25,6 +25,7 @@
 				"telegram-desktop"
 				"sshfs 100.126.179.69:/music /home/proggerx/music"
 				"easyeffects --gapplication-service"
+				"${pkgs.networkmanagerapplet}/bin/nm-applet"
 			] ++ (if sys.isLaptop then [ "iio-hyprland" ] else [ ]);
 			
 			input = {

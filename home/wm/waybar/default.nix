@@ -48,7 +48,7 @@
                 height = 15;
                 spacing = 20;
 
-                modules-center = [ "mpd" "custom/cava" ];
+                modules-center = [ "mpd" "custom/cava" "custom/lyrics" ];
                 modules-left = [ "hyprland/window" "hyprland/workspaces" ];
                 modules-right = [ "tray" "custom/pipewire" "hyprland/language" "clock" ];
                 
@@ -99,6 +99,12 @@
                     on-scroll-down = "${import ./brightness.nix { inherit pkgs; }}/bin/waybar-brightness lower > /dev/null";
                     exec = "${import ./brightness.nix { inherit pkgs; }}/bin/waybar-brightness get";
                 };
+
+				"custom/lyrics" = {
+					format = "{}";
+					return-type = "text";
+					exec = "${pkgs.callPackage ./lrcsnc.nix {}}/bin/lrcsnc --config ${./lrcsnc-config}";
+				};
 
                 "mpd" = {
                     format = "  {artist} - {title}";

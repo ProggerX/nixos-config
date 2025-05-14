@@ -1,0 +1,71 @@
+# For more information, check wiki:
+# https://github.com/Endg4meZer0/lrcsnc/wiki/Configuration
+
+[player]
+included-players = ["cmus", "spotify", "mpd"]
+excluded-players = []
+
+[lyrics]
+provider = "lrclib"
+timestamp-offset = 0.75
+
+[lyrics.romanization]
+japanese = false
+chinese = false
+korean = true
+
+[cache]
+enabled = true
+dir = "$HOME/.cache/lrcsnc"
+life-span = 168
+store-condition = 100
+
+[output]
+type = "piped"
+
+[output.piped]
+destination = "stdout"
+json = "none"
+insert-newline = true
+
+[output.piped.json-waybar]
+alt = ""
+tooltip = "{artists} - {title} - {album}"
+class = "{playback-status} {lyrics-status}"
+
+[output.piped.text]
+format = "{icon} {lyric} {multiplier}"
+
+[output.piped.multiplier]
+format = "(x{value})"
+
+[output.piped.lyric]
+icon = ""
+
+[output.piped.not-playing]
+text = ""
+
+[output.piped.song-not-found]
+enabled = true
+icon = ""
+text = ""
+
+[output.piped.no-synced-lyrics]
+enabled = true
+icon = ""
+text = ""
+
+[output.piped.loading-lyrics]
+enabled = true
+icon = "󱥸"
+text = "Loading..."
+
+[output.piped.error-message]
+enabled = true
+icon = ""
+text = "An error occured! Check logs for info!"
+
+[output.piped.instrumental]
+interval = 0.66
+symbol = "♪"
+max-symbols = 3

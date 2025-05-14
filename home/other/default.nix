@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, sys, ... }: {
     imports = [
 		./ncmpcpp
 		./tor-proxy
@@ -10,4 +10,12 @@
 		light = "Gruvbox-Plus-Light";
 	};
 	home.pointerCursor.hyprcursor.enable = true;
+	services.mpdris2 = {
+		enable = true;
+		mpd = {
+			host = "localhost";
+			port = 6600;
+			musicDirectory = "/home/proggerx/music";
+		};
+	};
 }
