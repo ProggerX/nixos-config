@@ -8,7 +8,7 @@ let theme = pkgs.fetchFromGitHub {
 android-path = "/android";
 in {
     isLaptop = true;
-    imports = [ ../pc/configuration.nix ];
+    imports = [ ../pc/configuration.nix ./winapps.nix ];
     networking.hostName = lib.mkForce "snd-tp";
     
 	services.hypridle.enable = true;

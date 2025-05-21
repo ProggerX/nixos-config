@@ -17,6 +17,7 @@
         };
         stylix.url = "github:danth/stylix";
         deploy-rs.url = "github:serokell/deploy-rs";
+		winapps.url = "github:winapps-org/winapps";
         # Server inputs
 		fish-text.url = "github:ProggerX/fish-text";
         flux.url = "github:Bananad3v/flux";
