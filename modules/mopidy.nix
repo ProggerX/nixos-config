@@ -12,6 +12,7 @@
 		enable = true;
 		musicDirectory = "/home/proggerx/music";
 		extraConfig = ''
+			playlist_directory "/home/proggerx/music"
 			audio_output {
 				type "pipewire"
 				name "My PipeWire Output"
