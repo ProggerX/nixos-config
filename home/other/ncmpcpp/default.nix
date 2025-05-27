@@ -7,4 +7,9 @@
 			user_interface = "alternative";
 		};
 	};
+	home.packages = [ pkgs.rmpc ];
+    xdg.configFile."rmpc/config.ron".text = ''
+		(
+		)
+	'';
 }
