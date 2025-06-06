@@ -31,6 +31,7 @@ let stable = import inputs.stable { inherit system; }; in {
         programs.nix-ld.enable = true;
 
         nixpkgs.config.permittedInsecurePackages = [
+			"ventoy-1.1.05"
 			"dotnet-sdk-6.0.428"
 			"dotnet-sdk-wrapped-6.0.428"
             "electron-25.9.0"
