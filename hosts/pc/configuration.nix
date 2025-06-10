@@ -68,7 +68,8 @@ let stable = import inputs.stable { inherit system; }; in {
         };
         boot.supportedFilesystems = [ "ntfs" ];
         
-        boot.extraModulePackages = with config.boot.kernelPackages; [ rtl88x2bu amneziawg ];
+        boot.extraModulePackages = with config.boot.kernelPackages; [ amneziawg ];
+		boot.kernelPackages = pkgs.linuxPackages_latest;
         
         networking.networkmanager.enable = true;    
         nix.settings.experimental-features = ["nix-command" "flakes"];
