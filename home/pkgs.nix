@@ -2,6 +2,7 @@
 home.packages = with pkgs; [
 		neovim
 		mpc-cli
+		heroic
 		telegram-desktop
 		sshfs
 		apostrophe
@@ -145,6 +146,7 @@ home.packages = with pkgs; [
         gnumake
         nitch
         direnv
+		cartridges
     ] ++ (if sys.isLaptop then [] else [
 		(dwarf-fortress-packages.dwarf-fortress-full.override {
             dfVersion = "0.47.05";
