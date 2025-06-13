@@ -18,4 +18,5 @@
 			musicDirectory = "/home/proggerx/music";
 		};
 	};
+	services.trayscale.enable = true;
 }
