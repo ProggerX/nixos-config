@@ -1,5 +1,7 @@
 { pkgs, inputs, system, sys, ... }: {
 home.packages = with pkgs; [
+		binwalk
+		audacity
 		neovim
 		mpc-cli
 		heroic
