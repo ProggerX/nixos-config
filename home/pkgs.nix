@@ -1,6 +1,7 @@
 { pkgs, inputs, system, sys, ... }: {
 home.packages = with pkgs; [
 		binwalk
+		multiplex
 		audacity
 		neovim
 		dissent
