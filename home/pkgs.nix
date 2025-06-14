@@ -3,6 +3,7 @@ home.packages = with pkgs; [
 		binwalk
 		audacity
 		neovim
+		dissent
 		mpc-cli
 		heroic
 		telegram-desktop

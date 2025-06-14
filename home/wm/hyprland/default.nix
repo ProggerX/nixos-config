@@ -26,6 +26,7 @@
 				"sshfs 100.126.179.69:/music /home/proggerx/music"
 				"easyeffects --gapplication-service"
 				"${pkgs.networkmanagerapplet}/bin/nm-applet"
+				"${pkgs.dissent}/bin/dissent"
 			] ++ (if sys.isLaptop then [ "iio-hyprland" ] else [ ]);
 			
 			input = {
@@ -148,6 +149,7 @@
 				"pin,class:(showmethekey-gtk)"
 				"workspace 4,class:(org.telegram.desktop)"
 				"workspace 3,class:(vesktop)"
+				"workspace 3,class:(so.libdb.dissent)"
 				"workspace 4,class:(nchat)"
 				"workspace 10,class:(Spotify)"
 			];
