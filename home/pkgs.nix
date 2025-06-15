@@ -1,6 +1,8 @@
 { pkgs, inputs, system, sys, ... }: {
 home.packages = with pkgs; [
 		binwalk
+		wireshark
+		testdisk
 		multiplex
 		audacity
 		neovim
