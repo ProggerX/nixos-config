@@ -8,47 +8,77 @@
         enable = true;
         systemd.enable = true;
         style = with sys.lib.stylix.colors; ''
-			#window {
-				margin-left: 4px;
-				border-radius: 6px;
-			}
-			#window * {
-				background-color: #${base01};
-				padding: 0;
-				margin-bottom: 4px;
-				margin-left: 0px;
-				padding-left: 10px;
-				padding-right: 10px;
-			}
-			#clock {
-				margin-right: 10px;
-			}
-            * {
-				border-bottom-right-radius: 10px;
-				border-bottom-left-radius: 10px;
-                background-color: #${base00};
-                color: #${base05};
-                font-family: "${sys.stylix.fonts.sansSerif.name}";
-                font-size: 10pt;
-            }
-			#workspaces button {
-				padding: 4px;
-			}
-			#workspaces button.active {
-				border-radius: 10px;
-				border: 2px solid #${base05};
-				margin-top: 2px;
-				margin-bottom: 2px;
-			}
+/* Parts of style are stolen from https://github.com/diinki/diinki-aero */
+
+#window {
+	margin-left: 10px;
+}
+
+#clock {
+	margin-right: 10px;
+}
+
+* {
+	border-radius: 10;
+	min-height: 0;
+	font-weight: bold;
+	font-size: 14px;
+	background-color: #${base00};
+	color: #${base05};
+	font-family: "${sys.stylix.fonts.sansSerif.name}";
+    font-size: 10pt;
+}
+#clock,
+#custom-pipewire,
+#custom-battery,
+#custom-brightness,
+#custom-cava,
+#language,
+#tray,
+#workspaces,
+#window,
+#mpd {
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.34);
+	border-style: none;
+	border-bottom-style: solid;
+	border-top-style: solid;
+	border-bottom-color: rgba(255,255,255,0.15);
+	border-top-color: rgba(255,255,255,0.45);
+	border-width: 1px;
+}
+
+#tray menu {
+	background-color: #${base00};
+}
+
+#workspaces button {
+	transition-duration: 100ms;
+	all: initial;
+	min-width: 0;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+#workspaces button.active * {
+	color: #${base0D};
+}
+
+#workspaces button:hover {
+	transition-duration: 120ms;
+	text-shadow: 0px 0px 8px aqua;
+}
         '';
         settings = {
             bar = {
                 position = "top";
-                margin-top = 0;
+                margin-top = 5;
                 height = 15;
                 spacing = 20;
 
-                modules-center = [ "mpd" "custom/cava" "custom/lyrics" ];
+                modules-center = [ "mpd" "custom/cava" ];
                 modules-left = [ "hyprland/window" "hyprland/workspaces" ];
                 modules-right = [ "tray" "custom/pipewire" "hyprland/language" "clock" ];
                 
