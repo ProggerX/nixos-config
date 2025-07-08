@@ -122,13 +122,13 @@ in {
 				root = "/nginx-root";
             };
         };
-        virtualHosts.fsui = {
-            addSSL = true;
-            enableACME = true;
-            serverName = "f179i.bald.su";
-            locations."/" = {
-				proxyPass = "http://justix:8080";
-            };
-        };
+    #     virtualHosts.fsui = {
+    #         addSSL = true;
+    #         enableACME = true;
+    #         serverName = "f179i.bald.su";
+    #         locations."/" = {
+				# proxyPass = "http://justix:8080";
+    #         };
+    #     };
     };
 }
