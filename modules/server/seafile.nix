@@ -8,6 +8,7 @@
             enable = true;
 			adminEmail = "x@proggers.ru";
 			initialAdminPassword = "123";
+			seahubAddress = "0.0.0.0:8000";
 			ccnetSettings.General.SERVICE_URL = "https://sf.bald.su";
         };
         services.nginx = {
