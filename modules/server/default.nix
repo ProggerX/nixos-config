@@ -3,6 +3,7 @@
 		./fish-text.nix
         ./emanote.nix
 		./paperless.nix
+		./seafile.nix
 		./dufs.nix
 		./memos.nix
         ./searx.nix
