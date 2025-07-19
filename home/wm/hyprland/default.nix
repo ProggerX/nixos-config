@@ -85,15 +85,13 @@
 				
 				
 				"$mainMod, RETURN, exec, kitty"
-				"$mainMod, E, exec, nemo"
+				"$mainMod, E, exec, kitty vifm"
 				"ALT, SPACE, exec, rofi -show run"
 				"$mainMod, R, exec, rofi -show drun"
 				"$mainMod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
 				
 				'', PRINT, exec, grim -g"$(slurp)" - | wl-copy''
 				''$mainMod, I, exec, grim -g"$(slurp)" -l 0 /home/proggerx/screen.png''
-				''CTRL, PRINT, exec, rm -rf /home/proggerx/screen-record.mp4 && wf-recorder -g"$(slurp)" --file ~/screen-record.mp4''
-				"CTRL SHIFT, PRINT, exec, pkill wf-recorder"
 				
 				"$mainMod, h, layoutmsg, mfact -0.08"
 				"$mainMod, l, layoutmsg, mfact +0.08"
