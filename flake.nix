@@ -85,7 +85,7 @@
             };
         };
         deploy.nodes.server = {
-            hostname = "100.126.179.69";
+            hostname = "10.7.0.6";
             profiles.system = {
                 user = "root";
                 sshUser = "root";

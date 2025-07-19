@@ -46,10 +46,9 @@ let stable = import inputs.stable { inherit system; }; in {
         };
 
 
-        services.tailscale.enable = true;
-
         networking.hostName = "snd-pc";
-        networking.nameservers = [ "100.126.179.69" ];
+        networking.nameservers = [ "10.7.0.6" "192.168.0.17" ];
+		networking.search = [ "lan" "wg.me" ];
         networking.firewall = {
             allowedUDPPorts = [ 51820 ]; 
         };

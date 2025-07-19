@@ -23,7 +23,7 @@
 			exec-once = [
 				"firefox-nightly"
 				"telegram-desktop"
-				"sshfs 100.126.179.69:/music /home/proggerx/music"
+				"sshfs 10.7.0.6:/music /home/proggerx/music"
 				"easyeffects --gapplication-service"
 				"${pkgs.networkmanagerapplet}/bin/nm-applet"
 				"${pkgs.dissent}/bin/dissent"
