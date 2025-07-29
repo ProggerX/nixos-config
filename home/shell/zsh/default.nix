@@ -6,7 +6,7 @@
         autosuggestion.enable = true;
         syntaxHighlighting.enable = true;
     
-        initExtra = ''
+        initContent = ''
             bindkey -v '^?' backward-delete-char
         '';
 

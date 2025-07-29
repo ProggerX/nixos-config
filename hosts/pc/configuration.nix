@@ -104,7 +104,7 @@ let stable = import inputs.stable { inherit system; }; in {
         programs.river.enable = true;
         services.xserver.windowManager.qtile.enable = true;
         services.greenclip.enable = true;
-        hardware.pulseaudio.enable = false;
+        services.pulseaudio.enable = false;
         
         programs.steam = {
             enable = true;
@@ -186,7 +186,7 @@ let stable = import inputs.stable { inherit system; }; in {
                 variants = ["qt5"];
             })
             wget
-            webkitgtk
+            webkitgtk_6_0
             wireguard-tools
             polkit_gnome
             nettools
@@ -195,7 +195,7 @@ let stable = import inputs.stable { inherit system; }; in {
             libsForQt5.qt5.qtgraphicaleffects
             catppuccin-sddm-corners
             (
-                buildFHSUserEnv {
+                buildFHSEnv {
                     name = "fhs";
                     targetPkgs = pkgs : with pkgs; [
                         alsa-lib atk cairo cups curl dbus expat file fish fontconfig freetype

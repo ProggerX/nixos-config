@@ -1,5 +1,6 @@
 { pkgs, inputs, system, sys, ... }: {
 home.packages = with pkgs; [
+		(pkgs.callPackage ./wm/waybar/wf-recorder.nix {})
 		binwalk
 		wireshark
 		testdisk
