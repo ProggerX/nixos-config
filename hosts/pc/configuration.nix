@@ -89,8 +89,6 @@ let stable = import inputs.stable { inherit system; }; in {
         time.timeZone = "Europe/Moscow";
         
         virtualisation.docker.enable = true;
-        users.extraGroups.docker.members = [ "proggerx" ];
-        users.extraGroups.wireshark.members = [ "proggerx" ];
         
         services.xserver.enable = true;
 		services.xserver.desktopManager.cinnamon.enable = true;
@@ -161,7 +159,7 @@ let stable = import inputs.stable { inherit system; }; in {
         users.mutableUsers = false;
         users.users.proggerx = {
             isNormalUser = true;
-            extraGroups = [ "wheel" "adbusers" ]; 
+            extraGroups = [ "wheel" "adbusers" "docker" "wireshark" ]; 
             hashedPassword = "$y$j9T$9Q.MJOUROTrVdApws9avH0$HYDJYm6RsP8o3AWoL7FHjOA.y/TPE2p4tbI1DXHhM.6";
         };
         
@@ -238,6 +236,15 @@ let stable = import inputs.stable { inherit system; }; in {
                         TimeoutStopSec = 10;
                     };
             };
+			services.wg-tunnel = {
+				description = "Auto-up wg tunnel";
+				wantedBy = [ "multi-user.target" ];
+				after = [ "network.target" ];
+				serviceConfig = {
+					Type = "oneshot";
+					ExecStart = "${pkgs.wireguard-tools}/bin/wg-quick up tunnel";
+				};
+			};
         };
         
         networking.extraHosts = ''
