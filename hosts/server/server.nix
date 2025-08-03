@@ -4,6 +4,7 @@
 	server.dufs.enable = false;
 	server.fish-text.enable = true;
     server.navidrome.enable = true;
+    server.hspobeda.enable = true;
     server.emanote.enable = false;
     server.seafile.enable = true;
     server.searx.enable = true;

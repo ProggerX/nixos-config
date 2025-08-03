@@ -4,6 +4,7 @@
         ./emanote.nix
 		./paperless.nix
 		./seafile.nix
+		./hspobeda.nix
 		./dufs.nix
 		./memos.nix
         ./searx.nix
