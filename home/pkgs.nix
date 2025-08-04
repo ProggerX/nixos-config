@@ -3,6 +3,7 @@ home.packages = with pkgs; [
 		(pkgs.callPackage ./wm/waybar/wf-recorder.nix {})
 		binwalk
 		foliate
+		koreader
 		wireshark
 		testdisk
 		multiplex
