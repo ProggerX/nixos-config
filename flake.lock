@@ -615,11 +615,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1754489035,
-        "narHash": "sha256-LvwKY3dCfru5L2+cTPIR5g1zjSg88bpEMjQfjddK/Xo=",
+        "lastModified": 1754511219,
+        "narHash": "sha256-7vib7ZM2C+v1MVHhTyhiIuOHyH/nFzA/djNRA3+g6no=",
         "owner": "ProggerX",
         "repo": "fmm",
-        "rev": "7f8005ef55762d81fcea8833de412a03f387a0d5",
+        "rev": "2b33614e4874d4d8b74c573be1842655087edb6f",
         "type": "github"
       },
       "original": {
