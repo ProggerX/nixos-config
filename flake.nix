@@ -6,6 +6,7 @@
         nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 		stable.url = "github:NixOS/nixpkgs/nixos-24.11";
 		aagl.url = "github:ezKEa/aagl-gtk-on-nix";
+		fmm.url = "github:ProggerX/fmm";
         rust-overlay.url = "github:oxalica/rust-overlay";
         home-manager = {
             url = "github:nix-community/home-manager";
