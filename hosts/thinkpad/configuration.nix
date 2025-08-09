@@ -21,20 +21,20 @@ in {
 	programs.iio-hyprland.enable = true;
 	boot.loader.grub = {
 		efiInstallAsRemovable = lib.mkForce false;
-		extraConfig = lib.mkForce "";
-		extraEntries = ''
-			menuentry "Android" {
-				set root=(hd0,gpt9)
-				linux ${android-path}/kernel
-				initrd ${android-path}/initrd.img
-				boot
-			}
-			menuentry "Windows" --class windows --class os {
-				insmod ntfs
-				search --no-floppy --set=root --fs-uuid 28B9-E112
-				chainloader (''${root})/EFI/Microsoft/Boot/bootmgfw.efi
-			}
-		'';
+		# extraConfig = lib.mkForce "";
+		# extraEntries = ''
+		# 	menuentry "Android" {
+		# 		set root=(hd0,gpt9)
+		# 		linux ${android-path}/kernel
+		# 		initrd ${android-path}/initrd.img
+		# 		boot
+		# 	}
+		# 	menuentry "Windows" --class windows --class os {
+		# 		insmod ntfs
+		# 		search --no-floppy --set=root --fs-uuid 28B9-E112
+		# 		chainloader (''${root})/EFI/Microsoft/Boot/bootmgfw.efi
+		# 	}
+		# '';
 		theme = lib.mkForce theme;
 	};
     boot.loader.efi.canTouchEfiVariables = lib.mkForce true;
