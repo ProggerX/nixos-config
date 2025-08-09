@@ -2,6 +2,7 @@
     imports = [
 		./fish-text.nix
         ./emanote.nix
+		./calibre.nix
 		./paperless.nix
 		./seafile.nix
 		./hspobeda.nix

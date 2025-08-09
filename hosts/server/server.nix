@@ -1,6 +1,7 @@
 { ... }:
 {
     server.adguard.enable = true;
+    server.calibre.enable = true;
 	server.dufs.enable = false;
 	server.fish-text.enable = true;
     server.navidrome.enable = true;
