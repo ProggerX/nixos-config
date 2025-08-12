@@ -15,7 +15,7 @@
             virtualHosts.hspobeda = {
                 addSSL = true;
                 useACMEHost = "hspobeda";
-                serverName = "хаскеллпобеда.рф";
+                serverName = "xn--80aacmdb6aja4akt4c.xn--p1ai";
                 locations."/" = {
                     proxyPass = "http://0.0.0.0:1339";
                 };
