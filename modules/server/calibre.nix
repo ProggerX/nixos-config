@@ -38,6 +38,7 @@
 			listen.ip = "0.0.0.0";
 			listen.port = 1559;
 			options.calibreLibrary = "/books";
+			options.enableBookUploading = true;
 		};
 
         security.acme = {
