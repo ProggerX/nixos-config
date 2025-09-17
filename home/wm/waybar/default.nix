@@ -6,7 +6,7 @@
     stylix.targets.waybar.enable = false;
     programs.waybar    = {
         enable = true;
-        systemd.enable = true;
+        systemd.enable = false;
         style = with sys.lib.stylix.colors; ''
 /* Parts of style are stolen from https://github.com/diinki/diinki-aero */
 
@@ -79,15 +79,15 @@
                 spacing = 20;
 
                 modules-center = [ "mpd" "custom/cava" ];
-                modules-left = [ "hyprland/window" "hyprland/workspaces" ];
-                modules-right = [ "tray" "custom/pipewire" "hyprland/language" "clock" ];
+                modules-left = [ "sway/window" "sway/workspaces" ];
+                modules-right = [ "tray" "custom/pipewire" "sway/language" "clock" ];
                 
-                "hyprland/language" = {
+                "sway/language" = {
                     format-ru = "ru";
                     format-en = "us";
                 };
 
-                "hyprland/window" = {
+                "sway/window" = {
 					on-click = "rofi -show drun";
                     max-length = 30;
 					min-length = 30;

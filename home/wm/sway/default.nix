@@ -3,11 +3,10 @@
     wayland.windowManager.sway = {
         enable = true;
         config = {
-            bars = [];
             input = {
                 "*" = {
                     xkb_layout = "us,ru";
-                    xkb_options = "grp:win_space_toggle";
+                    xkb_options = "grp:win_space_toggle,caps:escape";
                 };
             };
             gaps = {
@@ -20,8 +19,7 @@
             mod = config.wayland.windowManager.sway.config.modifier;
             in lib.mkOptionDefault {
                 "${mod}+Return" = "exec ${pkgs.kitty}/bin/kitty";
-                "${mod}+y" = "exec ${pkgs.kitty}/bin/kitty ${pkgs.yazi}/bin/yazi";
-                "${mod}+o" = "exec ${pkgs.neovide}/bin/neovide";
+                "${mod}+y" = "exec ${pkgs.kitty}/bin/kitty ${pkgs.vifm}/bin/vifm";
                 "${mod}+shift+r" = ''mode "resize"'';
                 "${mod}+c" = "kill";
                 "${mod}+r" = "exec rofi -show drun";
@@ -40,18 +38,13 @@
                 "XF86AudioNext" = "exec ${pkgs.playerctl}/bin/playerctl next";
             };
             startup = [
-                { command = "${pkgs.waybar}/bin/waybar"; }
                 { command = "${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store"; }
-                { command = "${pkgs.wpaperd}/bin/wpaperd"; }
-                { command = "${pkgs.firefox}/bin/firefox"; }
+                { command = "firefox-nightly"; }
                 { command = "${pkgs.telegram-desktop}/bin/telegram-desktop"; }
-                { command = "${pkgs.vesktop}/bin/vesktop"; }
-                { command = "yandex-music"; }
-                { command = "sleep 5 && ${pkgs.systemd}/bin/systemctl --user start kanshi.service"; }
                 { command = "sleep 2 && ${pkgs.sway}/bin/swaymsg workspace 1"; }
             ];
             assigns = {
-                "2" = [{ app_id = "^firefox$"; }];
+                "2" = [{ app_id = "^firefox-nightly$"; }];
                 "3" = [{ class = "^vesktop$"; }];
                 "4" = [{ app_id = "^org.telegram.desktop$"; }];
                 "10" = [{ class = "^Spotify$"; } { app_id = "^YandexMusic$"; }];
