@@ -19,7 +19,6 @@
 }
 
 * {
-	border-radius: 10;
 	min-height: 0;
 	font-weight: bold;
 	font-size: 14px;
@@ -41,6 +40,7 @@
 	padding: 5px;
 	padding-left: 10px;
 	padding-right: 10px;
+	border-radius: 10;
 	box-shadow: 0px 0px 3px rgba(0,0,0,0.34);
 	border-style: none;
 	border-bottom-style: solid;
@@ -62,7 +62,7 @@
 	margin-left: 5px;
 }
 
-#workspaces button.active * {
+#workspaces button.focused * {
 	color: #${base0D};
 }
 

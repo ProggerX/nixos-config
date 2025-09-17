@@ -19,6 +19,7 @@
         stylix.url = "github:danth/stylix";
         deploy-rs.url = "github:serokell/deploy-rs";
 		winapps.url = "github:winapps-org/winapps";
+		iio-sway.url = "github:tbaumann/iio-sway";
         # Server inputs
 		haskellpobeda.url = "github:ProggerX/haskellpobeda";
 		fish-text.url = "github:ProggerX/fish-text";

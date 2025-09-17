@@ -1,8 +1,9 @@
-{ lib, pkgs, config, ... }:
+{ lib, pkgs, config, sys, ... }:
 {
     wayland.windowManager.sway = {
         enable = true;
         config = {
+			bars = [];
             input = {
                 "*" = {
                     xkb_layout = "us,ru";
@@ -37,12 +38,17 @@
                 "XF86AudioPrev" = "exec ${pkgs.playerctl}/bin/playerctl previous";
                 "XF86AudioNext" = "exec ${pkgs.playerctl}/bin/playerctl next";
             };
-            startup = [
-                { command = "${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store"; }
-                { command = "firefox-nightly"; }
-                { command = "${pkgs.telegram-desktop}/bin/telegram-desktop"; }
-                { command = "sleep 2 && ${pkgs.sway}/bin/swaymsg workspace 1"; }
-            ];
+            startup = map (x: { command = x; }) ([
+                "${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store"
+                "firefox-nightly"
+                "${pkgs.telegram-desktop}/bin/Telegram"
+                "sleep 2 && ${pkgs.sway}/bin/swaymsg workspace 1"
+				"sshfs 10.7.0.6:/music /home/proggerx/music"
+				"easyeffects --gapplication-service"
+				"${pkgs.networkmanagerapplet}/bin/nm-applet"
+				"waybar"
+				] ++ (if sys.isLaptop then ["iio-sway"] else []));
+            
             assigns = {
                 "2" = [{ app_id = "^firefox-nightly$"; }];
                 "3" = [{ class = "^vesktop$"; }];

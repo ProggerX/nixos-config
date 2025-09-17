@@ -1,7 +1,9 @@
 { pkgs, inputs, system, sys, ... }: {
 home.packages = with pkgs; [
 		(pkgs.callPackage ./wm/waybar/wf-recorder.nix {})
+		inputs.iio-sway.packages.${system}.default
 		way-displays
+		libnotify
 		wdisplays
 		nixos-shell
 		gtk4
