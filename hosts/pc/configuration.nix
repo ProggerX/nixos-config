@@ -98,8 +98,9 @@ let stable = import inputs.stable { inherit system; }; in {
         
         services.displayManager.defaultSession = "sway";
                                 
-        programs.hyprland.enable = true;
+        programs.hyprland.enable = false;
         programs.river.enable = true;
+		programs.sway.enable = true;
         services.xserver.windowManager.qtile.enable = true;
         services.greenclip.enable = true;
         services.pulseaudio.enable = false;
@@ -170,6 +171,7 @@ let stable = import inputs.stable { inherit system; }; in {
         };
         
         environment.systemPackages = with pkgs; [
+			mangohud
 			amneziawg-go
 			amneziawg-tools
             vim 

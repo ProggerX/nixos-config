@@ -2,9 +2,6 @@
 {
     wayland.windowManager.sway = {
         enable = true;
-        extraOptions = [
-            "--unsupported-gpu"
-        ];
         config = {
             bars = [];
             input = {
