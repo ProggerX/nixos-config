@@ -45,7 +45,7 @@
                     ./modules/base.nix
                     ./modules/home.nix
 					./modules/aagl.nix
-                    # ./modules/nvidia.nix
+                    ./modules/nvidia.nix
                     ./hosts/pc/configuration.nix
                     ./hosts/pc/hardware-configuration.nix
                     ./modules/non-server.nix

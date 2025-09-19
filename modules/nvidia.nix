@@ -1,15 +1,18 @@
-{ config, ... }: {
-    hardware.nvidia = {
-        modesetting.enable = true;
-        powerManagement.enable = false;
-        powerManagement.finegrained = false;
-        open = false;
-        nvidiaSettings = true;
-        package = config.boot.kernelPackages.nvidiaPackages.stable;
-    };
-	services.sunshine = {
-		enable = true;
-		capSysAdmin = true;
-	};
-    services.xserver.videoDrivers = [ "nvidia" ];
+{ pkgs, ... }: {
+	systemd.tmpfiles.rules = 
+	  let
+		rocmEnv = pkgs.symlinkJoin {
+		  name = "rocm-combined";
+		  paths = with pkgs.rocmPackages; [
+			rocblas
+			hipblas
+			clr
+		  ];
+		};
+	  in [
+		"L+    /opt/rocm   -    -    -     -    ${rocmEnv}"
+	  ];
+	environment.systemPackages = with pkgs; [ blender-hip ];
+	services.lact.enable = true;
+	hardware.amdgpu.overdrive.enable = true;
 }
