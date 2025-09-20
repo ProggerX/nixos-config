@@ -48,7 +48,10 @@
 				"easyeffects --gapplication-service"
 				"${pkgs.networkmanagerapplet}/bin/nm-applet"
 				"waybar"
-				] ++ (if sys.isLaptop then ["iio-sway"] else []));
+				] ++ (if sys.isLaptop then [
+					"iio-sway"
+					"${pkgs.wlsunset}/bin/wlsunset -T 5500"
+				] else []));
 			
 			assigns = {
 				"2" = [{ app_id = "^firefox-nightly$"; }];
