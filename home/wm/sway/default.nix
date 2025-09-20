@@ -40,6 +40,7 @@
 				"XF86AudioNext" = "exec ${pkgs.playerctl}/bin/playerctl next";
 			};
 			startup = map (x: { command = x; }) ([
+				"sh -c \"sleep 5; systemctl --user start kanshi.service\""
 				"${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store"
 				"firefox-nightly"
 				"${pkgs.telegram-desktop}/bin/Telegram"
@@ -63,7 +64,6 @@
 		extraConfig = ''
 			default_border pixel 2
 			default_floating_border pixel 2
-			exec sleep 5; systemctl --user start kanshi.service
 		'';
 	};
 	systemd.user.services.kanshi = {
