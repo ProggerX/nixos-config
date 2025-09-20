@@ -20,6 +20,7 @@
         deploy-rs.url = "github:serokell/deploy-rs";
 		winapps.url = "github:winapps-org/winapps";
 		iio-sway.url = "github:tbaumann/iio-sway";
+		vicinae.url = "github:vicinaehq/vicinae";
         # Server inputs
 		haskellpobeda.url = "github:ProggerX/haskellpobeda";
 		fish-text.url = "github:ProggerX/fish-text";

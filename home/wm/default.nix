@@ -8,5 +8,6 @@
         ./waybar
         ./river
         ./sway
+		./vicinae
     ];
 }
