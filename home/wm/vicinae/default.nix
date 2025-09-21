@@ -2,10 +2,10 @@
 {
 	imports = [ inputs.vicinae.homeManagerModules.default ];
 
-	home.packages = [ inputs.vicinae.packages.${pkgs.system}.default ];
+	home.packages = [];
 
 	services.vicinae = {
-		enable = true;
+		enable = false;
 		autoStart = true;
 		settings = {
 			faviconService = "twenty";

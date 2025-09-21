@@ -3,7 +3,11 @@
 	wayland.windowManager.sway = {
 		enable = true;
 		config = {
-			bars = [];
+			bars = [{
+				position = "top";
+				statusCommand = "${pkgs.i3status}/bin/i3status";
+				trayOutput = "none";
+			}];
 			input = {
 				"*" = {
 					xkb_layout = "us,ru";
@@ -48,7 +52,6 @@
 				"sshfs 10.7.0.6:/music /home/proggerx/music"
 				"easyeffects --gapplication-service"
 				"${pkgs.networkmanagerapplet}/bin/nm-applet"
-				"waybar"
 				] ++ (if sys.isLaptop then [
 					"iio-sway"
 					"${pkgs.wlsunset}/bin/wlsunset -T 5500"
