@@ -35,9 +35,6 @@
 				"${mod}+u" = "fullscreen toggle";
 				"${mod}+f" = "floating toggle";
 				"${mod}+ctrl+l" = "exec ${pkgs.hyprlock}/bin/hyprlock";
-				"XF86AudioMute" = "exec ${pkgs.pamixer}/bin/pamixer -t";
-				"XF86AudioRaiseVolume" = "exec ${pkgs.pamixer}/bin/pamixer -i2";
-				"XF86AudioLowerVolume" = "exec ${pkgs.pamixer}/bin/pamixer -d2";
 				"XF86AudioPause" = "exec ${pkgs.playerctl}/bin/playerctl play-pause";
 				"XF86AudioPlay" = "exec ${pkgs.playerctl}/bin/playerctl play";
 				"XF86AudioPrev" = "exec ${pkgs.playerctl}/bin/playerctl previous";
@@ -67,7 +64,7 @@
 		extraConfig = ''
 			default_border pixel 2
 			default_floating_border pixel 2
-		'';
+		'' + builtins.readFile ./swayosd;
 	};
 	systemd.user.services.kanshi = {
 		Service = {
@@ -80,4 +77,5 @@
 			ExecStart = ''${pkgs.kanshi}/bin/kanshi -c /kanshi.cfg'';
 		};
 	};
+	services.swayosd.enable = true;
 }
