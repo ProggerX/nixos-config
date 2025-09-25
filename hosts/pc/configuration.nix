@@ -10,6 +10,8 @@ let stable = import inputs.stable { inherit system; }; in {
 				trusted-public-keys = [ "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g=" ];
 			};
 		};
+		powerManagement.enable = true;
+		boot.resumeDevice = "/dev/disk/by-label/NIXSWAP";
 		services.logind.powerKey = "suspend";
 		services.logind.powerKeyLongPress = "poweroff";
         virtualisation.waydroid.enable = true;
