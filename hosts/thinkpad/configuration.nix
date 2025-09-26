@@ -11,12 +11,15 @@ in {
     imports = [ ../pc/configuration.nix ./winapps.nix ];
     networking.hostName = lib.mkForce "snd-tp";
     
+
+	networking.interfaces."eno1".wakeOnLan.enable = lib.mkForce false;
 	services.hypridle.enable = true;
     services.xserver.videoDrivers = [ "intel" ];
 	services.xserver.wacom.enable = true;
 	services.xserver.desktopManager.cinnamon.enable = lib.mkForce false;
 	services.desktopManager.gnome.enable = true;
 	services.logind.powerKey = lib.mkForce "ignore";
+	services.logind.lidSwitch = lib.mkForce "hibernate";
 	hardware.sensor.iio.enable = true;
 	programs.iio-hyprland.enable = true;
 	boot.loader.grub = {
