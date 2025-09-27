@@ -2,6 +2,7 @@
 home.packages = with pkgs; [
 		(pkgs.callPackage ./wm/waybar/wf-recorder.nix {})
 		inputs.iio-sway.packages.${system}.default
+		mods
 		way-displays
 		cbonsai
 		libnotify
