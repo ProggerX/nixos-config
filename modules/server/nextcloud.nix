@@ -7,7 +7,8 @@
 		config.dbtype = "sqlite";
 		https = true;
 		extraApps = {
-			inherit (config.services.nextcloud.package.packages.apps) calendar contacts;
+			inherit (config.services.nextcloud.package.packages.apps)
+				calendar contacts notes mail forms whiteboard richdocuments;
 		};
 		extraAppsEnable = true;
 	};
