@@ -1,5 +1,6 @@
 {
     imports = [
+		./nextcloud.nix
 		./fish-text.nix
         ./emanote.nix
 		./calibre.nix
