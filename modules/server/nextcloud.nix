@@ -29,10 +29,25 @@
 			enableACME = true;
 			locations."/" = {
 				proxyPass = "http://[::1]:${toString config.services.collabora-online.port}";
-				proxyWebsockets = true; # collabora uses websockets
+				proxyWebsockets = true;
 			};
 			extraConfig = "client_max_body_size 5G;";
 		};
+		virtualHosts."wb.bald.su" = {
+			addSSL = true;
+			enableACME = true;
+			locations."/" = {
+				proxyPass = "http://0.0.0.0:3002";
+				proxyWebsockets = true;
+			};
+			extraConfig = "client_max_body_size 5G;";
+		};
+	};
+
+	services.nextcloud-whiteboard-server = {
+		enable = true;
+		settings = { NEXTCLOUD_URL = "https://nc.bald.su"; };
+		secrets = [ "/nc-whiteboard-env" ];
 	};
 
 	services.nextcloud = {
