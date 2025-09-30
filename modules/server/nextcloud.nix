@@ -1,24 +1,35 @@
 { config, ... }:
 {
-	virtualisation.oci-containers.containers.collabora = {
-		image = "docker.io/collabora/code";
-		ports = [ "9980:9980" ];
-		autoStart = true;
-		environment = {
-			# This limits it to this NC instance AFAICT
-			aliasgroup1 = "https://nc.bald.su:443";
-			# Must disable SSL as it's behind a reverse proxy
-			extra_params = "--o:ssl.enable=false";
+	services.collabora-online = {
+		enable = true;
+		port = 9980;
+		settings = {
+			ssl = {
+				enable = false;
+				termination = true;
+			};
+
+			net = {
+				listen = "loopback";
+				post_allow.host = ["::1"];
+			};
+
+			storage.wopi = {
+				"@allow" = true;
+				host = ["nc.bald.su"];
+			};
+
+			server_name = "office.bald.su";
 		};
 	};
 	services.nginx = {
 		enable = true;
-		virtualHosts.office = {
+		virtualHosts."office.bald.su" = {
 			addSSL = true;
 			enableACME = true;
-			serverName = "office.bald.su";
 			locations."/" = {
-				proxyPass = "http://0.0.0.0:9980";
+				proxyPass = "http://[::1]:${toString config.services.collabora-online.port}";
+				proxyWebsockets = true; # collabora uses websockets
 			};
 			extraConfig = "client_max_body_size 5G;";
 		};
