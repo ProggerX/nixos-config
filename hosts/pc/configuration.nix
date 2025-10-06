@@ -6,8 +6,11 @@ let stable = import inputs.stable { inherit system; }; in {
     config = {
 		nix = {
 			settings = {
-				substituters = [ "https://cache.garnix.io" ];
-				trusted-public-keys = [ "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g=" ];
+				substituters = [ "https://cache.garnix.io" "https://balds.cachix.org" ];
+				trusted-public-keys = [
+					"cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
+					"balds.cachix.org-1:c0jfVRWyMyFb3Fxg7jWMv3Yx3u3tfa3T0dVX/ssWICg="
+				];
 			};
 		};
 		powerManagement.enable = true;
