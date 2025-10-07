@@ -12,3 +12,7 @@ bindsym XF86AudioLowerVolume exec swayosd-client --output-volume -2
 bindsym XF86MonBrightnessUp exec swayosd-client --brightness raise
 # Brightness lower
 bindsym XF86MonBrightnessDown exec swayosd-client --brightness lower
+
+# Gestures
+bindgesture swipe:right workspace prev
+bindgesture swipe:left workspace next
