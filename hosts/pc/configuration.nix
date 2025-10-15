@@ -309,5 +309,29 @@ let stable = import inputs.stable { inherit system; }; in {
                 ];
             };
         };
+		environment.etc."os-release".source = lib.mkForce (pkgs.writeText "shefos" ''
+ANSI_COLOR="0;38;2;126;186;228"
+BUG_REPORT_URL="https://shefos.ru/"
+BUILD_ID="320KG.NOSYSTEMD"
+CPE_NAME="cpe:/o:nixos:nixos:25.11"
+DEFAULT_HOSTNAME=nixos
+DOCUMENTATION_URL="https://shefos.ru/"
+HOME_URL="https://shefos.ru/"
+ID=shefos
+ID_LIKE=""
+IMAGE_ID=""
+IMAGE_VERSION=""
+LOGO="trollface"
+NAME=SHEFOS
+PRETTY_NAME="SHEFOS 320KG NO SYSTEMD EDITION"
+SUPPORT_URL="https://shefos.ru/"
+VARIANT=""
+VARIANT_ID=""
+VENDOR_NAME=ShefOS
+VENDOR_URL="https://shefos.ru/"
+VERSION="320KG NO SYSTEMD EDITION"
+VERSION_CODENAME=320kg
+VERSION_ID="320kg"
+		'');
     };
 }
