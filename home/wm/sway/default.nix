@@ -35,6 +35,7 @@
 				"${mod}+u" = "fullscreen toggle";
 				"${mod}+f" = "floating toggle";
 				"${mod}+ctrl+l" = "exec ${pkgs.hyprlock}/bin/hyprlock";
+				"ctrl+shift+space" = "exec hexecute";
 				"XF86AudioPause" = "exec ${pkgs.playerctl}/bin/playerctl play-pause";
 				"XF86AudioPlay" = "exec ${pkgs.playerctl}/bin/playerctl play";
 				"XF86AudioPrev" = "exec ${pkgs.playerctl}/bin/playerctl previous";

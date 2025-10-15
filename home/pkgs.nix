@@ -2,6 +2,8 @@
 home.packages = with pkgs; [
 		(pkgs.callPackage ./wm/waybar/wf-recorder.nix {})
 		inputs.iio-sway.packages.${system}.default
+		inputs.hexecute.packages.${system}.default
+		moonlight-qt
 		mods
 		way-displays
 		cbonsai
