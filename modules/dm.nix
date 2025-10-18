@@ -5,7 +5,7 @@
 		enable = true;
 		settings = {
 			default_session = {
-				command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd sway -r ";
+				command = "${pkgs.tuigreet}/bin/tuigreet --time -r --cmd 'mango &> /home/proggerx/mango.log' ";
 				user = "greeter";
 			};
 		};
