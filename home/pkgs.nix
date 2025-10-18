@@ -27,7 +27,7 @@ home.packages = with pkgs; [
 		apostrophe
 		easyeffects
 		inputs.firefox.packages.${system}.firefox-nightly-bin
-		inputs.fmm.packages.${system}.default
+		# inputs.fmm.packages.${system}.default
 		gamescope
 		nicotine-plus
 		fretboard

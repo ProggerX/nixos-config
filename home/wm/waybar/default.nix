@@ -10,7 +10,7 @@
 		style = with sys.lib.stylix.colors; ''
 /* Parts of style are stolen from https://github.com/diinki/diinki-aero */
 
-#window {
+#tags {
 	margin-left: 10px;
 }
 
@@ -79,7 +79,7 @@
 				spacing = 20;
 
 				modules-center = [ "mpd" "custom/cava" ];
-				modules-left = [ "dwl/window" "dwl/tags" ];
+				modules-left = [ "dwl/tags" ];
 				modules-right = [ "tray" "custom/pipewire" "dwl/language" "clock" ];
 				
 				"dwl/language" = {
