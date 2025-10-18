@@ -1,13 +1,13 @@
 { pkgs, sys, ... }:
 {
-    imports = [
-        ./laptop.nix
-    ];
-    stylix.targets.waybar.enable = false;
-    programs.waybar    = {
-        enable = true;
-        systemd.enable = false;
-        style = with sys.lib.stylix.colors; ''
+	imports = [
+		./laptop.nix
+	];
+	stylix.targets.waybar.enable = false;
+	programs.waybar	= {
+		enable = true;
+		systemd.enable = false;
+		style = with sys.lib.stylix.colors; ''
 /* Parts of style are stolen from https://github.com/diinki/diinki-aero */
 
 #window {
@@ -25,7 +25,7 @@
 	background-color: #${base00};
 	color: #${base05};
 	font-family: "${sys.stylix.fonts.sansSerif.name}";
-    font-size: 10pt;
+	font-size: 10pt;
 }
 #clock,
 #custom-pipewire,
@@ -34,7 +34,7 @@
 #custom-cava,
 #language,
 #tray,
-#workspaces,
+#tags,
 #window,
 #mpd {
 	padding: 5px;
@@ -54,7 +54,7 @@
 	background-color: #${base00};
 }
 
-#workspaces button {
+#tags button {
 	transition-duration: 100ms;
 	all: initial;
 	min-width: 0;
@@ -62,73 +62,73 @@
 	margin-left: 5px;
 }
 
-#workspaces button.focused * {
+#tags button.focused * {
 	color: #${base0D};
 }
 
-#workspaces button:hover {
+#tags button:hover {
 	transition-duration: 120ms;
 	text-shadow: 0px 0px 8px aqua;
 }
-        '';
-        settings = {
-            bar = {
-                position = "top";
-                margin-top = 5;
-                height = 15;
-                spacing = 20;
+		'';
+		settings = {
+			bar = {
+				position = "top";
+				margin-top = 5;
+				height = 15;
+				spacing = 20;
 
-                modules-center = [ "mpd" "custom/cava" ];
-                modules-left = [ "sway/window" "sway/workspaces" ];
-                modules-right = [ "tray" "custom/pipewire" "sway/language" "clock" ];
-                
-                "sway/language" = {
-                    format-ru = "ru";
-                    format-en = "us";
-                };
+				modules-center = [ "mpd" "custom/cava" ];
+				modules-left = [ "dwl/window" "dwl/tags" ];
+				modules-right = [ "tray" "custom/pipewire" "dwl/language" "clock" ];
+				
+				"dwl/language" = {
+					format-ru = "ru";
+					format-en = "us";
+				};
 
-                "sway/window" = {
+				"dwl/window" = {
 					on-click = "rofi -show drun";
-                    max-length = 30;
+					max-length = 30;
 					min-length = 30;
 					align = 0;
 					format = "  {title}";
-                };
+				};
 
-                "tray" = {
-                    spacing = 10;
-                    icon-size = 15;
-                };
+				"tray" = {
+					spacing = 10;
+					icon-size = 15;
+				};
 
-                "clock" = {
-                    "format" = "{:%H:%M}";
-                    "format-alt" = "{:%d-%m-%Y}";
-                };
+				"clock" = {
+					"format" = "{:%H:%M}";
+					"format-alt" = "{:%d-%m-%Y}";
+				};
 
-                "custom/pipewire" = let pamixer = "${pkgs.pamixer}/bin/pamixer"; in {
-                    format = "{}";
-                    exec = "sleep 0.05 && echo $(${pamixer} --get-mute)$(${pamixer} --get-volume) | sed 's/true/ /' | sed 's/false/) /'";
-                    on-click = "${pamixer} -t; pkill -x -RTMIN+11 waybar";
-                    on-scroll-up = "${pamixer} -i2; pkill -x -RTMIN+11 waybar";
-                    on-scroll-down = "${pamixer} -d2; pkill -x -RTMIN+11 waybar";
-                    signal = 11;
-                    interval = 5;
-                    tooltip = false;
-                };
-                
-                "custom/battery" = {
-                    format = "{}";
-                    exec = "${import ./battery.nix { inherit pkgs; }}/bin/waybar_battery";
-                    interval = 5;
-                };
+				"custom/pipewire" = let pamixer = "${pkgs.pamixer}/bin/pamixer"; in {
+					format = "{}";
+					exec = "sleep 0.05 && echo $(${pamixer} --get-mute)$(${pamixer} --get-volume) | sed 's/true/ /' | sed 's/false/) /'";
+					on-click = "${pamixer} -t; pkill -x -RTMIN+11 waybar";
+					on-scroll-up = "${pamixer} -i2; pkill -x -RTMIN+11 waybar";
+					on-scroll-down = "${pamixer} -d2; pkill -x -RTMIN+11 waybar";
+					signal = 11;
+					interval = 5;
+					tooltip = false;
+				};
+				
+				"custom/battery" = {
+					format = "{}";
+					exec = "${import ./battery.nix { inherit pkgs; }}/bin/waybar_battery";
+					interval = 5;
+				};
 
-                "custom/brightness" = {
-                    format = "{}";
-                    interval = 5;
-                    on-scroll-up = "${import ./brightness.nix { inherit pkgs; }}/bin/waybar-brightness raise > /dev/null";
-                    on-scroll-down = "${import ./brightness.nix { inherit pkgs; }}/bin/waybar-brightness lower > /dev/null";
-                    exec = "${import ./brightness.nix { inherit pkgs; }}/bin/waybar-brightness get";
-                };
+				"custom/brightness" = {
+					format = "{}";
+					interval = 5;
+					on-scroll-up = "${import ./brightness.nix { inherit pkgs; }}/bin/waybar-brightness raise > /dev/null";
+					on-scroll-down = "${import ./brightness.nix { inherit pkgs; }}/bin/waybar-brightness lower > /dev/null";
+					exec = "${import ./brightness.nix { inherit pkgs; }}/bin/waybar-brightness get";
+				};
 
 				"custom/lyrics" = {
 					format = "{}";
@@ -136,24 +136,24 @@
 					exec = "${pkgs.callPackage ./lrcsnc.nix {}}/bin/lrcsnc --config ${./lrcsnc-config}";
 				};
 
-                "mpd" = {
-                    format = "  {artist} - {title}";
+				"mpd" = {
+					format = "  {artist} - {title}";
 					format-paused = " {artist} - {title}";
 					format-stopped = "";
 					on-click = "${pkgs.mpc-cli}/bin/mpc prev";
 					on-click-right = "${pkgs.mpc-cli}/bin/mpc next";
 					on-click-middle = "${pkgs.mpc-cli}/bin/mpc toggle";
-                };
+				};
 
-                "custom/cava" = {
-                    format = "{}";
-                    return-type = "text";
-                    max-length = 50;
-                    escape = true;
-                    tooltip = false;
-                    exec = "${import ./cava.nix { inherit pkgs; }}/bin/cava_waybar";
-                };
-            };
-        };
-    };
+				"custom/cava" = {
+					format = "{}";
+					return-type = "text";
+					max-length = 50;
+					escape = true;
+					tooltip = false;
+					exec = "${import ./cava.nix { inherit pkgs; }}/bin/cava_waybar";
+				};
+			};
+		};
+	};
 }

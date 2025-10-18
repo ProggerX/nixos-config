@@ -1,5 +1,6 @@
 { config, inputs, system, lib, pkgs, ... }:
 let stable = import inputs.stable { inherit system; }; in {
+	imports = [ inputs.mangowc.nixosModules.mango ];
     options = {
         isLaptop = lib.mkEnableOption ''Device is laptop'';
     };
@@ -107,6 +108,7 @@ let stable = import inputs.stable { inherit system; }; in {
         programs.hyprland.enable = false;
         programs.river.enable = true;
 		programs.sway.enable = true;
+		programs.mango.enable = true;
         services.xserver.windowManager.qtile.enable = true;
         services.greenclip.enable = true;
         services.pulseaudio.enable = false;

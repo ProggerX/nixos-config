@@ -9,5 +9,6 @@
         ./river
         ./sway
 		./vicinae
+		./mango
     ];
 }
