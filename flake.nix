@@ -27,6 +27,7 @@
 			url = "github:DreamMaoMao/mangowc";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		nvim.url = "github:nix-community/neovim-nightly-overlay";
 		# Server inputs
 		haskellpobeda.url = "github:ProggerX/haskellpobeda";
 		fish-text.url = "github:ProggerX/fish-text";

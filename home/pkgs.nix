@@ -20,7 +20,7 @@ home.packages = with pkgs; [
 		testdisk
 		multiplex
 		audacity
-		neovim
+		inputs.nvim.packages.${pkgs.system}.default
 		dissent
 		mpc-cli
 		heroic
