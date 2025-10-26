@@ -1,6 +1,8 @@
 { pkgs, inputs, system, sys, ... }: {
 home.packages = with pkgs; [
 		kanshi
+		rlci
+		libqalculate
 		(pkgs.callPackage ./wm/waybar/wf-recorder.nix {})
 		inputs.iio-sway.packages.${system}.default
 		inputs.hexecute.packages.${system}.default
