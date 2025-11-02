@@ -1,6 +1,7 @@
 { pkgs, inputs, system, sys, ... }: {
 home.packages = with pkgs; [
 		kanshi
+		localsend
 		rlci
 		libqalculate
 		(pkgs.callPackage ./wm/waybar/wf-recorder.nix {})

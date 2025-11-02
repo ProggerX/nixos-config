@@ -116,9 +116,31 @@ in {
         };
     };
 
+	services.szurubooru.enable = false;
+	services.szurubooru.server.settings.name = "Зачем ты здесь?";
+	services.szurubooru.server.settings.domain = "https://арты.хаскеллпобеда.рф";
+	services.szurubooru.server.port = 9000;
+	services.szurubooru.server.settings.secretFile = "/run/secrets/szurubooru-server-secret";
+	services.szurubooru.server.settings.delete_source_files = "yes";
+	services.szurubooru.database.passwordFile = "/run/secrets/szurubooru-db-password";
+	services.szurubooru.database.name = "boorubase";
+	services.szurubooru.server.package = (pkgs.szurubooru.server.overrideAttrs (old: {
+		propagatedBuildInputs = (old.propagatedBuildInputs ++ (with pkgs.python312Packages; [ pyyaml ]));
+	})).override {
+		python3 = pkgs.python312;
+	};
+
+	security.acme = {
+		acceptTerms = true;
+		defaults.email = "x@proggers.ru";
+		certs = {
+			booru = { domain = "xn--80a6ag0b.xn--80aacmdb6aja4akt4c.xn--p1ai"; webroot = "/var/lib/acme/acme-challenge"; group = "nginx"; };
+		};
+	};
+
     services.nginx = {
         enable = true;
-        virtualHosts.main = {
+        virtualHosts.aamain = {
             addSSL = true;
             enableACME = true;
             serverName = "bald.su";
@@ -126,6 +148,20 @@ in {
 				root = "/nginx-root";
             };
         };
+		virtualHosts.zzbooru = {
+			addSSL = true;
+			useACMEHost = "booru";
+			serverName = "xn--80a6ag0b.xn--80aacmdb6aja4akt4c.xn--p1ai";
+			locations = {
+				"/api/".proxyPass = "http://localhost:9000/";
+				"/data/".root = config.services.szurubooru.dataDir;
+				"/" = {
+					root = config.services.szurubooru.client.package;
+					tryFiles = "$uri /index.htm";
+				};
+			};
+			extraConfig = "client_max_body_size 100M;";
+		};
     #     virtualHosts.fsui = {
     #         addSSL = true;
     #         enableACME = true;

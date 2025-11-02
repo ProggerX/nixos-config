@@ -90,7 +90,6 @@
 				modules = [
 					inputs.notie.nixosModules.notie
 					inputs.notbalds.nixosModules.cwe-server
-					determinate.nixosModules.default
 
 					./modules/base.nix
 					./modules/server
