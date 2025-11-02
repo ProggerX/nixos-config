@@ -5,6 +5,7 @@
 		# Main inputs
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 		determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
+		agenix.url = "github:ryantm/agenix";
 		stable.url = "github:NixOS/nixpkgs/nixos-24.11";
 		aagl.url = "github:ezKEa/aagl-gtk-on-nix";
 		fmm.url = "github:ProggerX/fmm";
@@ -44,7 +45,7 @@
 		firefox.url = "github:nix-community/flake-firefox-nightly";
 	};
 
-	outputs = { nixpkgs, determinate, ... }@inputs: {
+	outputs = { nixpkgs, determinate, agenix, ... }@inputs: {
 		nixosConfigurations = {
 			snd-pc = nixpkgs.lib.nixosSystem rec {
 				system = "x86_64-linux";
@@ -58,6 +59,8 @@
 					./hosts/pc/hardware-configuration.nix
 					./modules/non-server.nix
 					determinate.nixosModules.default
+					agenix.nixosModules.default
+					./modules/secrets.nix
 				];
 			};
 			snd-lp = nixpkgs.lib.nixosSystem rec {
@@ -70,6 +73,7 @@
 					./hosts/laptop/hardware-configuration.nix
 					./modules/non-server.nix
 					determinate.nixosModules.default
+					agenix.nixosModules.default
 				];
 			};
 			snd-tp = nixpkgs.lib.nixosSystem rec {
@@ -82,6 +86,8 @@
 					./hosts/thinkpad/hardware-configuration.nix
 					./modules/non-server.nix
 					determinate.nixosModules.default
+					agenix.nixosModules.default
+					./modules/secrets.nix
 				];
 			};
 			server = nixpkgs.lib.nixosSystem rec {
@@ -90,6 +96,8 @@
 				modules = [
 					inputs.notie.nixosModules.notie
 					inputs.notbalds.nixosModules.cwe-server
+					agenix.nixosModules.default
+					./modules/secrets.nix
 
 					./modules/base.nix
 					./modules/server

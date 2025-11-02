@@ -253,15 +253,6 @@ let stable = import inputs.stable { inherit system; }; in {
                         TimeoutStopSec = 10;
                     };
             };
-			services.wg-tunnel = {
-				description = "Auto-up wg tunnel";
-				wantedBy = [ "multi-user.target" ];
-				after = [ "network.target" ];
-				serviceConfig = {
-					Type = "oneshot";
-					ExecStart = "${pkgs.wireguard-tools}/bin/wg-quick up tunnel";
-				};
-			};
         };
         
         networking.extraHosts = ''

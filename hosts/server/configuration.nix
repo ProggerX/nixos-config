@@ -5,6 +5,8 @@ let
     hostname = "server";
 in {
 
+	imports = [ ../../modules/server/wireguard.nix ];
+
     nixpkgs.config.allowUnfree = true;
     time.timeZone = "Europe/Moscow";
 
