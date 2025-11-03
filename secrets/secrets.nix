@@ -5,4 +5,5 @@ in
 	"wg-laptop.age".publicKeys = [ key ];
 	"wg-pc.age".publicKeys = [ key ];
 	"wg-server.age".publicKeys = [ key ];
+	"password.age".publicKeys = [ key ];
 }

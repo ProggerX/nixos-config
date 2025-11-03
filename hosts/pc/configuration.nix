@@ -169,7 +169,7 @@ let stable = import inputs.stable { inherit system; }; in {
         users.users.proggerx = {
             isNormalUser = true;
             extraGroups = [ "wheel" "adbusers" "docker" "wireshark" "input" ]; 
-            hashedPassword = "$y$j9T$9Q.MJOUROTrVdApws9avH0$HYDJYm6RsP8o3AWoL7FHjOA.y/TPE2p4tbI1DXHhM.6";
+            hashedPasswordFile = config.age.secrets.password.path;
         };
         
         services.dbus.enable = true;
