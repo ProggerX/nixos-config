@@ -10,8 +10,6 @@ in {
     nixpkgs.config.allowUnfree = true;
     time.timeZone = "Europe/Moscow";
 
-    networking.wireguard.enable = true;
-   
 
     virtualisation.docker.enable = true;
 

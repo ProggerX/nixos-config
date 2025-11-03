@@ -262,7 +262,6 @@ let stable = import inputs.stable { inherit system; }; in {
         programs.adb.enable = true;
         
         networking.firewall.enable = false;
-        networking.wireguard.enable = true;
 
         fileSystems."/temp" = {
             device = "tmpfs";

@@ -107,12 +107,13 @@
 			};
 		};
 		deploy.nodes.server = {
-			hostname = "10.7.0.6";
+			hostname = "192.168.0.17";
 			profiles.system = {
 				user = "root";
 				sshUser = "root";
 				path = inputs.deploy-rs.lib.aarch64-linux.activate.nixos inputs.self.nixosConfigurations.server;
 			};
 		};
+		nixosModules.wireguard = import ./modules/wireguard.nix;
 	};
 }
