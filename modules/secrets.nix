@@ -9,4 +9,5 @@
 	age.secrets.wg-pc.file = ../secrets/wg-pc.age;
 	age.secrets.wg-server.file = ../secrets/wg-server.age;
 	age.secrets.password.file = ../secrets/password.age;
+	age.secrets.wakasalt.file = ../secrets/wakasalt.age;
 }

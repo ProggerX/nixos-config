@@ -16,4 +16,5 @@
         transmission.enable = false;
     };
     server.cwe_server.enable = true;
+    server.wakapi.enable = true;
 }

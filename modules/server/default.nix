@@ -14,5 +14,6 @@
         ./navidrome.nix
         ./jellyfin.nix
         ./adguard.nix
+        ./wakapi.nix
     ];
 }
