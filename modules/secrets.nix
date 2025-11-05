@@ -5,9 +5,18 @@
 	];
 
 	age.identityPaths = [ "/etc/ssh/id_secrets" ];
-	age.secrets.wg-laptop.file = ../secrets/wg-laptop.age;
-	age.secrets.wg-pc.file = ../secrets/wg-pc.age;
-	age.secrets.wg-server.file = ../secrets/wg-server.age;
-	age.secrets.password.file = ../secrets/password.age;
-	age.secrets.wakasalt.file = ../secrets/wakasalt.age;
+	age.secrets = {
+		wg-laptop.file = ../secrets/wg-laptop.age;
+		wg-pc.file = ../secrets/wg-pc.age;
+		wg-server.file = ../secrets/wg-server.age;
+		password.file = ../secrets/password.age;
+		wakasalt.file = ../secrets/wakasalt.age;
+		pssh = rec {
+			file = ../secrets/pssh.age;
+			mode = "700";
+			owner = "proggerx";
+			group = "users";
+			path = "/home/${owner}/.ssh/id_ssh";
+		};
+	};
 }

@@ -7,4 +7,5 @@ in
 	"wg-server.age".publicKeys = [ key ];
 	"password.age".publicKeys = [ key ];
 	"wakasalt.age".publicKeys = [ key ];
+	"pssh.age".publicKeys = [ key ];
 }
