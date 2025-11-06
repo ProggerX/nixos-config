@@ -20,7 +20,7 @@
 
 				privateKeyFile = cfg.keys.privateFile;
 
-				extraOptions = if cfg.tunnel then {FwMark = "0xca6c";} else {};
+				extraOptions = if cfg.tunnel then {FwMark = "0xca6c"; Dns = "8.8.8.8";} else {};
 
 				peers = [
 					{ 
