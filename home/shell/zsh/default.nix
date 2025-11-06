@@ -12,7 +12,7 @@
 
         shellAliases = {
             dploy = "deploy -s";
-            update = "nh os switch /home/proggerx/Nix/nixos-config";
+            update = "sudo nixos-rebuild switch --flake /home/proggerx/Nix/nixos-config";
             q = "exit";
             cls = "clear";
             cat = "bat";
