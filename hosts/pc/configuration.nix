@@ -55,7 +55,6 @@ let stable = import inputs.stable { inherit system; }; in {
         networking.hostName = "snd-pc";
         networking.nameservers = [ "10.7.0.6" "192.168.0.17" ];
 		networking.search = [ "lan" "wg.me" ];
-		networking.interfaces."eno1".wakeOnLan.enable = true;
         networking.firewall = {
             allowedUDPPorts = [ 51820 ]; 
         };

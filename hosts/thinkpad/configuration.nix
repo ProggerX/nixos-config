@@ -12,7 +12,6 @@ in {
     networking.hostName = lib.mkForce "snd-tp";
     
 
-	networking.interfaces."eno1".wakeOnLan.enable = lib.mkForce false;
 	services.hypridle.enable = true;
     services.xserver.videoDrivers = [ "intel" ];
 	services.xserver.wacom.enable = true;

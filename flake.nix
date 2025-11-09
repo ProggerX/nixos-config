@@ -51,6 +51,7 @@
 				system = "x86_64-linux";
 				specialArgs = { inherit inputs; inherit system; };
 				modules = [
+					{ networking.interfaces."eno1".wakeOnLan.enable = true; }
 					./modules/base.nix
 					./modules/home.nix
 					./modules/aagl.nix
