@@ -32,4 +32,11 @@
 					else "a6BWU/8BnZ/HQHIwWpTnb0G86Sfosj2zdQuWFmOjTZ4=";
 		};
 	};
+
+
+	services.yggdrasil = {
+		enable = true;
+		settings.Peers = [ "tcp://ip4.01.msk.ru.dioni.su:9002" ];
+		settings.IfName = "yggd";
+	};
 }
