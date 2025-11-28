@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 {
     options = {
         server.navidrome.enable = lib.mkEnableOption "Enable navidrome";
@@ -27,5 +27,15 @@
             acceptTerms = true;
             defaults.email = "x@proggers.ru";
         };
+		services.transmission = {
+			enable = true;
+			user = "proggerx";
+			webHome = pkgs.flood-for-transmission;
+			settings = {
+				download-dir = "/music";
+				rpc-bind-address = "10.7.0.6";
+				rpc-whitelist = "127.0.0.1,10.7.0.4,10.7.0.5,10.7.0.8";
+			};
+		};
     };
 }
