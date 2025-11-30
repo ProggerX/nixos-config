@@ -2,7 +2,7 @@
 {
     server.adguard.enable = true;
     server.calibre.enable = true;
-	server.dufs.enable = false;
+	server.dufs.enable = true;
 	server.fish-text.enable = true;
     server.navidrome.enable = true;
     server.hspobeda.enable = true;

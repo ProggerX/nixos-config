@@ -10,9 +10,8 @@
     };
 	services.mpd = {
 		enable = true;
-		musicDirectory = "/home/proggerx/music";
+		musicDirectory = "http://10.7.0.6:5000/";
 		extraConfig = ''
-			playlist_directory "/home/proggerx/music"
 			audio_output {
 				type "pipewire"
 				name "My PipeWire Output"
