@@ -18,6 +18,11 @@
 				name "My PipeWire Output"
 			}
 			audio_output {
+				type "alsa"
+				name "alsa"
+				mixer_control "Master"
+			}
+			audio_output {
 				type            "fifo"
 				name            "Visualizer feed"
 				path            "/tmp/mpd.fifo"

@@ -167,7 +167,7 @@ let stable = import inputs.stable { inherit system; }; in {
         users.mutableUsers = false;
         users.users.proggerx = {
             isNormalUser = true;
-            extraGroups = [ "wheel" "adbusers" "docker" "wireshark" "input" ]; 
+            extraGroups = [ "wheel" "adbusers" "docker" "wireshark" "input" "audio" ]; 
             hashedPasswordFile = config.age.secrets.password.path;
         };
         
