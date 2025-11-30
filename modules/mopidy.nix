@@ -23,6 +23,12 @@
 				path            "/tmp/mpd.fifo"
 				format          "44100:16:2"
 			}
+			audio_output {
+				type "httpd"
+				name "online yeah"
+				port "8989"
+				bind_to_address "0.0.0.0"
+			}
 		'';
 
 		network.listenAddress = "any";
