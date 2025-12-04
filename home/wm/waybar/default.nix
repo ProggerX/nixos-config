@@ -140,9 +140,9 @@
 					format = "  {artist} - {title}";
 					format-paused = " {artist} - {title}";
 					format-stopped = "";
-					on-click = "${pkgs.mpc-cli}/bin/mpc prev";
-					on-click-right = "${pkgs.mpc-cli}/bin/mpc next";
-					on-click-middle = "${pkgs.mpc-cli}/bin/mpc toggle";
+					on-click = "${pkgs.mpc}/bin/mpc prev";
+					on-click-right = "${pkgs.mpc}/bin/mpc next";
+					on-click-middle = "${pkgs.mpc}/bin/mpc toggle";
 				};
 
 				"custom/cava" = {

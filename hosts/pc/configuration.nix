@@ -27,7 +27,7 @@ let stable = import inputs.stable { inherit system; }; in {
             nerd-fonts.jetbrains-mono
             noto-fonts
 			corefonts
-			vistafonts
+			vista-fonts
         ];
         boot.binfmt.emulatedSystems = ["aarch64-linux"];
         nix.settings.extra-platforms = config.boot.binfmt.emulatedSystems;
@@ -37,7 +37,7 @@ let stable = import inputs.stable { inherit system; }; in {
         programs.nix-ld.enable = true;
 
         nixpkgs.config.permittedInsecurePackages = [
-			"ventoy-1.1.05"
+			"ventoy-1.1.07"
 			"dotnet-sdk-6.0.428"
 			"dotnet-sdk-wrapped-6.0.428"
             "electron-25.9.0"
@@ -97,7 +97,7 @@ let stable = import inputs.stable { inherit system; }; in {
         virtualisation.docker.enable = true;
         
         services.xserver.enable = true;
-		services.xserver.desktopManager.cinnamon.enable = true;
+		services.xserver.desktopManager.cinnamon.enable = false;
         services.libinput.enable = true;
         services.libinput.touchpad.tapping = true;
         services.libinput.touchpad.middleEmulation = true;
@@ -109,6 +109,8 @@ let stable = import inputs.stable { inherit system; }; in {
 		programs.sway.enable = true;
 		programs.mango.enable = true;
         services.xserver.windowManager.qtile.enable = true;
+		services.desktopManager.gnome.enable = false;
+		services.displayManager.gdm.enable = false;
         services.greenclip.enable = true;
         services.pulseaudio.enable = false;
         
@@ -178,6 +180,8 @@ let stable = import inputs.stable { inherit system; }; in {
         };
         
         environment.systemPackages = with pkgs; [
+			gnomeExtensions.forge
+			gnomeExtensions.runcat
 			mangohud
 			amneziawg-go
 			amneziawg-tools
@@ -279,7 +283,7 @@ let stable = import inputs.stable { inherit system; }; in {
         ];
         zramSwap.enable = true;
 
-        system.stateVersion = "24.11"; 
+        system.stateVersion = "25.11"; 
 
 
         services.terraria.enable = false;

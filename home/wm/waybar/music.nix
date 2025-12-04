@@ -2,7 +2,7 @@
 pkgs.writeShellScriptBin "music_now_playing" ''
     while true
     do
-        mp=$(${pkgs.mpc-cli}/bin/mpc current 2> /dev/null)
+        mp=$(${pkgs.mpc}/bin/mpc current 2> /dev/null)
         if [ "$mp" = "" ]; then
             echo ""
         else

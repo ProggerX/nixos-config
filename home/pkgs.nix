@@ -25,8 +25,7 @@ home.packages = with pkgs; [
 		multiplex
 		audacity
 		inputs.nvim.packages.${pkgs.system}.default
-		dissent
-		mpc-cli
+		mpc
 		heroic
 		telegram-desktop
 		sshfs
@@ -102,7 +101,6 @@ home.packages = with pkgs; [
 		gimp
 		openjdk17-bootstrap
 		osu-lazer-bin
-		kdePackages.xwaylandvideobridge
 		alsa-utils
 		toilet figlet
 		cowsay
@@ -114,7 +112,7 @@ home.packages = with pkgs; [
 		fswatch
 		zathura
 		brightnessctl
-		transmission_3
+		transmission_4
 		chromium
 		ventoy
 		file
@@ -166,16 +164,10 @@ home.packages = with pkgs; [
 		slurp
 		eza
 		python311
-		vesktop
 		gcc
 		gnumake
 		nitch
 		direnv
 		cartridges
-	] ++ (if sys.isLaptop then [] else [
-		(dwarf-fortress-packages.dwarf-fortress-full.override {
-			dfVersion = "0.47.05";
-			enableDwarfTherapist = false;
-		})
-	]);
+	];
 }

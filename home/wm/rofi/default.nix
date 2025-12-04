@@ -2,7 +2,6 @@
 	stylix.targets.rofi.enable = false;
 	programs.rofi = {
 		enable = true;
-		package = pkgs.rofi-wayland;
 		theme = with sys.lib.stylix.colors; let filename = "theme-rofi.rasi"; in "${pkgs.writeText filename ''
 			* {
 			    bg-col:  #${base00};

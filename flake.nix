@@ -3,22 +3,22 @@
 
 	inputs = {
 		# Main inputs
-		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+		nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
 		determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
 		agenix.url = "github:ryantm/agenix";
-		stable.url = "github:NixOS/nixpkgs/nixos-24.11";
+		stable.url = "github:NixOS/nixpkgs/nixos-25.11";
 		aagl.url = "github:ezKEa/aagl-gtk-on-nix";
 		fmm.url = "github:ProggerX/fmm";
 		rust-overlay.url = "github:oxalica/rust-overlay";
 		home-manager = {
-			url = "github:nix-community/home-manager";
+			url = "github:nix-community/home-manager/release-25.11";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 		pabc-nix = {
 			url = "github:ProggerX/pabc-nix/v3";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-		stylix.url = "github:danth/stylix";
+		stylix.url = "github:danth/stylix/release-25.11";
 		deploy-rs.url = "github:serokell/deploy-rs";
 		winapps.url = "github:winapps-org/winapps";
 		iio-sway.url = "github:tbaumann/iio-sway";
