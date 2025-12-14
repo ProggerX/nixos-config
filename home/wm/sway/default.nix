@@ -50,9 +50,9 @@
 				"sshfs 10.7.0.6:/music /home/proggerx/music"
 				"easyeffects --gapplication-service"
 				"${pkgs.networkmanagerapplet}/bin/nm-applet"
+				"${pkgs.wlsunset}/bin/wlsunset -T 5500"
 				] ++ (if sys.isLaptop then [
 					"iio-sway"
-					"${pkgs.wlsunset}/bin/wlsunset -T 5500"
 				] else []));
 			
 			assigns = {
