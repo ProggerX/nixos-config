@@ -116,7 +116,7 @@ in {
         };
     };
 
-	services.szurubooru.enable = false;
+	services.szurubooru.enable = true;
 	services.szurubooru.server.settings.name = "Зачем ты здесь?";
 	services.szurubooru.server.settings.domain = "https://арты.хаскеллпобеда.рф";
 	services.szurubooru.server.port = 9000;
@@ -125,9 +125,9 @@ in {
 	services.szurubooru.database.passwordFile = "/run/secrets/szurubooru-db-password";
 	services.szurubooru.database.name = "boorubase";
 	services.szurubooru.server.package = (pkgs.szurubooru.server.overrideAttrs (old: {
-		propagatedBuildInputs = (old.propagatedBuildInputs ++ (with pkgs.python312Packages; [ pyyaml ]));
+		propagatedBuildInputs = (old.propagatedBuildInputs ++ (with pkgs.python313Packages; [ pyyaml ]));
 	})).override {
-		python3 = pkgs.python312;
+		python3 = pkgs.python313;
 	};
 
 	security.acme = {
