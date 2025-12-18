@@ -24,7 +24,7 @@
 			enable = true;
 			package = pkgs.paperServers.paper-1_21_10;
 			serverProperties = {
-				offline-mode = true;
+				online-mode = false;
 			};
 		};
 	};
