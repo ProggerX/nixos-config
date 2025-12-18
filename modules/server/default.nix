@@ -3,6 +3,7 @@
 		./nextcloud.nix
 		./fish-text.nix
         ./emanote.nix
+		./minecraft.nix
 		./calibre.nix
 		./paperless.nix
 		./seafile.nix

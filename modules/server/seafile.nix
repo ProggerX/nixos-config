@@ -4,13 +4,6 @@
         server.seafile.enable = lib.mkEnableOption "Enable seafile";
     };
     config = lib.mkIf config.server.seafile.enable {
-        services.seafile = {
-            enable = true;
-			adminEmail = "x@proggers.ru";
-			initialAdminPassword = "123";
-			seahubAddress = "0.0.0.0:8000";
-			ccnetSettings.General.SERVICE_URL = "https://sf.bald.su";
-        };
         services.nginx = {
             enable = true;
             virtualHosts.seafile = {
