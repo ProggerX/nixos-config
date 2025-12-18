@@ -6,6 +6,7 @@
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
 		minecraft.url = "github:Infinidoge/nix-minecraft";
 		determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
+		freesm.url = "github:freesmteam/freesmlauncher/sequoia-1.4.4";
 		agenix.url = "github:ryantm/agenix";
 		stable.url = "github:NixOS/nixpkgs/nixos-25.11";
 		aagl.url = "github:ezKEa/aagl-gtk-on-nix";

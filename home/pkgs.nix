@@ -1,8 +1,11 @@
 { pkgs, inputs, system, sys, ... }: {
-home.packages = with pkgs; [
+home.packages = with pkgs.haskell.packages.ghc912; [
 		(ghc.withPackages (ps:
-			with ps; [ vector containers lens aeson ]
+			with ps; [ vector containers lens aeson split ]
 		))
+		haskell-language-server
+		cabal-install
+] ++ (with pkgs; [
 		kanshi
 		localsend
 		rlci
@@ -32,7 +35,7 @@ home.packages = with pkgs; [
 		apostrophe
 		easyeffects
 		inputs.firefox.packages.${system}.firefox-nightly-bin
-		# inputs.fmm.packages.${system}.default
+# inputs.fmm.packages.${system}.default
 		gamescope
 		nicotine-plus
 		fretboard
@@ -55,9 +58,6 @@ home.packages = with pkgs; [
 		zls
 		arduino-language-server
 		cassette
-		haskell-language-server
-		cabal-install
-		stack
 		cool-retro-term
 		tgpt
 		neovide
@@ -96,7 +96,7 @@ home.packages = with pkgs; [
 		nemo
 		tor-browser
 		neofetch
-		prismlauncher
+		inputs.freesm.packages.${pkgs.stdenv.hostPlatform.system}.default
 		bc
 		gimp
 		openjdk17-bootstrap
@@ -169,5 +169,5 @@ home.packages = with pkgs; [
 		nitch
 		direnv
 		cartridges
-	];
+		]);
 }
