@@ -8,7 +8,7 @@
                 path = ${sys.stylix.image}
                 blur_passes = 1
                 contrast = 1
-                brightness = 1
+                brightness = 0.5
                 vibrancy = 1
             }
             
