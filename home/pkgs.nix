@@ -79,7 +79,8 @@ home.packages = with pkgs.haskell.packages.ghc912; [
 		ffmpeg
 		lazydocker
 		mpv
-		clang-tools
+		(import inputs.old { inherit system; } ).clang-tools
+		gcc
 		mpg123
 		parted
 		aalib
@@ -164,7 +165,6 @@ home.packages = with pkgs.haskell.packages.ghc912; [
 		slurp
 		eza
 		python311
-		gcc
 		gnumake
 		nitch
 		direnv

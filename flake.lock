@@ -1909,6 +1909,22 @@
         "type": "github"
       }
     },
+    "old": {
+      "locked": {
+        "lastModified": 1766687554,
+        "narHash": "sha256-DegN7KD/EtFSKXf2jvqL6lvev6GlfAAatYBcRC8goEo=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "fd0ca39c92fdb4012ed8d60e1683c26fddadd136",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-25.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "pabc-nix": {
       "inputs": {
         "flake-parts": "flake-parts_8",
@@ -1953,9 +1969,9 @@
         "notbalds": "notbalds",
         "notie": "notie",
         "nvim": "nvim",
+        "old": "old",
         "pabc-nix": "pabc-nix",
         "rust-overlay": "rust-overlay_2",
-        "stable": "stable",
         "stylix": "stylix",
         "vicinae": "vicinae",
         "winapps": "winapps"
@@ -2015,22 +2031,6 @@
       "original": {
         "owner": "wlrfx",
         "repo": "scenefx",
-        "type": "github"
-      }
-    },
-    "stable": {
-      "locked": {
-        "lastModified": 1764677808,
-        "narHash": "sha256-H3lC7knbXOBrHI9hITQ7modLuX20mYJVhZORL5ioms0=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "1aab89277eb2d87823d5b69bae631a2496cff57a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-25.11",
-        "repo": "nixpkgs",
         "type": "github"
       }
     },

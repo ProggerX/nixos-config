@@ -1,5 +1,4 @@
-{ config, inputs, system, lib, pkgs, ... }:
-let stable = import inputs.stable { inherit system; }; in {
+{ config, inputs, system, lib, pkgs, ... }: {
 	imports = [ inputs.mangowc.nixosModules.mango ];
     options = {
         isLaptop = lib.mkEnableOption ''Device is laptop'';
