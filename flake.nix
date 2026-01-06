@@ -61,7 +61,6 @@
 					./hosts/pc/configuration.nix
 					./hosts/pc/hardware-configuration.nix
 					./modules/non-server.nix
-					determinate.nixosModules.default
 					agenix.nixosModules.default
 					./modules/secrets.nix
 				];
@@ -75,7 +74,6 @@
 					./hosts/laptop/configuration.nix
 					./hosts/laptop/hardware-configuration.nix
 					./modules/non-server.nix
-					determinate.nixosModules.default
 					agenix.nixosModules.default
 				];
 			};
@@ -88,7 +86,6 @@
 					./hosts/thinkpad/configuration.nix
 					./hosts/thinkpad/hardware-configuration.nix
 					./modules/non-server.nix
-					determinate.nixosModules.default
 					agenix.nixosModules.default
 					./modules/secrets.nix
 				];

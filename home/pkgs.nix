@@ -6,6 +6,7 @@ home.packages = with pkgs.haskell.packages.ghc912; [
 		haskell-language-server
 		cabal-install
 ] ++ (with pkgs; [
+		lrcget
 		kanshi
 		localsend
 		rlci
