@@ -1,11 +1,12 @@
 { pkgs, inputs, system, sys, ... }: {
-home.packages = with pkgs.haskell.packages.ghc912; [
+home.packages = 
+(with pkgs; [
+		aonsoku
 		(ghc.withPackages (ps:
 			with ps; [ vector containers lens aeson split ]
 		))
 		haskell-language-server
 		cabal-install
-] ++ (with pkgs; [
 		lrcget
 		kanshi
 		localsend

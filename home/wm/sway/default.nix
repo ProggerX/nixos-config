@@ -30,7 +30,6 @@
 				"${mod}+r" = "exec rofi -show drun";
 				"alt+space" = "exec rofi -show run";
 				"${mod}+v" = "exec cliphist list | rofi -dmenu -p ' 󰅌	' | cliphist decode | wl-copy";
-				"${mod}+t" = "vicinae";
 				"Print" = "exec grim -g\"$(slurp)\" - | wl-copy";
 				"${mod}+u" = "fullscreen toggle";
 				"${mod}+f" = "floating toggle";
@@ -47,13 +46,12 @@
 				"firefox-nightly"
 				"${pkgs.telegram-desktop}/bin/Telegram"
 				"sleep 2 && ${pkgs.sway}/bin/swaymsg workspace 1"
-				"sshfs 10.7.0.6:/music /home/proggerx/music"
 				"easyeffects --gapplication-service"
 				"${pkgs.networkmanagerapplet}/bin/nm-applet"
 				"${pkgs.wlsunset}/bin/wlsunset -T 5500"
-				] ++ (if sys.isLaptop then [
-					"iio-sway"
-				] else []));
+			] ++ (if sys.isLaptop then [
+				"iio-sway"
+			] else []));
 			
 			assigns = {
 				"2" = [{ app_id = "^firefox-nightly$"; }];
@@ -73,7 +71,6 @@
 			Environment = [
 				"WAYLAND_DISPLAY=\"wayland-1\""
 				"DISPLAY=\":0\""
-
 			];
 			ExecStart = ''${pkgs.kanshi}/bin/kanshi -c /kanshi.cfg'';
 		};
