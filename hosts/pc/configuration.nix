@@ -6,7 +6,7 @@
     config = {
 		nix = {
 			settings = {
-				substituters = [ "https://cache.garnix.io" "http://cdn.proggers.ru" ];
+				substituters = [ "https://mirror.yandex.ru/nixos" "https://cache.garnix.io" "http://cdn.proggers.ru" ];
 				trusted-public-keys = [
 					"cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
 					"balds.cachix.org-1:c0jfVRWyMyFb3Fxg7jWMv3Yx3u3tfa3T0dVX/ssWICg="
