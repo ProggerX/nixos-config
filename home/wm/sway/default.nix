@@ -33,7 +33,7 @@
 				"Print" = "exec grim -g\"$(slurp)\" - | wl-copy";
 				"${mod}+u" = "fullscreen toggle";
 				"${mod}+f" = "floating toggle";
-				"${mod}+ctrl+l" = "exec ${pkgs.hyprlock}/bin/hyprlock";
+				"${mod}+ctrl+l" = "exec ${pkgs.swaylock}/bin/swaylock";
 				"ctrl+shift+space" = "exec hexecute";
 				"XF86AudioPause" = "exec ${pkgs.playerctl}/bin/playerctl play-pause";
 				"XF86AudioPlay" = "exec ${pkgs.playerctl}/bin/playerctl play";

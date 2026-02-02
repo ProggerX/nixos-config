@@ -15,9 +15,9 @@
 
 	programs.git = {
 		enable = true;
-		userName = "ProggerX";
-		userEmail = "x@proggers.ru";
-		extraConfig = {
+		settings = {
+			user.name = "ProggerX";
+			user.email = "x@proggers.ru";
 			user.signingKey = sys.age.secrets.pssh.path;
 			commit.gpgsign = true;
 			gpg.format = "ssh";
@@ -26,6 +26,7 @@
 	};
 	programs.ssh = {
 		enable = true;
+		enableDefaultConfig = false;
 		matchBlocks."*".identityFile = sys.age.secrets.pssh.path;
 	};
 }

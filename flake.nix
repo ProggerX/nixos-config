@@ -9,7 +9,7 @@
 		freesm.url = "github:freesmteam/freesmlauncher/sequoia-1.4.4";
 		agenix.url = "github:ryantm/agenix";
 		old.url = "github:NixOS/nixpkgs/nixos-25.05";
-		aagl.url = "github:ezKEa/aagl-gtk-on-nix";
+		aagl.url = "github:ezKEa/aagl-gtk-on-nix/release-25.11";
 		fmm.url = "github:ProggerX/fmm";
 		rust-overlay.url = "github:oxalica/rust-overlay";
 		home-manager = {

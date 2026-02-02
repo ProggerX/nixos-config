@@ -15,8 +15,10 @@
 		};
 		powerManagement.enable = true;
 		boot.resumeDevice = "/dev/disk/by-label/NIXSWAP";
-		services.logind.powerKey = "suspend";
-		services.logind.powerKeyLongPress = "poweroff";
+		services.logind.settings.Login = {
+			HandlePowerKey = "suspend";
+			HandlePowerKeyLongPress = "poweroff";
+		};
         virtualisation.waydroid.enable = true;
 		services.fprintd.enable = true;
         services.atftpd.enable = true;
@@ -303,6 +305,7 @@
                 ];
             };
         };
+		documentation.man.generateCaches = false;
 		environment.etc."os-release".source = lib.mkForce (pkgs.writeText "shefos" ''
 ANSI_COLOR="0;38;2;126;186;228"
 BUG_REPORT_URL="https://shefos.ru/"
