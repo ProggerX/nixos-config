@@ -1,6 +1,7 @@
 { pkgs, inputs, system, sys, ... }: {
 home.packages = 
 (with pkgs; [
+		gnome-graphs
 		aonsoku
 		(ghc.withPackages (ps:
 			with ps; [ vector containers lens aeson split ]
@@ -29,7 +30,7 @@ home.packages =
 		testdisk
 		multiplex
 		audacity
-		inputs.nvim.packages.${pkgs.system}.default
+		inputs.nvim.packages.${pkgs.stdenv.hostPlatform.system}.default
 		mpc
 		heroic
 		telegram-desktop
@@ -46,7 +47,7 @@ home.packages =
 		ollama
 		marksman
 		codeberg-cli
-		inputs.pabc-nix.packages.${pkgs.system}.default
+		inputs.pabc-nix.packages.${pkgs.stdenv.hostPlatform.system}.default
 		codeblocks
 		typst
 		tinymist

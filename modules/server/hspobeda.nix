@@ -6,8 +6,8 @@
 			wantedBy = [ "multi-user.target" ];
 			serviceConfig = {
 				type = "simple";
-				ExecStart = "${inputs.haskellpobeda.packages.${pkgs.system}.default}/bin/haskellpobeda";
-				WorkingDirectory = "${inputs.haskellpobeda.packages.${pkgs.system}.default.src}";
+				ExecStart = "${inputs.haskellpobeda.packages.${pkgs.stdenv.hostPlatform.system}.default}/bin/haskellpobeda";
+				WorkingDirectory = "${inputs.haskellpobeda.packages.${pkgs.stdenv.hostPlatform.system}.default.src}";
 			};
 		};
         services.nginx = {

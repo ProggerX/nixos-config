@@ -104,7 +104,7 @@
         services.displayManager.defaultSession = "sway";
                                 
         programs.hyprland.enable = false;
-        programs.river.enable = true;
+        programs.river-classic.enable = true;
 		programs.sway.enable = true;
 		programs.mango.enable = true;
         services.xserver.windowManager.qtile.enable = true;
