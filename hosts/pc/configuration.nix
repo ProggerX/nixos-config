@@ -170,7 +170,7 @@
         users.mutableUsers = false;
         users.users.proggerx = {
             isNormalUser = true;
-            extraGroups = [ "wheel" "adbusers" "docker" "wireshark" "input" "audio" ]; 
+            extraGroups = [ "wheel" "adbusers" "docker" "wireshark" "input" "audio" "networkmanager" ]; 
             hashedPasswordFile = config.age.secrets.password.path;
         };
         
