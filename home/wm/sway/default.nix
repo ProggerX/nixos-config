@@ -34,6 +34,8 @@
 				"${mod}+u" = "fullscreen toggle";
 				"${mod}+f" = "floating toggle";
 				"${mod}+ctrl+l" = "exec ${pkgs.swaylock}/bin/swaylock";
+				"${mod}+shift+w" = "exec ${pkgs.nmgui}/bin/nmgui";
+				"${mod}+shift+s" = "exec ${pkgs.pwvucontrol}/bin/pwvucontrol";
 				"ctrl+shift+space" = "exec hexecute";
 				"XF86AudioPause" = "exec ${pkgs.playerctl}/bin/playerctl play-pause";
 				"XF86AudioPlay" = "exec ${pkgs.playerctl}/bin/playerctl play";

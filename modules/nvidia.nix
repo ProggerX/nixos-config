@@ -19,6 +19,9 @@
 	services.ollama = {
 		enable = true;
 		package = (import inputs.master { inherit system; }).ollama-rocm;
+		environmentVariables = {
+			OLLAMA_CONTEXT_LENGTH="32000";
+		};
 		acceleration = "rocm";
 		host = "0.0.0.0";
 	};
