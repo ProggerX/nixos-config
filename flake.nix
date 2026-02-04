@@ -4,6 +4,7 @@
 	inputs = {
 		# Main inputs
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+		master.url = "github:nixos/nixpkgs/nixos-unstable";
 		minecraft.url = "github:Infinidoge/nix-minecraft";
 		determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
 		freesm.url = "github:freesmteam/freesmlauncher/sequoia-1.4.4";

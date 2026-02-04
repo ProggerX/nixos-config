@@ -44,7 +44,7 @@ home.packages =
 		fretboard
 		haskellPackages.pointfree
 		tree-sitter
-		ollama
+		(import inputs.master { inherit system; }).ollama
 		marksman
 		codeberg-cli
 		inputs.pabc-nix.packages.${pkgs.stdenv.hostPlatform.system}.default

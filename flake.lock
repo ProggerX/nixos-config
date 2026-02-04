@@ -1185,6 +1185,22 @@
         "type": "github"
       }
     },
+    "master": {
+      "locked": {
+        "lastModified": 1770115704,
+        "narHash": "sha256-KHFT9UWOF2yRPlAnSXQJh6uVcgNcWlFqqiAZ7OVlHNc=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "e6eae2ee2110f3d31110d5c222cd395303343b08",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "minecraft": {
       "inputs": {
         "flake-compat": "flake-compat_6",
@@ -1965,6 +1981,7 @@
         "home-manager": "home-manager_2",
         "iio-sway": "iio-sway",
         "mangowc": "mangowc",
+        "master": "master",
         "minecraft": "minecraft",
         "nixpkgs": "nixpkgs_17",
         "notbalds": "notbalds",

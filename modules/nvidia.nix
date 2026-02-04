@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, inputs, system, ... }: {
 	systemd.tmpfiles.rules = 
 	  let
 		rocmEnv = pkgs.symlinkJoin {
@@ -18,7 +18,7 @@
 
 	services.ollama = {
 		enable = true;
-		package = pkgs.ollama-rocm;
+		package = (import inputs.master { inherit system; }).ollama-rocm;
 		acceleration = "rocm";
 		host = "0.0.0.0";
 	};
