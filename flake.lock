@@ -983,11 +983,11 @@
         "nixpkgs": "nixpkgs_12"
       },
       "locked": {
-        "lastModified": 1754219699,
-        "narHash": "sha256-C++CCAcEmQUDLwN2uENvQGnVIl0ZDAztrt4Thlh6TsI=",
+        "lastModified": 1767556102,
+        "narHash": "sha256-As1HVWrEIHWm01PrA4R8Fxcylwoli3YKPZ0rDPu+8DM=",
         "owner": "ProggerX",
         "repo": "haskellpobeda",
-        "rev": "43f813a4bca467755411a768090d399975a66e63",
+        "rev": "a34a95ecadd76998825456a804bddc0e2ff79073",
         "type": "github"
       },
       "original": {
