@@ -53,7 +53,6 @@ home.packages =
 		tinymist
 		pandoc
 		nodejs
-		cf-tool
 		haskellPackages.hoogle
 		arduino
 		arduino-cli
