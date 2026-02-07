@@ -8,7 +8,6 @@
 	
 		initContent = ''
 			bindkey -v '^?' backward-delete-char
-			command_not_found_handler() { , $@ }
 		'';
 
 		shellAliases = {
