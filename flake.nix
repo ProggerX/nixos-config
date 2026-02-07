@@ -55,6 +55,7 @@
 				specialArgs = { inherit inputs; inherit system; };
 				modules = [
 					{ networking.interfaces."eno1".wakeOnLan.enable = true; }
+					{ nix.nixPath = [ "nixpkgs=${nixpkgs}" ]; }
 					./modules/base.nix
 					./modules/home.nix
 					./modules/aagl.nix
@@ -70,6 +71,7 @@
 				system = "x86_64-linux";
 				specialArgs = { inherit inputs; inherit system; };
 				modules = [
+					{ nix.nixPath = [ "nixpkgs=${nixpkgs}" ]; }
 					./modules/base.nix
 					./modules/home.nix
 					./hosts/laptop/configuration.nix
@@ -82,6 +84,7 @@
 				system = "x86_64-linux";
 				specialArgs = { inherit inputs; inherit system; };
 				modules = [
+					{ nix.nixPath = [ "nixpkgs=${nixpkgs}" ]; }
 					./modules/base.nix
 					./modules/home.nix
 					./hosts/thinkpad/configuration.nix
@@ -95,6 +98,7 @@
 				system = "aarch64-linux";
 				specialArgs = { inherit inputs; inherit system; };
 				modules = [
+					{ nix.nixPath = [ "nixpkgs=${nixpkgs}" ]; }
 					inputs.notie.nixosModules.notie
 					inputs.notbalds.nixosModules.cwe-server
 					agenix.nixosModules.default
