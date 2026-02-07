@@ -17,8 +17,8 @@ in {
 	services.xserver.wacom.enable = true;
 	services.xserver.desktopManager.cinnamon.enable = lib.mkForce false;
 	services.desktopManager.gnome.enable = lib.mkForce true;
-	services.logind.powerKey = lib.mkForce "ignore";
-	services.logind.lidSwitch = lib.mkForce "hibernate";
+	services.logind.settings.Login.HandlePowerKey = lib.mkForce "ignore";
+	services.logind.settings.Login.HandleLidSwitch = lib.mkForce "suspend-then-hibernate";
 	hardware.sensor.iio.enable = true;
 	programs.iio-hyprland.enable = true;
 	boot.loader.grub = {
