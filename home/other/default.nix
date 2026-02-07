@@ -2,6 +2,7 @@
     imports = [
 		./ncmpcpp
 		./tor-proxy
+		./zathura
     ];
 	stylix.iconTheme = {
 		enable = true;

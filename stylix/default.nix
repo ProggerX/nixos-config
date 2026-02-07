@@ -11,7 +11,7 @@
         };
         opacity = {
             terminal = 1.0;
-            applications = 1;
+            applications = 1.0;
         };
         fonts = rec {
             sizes = {

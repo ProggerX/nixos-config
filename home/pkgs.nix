@@ -114,7 +114,6 @@ home.packages =
 		github-cli
 		mono
 		fswatch
-		zathura
 		brightnessctl
 		transmission_4
 		chromium
@@ -172,5 +171,6 @@ home.packages =
 		nitch
 		direnv
 		cartridges
+		tlrc
 		]);
 }

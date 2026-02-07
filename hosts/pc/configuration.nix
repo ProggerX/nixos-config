@@ -306,6 +306,7 @@
             };
         };
 		documentation.man.generateCaches = false;
+		documentation.enable = false;
 		environment.etc."os-release".source = lib.mkForce (pkgs.writeText "shefos" ''
 ANSI_COLOR="0;38;2;126;186;228"
 BUG_REPORT_URL="https://shefos.ru/"
