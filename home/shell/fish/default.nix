@@ -6,7 +6,6 @@
         direnv hook fish | source
         zoxide init fish --cmd cd | source
         fish_vi_key_bindings
-        gof
     '';
     programs.fish.shellAliases = {
         q = "exit";
