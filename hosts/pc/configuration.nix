@@ -106,9 +106,9 @@
         services.displayManager.defaultSession = "sway";
                                 
         programs.hyprland.enable = false;
-        programs.river-classic.enable = true;
+        programs.river-classic.enable = false;
 		programs.sway.enable = true;
-		programs.mango.enable = true;
+		programs.mango.enable = false;
         services.xserver.windowManager.qtile.enable = true;
 		services.desktopManager.gnome.enable = false;
 		services.displayManager.gdm.enable = false;
@@ -151,6 +151,16 @@
             alsa.enable = true;
             alsa.support32Bit = true;
             pulse.enable = true;
+			jack.enable = true;
+
+extraConfig.pipewire."92-low-latency" = {
+    "context.properties" = {
+      "default.clock.rate" = 48000;
+      "default.clock.quantum" = 64;
+      "default.clock.min-quantum" = 64;
+      "default.clock.max-quantum" = 64;
+    };
+  };
         };
         services.pipewire.wireplumber.configPackages = [
             (pkgs.writeTextDir "share/wireplumber/bluetooth.lua.d/51-bluez-config.lua" ''
@@ -170,7 +180,7 @@
         users.mutableUsers = false;
         users.users.proggerx = {
             isNormalUser = true;
-            extraGroups = [ "wheel" "adbusers" "docker" "wireshark" "input" "audio" "networkmanager" ]; 
+            extraGroups = [ "wheel" "adbusers" "docker" "wireshark" "input" "audio" "networkmanager" "realtime" ]; 
             hashedPasswordFile = config.age.secrets.password.path;
         };
         
@@ -183,6 +193,9 @@
         environment.systemPackages = with pkgs; [
 			gnomeExtensions.forge
 			gnomeExtensions.runcat
+			guitarix
+			helvum
+			lsp-plugins
 			mangohud
 			amneziawg-go
 			amneziawg-tools

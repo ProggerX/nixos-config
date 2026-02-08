@@ -2,7 +2,7 @@
 {
 	imports = [inputs.mangowc.hmModules.mango];
 	wayland.windowManager.mango = {
-		enable = true;
+		enable = false;
 		settings = builtins.readFile ./config.conf;
 		autostart_sh = 
 			builtins.concatStringsSep "\n" ([

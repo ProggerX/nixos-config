@@ -1,6 +1,6 @@
 { sys, pkgs, ... }: {
 	services.cliphist.enable = true;
-	services.hyprsunset.enable = true;
+	services.hyprsunset.enable = false;
 	wayland.windowManager.hyprland = {
 		enable = false;
 		settings = {
