@@ -123,7 +123,7 @@
 
         services.gnome.gnome-keyring.enable = true;
             
-        programs.fish.enable = true;
+        programs.fish.enable = false;
         programs.zsh.enable = true;
         environment.pathsToLink = [ "/share/zsh" ];
         environment.sessionVariables = {

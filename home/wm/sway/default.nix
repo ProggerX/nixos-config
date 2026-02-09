@@ -34,7 +34,8 @@
 				"${mod}+u" = "fullscreen toggle";
 				"${mod}+f" = "floating toggle";
 				"${mod}+ctrl+l" = "exec ${pkgs.swaylock}/bin/swaylock";
-				"${mod}+shift+w" = "exec ${pkgs.nmgui}/bin/nmgui";
+				"${mod}+shift+n" = "exec ${pkgs.nmgui}/bin/nmgui";
+				"${mod}+shift+w" = "exec cwp";
 				"${mod}+shift+s" = "exec ${pkgs.pwvucontrol}/bin/pwvucontrol";
 				"ctrl+shift+space" = "exec hexecute";
 				"XF86AudioPause" = "exec ${pkgs.playerctl}/bin/playerctl play-pause";
@@ -51,6 +52,7 @@
 				"easyeffects --gapplication-service"
 				"${pkgs.networkmanagerapplet}/bin/nm-applet"
 				"${pkgs.wlsunset}/bin/wlsunset -T 5500"
+				"${pkgs.swaybg}/bin/swaybg -m fill -i ${config.stylix.image}"
 			] ++ (if sys.isLaptop then [
 				"iio-sway"
 			] else []));
@@ -65,17 +67,40 @@
 		extraConfig = ''
 			default_border pixel 2
 			default_floating_border pixel 2
+			swaybg_command -
 		'' + builtins.readFile ./swayosd;
 	};
-	systemd.user.services.kanshi = {
-		Service = {
-			Type = "simple";
-			Environment = [
-				"WAYLAND_DISPLAY=\"wayland-1\""
-				"DISPLAY=\":0\""
-			];
-			ExecStart = ''${pkgs.kanshi}/bin/kanshi -c /kanshi.cfg'';
+	systemd.user.services = {
+		kanshi = {
+			Service = {
+				Type = "simple";
+				Environment = [
+					"WAYLAND_DISPLAY=\"wayland-1\""
+					"DISPLAY=\":0\""
+				];
+				ExecStart = ''${pkgs.kanshi}/bin/kanshi -c /kanshi.cfg'';
+			};
 		};
 	};
+	home.packages = [
+		(pkgs.writeShellScriptBin "cwp" ''
+			chosen=$(
+				find $HOME/wallpapers/ -type f -print0 \
+				| xargs -0 file --mime-type \
+				| grep 'image/' \
+				| cut -d ':' -f 1 \
+				| sed "s|$HOME/wallpapers/||" \
+				| ${pkgs.rofi}/bin/rofi -dmenu -p "Select wallpaper" 
+			)
+			[ $? -eq 0 ] \
+				&& (i=$(pidof swaybg)
+				${pkgs.swaybg}/bin/swaybg -m fill\
+				  -i $HOME/wallpapers/$chosen &
+				sleep 2
+				kill $i
+				disown
+				)
+		'')
+	];
 	services.swayosd.enable = true;
 }

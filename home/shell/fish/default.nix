@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-    programs.fish.enable = true;
+    programs.fish.enable = false;
     programs.fish.interactiveShellInit = ''
         set fish_greeting
         direnv hook fish | source
