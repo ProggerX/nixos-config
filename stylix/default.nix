@@ -31,8 +31,8 @@
                 name = "Noto Color Emoji";
             };
         };
-        base16Scheme = "${pkgs.base16-schemes}/share/themes/material.yaml";
-        image = ./wallpapers/twin_turbo.jpg;
+        base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-medium.yaml";
+        image = ./wallpapers/canopus.png;
 			# let color = "${config.lib.stylix.colors.base00}";
 			# in import ./color.nix { inherit pkgs; col = "#${color}"; w = 1920; h = 1080; };
     };
