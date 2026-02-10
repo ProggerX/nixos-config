@@ -53,7 +53,7 @@
 				"easyeffects --gapplication-service"
 				"${pkgs.networkmanagerapplet}/bin/nm-applet"
 				"${pkgs.wlsunset}/bin/wlsunset -T 5500"
-				"${pkgs.swaybg}/bin/swaybg -m fill -i ${config.stylix.image}"
+				"${config.bg.setDefault}"
 			] ++ (if sys.isLaptop then [
 				"iio-sway"
 			] else []));
