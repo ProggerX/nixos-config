@@ -19,6 +19,7 @@ in {
 	services.desktopManager.gnome.enable = lib.mkForce true;
 	services.logind.settings.Login.HandlePowerKey = lib.mkForce "ignore";
 	services.logind.settings.Login.HandleLidSwitch = lib.mkForce "suspend-then-hibernate";
+	systemd.sleep.extraConfig = "HibernateDelaySec=1h";
 	hardware.sensor.iio.enable = true;
 	programs.iio-hyprland.enable = true;
 	boot.loader.grub = {
