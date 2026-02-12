@@ -12,7 +12,7 @@
                     type = "tcp";
                     localIP = "127.0.0.1";
                     localPort = 25565;
-                    remotePort = 25565;
+                    remotePort = 25566;
                 }
             ];
         };
