@@ -64,7 +64,7 @@
         boot.loader.systemd-boot.enable = false;
         boot.loader.efi.canTouchEfiVariables = false;
         boot.loader.grub = {
-            enable = true;
+            enable = false;
             efiSupport = true;
 			efiInstallAsRemovable = true;
 			extraConfig = ''
@@ -72,6 +72,11 @@
 			'';
             device = "nodev";
         };
+		boot.loader.limine = {
+			enable = true;
+			efiSupport = true;
+			efiInstallAsRemovable = true;
+		};
         boot.supportedFilesystems = [ "ntfs" ];
         
         boot.extraModulePackages = with config.boot.kernelPackages; [ amneziawg ];

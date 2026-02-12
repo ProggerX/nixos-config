@@ -40,5 +40,6 @@ in {
 		# '';
 		theme = lib.mkForce theme;
 	};
+	boot.loader.limine.efiInstallAsRemovable = lib.mkForce false;
     boot.loader.efi.canTouchEfiVariables = lib.mkForce true;
 }
