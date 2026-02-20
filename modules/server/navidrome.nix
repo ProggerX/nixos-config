@@ -37,5 +37,9 @@
 				rpc-whitelist = "127.0.0.1,10.7.0.4,10.7.0.5,10.7.0.8";
 			};
 		};
+		systemd.services.transmission.serviceConfig = {
+			RootDirectory = lib.mkForce "/";
+			ReadWritePaths = [ "/music" "/movies" ];
+		};
     };
 }
