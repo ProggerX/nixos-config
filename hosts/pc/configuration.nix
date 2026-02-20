@@ -32,6 +32,7 @@
         ];
         boot.binfmt.emulatedSystems = ["aarch64-linux"];
         nix.settings.extra-platforms = config.boot.binfmt.emulatedSystems;
+		nix.settings.trusted-users = [ "@wheel" "root" ];
 
         services.resolved.enable = true;
 
