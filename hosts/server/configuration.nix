@@ -35,7 +35,7 @@ in {
     };
 
     services.getty.autologinUser = "proggerx";
-    services.tailscale.enable = true;
+    services.tailscale.enable = false;
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
     networking.firewall.enable = false;
@@ -90,6 +90,7 @@ in {
 
     networking = {
         nameservers = [
+			"8.8.8.8"
         	"217.10.39.4"
         	"217.10.36.5"
         	"217.10.32.4"

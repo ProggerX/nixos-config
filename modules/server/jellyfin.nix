@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, system, inputs, ... }:
 {
     options = {
         server.jellyfin.enable = lib.mkEnableOption "Enable jellyfin";
@@ -6,6 +6,7 @@
     };
     config = lib.mkIf config.server.jellyfin.enable {
         services.jellyfin.enable = true;
+		services.jellyfin.package = inputs.master.legacyPackages.${system}.jellyfin;
         services.nginx = {
             enable = true;
             virtualHosts.jellyfin = {
