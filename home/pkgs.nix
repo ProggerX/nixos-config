@@ -44,7 +44,8 @@ home.packages =
 		fretboard
 		haskellPackages.pointfree
 		tree-sitter
-		(import inputs.master { inherit system; }).ollama
+		inputs.master.legacyPackages.${system}.ollama
+		inputs.master.legacyPackages.${system}.jellyfin-desktop
 		marksman
 		codeberg-cli
 		inputs.pabc-nix.packages.${pkgs.stdenv.hostPlatform.system}.default
@@ -81,7 +82,7 @@ home.packages =
 		ffmpeg
 		lazydocker
 		mpv
-		(import inputs.old { inherit system; } ).clang-tools
+		inputs.old.legacyPackages.${system}.clang-tools
 		gcc
 		mpg123
 		parted

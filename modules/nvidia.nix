@@ -18,7 +18,7 @@
 
 	services.ollama = {
 		enable = true;
-		package = (import inputs.master { inherit system; }).ollama-rocm;
+		package = inputs.master.legacyPackages.${system}.ollama-rocm;
 		environmentVariables = {
 			OLLAMA_CONTEXT_LENGTH="32000";
 		};
