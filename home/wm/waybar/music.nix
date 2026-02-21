@@ -1,13 +1,13 @@
-{ pkgs, ... }:
+{pkgs, ...}:
 pkgs.writeShellScriptBin "music_now_playing" ''
-    while true
-    do
-        mp=$(${pkgs.mpc}/bin/mpc current 2> /dev/null)
-        if [ "$mp" = "" ]; then
-            echo ""
-        else
-			echo "$mp"
-        fi
-        sleep 1
-    done
+   while true
+   do
+       mp=$(${pkgs.mpc}/bin/mpc current 2> /dev/null)
+       if [ "$mp" = "" ]; then
+           echo ""
+       else
+  echo "$mp"
+       fi
+       sleep 1
+   done
 ''

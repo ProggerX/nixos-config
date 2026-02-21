@@ -1,20 +1,20 @@
 {
-    imports = [
-		./nextcloud.nix
-		./fish-text.nix
-        ./emanote.nix
-		./minecraft.nix
-		./calibre.nix
-		./paperless.nix
-		./seafile.nix
-		./hspobeda.nix
-		./dufs.nix
-		./memos.nix
-        ./searx.nix
-        ./frp.nix
-        ./navidrome.nix
-        ./jellyfin.nix
-        ./adguard.nix
-        ./wakapi.nix
-    ];
+  imports = [
+    ./nextcloud.nix
+    ./fish-text.nix
+    ./emanote.nix
+    ./minecraft.nix
+    ./calibre.nix
+    ./paperless.nix
+    ./seafile.nix
+    ./hspobeda.nix
+    ./dufs.nix
+    ./memos.nix
+    ./searx.nix
+    ./frp.nix
+    ./navidrome.nix
+    ./jellyfin.nix
+    ./adguard.nix
+    ./wakapi.nix
+  ];
 }

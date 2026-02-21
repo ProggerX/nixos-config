@@ -1,7 +1,12 @@
-{ sys, pkgs, lib, ... }: {
+{
+  sys,
+  pkgs,
+  lib,
+  ...
+}: {
   #   programs.hyprlock = lib.mkForce {
   #       enable = true;
-		# settings = {};
+  # settings = {};
   #       extraConfig = ''
   #           background {
   #               monitor =
@@ -11,13 +16,13 @@
   #               brightness = 0.5
   #               vibrancy = 1
   #           }
-  #           
+  #
   #           general {
   #               hide_cursor = true
   #               grace = 0
   #               disable_loading_bar = false
   #           }
-  #           
+  #
   #           input-field {
   #               monitor =
   #               size = 250, 60
@@ -37,7 +42,7 @@
   #               halign = center
   #               valign = center
   #           }
-  #           
+  #
   #           label {
   #             monitor =
   #             text = cmd[update:1000] echo "$(date +"%A, %B %d")"
@@ -48,9 +53,9 @@
   #             halign = center
   #             valign = center
   #           }
-  #           
+  #
   #           label {
-  #             monitor = 
+  #             monitor =
   #             text = cmd[update:1000] echo "$(date +"%-I:%M")"
   #             color = rgb(${sys.lib.stylix.colors.base05})
   #             font_size = 95
@@ -59,11 +64,11 @@
   #             halign = center
   #             valign = center
   #           }
-  #           
+  #
   #           label {
   #               monitor =
   #               text = cmd[update:1000] echo "($(whoami))'' + (if sys.isLaptop == true then ''($(${import ../waybar/battery.nix { inherit pkgs; }}/bin/waybar_battery))"'' else ''"'') + ''
-		#
+  #
   #               color = rgb(${sys.lib.stylix.colors.base05})
   #               font_size = 14
   #               font_family = JetBrainsMono NF
