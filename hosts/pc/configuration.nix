@@ -308,7 +308,7 @@ extraConfig.pipewire."92-low-latency" = {
 
         services.terraria.enable = false;
         services.frp = {
-            enable = true;
+            enable = false;
             role = "client";
             settings = {
                 serverAddr = "5.35.87.192";
