@@ -85,7 +85,6 @@
     };
     boot.supportedFilesystems = ["ntfs"];
 
-    boot.extraModulePackages = with config.boot.kernelPackages; [amneziawg];
     boot.kernelPackages = pkgs.linuxPackages_latest;
 
     networking.networkmanager.enable = true;
