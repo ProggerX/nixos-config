@@ -46,6 +46,11 @@ in {
       fsType = "ext4";
       options = ["noatime"];
     };
+    "/videos" = {
+      device = "/dev/vg1/videos";
+      fsType = "xfs";
+      options = ["defaults" "noatime"];
+    };
   };
 
   networking = {
@@ -58,6 +63,7 @@ in {
   };
 
   environment.systemPackages = with pkgs; [
+    xfsprogs
     vim
     git
     wireguard-tools
