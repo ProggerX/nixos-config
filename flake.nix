@@ -35,7 +35,6 @@
     # Server inputs
     haskellpobeda.url = "github:ProggerX/haskellpobeda";
     fish-text.url = "github:ProggerX/fish-text";
-    flux.url = "github:Bananad3v/flux";
     emanote = {
       url = "github:srid/emanote";
       inputs.nixpkgs.follows = "nixpkgs";

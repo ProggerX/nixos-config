@@ -9,7 +9,6 @@
 
   services.vicinae = {
     enable = false;
-    autoStart = true;
     settings = {
       faviconService = "twenty";
       font.size = 14;
