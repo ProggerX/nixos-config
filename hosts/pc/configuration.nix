@@ -156,6 +156,7 @@
     security.rtkit.enable = true;
     security.polkit.enable = true;
     security.pam.services.hyprlock = {};
+    security.pam.services.login.failDelay.enable = false;
     services.pipewire = {
       enable = true;
       alsa.enable = true;

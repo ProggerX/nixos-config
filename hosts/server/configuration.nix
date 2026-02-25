@@ -176,6 +176,32 @@ in {
       };
       extraConfig = "client_max_body_size 100M;";
     };
+    virtualHosts.tld = {
+      addSSL = true;
+      enableACME = true;
+      serverName = "tld.bald.su";
+      extraConfig = ''
+        resolver 8.8.8.8 valid=30s;
+      '';
+      locations."/".extraConfig = ''
+        proxy_pass https://tldraw.com;
+
+        proxy_set_header Host tldraw.com;
+
+        proxy_ssl_name tldraw.com;
+        proxy_ssl_server_name on;
+
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        proxy_redirect https://tldraw.com https://$host/;
+      '';
+    };
     #     virtualHosts.fsui = {
     #         addSSL = true;
     #         enableACME = true;

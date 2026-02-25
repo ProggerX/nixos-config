@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  inputs,
   ...
 }: {
   options = {
@@ -11,6 +12,7 @@
     systemd.services.navidrome.serviceConfig.EnvironmentFile = "/navidrome-env.conf";
     services.navidrome = {
       enable = true;
+      package = inputs.old.legacyPackages.aarch64-linux.navidrome;
       settings = {
         MusicFolder = "/music";
         Address = "0.0.0.0";
@@ -43,7 +45,7 @@
     };
     systemd.services.transmission.serviceConfig = {
       RootDirectory = lib.mkForce "/";
-      ReadWritePaths = ["/music" "/movies"];
+      ReadWritePaths = ["/music" "/videos"];
     };
   };
 }

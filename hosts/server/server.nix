@@ -2,7 +2,7 @@
   server.adguard.enable = true;
   server.calibre.enable = true;
   server.dufs.enable = true;
-  server.fish-text.enable = true;
+  server.fish-text.enable = false;
   server.navidrome.enable = true;
   server.hspobeda.enable = true;
   server.emanote.enable = false;

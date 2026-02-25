@@ -1,6 +1,6 @@
-{pkgs, ...}:
-let compositor = "sway";
-	user = "proggerx";
+{pkgs, ...}: let
+  compositor = "sway";
+  user = "proggerx";
 in {
   boot.kernelParams = ["console=tty2"];
   services.greetd = {
