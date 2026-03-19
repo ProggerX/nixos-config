@@ -61,7 +61,7 @@
     };
 
     networking.hostName = "snd-pc";
-    networking.nameservers = ["10.7.0.6" "192.168.0.17"];
+    networking.nameservers = ["10.7.0.6" "8.8.8.8" "192.168.0.17"];
     networking.search = ["lan" "wg.me"];
     networking.firewall = {
       allowedUDPPorts = [51820];
@@ -189,11 +189,17 @@
     services.blueman.enable = true;
 
     users.mutableUsers = false;
-    users.users.proggerx = {
-      isNormalUser = true;
-      extraGroups = ["wheel" "adbusers" "docker" "wireshark" "input" "audio" "networkmanager" "realtime"];
-      hashedPasswordFile = config.age.secrets.password.path;
-      openssh.authorizedKeys.keys = ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDNzhtfJxQ3N+nfTRNFZ8LmZ12SF7qtl2YjyKHB9v+r88gLEOygxMA8UFgrJ36NGN16eQGb26Xqz+aNJOlUDHUugpiHLezOrYwBdGtiCVmy/V3Mh3+KmhWjlarO69nCfXsYYPNzmccLY987QFyiNmI4bbfJlc7Y/hboK4WNZRU6aNjuufjQ1edWIR9kettG531EI4ZCNoHvV3+1V1w0EfP70s+ztyuQO2BIB4D8eUGnpi8zdowMuP4IK1jhXZ09SNdH+i3cyhtBNod4RXR5Dn/u3HdT4nW645JlBERgIV3DAxyjRpNEmBBOPyzxCD3CbahgQ4VkyNEY357NCwu8Y41oCoadeCEcO5vRP3xw+rieLTqy/xPfad5CvMsTDmRStxrAlBpe+lgsx+5Cg/AkoeuOlHZuZh7EkliI5h0gSP1JCrQgUGSRg1RMMlPHjDrmecSROaNXvjseOKDSi+Mn9E7JIRWeqMGRkv27a02FTmGHLX3juwrucjg/ox353Pl+eUk= proggerx@pocket-os"];
+    users.users = {
+      proggerx = {
+        isNormalUser = true;
+        extraGroups = ["wheel" "adbusers" "docker" "wireshark" "input" "audio" "networkmanager" "realtime"];
+        hashedPasswordFile = config.age.secrets.password.path;
+        openssh.authorizedKeys.keys = ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDNzhtfJxQ3N+nfTRNFZ8LmZ12SF7qtl2YjyKHB9v+r88gLEOygxMA8UFgrJ36NGN16eQGb26Xqz+aNJOlUDHUugpiHLezOrYwBdGtiCVmy/V3Mh3+KmhWjlarO69nCfXsYYPNzmccLY987QFyiNmI4bbfJlc7Y/hboK4WNZRU6aNjuufjQ1edWIR9kettG531EI4ZCNoHvV3+1V1w0EfP70s+ztyuQO2BIB4D8eUGnpi8zdowMuP4IK1jhXZ09SNdH+i3cyhtBNod4RXR5Dn/u3HdT4nW645JlBERgIV3DAxyjRpNEmBBOPyzxCD3CbahgQ4VkyNEY357NCwu8Y41oCoadeCEcO5vRP3xw+rieLTqy/xPfad5CvMsTDmRStxrAlBpe+lgsx+5Cg/AkoeuOlHZuZh7EkliI5h0gSP1JCrQgUGSRg1RMMlPHjDrmecSROaNXvjseOKDSi+Mn9E7JIRWeqMGRkv27a02FTmGHLX3juwrucjg/ox353Pl+eUk= proggerx@pocket-os"];
+      };
+      test = {
+        isNormalUser = true;
+        password = "123";
+      };
     };
 
     services.dbus.enable = true;
@@ -371,6 +377,10 @@
           }
         ];
       };
+    };
+    programs.throne = {
+      enable = true;
+      tunMode.enable = true;
     };
     documentation.man.generateCaches = false;
     documentation.enable = false;
