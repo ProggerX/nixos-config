@@ -157,6 +157,8 @@
     security.polkit.enable = true;
     security.pam.services.hyprlock = {};
     security.pam.services.login.failDelay.enable = false;
+    security.pam.services.sudo.failDelay.enable = false;
+    security.pam.services.polkit.failDelay.enable = false;
     services.pipewire = {
       enable = true;
       alsa.enable = true;
