@@ -6,6 +6,7 @@
   ...
 }: {
   home.packages = with pkgs; [
+    codeberg-cli
     gnome-graphs
     aonsoku
     (ghc.withPackages (
@@ -51,6 +52,7 @@
     haskellPackages.pointfree
     tree-sitter
     inputs.master.legacyPackages.${system}.ollama
+    (import inputs.master {inherit system; config.allowUnfree = true;}).vintagestory
     inputs.master.legacyPackages.${system}.jellyfin-desktop
     marksman
     codeberg-cli
