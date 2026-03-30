@@ -2,7 +2,7 @@
   compositor = "sway";
   user = "proggerx";
 in {
-  boot.kernelParams = ["console=tty2"];
+  boot.kernelParams = ["console=tty1"];
   services.greetd = {
     enable = true;
     settings = {

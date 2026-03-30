@@ -10,6 +10,7 @@
     '';
 
     shellAliases = {
+      nb = "nix build --no-link --print-out-paths";
       dploy = "deploy -s";
       update = "sudo nixos-rebuild switch --flake /home/proggerx/Nix/nixos-config";
       q = "exit";

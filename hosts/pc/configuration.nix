@@ -384,6 +384,7 @@
       enable = true;
       tunMode.enable = true;
     };
+    programs.amnezia-vpn.enable = true;
     documentation.man.generateCaches = false;
     documentation.enable = false;
     environment.etc."os-release".source = lib.mkForce (pkgs.writeText "shefos" ''
