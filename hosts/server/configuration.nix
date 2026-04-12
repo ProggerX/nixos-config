@@ -101,28 +101,6 @@ in {
       "217.10.36.5"
       "217.10.32.4"
     ];
-    bridges.br0.interfaces = ["end0"];
-    interfaces."br0".ipv4.addresses = [
-      {
-        address = "192.168.0.17";
-        prefixLength = 24;
-      }
-    ];
-    defaultGateway = "192.168.0.1";
-  };
-
-  containers.test = {
-    privateNetwork = true;
-    hostBridge = "br0";
-    localAddress = "192.168.0.30/24";
-    config = {
-      system.stateVersion = "24.05";
-      networking = {
-        defaultGateway = "192.168.0.1";
-        nameservers = ["217.10.39.4"];
-        useHostResolvConf = lib.mkForce false;
-      };
-    };
   };
 
   services.szurubooru.enable = true;
