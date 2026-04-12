@@ -1,6 +1,6 @@
 {config, ...}: {
   services.collabora-online = {
-    enable = true;
+    enable = false;
     port = 9980;
     settings = {
       ssl = {
@@ -44,13 +44,13 @@
   };
 
   services.nextcloud-whiteboard-server = {
-    enable = true;
+    enable = false;
     settings = {NEXTCLOUD_URL = "https://nc.bald.su";};
     secrets = ["/nc-whiteboard-env"];
   };
 
   services.nextcloud = {
-    enable = true;
+    enable = false;
     hostName = "nc.bald.su";
     config.adminpassFile = "/nextcloud-pass";
     config.dbtype = "sqlite";
