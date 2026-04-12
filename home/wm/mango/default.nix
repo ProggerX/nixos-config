@@ -17,7 +17,7 @@
         "${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store &"
         "firefox-nightly &"
         "${pkgs.telegram-desktop}/bin/Telegram &"
-        "sshfs 10.7.0.6:/music /home/proggerx/music &"
+        "sshfs 10.8.0.6:/music /home/proggerx/music &"
         "easyeffects --gapplication-service &"
         "${pkgs.networkmanagerapplet}/bin/nm-applet &"
         "${pkgs.swaybg}/bin/swaybg -i ${sys.stylix.image} &"

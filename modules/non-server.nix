@@ -19,14 +19,14 @@
 
   wg = {
     enable = true;
-    endpoint = "5.35.87.192:51820";
+    endpoint = "5.35.87.192:51821";
     tunnel = true;
     address =
       if config.isLaptop
-      then "10.7.0.5/24"
-      else "10.7.0.4/24";
+      then "10.8.0.5/24"
+      else "10.8.0.4/24";
     keys = {
-      public = "eBynlYh1/1vwqD8KQ2PhwrPVUWnZ7dEoqrZ8iLyNVS0=";
+      public = "v1pNYxDeQAwCPG8/eOO3A0fZrxz/HiiBCu3n5v86TXg=";
       privateFile =
         if config.isLaptop
         then config.age.secrets.wg-laptop.path

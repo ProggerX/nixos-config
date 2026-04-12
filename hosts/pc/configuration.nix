@@ -61,7 +61,7 @@
     };
 
     networking.hostName = "snd-pc";
-    networking.nameservers = ["10.7.0.6" "8.8.8.8" "192.168.0.17"];
+    networking.nameservers = ["10.8.0.6" "8.8.8.8" "192.168.0.17"];
     networking.search = ["lan" "wg.me"];
     networking.firewall = {
       allowedUDPPorts = [51820];

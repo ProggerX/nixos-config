@@ -39,6 +39,30 @@ in {
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   networking.firewall.enable = false;
+  boot.kernel.sysctl = { "net.ipv4.ip_forward" = 1; };
+  networking.nat = {
+    enable = true;
+    externalInterface = "end0";
+    internalInterfaces = [ "wg0" ];
+  };
+  networking.wg-quick.interfaces.wg0 = {
+    postUp = ''
+      ${pkgs.iptables}/bin/iptables -C FORWARD -i wg0 -o end0 -j ACCEPT 2>/dev/null || \
+      ${pkgs.iptables}/bin/iptables -A FORWARD -i wg0 -o end0 -j ACCEPT
+
+      ${pkgs.iptables}/bin/iptables -C FORWARD -i end0 -o wg0 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT 2>/dev/null || \
+      ${pkgs.iptables}/bin/iptables -A FORWARD -i end0 -o wg0 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+
+      ${pkgs.iptables}/bin/iptables -t nat -C POSTROUTING -s 10.8.0.0/24 -o end0 -j MASQUERADE 2>/dev/null || \
+      ${pkgs.iptables}/bin/iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o end0 -j MASQUERADE
+    '';
+
+    postDown = ''
+      ${pkgs.iptables}/bin/iptables -D FORWARD -i wg0 -o end0 -j ACCEPT 2>/dev/null || true
+      ${pkgs.iptables}/bin/iptables -D FORWARD -i end0 -o wg0 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT 2>/dev/null || true
+      ${pkgs.iptables}/bin/iptables -t nat -D POSTROUTING -s 10.8.0.0/24 -o end0 -j MASQUERADE 2>/dev/null || true
+    '';
+  };
 
   fileSystems = {
     "/" = {

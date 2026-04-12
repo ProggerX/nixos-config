@@ -19,7 +19,7 @@
         [
           "firefox-nightly"
           "Telegram"
-          "sshfs 10.7.0.6:/music /home/proggerx/music"
+          "sshfs 10.8.0.6:/music /home/proggerx/music"
           "easyeffects --gapplication-service"
           "${pkgs.networkmanagerapplet}/bin/nm-applet"
           "${pkgs.dissent}/bin/dissent"

@@ -14,7 +14,7 @@
   };
   services.mpd = {
     enable = true;
-    musicDirectory = "http://10.7.0.6:5000/";
+    musicDirectory = "http://13.37.67.67:5000/";
     extraConfig = ''
       audio_output {
       	type "pipewire"
