@@ -60,7 +60,8 @@
       startup = map (x: {command = x;}) ([
           "sh -c \"sleep 5; systemctl --user start kanshi.service\""
           "${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store"
-          "firefox-nightly"
+          "${pkgs.qutebrowser}/bin/qutebrowser"
+          # "firefox-nightly"
           "${pkgs.telegram-desktop}/bin/Telegram"
           "sleep 2 && ${pkgs.sway}/bin/swaymsg workspace 1"
           "easyeffects --gapplication-service"
@@ -77,7 +78,7 @@
         ));
 
       assigns = {
-        "2" = [{app_id = "^firefox-nightly$";}];
+        "2" = [{app_id = "^firefox-nightly$";} {app_id = "^org.qutebrowser.qutebrowser$";}];
         "3" = [{class = "^vesktop$";}];
         "4" = [{app_id = "^org.telegram.desktop$";}];
         "10" = [{class = "^Spotify$";} {app_id = "^YandexMusic$";}];

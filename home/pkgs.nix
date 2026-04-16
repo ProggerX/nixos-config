@@ -6,6 +6,7 @@
   ...
 }: {
   home.packages = with pkgs; [
+    qutebrowser
     codeberg-cli
     gnome-graphs
     aonsoku

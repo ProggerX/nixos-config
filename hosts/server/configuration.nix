@@ -79,11 +79,15 @@ in {
 
   networking = {
     hostName = hostname;
-    wireless = {
-      enable = false;
-      networks."ssid".psk = "password_here";
-      interfaces = [interface];
-    };
+
+    interfaces.eth0.ipv4.addresses = [{
+      address = "13.37.67.67";
+      prefixLength = 16;
+    }];
+
+    defaultGateway = "13.37.0.1";
+
+    useDHCP = false;
   };
 
   environment.systemPackages = with pkgs; [
