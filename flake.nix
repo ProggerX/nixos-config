@@ -45,6 +45,7 @@
     };
     notbalds.url = "github:NotBalds/nix";
     firefox.url = "github:nix-community/flake-firefox-nightly";
+    adhd.url = "git+https://codeberg.org/proggerx/adhd";
   };
 
   outputs = {
@@ -115,6 +116,7 @@
         };
         modules = [
           {nix.nixPath = ["nixpkgs=${nixpkgs}"];}
+          inputs.adhd.nixosModules.default
           inputs.notie.nixosModules.notie
           inputs.notbalds.nixosModules.cwe-server
           agenix.nixosModules.default

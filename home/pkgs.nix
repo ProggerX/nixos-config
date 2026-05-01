@@ -144,7 +144,7 @@
     tty-clock
     fpc
     tree
-    btop
+    btop-rocm
     cava
     showmethekey
     jq
