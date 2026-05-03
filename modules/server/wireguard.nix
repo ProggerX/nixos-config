@@ -3,7 +3,7 @@
   wg = {
     enable = true;
     endpoint = "5.35.87.192:51821";
-    tunnel = false;
+    tunnel = true;
     allowedIPs = [ "10.8.0.0/24" ];
     address = "10.8.0.6";
     keys = {
