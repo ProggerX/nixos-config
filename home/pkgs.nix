@@ -12,7 +12,7 @@
     aonsoku
     (ghc.withPackages (
       ps:
-        with ps; [vector containers lens aeson split]
+        with ps; [vector containers lens aeson split scotty wai-middleware-static]
     ))
     haskell-language-server
     cabal-install

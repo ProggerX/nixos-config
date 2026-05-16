@@ -107,7 +107,7 @@
 
     virtualisation.docker.enable = true;
 
-    services.xserver.enable = true;
+    services.xserver.enable = false;
     services.xserver.desktopManager.cinnamon.enable = false;
     services.libinput.enable = true;
     services.libinput.touchpad.tapping = true;
@@ -122,6 +122,7 @@
     services.xserver.windowManager.qtile.enable = true;
     services.desktopManager.gnome.enable = false;
     services.displayManager.gdm.enable = false;
+    services.displayManager.enable = lib.mkForce false;
     services.greenclip.enable = true;
     services.pulseaudio.enable = false;
 
@@ -135,6 +136,15 @@
 
     programs.fish.enable = false;
     programs.zsh.enable = true;
+#     environment.loginShellInit = let
+#       user = "proggerx";
+#       compositor = "sway";
+#     in
+# ''
+# if [ "$USER" = "${user}" ] && [ "$(tty)" = "/dev/tty1" ]; then
+#   exec ${compositor} &> "/home/${user}/.${compositor}.log"
+# fi
+# '';
     environment.pathsToLink = ["/share/zsh"];
     environment.sessionVariables = {
       PATH = [
@@ -142,7 +152,7 @@
         "/home/proggerx/.local/bin/"
         "/home/proggerx/go/bin"
       ];
-      EDITOR = "vim";
+      EDITOR = "nvim";
       DIRENV_LOG_FORMAT = "";
     };
     users.defaultUserShell = pkgs.zsh;
@@ -198,10 +208,10 @@
         hashedPasswordFile = config.age.secrets.password.path;
         openssh.authorizedKeys.keys = ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDNzhtfJxQ3N+nfTRNFZ8LmZ12SF7qtl2YjyKHB9v+r88gLEOygxMA8UFgrJ36NGN16eQGb26Xqz+aNJOlUDHUugpiHLezOrYwBdGtiCVmy/V3Mh3+KmhWjlarO69nCfXsYYPNzmccLY987QFyiNmI4bbfJlc7Y/hboK4WNZRU6aNjuufjQ1edWIR9kettG531EI4ZCNoHvV3+1V1w0EfP70s+ztyuQO2BIB4D8eUGnpi8zdowMuP4IK1jhXZ09SNdH+i3cyhtBNod4RXR5Dn/u3HdT4nW645JlBERgIV3DAxyjRpNEmBBOPyzxCD3CbahgQ4VkyNEY357NCwu8Y41oCoadeCEcO5vRP3xw+rieLTqy/xPfad5CvMsTDmRStxrAlBpe+lgsx+5Cg/AkoeuOlHZuZh7EkliI5h0gSP1JCrQgUGSRg1RMMlPHjDrmecSROaNXvjseOKDSi+Mn9E7JIRWeqMGRkv27a02FTmGHLX3juwrucjg/ox353Pl+eUk= proggerx@pocket-os"];
       };
-      test = {
-        isNormalUser = true;
-        password = "123";
-      };
+      # test = {
+      #   isNormalUser = true;
+      #   password = "123";
+      # };
     };
 
     services.dbus.enable = true;
@@ -411,5 +421,6 @@
       VERSION_CODENAME=320kg
       VERSION_ID="320kg"
     '');
+    nix.package = pkgs.lixPackageSets.stable.lix;
   };
 }
