@@ -155,6 +155,11 @@ in {
         webroot = "/var/lib/acme/acme-challenge";
         group = "nginx";
       };
+      bald = {
+        domain = "bald.su";
+        webroot = "/var/lib/acme/acme-challenge";
+        group = "nginx";
+      };
     };
   };
 
@@ -162,7 +167,7 @@ in {
     enable = true;
     virtualHosts.aamain = {
       addSSL = true;
-      enableACME = true;
+      useACMEHost = "bald";
       serverName = "bald.su";
       locations."/" = {
         root = "/nginx-root";

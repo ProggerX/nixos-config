@@ -16,6 +16,7 @@
   };
   server.cwe_server.enable = true;
   server.wakapi.enable = true;
+  server.ngircd.enable = true;
   services.adhd = {
     enable = true;
     configuration = ''

@@ -16,5 +16,6 @@
     ./jellyfin.nix
     ./adguard.nix
     ./wakapi.nix
+    ./ngircd.nix
   ];
 }

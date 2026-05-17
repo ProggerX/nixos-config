@@ -20,6 +20,13 @@
           localPort = 443;
           remotePort = 443;
         }
+        {
+          name = "server_ircs";
+          type = "tcp";
+          localIP = "127.0.0.1";
+          localPort = 6697;
+          remotePort = 6697;
+        }
       ];
     };
   };
