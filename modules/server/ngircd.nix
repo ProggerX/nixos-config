@@ -15,19 +15,15 @@ in {
           Name = bald.su
           Info = bald's irc server
           MotdFile = /etc/ngircd/ngircd.motd
-
-        [Server]
           Listen = 127.0.0.1
           Ports = 16667
-          SyslogFacility = local5
+          AdminInfo1 = bald
+          AdminInfo2 = planet earth
+          AdminEMail = x@proggers.ru
 
         [Channel]
           Name = #general
           Topic = Welcome to bald's IRC
-
-        [Options]
-          PAM = false
-          DNS = false
       '';
     };
 
