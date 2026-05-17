@@ -21,6 +21,10 @@ in {
           AdminInfo2 = planet earth
           AdminEMail = x@proggers.ru
 
+        [Options]
+          PAM = no
+          RequireAuthPing = no
+
         [Channel]
           Name = #general
           Topic = Welcome to bald's IRC
@@ -28,22 +32,9 @@ in {
     };
 
     environment.etc."ngircd/ngircd.motd".text = ''
-      [1;33m      ___           ___           ___           ___
-         /\__\         /\  \         /\__\         /\  \
-        /:/ _/_        \:\  \       /:/ _/_       /::\  \
-       /:/ /\__\        \:\  \     /:/ /\  \     /:/\:\__\
-      /:/ /:/ _/_   ___ /::\  \   /:/ /::\  \   /:/ /:/  /
-     /:/_/:/ /\__\ /\  /:/\:\__\ /:/_/:/\:\__\ /:/_/:/__/___
-     \:\/:/ /:/  / \:\/:/  \/__/ \:\/:/ /:/  / \:\/:::::/  /
-      \::/_/:/  /   \::/__/       \::/_/:/  /   \::/~~/~~~~
-       \:\/:/  /     \:\  \        \:\/:/  /     \:\  \
-        \::/  /       \:\__\        \::/  /       \:\__\
-         \/__/         \/__/         \/__/         \/__/
-      [0m
-      Welcome to bald's IRC server (bald.su:6697)
-      Channel: #general
-      ---
-      [1;31mConnection instructions: 6697 ssl required![0m
+        Welcome to bald's IRC server (bald.su:6697)
+        Channel: #general
+        Connection requires SSL/TLS on port 6697
     '';
 
     services.nginx.streamConfig = ''
