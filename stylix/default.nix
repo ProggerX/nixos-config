@@ -5,6 +5,7 @@
 }: {
   stylix = {
     enable = true;
+    polarity = "dark";
     cursor = {
       name = "idk-cursor";
       size = 35;
@@ -38,7 +39,7 @@
       };
     };
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-medium.yaml";
-    image = ./wallpapers/oguri.png;
+    image = ./wallpapers/milkw.png;
     # let color = "${config.lib.stylix.colors.base00}";
     # in import ./color.nix { inherit pkgs; col = "#${color}"; w = 1920; h = 1080; };
   };
